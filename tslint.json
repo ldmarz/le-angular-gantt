@@ -1,0 +1,8 @@
+{
+    "extends": "tslint-config-standard",
+    "rules": {
+      "member-ordering": false,
+      "no-inferrable-types": true,
+      "prefer-for-of": true
+    }
+}

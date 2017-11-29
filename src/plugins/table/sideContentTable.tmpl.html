@@ -1,0 +1,26 @@
+<div gantt-recompile-on="gantt-table-content:recompile" class="gantt-side-content-table">
+
+    <div class="gantt-table-column {{getClass()}}" ng-repeat="column in ::pluginScope.columns" ng-controller="TableColumnController">
+
+        <div class="gantt-table-header" ng-style="::{height: ganttHeaderHeight + 'px'}">
+            <div ng-show="ganttHeaderHeight" class="gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row">
+                <span class="gantt-label-text" gantt-bind-compile-html="::getHeaderContent()"/>
+            </div>
+        </div>
+
+        <div class="gantt-table-content"  ng-style="::getMaxHeightCss()">
+            <div gantt-vertical-scroll-receiver>
+                <div class="gantt-table-row" ng-repeat="row in ::gantt.rowsManager.visibleRows track by row.model.id" ng-controller="TableColumnRowController" id="id">
+                    <div gantt-row-label class="gantt-row-label gantt-row-height" ng-click="test(row)" ng-class="::getClasses()" ng-style="::getHeight()">
+                        <div class="gantt-valign-container">
+                            <div class="gantt-valign-content">
+                                <span class="gantt-label-text" gantt-bind-compile-html-one-time="::getRowContent()"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

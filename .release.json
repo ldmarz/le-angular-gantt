@@ -1,0 +1,30 @@
+{
+    "non-interactive": false,
+    "dry-run": false,
+    "verbose": true,
+    "force": false,
+    "pkgFiles": ["package.json", "bower.json"],
+    "increment": "patch",
+    "buildCommand": "yarn dist",
+    "src": {
+      "commitMessage": "chore(release): Release v%s",
+      "tagName": "v%s",
+      "tagAnnotation": "v%s"
+    },
+    "dist": {
+        "repo": false,
+        "stageDir": ".stage",
+        "base": "dist",
+        "files": ["**/*"]
+    },
+    "npm": {
+        "publish": true,
+        "publishPath": "."
+    },
+    "prompt": {
+      "src": {
+      },
+      "dist": {
+      }
+    }
+}

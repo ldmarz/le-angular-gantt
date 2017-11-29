@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Angular Gantt - Gantt chart component for AngularJS (Demo)</title>
+    <meta name="description" content="Gantt chart component for AngularJS">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="canonical" href="https://www.angular-gantt.com/">
+    <link rel="shortcut icon" href="https://www.angular-gantt.com/img/favicon.ico">
+
+</head>
+<body ng-app="gantt.demo" ng-strict-di><!-- ng-strict-di-->
+    <div ng-controller="DemoCtrl">
+        <button ng-click="collapse()"> collpase </button>
+        <button ng-click="expand()"> expand </button>
+        <button ng-click="test2()">noTask</button>
+        <div gantt data="data" api="registerApi">
+            <gantt-tree></gantt-tree>
+        </div>
+    </div>
+</body>
+</html>
