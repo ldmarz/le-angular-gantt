@@ -5,6 +5,10 @@ export default function ($scope,$rootScope) {
   'ngInject'
   $scope.levels = levels
   $scope.$parent.nodeScopes[$scope.row.model.id] = $scope
+  // if (get($scope, 'row.model.level', null) === levels.TASK) {
+  //   $scope.toggle()
+  //   $scope.collapsed = true
+  // }
   $scope.$on('$destroy', function () {
     delete $scope.$parent.nodeScopes[$scope.row.model.id]
   })
