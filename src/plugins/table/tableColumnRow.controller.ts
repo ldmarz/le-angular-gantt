@@ -47,4 +47,8 @@ export default function ($scope) {
       return []
     }
   }
+
+  $scope.getClass = function (column) {
+    return $scope.pluginScope.classes[column]
+  }
 }

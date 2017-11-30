@@ -60,7 +60,7 @@ export default function ($scope) {
   }
   $scope.columnsClasses = {
     'model.mec': 'column-input',
-    'model.avic': 'column-input'
+    'model.avic': 'column-avic'
   }
   $scope.contents = {
     'model.mec': '<span>{{getValue()}}</span>',
