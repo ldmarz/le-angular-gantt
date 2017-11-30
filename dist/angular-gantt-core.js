@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.0-rc.1 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.0 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -3223,7 +3223,6 @@ var GanttRowsManager = exports.GanttRowsManager = function () {
         value: function setClasses(index, classes) {
             var model = this.rows[index].model;
             model['classes'] = classes;
-            console.log(model);
             this.gantt.$scope.$broadcast('row-clasess:changed');
         }
     }, {
@@ -4338,44 +4337,30 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
             return templateUrl;
         },
         scope: {
-            sortMode: '=?',
-            filterTask: '=?',
-            filterTaskComparator: '=?',
-            filterRow: '=?',
-            filterRowComparator: '=?',
-            viewScale: '=?',
-            columnWidth: '=?',
-            expandToFit: '=?',
-            shrinkToFit: '=?',
-            showSide: '=?',
-            allowSideResizing: '=?',
+            viewScale: '<?',
+            columnWidth: '<?',
+            expandToFit: '<?',
+            shrinkToFit: '<?',
+
             fromDate: '=?',
             toDate: '=?',
-            currentDateValue: '=?',
-            currentDate: '=?',
-            daily: '=?',
-            autoExpand: '=?',
-            taskOutOfRange: '=?',
-            taskContent: '=?',
-            rowContent: '=?',
-            maxHeight: '=?',
-            sideWidth: '=?',
-            headers: '=?',
-            headersFormats: '=?',
-            headersScales: '=?',
-            timeFrames: '=?',
-            dateFrames: '=?',
-            timeFramesWorkingMode: '=?',
-            timeFramesNonWorkingMode: '=?',
-            timespans: '=?',
-            columnMagnet: '=?',
-            shiftColumnMagnet: '=?',
-            timeFramesMagnet: '=?',
+
+            autoExpand: '<?',
+
+            maxHeight: '<?',
+            sideWidth: '<?',
+            headers: '<?',
+            headersFormats: '<?',
+            headersScales: '<?',
+
+            columnMagnet: '<?',
+            shiftColumnMagnet: '<?',
+
             data: '=?',
             api: '=?',
-            options: '=?'
+            options: '<?'
         },
-        controller: ["$scope", "$element", function controller($scope, $element) {
+        controller: ["$scope", "$element", "$rootScope", function controller($scope, $element, $rootScope) {
             'ngInject';
 
             for (var option in $scope.options) {
@@ -4383,7 +4368,7 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
             }
 
             ganttEnableNgAnimate($element, false);
-            $scope.gantt = new Gantt($scope, $element);
+            $scope.gantt = new Gantt($scope, $element, $rootScope);
             this.gantt = $scope.gantt;
         }],
         link: function link(scope, element) {
@@ -4807,7 +4792,7 @@ var _side = __webpack_require__(48);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Gantt = exports.Gantt = function () {
-    function Gantt($scope, $element) {
+    function Gantt($scope, $element, $rootScope) {
         var _this = this;
 
         (0, _classCallCheck3.default)(this, Gantt);
@@ -4815,6 +4800,7 @@ var Gantt = exports.Gantt = function () {
         this.rendered = false;
         this.isRefreshingColumns = false;
         this.$scope = $scope;
+        this.$rootScope = $rootScope;
         this.$element = $element;
         this.options = new _options.GanttOptions($scope, {
             'api': function api() {},
@@ -5170,6 +5156,7 @@ var Gantt = exports.Gantt = function () {
                 if (w > 0) {
                     _this2.options.set('sideWidth', w);
                 }
+                _this2.$rootScope.$broadcast('gantt-table-content:recompile');
                 _this2.api.core.raise.rendered(_this2.api);
             });
         }
@@ -7899,7 +7886,6 @@ exports.default = ["$compile", function ($compile) {
             scope.$watch(function () {
                 return scope.$eval(attrs.ganttBindCompileHtml);
             }, function (value) {
-                console.log('value', value);
                 element.html(value);
                 $compile(element.contents())(scope);
             });
@@ -7956,10 +7942,7 @@ exports.default = ["$compile", function ($compile) {
             var removeListener = void 0;
             return function linkFn(scope, element, attrs) {
                 var recompileOnEvent = function recompileOnEvent(eventName) {
-                    console.log('create event', eventName);
                     scope.$on(eventName, function (e) {
-                        console.log('execute event', eventName);
-                        console.log('listener', scope.removeListener);
                         if (scope.removeListener !== undefined) {
                             scope.removeListener();
                         }
