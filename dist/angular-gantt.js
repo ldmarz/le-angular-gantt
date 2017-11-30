@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.0 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.2 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -4792,7 +4792,7 @@ var _side = __webpack_require__(48);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Gantt = exports.Gantt = function () {
-    function Gantt($scope, $element, $rootScope) {
+    function Gantt($scope, $element) {
         var _this = this;
 
         (0, _classCallCheck3.default)(this, Gantt);
@@ -4800,7 +4800,6 @@ var Gantt = exports.Gantt = function () {
         this.rendered = false;
         this.isRefreshingColumns = false;
         this.$scope = $scope;
-        this.$rootScope = $rootScope;
         this.$element = $element;
         this.options = new _options.GanttOptions($scope, {
             'api': function api() {},
@@ -5156,7 +5155,6 @@ var Gantt = exports.Gantt = function () {
                 if (w > 0) {
                     _this2.options.set('sideWidth', w);
                 }
-                _this2.$rootScope.$broadcast('gantt-table-content:recompile');
                 _this2.api.core.raise.rendered(_this2.api);
             });
         }
@@ -31722,7 +31720,8 @@ exports.default = ["$scope", function ($scope) {
         }
         return value;
     };
-    $scope.getRowContent = function () {
+    $scope.getRowContent = function (column) {
+        $scope.column = column;
         var content = void 0;
         if ($scope.row.model.columnContents) {
             content = $scope.row.model.columnContents[$scope.column];
@@ -31740,12 +31739,12 @@ exports.default = ["$scope", function ($scope) {
             content = $scope.pluginScope.content;
         }
         if (content === undefined) {
-            return '{{getValue()}}';
+            return '{{getValue(column)}}';
         }
         return content;
     };
     $scope.getHeight = function () {
-        return { 'height': $scope.row.model.height };
+        return { 'height': $scope.row.model.height, 'width': '100px' };
     };
     $scope.getClasses = function () {
         if ($scope.row.model.classes) {
@@ -32504,6 +32503,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
 
     $scope.levels = _constant.levels;
     $scope.$parent.nodeScopes[$scope.row.model.id] = $scope;
+
     $scope.$on('$destroy', function () {
         delete $scope.$parent.nodeScopes[$scope.row.model.id];
     });
@@ -32568,13 +32568,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
         }
         return content;
     };
-    $scope.$on('angular-ui-tree:collapse-all', function () {
-        $scope.reportCollapsed($scope.collapsed);
-    });
-    $scope.$on('angular-ui-tree:expand-all', function () {
-        $scope.reportCollapsed($scope.collapsed);
-    });
-    $scope.reportCollapsed = function (newValue) {
+    $scope.$watch('collapsed', function (newValue) {
         if ($scope.$modelValue._collapsed !== newValue) {
             var oldValue = $scope.$modelValue._collapsed;
             $scope.$modelValue._collapsed = newValue;
@@ -32583,7 +32577,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
                 $scope.gantt.api.rows.refresh();
             }
         }
-    };
+    });
 }];
 
 var _lodash = __webpack_require__(202);
@@ -32711,7 +32705,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/table/sideContentTable.tmpl.html';
-var html = "<div class=gantt-side-content-table> <div class=\"gantt-table-column {{getClass()}}\" ng-repeat=\"column in ::pluginScope.columns\" ng-controller=TableColumnController> <div class=gantt-table-header ng-style=\"::{height: '28px'}\"> <div ng-show=ganttHeaderHeight class=\"gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row\"> <span class=gantt-label-text gantt-bind-compile-html=::getHeaderContent() /> </div> </div> <div class=gantt-table-content ng-style=getMaxHeightCss()> <div gantt-vertical-scroll-receiver> <div class=gantt-table-row ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\" ng-controller=TableColumnRowController id=id> <div gantt-row-label class=\"gantt-row-label gantt-row-height\" ng-click=test(row) ng-class=::getClasses() ng-style=::getHeight()> <div class=gantt-valign-container> <div class=gantt-valign-content> <span class=gantt-label-text gantt-bind-compile-html-one-time=::getRowContent()></span> </div> </div> </div> </div> </div> </div> </div> </div> ";
+var html = "<div class=gantt-side-content-table> <div class=\"gantt-table-column {{getClass()}}\" ng-repeat=\"column in ::pluginScope.columns\" ng-controller=TableColumnController> <div class=gantt-table-header ng-style=\"::{height: '2em'}\"> <div ng-show=ganttHeaderHeight class=\"gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row\"> <span class=gantt-label-text gantt-bind-compile-html=::getHeaderContent() /> </div> </div> </div> <div class=gantt-table-content ng-style=getMaxHeightCss()> <div gantt-vertical-scroll-receiver> <div class=\"gantt-table-row gantt-row-height\" ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\" ng-controller=TableColumnRowController id=id> <div gantt-row-label class=gantt-row-label ng-repeat=\"column in ::pluginScope.columns\" ng-style=\"{width: '100px',height: '100%', display: 'inline-block'}\"> <span class=gantt-label-text gantt-bind-compile-html-one-time=getRowContent(column)></span> </div> </div> </div> </div> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -32747,7 +32741,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeBodyChildren.tmpl.html';
-var html = "<div ng-controller=GanttTreeNodeController class=\"gantt-row-label gantt-row-height\" ng-style=\"{'height': row.model.height}\" ng-class=row.model.classes> <div class=gantt-valign-container> <div class=gantt-valign-content> <a ng-disabled=::isCollapseDisabled() data-nodrag ng-if=\"::row.model.level !== levels.LABOR\" class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\" ng-click=\"toggle(); reportCollapsed(collapsed)\"> <span class=\"gantt-tree-handle glyphicon glyphicon-chevron-down\" ng-class=\"{\n                'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,\n                'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\"></span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() /> </div> </div> </div> <ol ui-tree-nodes ng-class=\"{hidden: collapsed}\" ng-model=childrenRows> <li ng-repeat=\"row in childrenRows\" ui-tree-node> <div ng-include=\"'plugins/tree/treeBodyChildren.tmpl.html'\"></div> </li> </ol> ";
+var html = "<div ng-controller=GanttTreeNodeController class=\"gantt-row-label gantt-row-height\" ng-style=\"{'height': row.model.height}\" ng-class=row.model.classes> <div class=gantt-valign-container> <div class=gantt-valign-content> <a ng-disabled=::isCollapseDisabled() data-nodrag ng-if=\"::row.model.level !== levels.LABOR\" class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\" ng-click=toggle();> <span class=\"gantt-tree-handle glyphicon glyphicon-chevron-down\" ng-class=\"{\n                'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,\n                'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\"></span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() /> </div> </div> </div> <ol ui-tree-nodes ng-class=\"{hidden: collapsed}\" ng-model=childrenRows> <li ng-repeat=\"row in childrenRows\" ui-tree-node> <div ng-include=\"'plugins/tree/treeBodyChildren.tmpl.html'\"></div> </li> </ol> ";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
