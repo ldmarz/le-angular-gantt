@@ -9,7 +9,6 @@ export default function ($compile) {
       scope.$watch(function () {
         return scope.$eval(attrs.ganttBindCompileHtml)
       }, function (value) {
-        console.log('value', value)
         element.html(value)
         $compile(element.contents())(scope)
       })

@@ -274,7 +274,6 @@ export class GanttRowsManager {
   setClasses (index, classes) {
     const model = this.rows[index].model
     model['classes'] = classes
-    console.log(model)
     this.gantt.$scope.$broadcast('row-clasess:changed')
   }
   removeCustomRowSorter (sorterFunction: { (rows: GanttRow[]): GanttRow[] }) {

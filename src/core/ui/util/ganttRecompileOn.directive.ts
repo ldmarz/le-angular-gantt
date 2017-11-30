@@ -11,10 +11,7 @@ export default function ($compile) {
       return function linkFn (scope, element, attrs) {
 
         let recompileOnEvent = function (eventName) {
-          console.log('create event', eventName)
           scope.$on(eventName, function (e) {
-            console.log('execute event', eventName)
-            console.log('listener',scope.removeListener)
             if (scope.removeListener !== undefined) {
               scope.removeListener()
             }

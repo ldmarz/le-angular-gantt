@@ -16,44 +16,44 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       return templateUrl
     },
     scope: {
-      sortMode: '=?',
-      filterTask: '=?',
-      filterTaskComparator: '=?',
-      filterRow: '=?',
-      filterRowComparator: '=?',
-      viewScale: '=?',
-      columnWidth: '=?',
-      expandToFit: '=?',
-      shrinkToFit: '=?',
-      showSide: '=?',
-      allowSideResizing: '=?',
+      // sortMode: '<?',
+      // filterTask: '=?',
+      // filterTaskComparator: '=?',
+      // filterRow: '=?',
+      // filterRowComparator: '=?',
+      viewScale: '<?',
+      columnWidth: '<?',
+      expandToFit: '<?',
+      shrinkToFit: '<?',
+      // showSide: '=?',
+      // allowSideResizing: '<?',
       fromDate: '=?',
       toDate: '=?',
-      currentDateValue: '=?',
-      currentDate: '=?',
-      daily: '=?',
-      autoExpand: '=?',
-      taskOutOfRange: '=?',
-      taskContent: '=?',
-      rowContent: '=?',
-      maxHeight: '=?',
-      sideWidth: '=?',
-      headers: '=?',
-      headersFormats: '=?',
-      headersScales: '=?',
-      timeFrames: '=?',
-      dateFrames: '=?',
-      timeFramesWorkingMode: '=?',
-      timeFramesNonWorkingMode: '=?',
-      timespans: '=?',
-      columnMagnet: '=?',
-      shiftColumnMagnet: '=?',
-      timeFramesMagnet: '=?',
+      // currentDateValue: '=?',
+      // currentDate: '=?',
+      // daily: '=?',
+      autoExpand: '<?',
+      // taskOutOfRange: '<?',
+      // taskContent: '<?',
+      // rowContent: '<?',
+      maxHeight: '<?',
+      sideWidth: '<?',
+      headers: '<?',
+      headersFormats: '<?',
+      headersScales: '<?',
+      // timeFrames: '<?',
+      // dateFrames: '<?',
+      // timeFramesWorkingMode: '<?',
+      // timeFramesNonWorkingMode: '<?',
+      // timespans: '<?',
+      columnMagnet: '<?',
+      shiftColumnMagnet: '<?',
+      // timeFramesMagnet: '<?',
       data: '=?',
       api: '=?',
-      options: '=?'
+      options: '<?'
     },
-    controller: function ($scope, $element) {
+    controller: function ($scope, $element, $rootScope) {
       'ngInject'
       for (let option in $scope.options) {
         $scope[option] = $scope.options[option]
@@ -62,7 +62,7 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       // Disable animation if ngAnimate is present, as it drops down performance.
       ganttEnableNgAnimate($element, false)
 
-      $scope.gantt = new Gantt($scope, $element)
+      $scope.gantt = new Gantt($scope, $element, $rootScope)
       this.gantt = $scope.gantt
     },
     link: function (scope, element) {

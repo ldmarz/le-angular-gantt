@@ -1,5 +1,6 @@
 <div ng-controller="GanttTreeNodeController"
      class="gantt-row-label gantt-row-height"
+     ng-style="{'height': row.model.height}"
      ng-class="row.model.classes">
     <div class="gantt-valign-container">
         <div class="gantt-valign-content">
@@ -18,7 +19,7 @@
         </div>
     </div>
 </div>
-<ol ui-tree-nodes ng-class="{hidden: collapsed}" ng-model="childrenRows" ng-if="::row.model.level !== levels.LABOR">
+<ol ui-tree-nodes ng-class="{hidden: collapsed}" ng-model="childrenRows">
     <li ng-repeat="row in childrenRows" ui-tree-node>
         <div ng-include="'plugins/tree/treeBodyChildren.tmpl.html'"></div>
     </li>

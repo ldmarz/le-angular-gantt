@@ -76,6 +76,5 @@ export default function ($scope,$rootScope) {
         $scope.gantt.api.rows.refresh()
       }
     }
-    $rootScope.$broadcast('gantt-table-content:recompile')
   }
 }
