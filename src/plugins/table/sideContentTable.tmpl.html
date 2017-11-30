@@ -2,25 +2,21 @@
 
     <div class="gantt-table-column {{getClass()}}" ng-repeat="column in ::pluginScope.columns" ng-controller="TableColumnController">
 
-        <div class="gantt-table-header" ng-style="::{height: '28px'}">
+        <div class="gantt-table-header" ng-style="::{height: '2em'}">
             <div ng-show="ganttHeaderHeight" class="gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row">
                 <span class="gantt-label-text" gantt-bind-compile-html="::getHeaderContent()"/>
             </div>
         </div>
+    </div>
 
-        <div class="gantt-table-content"  ng-style="getMaxHeightCss()">
+     <div class="gantt-table-content"  ng-style="getMaxHeightCss()">
             <div gantt-vertical-scroll-receiver>
-                <div class="gantt-table-row" ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="TableColumnRowController" id="id">
-                    <div gantt-row-label class="gantt-row-label gantt-row-height" ng-click="test(row)" ng-class="::getClasses()" ng-style="::getHeight()">
-                        <div class="gantt-valign-container">
-                            <div class="gantt-valign-content">
-                                <span class="gantt-label-text" gantt-bind-compile-html-one-time="::getRowContent()"></span>
-                            </div>
-                        </div>
+                <div class="gantt-table-row gantt-row-height" ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="TableColumnRowController" id="id">
+                    <div gantt-row-label class="gantt-row-label" ng-repeat="column in ::pluginScope.columns" 
+                    ng-style="{width: '100px',height: '100%', display: 'inline-block'}"   >
+                         <span class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(column)"></span>
                     </div>
                 </div>
             </div>
-        </div>
-
     </div>
 </div>

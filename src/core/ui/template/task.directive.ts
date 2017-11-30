@@ -22,7 +22,6 @@ export default function (GanttDirectiveBuilder) {
       $scope.task.updatePosAndSize()
     })
 
-
     $scope.getClass = function () {
       if ($scope.task.model.classes) {
         return $scope.task.model.classes
@@ -30,8 +29,6 @@ export default function (GanttDirectiveBuilder) {
         return []
       }
     }
-
-    
   }
   return builder.build()
 }

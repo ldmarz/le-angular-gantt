@@ -79,3 +79,7 @@ textarea.live-row {
 .red {
   background-color: red;
 }
+
+.column-input {
+    width: 100px;
+}

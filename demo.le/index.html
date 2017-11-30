@@ -15,8 +15,17 @@
         <button ng-click="collapse()"> collpase </button>
         <button ng-click="expand()"> expand </button>
         <button ng-click="test2()">noTask</button>
-        <div gantt data="data" api="registerApi">
+        <div gantt data="data" api="registerApi" max-height="400">
             <gantt-tree></gantt-tree>
+             <gantt-table
+                columns="columns"
+                formatter="formatter"
+                headers="columnsHeaders"
+                classes="columnsClasses"
+                header-contents="headerContents"
+                contents="contents"
+                ></gantt-table>
+            
         </div>
     </div>
 </body>
