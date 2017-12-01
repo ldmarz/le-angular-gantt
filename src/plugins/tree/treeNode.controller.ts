@@ -34,7 +34,8 @@ export default function ($scope,$rootScope) {
     } else {
       $scope.$parent.childrenRows = newValue
     }
-    if (get($scope, 'row.model.level', null) !== levels.TASK) {
+    if ((get($scope, 'row.model.level', null) !== levels.TASK && get($scope, 'row.model.isSchedulling') === undefined)
+    || (get($scope, 'row.model.isSchedulling', null) && get($scope, 'row.model.level', null) !== levels.WORKPACKAGES)) {
       // this functions going to remove this watcher if the row not are a TASK
       $scope.watchChildren()
     }
