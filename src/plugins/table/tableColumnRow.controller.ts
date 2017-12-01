@@ -11,8 +11,8 @@ export default function ($scope) {
     return value
   }
 
-  $scope.getRowContent = function (column) {
-    $scope.column = column
+  $scope.getRowContent = function () {
+    $scope.column = $scope.$$childHead.column
     let content
 
     if ($scope.row.model.columnContents) {
@@ -31,7 +31,7 @@ export default function ($scope) {
       content = $scope.pluginScope.content
     }
     if (content === undefined) {
-      return '{{getValue(column)}}'
+      return '{{::getValue()}}'
     }
     return content
   }

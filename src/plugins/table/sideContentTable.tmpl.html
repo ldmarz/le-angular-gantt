@@ -12,9 +12,9 @@
      <div class="gantt-table-content"  ng-style="getMaxHeightCss()">
             <div gantt-vertical-scroll-receiver>
                 <div class="gantt-table-row gantt-row-height" ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="TableColumnRowController" id="id">
-                    <div gantt-row-label class="gantt-row-label {{getClass(column)}}" ng-repeat="column in ::pluginScope.columns" 
-                    ng-style="{height: '100%', display: 'inline-block'}"   >
-                         <span class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(column)"></span>
+                    <div gantt-row-label id="id" class="gantt-row-label {{::getClass(column)}}" ng-repeat="column in ::pluginScope.columns" 
+                    style="height: 100%; display: 'inline-block'"   >
+                         <span class="gantt-label-text" gantt-bind-compile-html-one-time="::getRowContent()"></span>
                     </div>
                 </div>
             </div>

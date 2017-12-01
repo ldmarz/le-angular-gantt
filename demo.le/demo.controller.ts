@@ -63,7 +63,7 @@ export default function ($scope) {
     'model.avic': 'column-avic'
   }
   $scope.contents = {
-    'model.mec': '<span>{{getValue()}}</span>',
-    'model.avic': '<span>{{getValue()}}</span>'
+    'model.mec': '<span>{{::getValue()}}</span>',
+    'model.avic': '<span>{{::getValue()}}</span>'
   }
 }
