@@ -79,3 +79,11 @@ textarea.live-row {
 .red {
   background-color: red;
 }
+
+.column-input {
+    width: 100px;
+}
+
+.column-avic {
+    width: 200px;
+}

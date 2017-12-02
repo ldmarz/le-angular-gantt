@@ -12,7 +12,9 @@ export default function ($scope) {
   }
 
   $scope.getRowContent = function () {
+    $scope.column = $scope.$$childHead.column
     let content
+
     if ($scope.row.model.columnContents) {
       content = $scope.row.model.columnContents[$scope.column]
     }
@@ -29,13 +31,13 @@ export default function ($scope) {
       content = $scope.pluginScope.content
     }
     if (content === undefined) {
-      return '{{getValue()}}'
+      return '{{::getValue()}}'
     }
     return content
   }
 
   $scope.getHeight = function () {
-    return {'height': $scope.row.model.height}
+    return {'height': $scope.row.model.height, 'width': '100px'}
   }
 
   $scope.getClasses = function () {
@@ -46,4 +48,7 @@ export default function ($scope) {
     }
   }
 
+  $scope.getClass = function (column) {
+    return $scope.pluginScope.classes[column]
+  }
 }

@@ -18,7 +18,8 @@ export default function (ganttUtils: GanttUtilsService, $compile, $document) {
       contents: '=?',
       headerContents: '=?',
       formatters: '=?',
-      headerFormatter: '=?'
+      headerFormatter: '=?',
+      columnsHeight: '=?'
     },
     link: function (scope, element, attrs, ganttCtrl) {
       let api = ganttCtrl.gantt.api
