@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.0 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.4 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -31721,8 +31721,8 @@ exports.default = ["$scope", function ($scope) {
         }
         return value;
     };
-    $scope.getRowContent = function (column) {
-        $scope.column = column;
+    $scope.getRowContent = function () {
+        $scope.column = $scope.$$childHead.column;
         var content = void 0;
         if ($scope.row.model.columnContents) {
             content = $scope.row.model.columnContents[$scope.column];
@@ -31740,7 +31740,7 @@ exports.default = ["$scope", function ($scope) {
             content = $scope.pluginScope.content;
         }
         if (content === undefined) {
-            return '{{getValue(column)}}';
+            return '{{::getValue()}}';
         }
         return content;
     };
@@ -32709,7 +32709,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/table/sideContentTable.tmpl.html';
-var html = "<div class=gantt-side-content-table> <div class=\"gantt-table-column {{getClass()}}\" ng-repeat=\"column in ::pluginScope.columns\" ng-controller=TableColumnController> <div class=gantt-table-header ng-style=\"::{height: '2em'}\"> <div ng-show=ganttHeaderHeight class=\"gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row\"> <span class=gantt-label-text gantt-bind-compile-html=::getHeaderContent() /> </div> </div> </div> <div class=gantt-table-content ng-style=getMaxHeightCss()> <div gantt-vertical-scroll-receiver> <div class=\"gantt-table-row gantt-row-height\" ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\" ng-controller=TableColumnRowController id=id> <div gantt-row-label class=\"gantt-row-label {{getClass(column)}}\" ng-repeat=\"column in ::pluginScope.columns\" ng-style=\"{height: '100%', display: 'inline-block'}\"> <span class=gantt-label-text gantt-bind-compile-html-one-time=getRowContent(column)></span> </div> </div> </div> </div> </div>";
+var html = "<div class=gantt-side-content-table> <div class=\"gantt-table-column {{getClass()}}\" ng-repeat=\"column in ::pluginScope.columns\" ng-controller=TableColumnController> <div class=gantt-table-header ng-style=\"::{height: '2em'}\"> <div ng-show=ganttHeaderHeight class=\"gantt-row-label-header gantt-row-label gantt-table-row gantt-table-header-row\"> <span class=gantt-label-text gantt-bind-compile-html=::getHeaderContent() /> </div> </div> </div> <div class=gantt-table-content ng-style=getMaxHeightCss()> <div gantt-vertical-scroll-receiver> <div class=\"gantt-table-row gantt-row-height\" ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\" ng-controller=TableColumnRowController id=id> <div gantt-row-label class=\"gantt-row-label {{::getClass(column)}}\" ng-repeat=\"column in ::pluginScope.columns\" style=height:100%;display:inline-block> <span class=gantt-label-text gantt-bind-compile-html-one-time=::getRowContent()></span> </div> </div> </div> </div> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -32847,4 +32847,3 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_271__;
 /******/ ]);
 });
 //# sourceMappingURL=angular-gantt-plugins.js.map
- * Project: le-angular-gantt v2.0.1 - Gantt chart component for AngularJS
