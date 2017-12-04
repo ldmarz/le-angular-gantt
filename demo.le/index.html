@@ -17,6 +17,11 @@
         <button ng-click="test2()">noTask</button>
         <div gantt data="data" api="registerApi">
             <gantt-tree></gantt-tree>
+             <gantt-movable enabled="true"
+                allow-moving="true" 
+                allow-resizing="true"
+                allow-row-switching="false">
+              </gantt-movable>
         </div>
     </div>
 </body>

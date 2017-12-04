@@ -28,7 +28,7 @@
             <gantt-body-background>
                 <gantt-row-background ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id"></gantt-row-background>
             </gantt-body-background>
-          <!--   <gantt-body-foreground>
+            <!-- <gantt-body-foreground>
                 <div class="gantt-current-date-line" ng-show="currentDate === 'line' && gantt.currentDateManager.position >= 0 && gantt.currentDateManager.position <= gantt.width" ng-style="{'left': gantt.currentDateManager.position + 'px' }"></div>
             </gantt-body-foreground> -->
             <gantt-body-columns>
@@ -135,7 +135,7 @@
     <script type="text/ng-template" id="template/ganttTask.tmpl.html">
         <div class="gantt-task" ng-class="::getClass()">
             <gantt-task-background></gantt-task-background> 
-        <!--     <gantt-task-foreground></gantt-task-foreground> -->
+            <gantt-task-foreground></gantt-task-foreground>
             <gantt-task-content></gantt-task-content>  
         </div>
     </script>
@@ -144,12 +144,12 @@
         <div class="gantt-task-background" ng-style="{'background-color': task.model.color}"></div>
     </script>
 
-<!--     <script type="text/ng-template" id="template/ganttTaskForeground.tmpl.html">
+    <script type="text/ng-template" id="template/ganttTaskForeground.tmpl.html">
         <div class="gantt-task-foreground">
             <div ng-if="task.truncatedRight" class="gantt-task-truncated-right" ng-style="{'padding-right': task.truncatedRightOffset + 'px'}">&gt;</div>
             <div ng-if="task.truncatedLeft" class="gantt-task-truncated-left" ng-style="{'padding-left': task.truncatedLeftOffset + 'px'}">&lt;</div>
         </div>
-    </script> -->
+    </script>
 
     <!-- Task content template -->
     <script type="text/ng-template" id="template/ganttTaskContent.tmpl.html">
