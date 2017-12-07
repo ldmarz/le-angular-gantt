@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.0 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.1 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -4792,7 +4792,7 @@ var _side = __webpack_require__(48);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Gantt = exports.Gantt = function () {
-    function Gantt($scope, $element, $rootScope) {
+    function Gantt($scope, $element) {
         var _this = this;
 
         (0, _classCallCheck3.default)(this, Gantt);
@@ -4800,7 +4800,6 @@ var Gantt = exports.Gantt = function () {
         this.rendered = false;
         this.isRefreshingColumns = false;
         this.$scope = $scope;
-        this.$rootScope = $rootScope;
         this.$element = $element;
         this.options = new _options.GanttOptions($scope, {
             'api': function api() {},
@@ -5156,7 +5155,6 @@ var Gantt = exports.Gantt = function () {
                 if (w > 0) {
                     _this2.options.set('sideWidth', w);
                 }
-                _this2.$rootScope.$broadcast('gantt-table-content:recompile');
                 _this2.api.core.raise.rendered(_this2.api);
             });
         }
