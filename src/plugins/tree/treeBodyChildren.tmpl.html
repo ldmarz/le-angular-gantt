@@ -2,7 +2,7 @@
      class="gantt-row-label gantt-row-height"
      ng-style="{'height': row.model.height}"
      ng-class="row.model.classes">
-    <div class="gantt-valign-container">
+    <div class="gantt-valign-container" row-id="{{::row.model.id}}">
         <div class="gantt-valign-content">
             <a ng-disabled="::isCollapseDisabled()" data-nodrag
                ng-if="::row.model.level !== levels.LABOR"
@@ -15,7 +15,7 @@
                 'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,
                 'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}"></span>
             </a>
-            <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="::getRowContent()"/>
+            <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="::getRowContent()" row-id="{{::row.model.id}}"/>
         </div>
     </div>
 </div>
