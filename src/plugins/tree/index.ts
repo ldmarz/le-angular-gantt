@@ -4,6 +4,7 @@ import uiTree from 'angular-ui-tree'
 
 import ganttModule from '../../index'
 
+import config from './config/config'
 import ganttTreeDirective from './tree.directive'
 import ganttRowTreeLabelDirective from './rowTreeLabel.directive'
 import ganttSideContentTreeDirective from './sideContentTree.directive'
@@ -19,6 +20,7 @@ require('angular-ui-tree/dist/angular-ui-tree.css')
 require('./tree.css')
 
 angular.module(pluginModule, [ganttModule, uiTree || 'ui.tree']) // https://github.com/angular-ui-tree/angular-ui-tree/issues/937
+  .config(config)
   .directive('ganttTree', ganttTreeDirective)
   .directive('ganttRowTreeLabel', ganttRowTreeLabelDirective)
   .directive('ganttSideContentTree', ganttSideContentTreeDirective)
