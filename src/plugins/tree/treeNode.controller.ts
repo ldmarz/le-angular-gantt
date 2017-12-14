@@ -82,4 +82,6 @@ export default function ($scope,$rootScope) {
       }
     }
   }
+
+  $scope.collapsed = true
 }

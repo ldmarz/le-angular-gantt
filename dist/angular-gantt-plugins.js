@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.9 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.10 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -14,7 +14,7 @@
 		exports["angular-gantt-plugins"] = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-native-dragdrop"), require("jsPlumb"), require("ui.tree"));
 	else
 		root["angular-gantt-plugins"] = factory(root["angular"], root["moment"], root["ElementQueries"], root["ResizeSensor"], root["angular-native-dragdrop"], root["jsPlumb"], root["ui.tree"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_267__, __WEBPACK_EXTERNAL_MODULE_268__, __WEBPACK_EXTERNAL_MODULE_269__, __WEBPACK_EXTERNAL_MODULE_270__, __WEBPACK_EXTERNAL_MODULE_271__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_268__, __WEBPACK_EXTERNAL_MODULE_269__, __WEBPACK_EXTERNAL_MODULE_270__, __WEBPACK_EXTERNAL_MODULE_271__, __WEBPACK_EXTERNAL_MODULE_272__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -9652,7 +9652,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-__webpack_require__(269);
+__webpack_require__(270);
 
 var _index = __webpack_require__(6);
 
@@ -9760,7 +9760,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _angularUiTree = __webpack_require__(271);
+var _angularUiTree = __webpack_require__(272);
 
 var _angularUiTree2 = _interopRequireDefault(_angularUiTree);
 
@@ -9768,35 +9768,39 @@ var _index = __webpack_require__(6);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _tree = __webpack_require__(244);
+var _config = __webpack_require__(241);
+
+var _config2 = _interopRequireDefault(_config);
+
+var _tree = __webpack_require__(245);
 
 var _tree2 = _interopRequireDefault(_tree);
 
-var _rowTreeLabel = __webpack_require__(241);
+var _rowTreeLabel = __webpack_require__(242);
 
 var _rowTreeLabel2 = _interopRequireDefault(_rowTreeLabel);
 
-var _sideContentTree = __webpack_require__(242);
+var _sideContentTree = __webpack_require__(243);
 
 var _sideContentTree2 = _interopRequireDefault(_sideContentTree);
 
-var _treeBody = __webpack_require__(245);
+var _treeBody = __webpack_require__(246);
 
 var _treeBody2 = _interopRequireDefault(_treeBody);
 
-var _treeHeader = __webpack_require__(246);
+var _treeHeader = __webpack_require__(247);
 
 var _treeHeader2 = _interopRequireDefault(_treeHeader);
 
-var _uiTree = __webpack_require__(248);
+var _uiTree = __webpack_require__(249);
 
 var _uiTree2 = _interopRequireDefault(_uiTree);
 
-var _treeNode = __webpack_require__(247);
+var _treeNode = __webpack_require__(248);
 
 var _treeNode2 = _interopRequireDefault(_treeNode);
 
-var _tree3 = __webpack_require__(243);
+var _tree3 = __webpack_require__(244);
 
 var _tree4 = _interopRequireDefault(_tree3);
 
@@ -9805,7 +9809,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var pluginModule = 'gantt.tree';
 __webpack_require__(188);
 __webpack_require__(201);
-_angular2.default.module(pluginModule, [_index2.default, _angularUiTree2.default || 'ui.tree']).directive('ganttTree', _tree2.default).directive('ganttRowTreeLabel', _rowTreeLabel2.default).directive('ganttSideContentTree', _sideContentTree2.default).directive('ganttTreeBody', _treeBody2.default).directive('ganttTreeHeader', _treeHeader2.default).controller('GanttUiTreeController', _uiTree2.default).controller('GanttTreeNodeController', _treeNode2.default).controller('GanttTreeController', _tree4.default);
+_angular2.default.module(pluginModule, [_index2.default, _angularUiTree2.default || 'ui.tree']).config(_config2.default).directive('ganttTree', _tree2.default).directive('ganttRowTreeLabel', _rowTreeLabel2.default).directive('ganttSideContentTree', _sideContentTree2.default).directive('ganttTreeBody', _treeBody2.default).directive('ganttTreeHeader', _treeHeader2.default).controller('GanttUiTreeController', _uiTree2.default).controller('GanttTreeNodeController', _treeNode2.default).controller('GanttTreeController', _tree4.default);
 exports.default = pluginModule;
 
 /***/ }),
@@ -26982,7 +26986,7 @@ exports.default = pluginModule;
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(265), __webpack_require__(266)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(266), __webpack_require__(267)(module)))
 
 /***/ }),
 /* 203 */
@@ -28073,7 +28077,7 @@ var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(249);
+__webpack_require__(250);
 
 /***/ }),
 /* 207 */
@@ -28134,7 +28138,7 @@ var _angular2 = _interopRequireDefault(_angular);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(250);
+__webpack_require__(251);
 
 /***/ }),
 /* 208 */
@@ -29246,7 +29250,7 @@ exports.default = ["GanttDependency", "GanttDependenciesEvents", "GanttDependenc
     return DependenciesManager;
 }];
 
-var _jsplumb = __webpack_require__(270);
+var _jsplumb = __webpack_require__(271);
 
 var _jsplumb2 = _interopRequireDefault(_jsplumb);
 
@@ -29888,7 +29892,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(251);
+__webpack_require__(252);
 
 /***/ }),
 /* 219 */
@@ -30093,7 +30097,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(252);
+__webpack_require__(253);
 
 /***/ }),
 /* 221 */
@@ -30226,7 +30230,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(253);
+__webpack_require__(254);
 
 /***/ }),
 /* 223 */
@@ -30246,7 +30250,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(254);
+__webpack_require__(255);
 
 /***/ }),
 /* 224 */
@@ -30266,7 +30270,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(255);
+__webpack_require__(256);
 
 /***/ }),
 /* 225 */
@@ -31063,7 +31067,7 @@ exports.default = ["$templateCache", function ($templateCache) {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(256);
+__webpack_require__(257);
 
 /***/ }),
 /* 230 */
@@ -31160,11 +31164,11 @@ exports.default = function () {
     };
 };
 
-var _ElementQueries = __webpack_require__(267);
+var _ElementQueries = __webpack_require__(268);
 
 var _ElementQueries2 = _interopRequireDefault(_ElementQueries);
 
-var _ResizeSensor = __webpack_require__(268);
+var _ResizeSensor = __webpack_require__(269);
 
 var _ResizeSensor2 = _interopRequireDefault(_ResizeSensor);
 
@@ -31429,7 +31433,7 @@ var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(257);
+__webpack_require__(258);
 
 /***/ }),
 /* 233 */
@@ -31473,7 +31477,7 @@ exports.default = ["$templateCache", function ($templateCache) {
     };
 }];
 
-__webpack_require__(258);
+__webpack_require__(259);
 
 /***/ }),
 /* 234 */
@@ -31575,7 +31579,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(259);
+__webpack_require__(260);
 
 /***/ }),
 /* 236 */
@@ -31944,7 +31948,7 @@ var angular = _interopRequireWildcard(_angular);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-__webpack_require__(260);
+__webpack_require__(261);
 
 /***/ }),
 /* 240 */
@@ -32032,13 +32036,10 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+exports.default = ["treeConfig", function (treeConfig) {
     'ngInject';
 
-    var builder = new GanttDirectiveBuilder('ganttRowTreeLabel');
-    builder.restrict = 'A';
-    builder.templateUrl = undefined;
-    return builder.build();
+    treeConfig.defaultCollapsed = true;
 }];
 
 /***/ }),
@@ -32055,14 +32056,34 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     'ngInject';
 
+    var builder = new GanttDirectiveBuilder('ganttRowTreeLabel');
+    builder.restrict = 'A';
+    builder.templateUrl = undefined;
+    return builder.build();
+}];
+
+/***/ }),
+/* 243 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
     var builder = new GanttDirectiveBuilder('ganttSideContentTree', 'plugins/tree/sideContentTree.tmpl.html');
     return builder.build();
 }];
 
-__webpack_require__(261);
+__webpack_require__(262);
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32359,7 +32380,7 @@ exports.default = ["$scope", "$filter", "GanttHierarchy", function ($scope, $fil
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32429,7 +32450,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32459,11 +32480,11 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(262);
 __webpack_require__(263);
+__webpack_require__(264);
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32480,10 +32501,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(264);
+__webpack_require__(265);
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32583,6 +32604,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
             }
         }
     };
+    $scope.collapsed = true;
 }];
 
 var _lodash = __webpack_require__(202);
@@ -32592,7 +32614,7 @@ var _constant = __webpack_require__(204);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32616,7 +32638,7 @@ exports.default = ["$scope", function ($scope) {
 }];
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/bounds/taskBounds.tmpl.html';
@@ -32625,7 +32647,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/corner/corner.tmpl.html';
@@ -32634,7 +32656,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/groups/taskGroup.tmpl.html';
@@ -32643,7 +32665,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/groups/taskOverview.tmpl.html';
@@ -32652,7 +32674,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/labelsBody.tmpl.html';
@@ -32661,7 +32683,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/labelsHeader.tmpl.html';
@@ -32670,7 +32692,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/sideContentLabels.tmpl.html';
@@ -32679,7 +32701,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/progress/taskProgress.tmpl.html';
@@ -32688,7 +32710,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/sections/taskSection.tmpl.html';
@@ -32697,7 +32719,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/sections/taskSections.tmpl.html';
@@ -32706,7 +32728,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/table/sideContentTable.tmpl.html';
@@ -32715,7 +32737,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tooltips/tooltip.tmpl.html';
@@ -32724,7 +32746,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/sideContentTree.tmpl.html';
@@ -32733,7 +32755,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeBody.tmpl.html';
@@ -32742,16 +32764,16 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeBodyChildren.tmpl.html';
-var html = "<div ng-controller=GanttTreeNodeController class=\"gantt-row-label gantt-row-height\" ng-style=\"{'height': row.model.height}\" ng-class=row.model.classes row-id={{::row.model.id}}> <div class=gantt-valign-container row-id={{::row.model.id}}> <div class=gantt-valign-content> <a ng-disabled=::isCollapseDisabled() data-nodrag ng-if=\"::row.model.level !== levels.LABOR\" class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\" ng-click=\"toggle(); reportCollapsed(collapsed)\"> <span class=\"gantt-tree-handle glyphicon glyphicon-chevron-down\" ng-class=\"{\n                'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,\n                'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\"></span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() row-id={{::row.model.id}} /> </div> </div> </div> <ol ui-tree-nodes ng-class=\"{hidden: collapsed}\" ng-model=childrenRows> <li ng-repeat=\"row in childrenRows\" ui-tree-node> <div ng-include=\"'plugins/tree/treeBodyChildren.tmpl.html'\"></div> </li> </ol> ";
+var html = "<div ng-controller=GanttTreeNodeController class=\"gantt-row-label gantt-row-height\" ng-style=\"{'height': row.model.height}\" ng-class=row.model.classes row-id={{::row.model.id}}> <div class=gantt-valign-container row-id={{::row.model.id}}> <div class=gantt-valign-content> <a data-nodrag ng-if=\"::row.model.level !== levels.LABOR\" class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\" ng-click=\"toggle(); reportCollapsed(collapsed)\"> <span class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,\n                'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}\"></span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() row-id={{::row.model.id}} /> </div> </div> </div> <ol ui-tree-nodes ng-class=\"{hidden: collapsed}\" ng-model=childrenRows> <li ng-repeat=\"row in childrenRows\" ui-tree-node> <div ng-include=\"'plugins/tree/treeBodyChildren.tmpl.html'\"></div> </li> </ol> ";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeHeader.tmpl.html';
@@ -32760,7 +32782,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports) {
 
 var g;
@@ -32787,7 +32809,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -32815,12 +32837,6 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 267 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_267__;
-
-/***/ }),
 /* 268 */
 /***/ (function(module, exports) {
 
@@ -32843,6 +32859,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_270__;
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_271__;
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_272__;
 
 /***/ })
 /******/ ]);

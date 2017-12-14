@@ -4,13 +4,13 @@
      ng-class="row.model.classes" row-id="{{::row.model.id}}">
     <div class="gantt-valign-container" row-id="{{::row.model.id}}">
         <div class="gantt-valign-content">
-            <a ng-disabled="::isCollapseDisabled()" data-nodrag
+            <a data-nodrag
                ng-if="::row.model.level !== levels.LABOR"
                class="gantt-tree-handle-button btn btn-xs"
                ng-class="{'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}"
                ng-click="toggle(); reportCollapsed(collapsed)">
                <span
-                class="gantt-tree-handle glyphicon glyphicon-chevron-down"
+                class="gantt-tree-handle glyphicon"
                 ng-class="{
                 'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed,
                 'gantt-tree-collapsed': collapsed, 'gantt-tree-expanded': !collapsed}"></span>
