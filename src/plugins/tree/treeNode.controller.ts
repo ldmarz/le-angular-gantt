@@ -64,15 +64,7 @@ export default function ($scope,$rootScope) {
     return content
   }
 
-  $scope.$on('angular-ui-tree:collapse-all', () => {
-    $scope.reportCollapsed($scope.collapsed)
-  })
-
-  $scope.$on('angular-ui-tree:expand-all', () => {
-    $scope.reportCollapsed($scope.collapsed)
-  })
-
-  $scope.reportCollapsed = function (newValue) {
+  $scope.$watch('collapsed', function (newValue) {
     if ($scope.$modelValue._collapsed !== newValue) {
       let oldValue = $scope.$modelValue._collapsed
       $scope.$modelValue._collapsed = newValue // $modelValue contains the Row object
@@ -81,5 +73,5 @@ export default function ($scope,$rootScope) {
         $scope.gantt.api.rows.refresh()
       }
     }
-  }
+  })
 }
