@@ -1,7 +1,7 @@
 export default function ($scope) {
   'ngInject'
-  $scope.getValue = function () {
-    let value = $scope.$eval($scope.column, $scope.row)
+  $scope.getValue = function (column) {
+    let value = $scope.$eval(column, $scope.row)
 
     let formatter = $scope.pluginScope.formatters[$scope.column]
     if (formatter !== undefined) {
@@ -11,8 +11,9 @@ export default function ($scope) {
     return value
   }
 
-  $scope.getRowContent = function () {
-    $scope.column = $scope.$$childHead.column
+  $scope.getRowContent = function (column) {
+    // debugger;
+    // $scope.column = $scope.$$childHead.column;
     let content
 
     if ($scope.row.model.columnContents) {
@@ -31,8 +32,9 @@ export default function ($scope) {
       content = $scope.pluginScope.content
     }
     if (content === undefined) {
-      return '{{::getValue()}}'
+      return "{{::getValue('" + column + "')}}"
     }
+
     return content
   }
 

@@ -10,16 +10,28 @@ export default function ($scope) {
       id: '1',
       level: 1,
       tasks: [
-        {name: 'task1', mec: 'mec', avic: 'avic1', from: moment(), to: moment().add(60, 'minutes')}
+        {name: 'task1',from: moment(), to: moment().add(60, 'minutes')}
       ]
     },
     {
-      id: '2', mec: 'mec', avic: 'avic2', name: 'row2', parent: 1, level: 2, tasks: [
+      id: '2', 
+      mec: 'mec2', 
+      avic: 'avic2', 
+      name: 'row2',
+      parent: 1, 
+      level: 2, 
+      tasks: [
         { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
       ]
     },
     {
-      id: '3', mec: 'mec3', avic: 'avic3', name: 'row2', parent: 2, level: 3, tasks: [
+      id: '3', 
+      mec: 'mec3', 
+      avic: 'avic3', 
+      name: 'row2', 
+      parent: 2, 
+      level: 3, 
+      tasks: [
         { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
       ]
     }
@@ -63,7 +75,7 @@ export default function ($scope) {
     'model.avic': 'column-avic'
   }
   $scope.contents = {
-    'model.mec': '<span>{{::getValue()}}</span>',
-    'model.avic': '<span>{{::getValue()}}</span>'
+    'model.mec': '<span>{{getValue()}}</span>',
+    'model.avic': '<span>{{getValue()}}</span>'
   }
 }

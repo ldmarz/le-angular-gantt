@@ -17,15 +17,17 @@
         <button ng-click="test2()">noTask</button>
         <div gantt data="data" api="registerApi" max-height="400">
             <gantt-tree></gantt-tree>
-             <gantt-table
-                columns="columns"
-                formatter="formatter"
-                headers="columnsHeaders"
-                classes="columnsClasses"
-                header-contents="headerContents"
-                contents="contents"
-                ></gantt-table>
-            
+             <gantt-movable enabled="true"
+                allow-moving="true" 
+                allow-resizing="true"
+                allow-row-switching="false">
+              </gantt-movable>
+              <gantt-table
+                columns="::columns"
+                headers="::columnsHeaders"
+                contents="::contents"
+                classes="::columnsClasses"
+              >
         </div>
     </div>
 </body>
