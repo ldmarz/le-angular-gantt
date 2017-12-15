@@ -4,7 +4,7 @@ import _ from 'lodash'
 export default function ($scope) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', id: '1', level: 1, tasks: [
+    {name: 'row1', mec: 'mec1', id: '1', level: 1, tasks: [
         {name: 'task1', from: moment(), to: moment().add(60, 'minutes')}
     ]}
   ]
@@ -62,7 +62,7 @@ export default function ($scope) {
     'model.avic': 'column-avic'
   }
   $scope.contents = {
-    'model.mec': '<span>{{getValue()}}</span>',
-    'model.avic': '<span>{{getValue()}}</span>'
+    'model.mec': "<span>{{getValue('model.mec')}}</span>",
+    'model.avic': '<span>{{getValue(model.avic)}}</span>'
   }
 }

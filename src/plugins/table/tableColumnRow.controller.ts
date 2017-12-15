@@ -3,9 +3,9 @@ export default function ($scope) {
   $scope.getValue = function (column) {
     let value = $scope.$eval(column, $scope.row)
 
-    let formatter = $scope.pluginScope.formatters[$scope.column]
+    let formatter = $scope.pluginScope.formatters[column]
     if (formatter !== undefined) {
-      value = formatter(value, $scope.column, $scope.row)
+      value = formatter(value, column, $scope.row)
     }
 
     return value
@@ -13,7 +13,7 @@ export default function ($scope) {
 
   $scope.getRowContent = function (column) {
     // debugger;
-    // $scope.column = $scope.$$childHead.column;
+    $scope.column = column
     let content
 
     if ($scope.row.model.columnContents) {
