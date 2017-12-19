@@ -15,7 +15,15 @@
         <button ng-click="collapse()"> collpase </button>
         <button ng-click="expand()"> expand </button>
         <button ng-click="test2()">noTask</button>
-        <div gantt data="data" api="registerApi">
+        <div gantt data="data" 
+            api="registerApi"
+            auto-expand="autoExpand" 
+            task-out-of-range="taskOutOfRange"
+            extra-scale-time="extraScaleTime" 
+            expand-to-fit="expandToFit" 
+            width="width"
+            column-width="getColumnWidth(width, 'day', 1)"
+            shrink-to-fit="shrinkToFit">
             <gantt-tree></gantt-tree>
              <gantt-movable enabled="true"
                 allow-moving="true" 

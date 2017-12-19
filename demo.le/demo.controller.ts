@@ -20,6 +20,23 @@ export default function ($scope) {
     ]
   }]
 
+  $scope.extraScaleTime = {
+    time: 16
+  }
+
+  $scope.autoExpand = 'both'
+  $scope.taskOutOfRange = 'resize'
+  $scope.expandToFit = true
+  $scope.shrinkToFit = false
+  $scope.width = true
+
+  $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
+    if (!widthEnabled) {
+      return undefined
+    }
+    return 140 * zoom
+  }
+
   $scope.registerApi = function (api) {
     $scope.api = api
     const _this = $scope

@@ -1,6 +1,7 @@
 import angular, {IFilterFilterComparatorFunc, ITimeoutService} from 'angular'
 
 import moment from 'moment'
+import {assign} from 'lodash'
 
 import GanttArrays from '../util/arrays.service'
 import {GanttRow, GanttRowModel} from './row.factory'
@@ -26,6 +27,9 @@ export class GanttRowsManager {
 
   _defaultFilterImpl: { (sortedRows: GanttRow[], filterRow: GanttRow[], filterRowComparator: (IFilterFilterComparatorFunc<GanttRow> | boolean)): GanttRow[]}
   filterImpl: { (sortedRows: GanttRow[], filterRow: GanttRow[], filterRowComparator: (IFilterFilterComparatorFunc<GanttRow> | boolean)): GanttRow[]}
+  defaultExtraScaleTime: {
+    time: number
+  }
 
   constructor (gantt: Gantt) {
     this.gantt = gantt
@@ -37,6 +41,9 @@ export class GanttRowsManager {
 
     this.customRowSorters = []
     this.customRowFilters = []
+    this.defaultExtraScaleTime = {
+      time: 12
+    }
 
     this.gantt.$scope.$watchGroup(['filterTask', 'filterTaskComparator'], (newValues, oldValues) => {
       if (newValues !== oldValues) {
@@ -69,6 +76,10 @@ export class GanttRowsManager {
         })
       }
     })
+
+    if (this.gantt.options.value('extraScaleTime')) {
+      assign(this.defaultExtraScaleTime, this.gantt.options.value('extraScaleTime'))
+    }
 
     this.gantt.api.registerMethod('rows', 'sort', GanttRowsManager.prototype.sortRows, this)
     this.gantt.api.registerMethod('rows', 'applySort', GanttRowsManager.prototype.applySort, this)
@@ -473,7 +484,9 @@ export class GanttRowsManager {
         defaultFrom = row.from
       }
     }
-    return defaultFrom
+    const units: moment.unitOfTime.DurationConstructor = 'hours'
+    const duration = moment.duration(this.defaultExtraScaleTime.time, units)
+    return moment(defaultFrom).subtract(duration)
   }
 
   getDefaultTo () {
@@ -483,7 +496,9 @@ export class GanttRowsManager {
         defaultTo = row.to
       }
     }
-    return defaultTo
+    const units: moment.unitOfTime.DurationConstructor = 'hours'
+    const duration = moment.duration(this.defaultExtraScaleTime.time, units)
+    return moment(defaultTo).add(duration)
   }
 }
 

@@ -2,6 +2,7 @@ import moment from 'moment'
 import {ITimeoutService} from 'angular'
 import {GanttDebounce} from '../util/debounce.factory'
 import {GanttDirectiveBuilder} from '../util/directiveBuilder.factory'
+import angular from 'angular'
 
 export default function (GanttDirectiveBuilder: {new(directiveName: string, templateUrl?: string, require?: string | string[], restrict?: string): GanttDirectiveBuilder},
                          $timeout: ITimeoutService,
@@ -79,9 +80,13 @@ export default function (GanttDirectiveBuilder: {new(directiveName: string, temp
           $timeout.cancel(autoExpandTimer)
         }
 
-        autoExpandTimer = $timeout(function () {
-          autoExpandColumns(el, date, direction)
-        }, 300)
+        const element = document.querySelector('.gantt-task-resizing, gantt-task-moving')
+        if (element) {
+          autoExpandTimer = $timeout(function () {
+            autoExpandColumns(el, date, direction)
+          }, 300)
+        }
+
       } else {
         $scope.gantt.api.scroll.raise.scroll(currentScrollLeft)
       }
