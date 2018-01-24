@@ -4,8 +4,8 @@ import _ from 'lodash'
 export default function ($scope) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', id: '1', level: 1, tasks: [
-        {name: 'task1', from: moment(), to: moment().add(60, 'minutes')}
+    {name: 'row1', mec: 'mec1', id: '1', level: 1, tasks: [
+      { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes')}
     ]}
   ]
 

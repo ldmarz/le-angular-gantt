@@ -1,3 +1,29 @@
+# New features
+
+   - ## Less watchers using one-time binding
+   - ## Extra scale time for gantt columns
+       Use extraScaleTime to scale symmetricaly the headerScale
+            
+            // SomeComponent.js
+            extraScaleTime: {
+                time: 3 // In Hours
+            }
+
+            // SomeTemplate.js
+            <div 
+                gantt
+                extra-scale-time="$scope.extraScaleTime"
+                >
+            </div>
+    - ## No draggable attribute
+        In order to avoid a task trigger the movable directive, you can use `no-draggable` attribute
+
+                tasks: [
+                    { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>'
+                    }
+                ]
+
+
 # angular-gantt 
 [![npm version](http://img.shields.io/npm/v/angular-gantt.svg?style=flat)](https://npmjs.org/package/angular-gantt) 
 [![Build status](http://img.shields.io/travis/angular-gantt/angular-gantt.svg?style=flat)](https://travis-ci.org/angular-gantt/angular-gantt)
