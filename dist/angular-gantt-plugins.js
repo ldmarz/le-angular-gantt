@@ -19823,9 +19823,11 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
             if (limitThreshold === undefined || limitThreshold > 0 && this.columns.length >= limitThreshold) {
                 this.visibleColumns = GanttColumnsManager.$filter('ganttColumnLimit')(this.columns, this.gantt);
                 this.visibleHeaders = [];
+                var temp = [];
                 for (i = 0; i < this.headers.length; i++) {
-                    this.visibleHeaders.push.apply(this.visibleHeaders, GanttColumnsManager.$filter('ganttColumnLimit')(this.headers[i], this.gantt));
+                    temp.push(GanttColumnsManager.$filter('ganttColumnLimit')(this.headers[i], this.gantt));
                 }
+                this.visibleHeaders.push.apply(this.visibleHeaders, temp);
             } else {
                 this.visibleColumns = this.columns;
                 this.visibleHeaders = this.headers;

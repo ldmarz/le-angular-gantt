@@ -200,7 +200,6 @@ export class GanttColumnsManager {
 
     this.columns = GanttColumnsManager.GanttColumnGenerator.generate(this.columnBuilder, this.from, this.to, this.gantt.options.value('viewScale'), this.getColumnsWidth())
     this.headers = GanttColumnsManager.GanttHeadersGenerator.generate(this)
-
     this.updateColumnsMeta()
     this.scrollToScrollAnchor();
 
@@ -438,9 +437,12 @@ export class GanttColumnsManager {
       this.visibleColumns = GanttColumnsManager.$filter('ganttColumnLimit')(this.columns, this.gantt)
 
       this.visibleHeaders = []
+      let temp = []
       for (i = 0; i < this.headers.length; i++) {
-        this.visibleHeaders.push.apply(this.visibleHeaders, GanttColumnsManager.$filter('ganttColumnLimit')(this.headers[i], this.gantt))
+        temp.push(GanttColumnsManager.$filter('ganttColumnLimit')(this.headers[i], this.gantt))
       }
+      this.visibleHeaders = temp
+
     } else {
       this.visibleColumns = this.columns
       this.visibleHeaders = this.headers

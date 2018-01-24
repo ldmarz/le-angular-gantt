@@ -9,6 +9,21 @@ export default function ($scope) {
     ]}
   ]
 
+  for (let index = 0; index < 1; index++) {
+    $scope.data.push(
+      {
+        name: 'row1', mec: 'mec1', level: 1,
+        tasks: [
+          {
+            name: 'hola hola',
+            from: moment().subtract(_.random(1, 10), 'hours'),
+            to: moment().add(_.random(1, 10), 'hours')
+          }
+        ]
+      }
+    )
+  }
+
   $scope.backup = [{
     id: '2', name: ' uandsnad sadas', parent: '1', level: 2, tasks: [
       { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
@@ -29,11 +44,9 @@ export default function ($scope) {
   $scope.expandToFit = true
   $scope.shrinkToFit = false
   $scope.width = true
+  $scope.scale = 'day'
 
   $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
-    if (!widthEnabled) {
-      return undefined
-    }
     return 140 * zoom
   }
 
