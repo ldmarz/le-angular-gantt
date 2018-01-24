@@ -147,8 +147,6 @@ export default function (ganttMouseButton: GanttMouseButton,
             let ele
             if (isArray(evt.path)) {
               ele = head(evt.path)
-              console.log(ele)
-              console.log(ele.hasAttribute('no-draggable'))
               return ele.hasAttribute('no-draggable')
             }
             return false
