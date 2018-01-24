@@ -33,7 +33,7 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       // currentDate: '=?',
       // daily: '=?',
       autoExpand: '<?',
-      // taskOutOfRange: '<?',
+      taskOutOfRange: '<?',
       // taskContent: '<?',
       // rowContent: '<?',
       maxHeight: '<?',
@@ -49,6 +49,7 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       columnMagnet: '<?',
       shiftColumnMagnet: '<?',
       // timeFramesMagnet: '<?',
+      extraScaleTime: '<?',
       data: '=?',
       api: '=?',
       options: '<?'
