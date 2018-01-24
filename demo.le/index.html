@@ -15,6 +15,8 @@
         <button ng-click="collapse()"> collpase </button>
         <button ng-click="expand()"> expand </button>
         <button ng-click="test2()">noTask</button>
+        <button type="button" style="width: 5em; text-align: left" class="btn btn-default" ng-model="scale" bs-options="s for s in ['minute', '5 minutes', 'hour', '3 hours', 'day', 'week', '2 weeks', 'month', 'quarter', '6 months', 'year']"
+            bs-select></button>
         <div gantt data="data" 
             api="registerApi"
             auto-expand="autoExpand" 
@@ -22,7 +24,9 @@
             extra-scale-time="extraScaleTime" 
             expand-to-fit="expandToFit" 
             width="width"
-            column-width="getColumnWidth(width, 'day', 1)"
+            max-height="500"
+            view-scale="scale"
+
             shrink-to-fit="shrinkToFit">
             <gantt-tree></gantt-tree>
              <gantt-movable enabled="true"
