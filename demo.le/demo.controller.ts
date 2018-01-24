@@ -3,19 +3,9 @@ import moment from 'moment'
 export default function ($scope) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', id: '1', level: 1, tasks: [
-        {name: 'task1', from: moment(), to: moment().add(60, 'minutes')}
-    ]},
-    {
-      id: '2', name: 'row2', parent: 1, level: 2, tasks: [
-        { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-      ]
-    },
-    {
-      id: '3', name: 'row2', parent: 2, level: 3, tasks: [
-        { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-      ]
-    }
+    {name: 'row1', mec: 'mec1', id: '1', level: 1, tasks: [
+      { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes')}
+    ]}
   ]
 
   $scope.registerApi = function (api) {

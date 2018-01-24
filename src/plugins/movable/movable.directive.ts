@@ -1,4 +1,5 @@
 import angular, {IAugmentedJQuery, IScope} from 'angular'
+import {each, isArray, head, indexOf} from 'lodash'
 
 import GanttUtilsService from '../../core/logic/util/utils.service'
 import GanttMouseButton from '../../core/ui/util/mouseButton.service'
@@ -72,6 +73,10 @@ export default function (ganttMouseButton: GanttMouseButton,
 
           let onPressEvents = function (evt) {
             evt.preventDefault()
+            if (isUnselectable(evt)) {
+              return false
+            }
+
             if (_hasTouch) {
               evt = ganttMouseOffset.getTouch(evt)
             }
@@ -136,6 +141,17 @@ export default function (ganttMouseButton: GanttMouseButton,
               moveTask(evt)
               scrollScreen(evt)
             }
+          }
+
+          let isUnselectable = function (evt) {
+            let ele
+            if (isArray(evt.path)) {
+              ele = head(evt.path)
+              console.log(ele)
+              console.log(ele.hasAttribute('no-draggable'))
+              return ele.hasAttribute('no-draggable')
+            }
+            return false
           }
 
           let moveTask = function (evt) {
