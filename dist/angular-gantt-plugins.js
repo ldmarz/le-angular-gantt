@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v2.0.10 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v2.0.15 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -19827,7 +19827,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 for (i = 0; i < this.headers.length; i++) {
                     temp.push(GanttColumnsManager.$filter('ganttColumnLimit')(this.headers[i], this.gantt));
                 }
-                this.visibleHeaders.push.apply(this.visibleHeaders, temp);
+                this.visibleHeaders = temp;
             } else {
                 this.visibleColumns = this.columns;
                 this.visibleHeaders = this.headers;
@@ -21443,6 +21443,8 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
             return templateUrl;
         },
         scope: {
+            sortMode: '<?',
+
             viewScale: '<?',
             columnWidth: '<?',
             expandToFit: '<?',
