@@ -16,7 +16,7 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       return templateUrl
     },
     scope: {
-      // sortMode: '<?',
+      sortMode: '<?',
       // filterTask: '=?',
       // filterTaskComparator: '=?',
       // filterRow: '=?',
