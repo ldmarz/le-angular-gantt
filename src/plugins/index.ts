@@ -13,7 +13,7 @@ import sortable from './sortable'
 import table from './table'
 import tooltips from './tooltips'
 import tree from './tree'
-
+import recycler from './recycler'
 export default {
   bounds: bounds,
   corner: corner,
@@ -29,5 +29,6 @@ export default {
   sortable: sortable,
   table: table,
   tooltips: tooltips,
-  tree: tree
+  tree: tree,
+  recycler: recycler
 }

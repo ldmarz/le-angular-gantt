@@ -149,6 +149,10 @@ angular-animate@^1.6.7:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.7.tgz#bc6dbe6a190d019a6fbb2c7373d40f01cfd75899"
 
+angular-aria@^1.6.9:
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.9.tgz#150fa603ba7f604f48e3715b76ab3ec4b78971a6"
+
 angular-hot-loader@^0.9.2:
   version "0.9.6"
   resolved "https://registry.yarnpkg.com/angular-hot-loader/-/angular-hot-loader-0.9.6.tgz#a534282316bde97f622cac667401458d25043e0d"
@@ -156,6 +160,10 @@ angular-hot-loader@^0.9.2:
     loader-utils "^1.0.3"
     source-map "^0.5.6"
     to-factory "^1.0.0"
+
+angular-material@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
 
 angular-mocks@^1.6.7:
   version "1.6.7"

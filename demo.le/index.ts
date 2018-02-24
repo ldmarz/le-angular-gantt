@@ -19,7 +19,7 @@ angular
     plugins.dependencies, plugins.drawtask, plugins.groups, plugins.labels,
     plugins.movable, plugins.overlap, plugins.progress,
     plugins.resizeSensor, plugins.sections, plugins.sortable,
-    plugins.table, plugins.tooltips, plugins.tree])
+    plugins.table, plugins.tooltips, plugins.tree, plugins.recycler])
   .service('DemoService', demoService)
   .controller('DemoCtrl', demoController)
   .config(['$compileProvider', function ($compileProvider) {

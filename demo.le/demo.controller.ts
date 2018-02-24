@@ -1,43 +1,19 @@
 import moment from 'moment'
 import _ from 'lodash'
 
-export default function ($scope) {
+export default function ($scope, $timeout) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', mec: 'mec1', id: '1', level: 1, tasks: [
+    {name: 'row1', mec: 'mec1', id: 1, level: 1, tasks: [
       { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes')}
     ]}
   ]
 
-  for (let index = 0; index < 1; index++) {
-    $scope.data.push(
-      {
-        name: 'row1', mec: 'mec1', level: 1,
-        tasks: [
-          {
-            name: 'hola hola',
-            from: moment().subtract(_.random(1, 10), 'hours'),
-            to: moment().add(_.random(1, 10), 'hours')
-          }
-        ]
-      }
-    )
-  }
-
-  $scope.backup = [{
-    id: '2', name: ' uandsnad sadas', parent: '1', level: 2, tasks: [
-      { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-    ]
-  },
-  {
-    id: '3', name: 'row2', parent: '2', level: 3, tasks: [
-      { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-    ]
-  }]
-
-  $scope.extraScaleTime = {
-    time: 16
-  }
+  appendChilds(100)
+  console.log('asdasd')
+  _.each($scope.data, value => {
+    appendChilds(20, value.id)
+  })
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
@@ -50,31 +26,28 @@ export default function ($scope) {
     return 140 * zoom
   }
 
-  $scope.registerApi = function (api) {
-    $scope.api = api
-    const _this = $scope
-    api.core.on.ready($scope, (api) => {
-      window.setTimeout(() => {
-        api.tree.on.collapsed(this, (row, collapsed) => {
-          if (!collapsed._collapsed) {
-            _.each($scope.backup, value => {
-              const aux = _.find($scope.data, {id: value.id})
-              if (value.parent === collapsed.model.id && !aux) {
-                $scope.data.push(value)
-              }
-            })
-            console.log($scope.data)
-          }
-        })
-      })
-    })
-  }
-
   $scope.collapse = function () {
     $scope.api.tree.collapseAll()
   }
 
   $scope.expand = function () {
     $scope.api.tree.expandAll()
+  }
+
+  function appendChilds (limit = 1, parent = undefined) {
+    for (let index = 0; index < limit; index++) {
+      $scope.data.push(
+        {
+          name: 'row1', mec: 'mec1', level: 1, parent: parent,
+          tasks: [
+            {
+              name: 'hola hola',
+              from: moment().subtract(_.random(1, 10), 'hours'),
+              to: moment().add(_.random(1, 10), 'hours')
+            }
+          ]
+        }
+      )
+    }
   }
 }

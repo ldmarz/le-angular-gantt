@@ -1,0 +1,19 @@
+<div>
+  <div class="gantt-tree-header" ng-style="{height: $parent.ganttHeaderHeight + 'px'}">
+    <div ng-if="$parent.ganttHeaderHeight" class="gantt-row-label gantt-row-label-header gantt-tree-row gantt-tree-header-row">
+      <span class="gantt-label-text" gantt-bind-compile-html="getHeaderContent()" />
+    </div>
+  </div>
+
+    <md-content layout="column">
+      <md-virtual-repeat-container id="vertical-container">
+        <div md-virtual-repeat="row in gantt.rowsManager.visibleRows" class="repeated-item" ng-controller="rowController">
+          {{row.model.id}}
+        </div>
+      </md-virtual-repeat-container>
+    </md-content>
+
+  <!-- <div ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="rowController">
+    hola {{row.model.id}} 
+  </div> -->
+</div>
