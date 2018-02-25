@@ -5,13 +5,20 @@
     </div>
   </div>
 
-    <md-content layout="column">
-      <md-virtual-repeat-container id="vertical-container">
-        <div md-virtual-repeat="row in gantt.rowsManager.visibleRows" class="repeated-item" ng-controller="rowController">
-          {{row.model.id}}
+  <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
+    <div md-virtual-repeat="row in treeRows" 
+      md-on-demand
+      class="repeated-item"
+      ng-controller="rowController"
+    >
+      <div> <!-- container -->
+        <div>
+          <button ng-click="collapseChildreen(row)"> x </button>Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
         </div>
-      </md-virtual-repeat-container>
-    </md-content>
+      </div>
+    </div>
+  </md-virtual-repeat-container>
+
 
   <!-- <div ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="rowController">
     hola {{row.model.id}} 

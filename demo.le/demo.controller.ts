@@ -1,5 +1,6 @@
 import moment from 'moment'
 import _ from 'lodash'
+import randomName from 'random-name'
 
 export default function ($scope, $timeout) {
   'ngInject'
@@ -9,8 +10,7 @@ export default function ($scope, $timeout) {
     ]}
   ]
 
-  appendChilds(100)
-  console.log('asdasd')
+  appendChilds(2)
   _.each($scope.data, value => {
     appendChilds(20, value.id)
   })
@@ -36,12 +36,13 @@ export default function ($scope, $timeout) {
 
   function appendChilds (limit = 1, parent = undefined) {
     for (let index = 0; index < limit; index++) {
+      const name = randomName()
       $scope.data.push(
         {
-          name: 'row1', mec: 'mec1', level: 1, parent: parent,
+          name: name, mec: 'mec1', level: 1, parent: parent,
           tasks: [
             {
-              name: 'hola hola',
+              name: name,
               from: moment().subtract(_.random(1, 10), 'hours'),
               to: moment().add(_.random(1, 10), 'hours')
             }

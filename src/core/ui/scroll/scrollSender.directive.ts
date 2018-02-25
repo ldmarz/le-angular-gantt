@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 export default function () {
   'ngInject'
   // Updates the element which are registered for the horizontal or vertical scroll event
@@ -15,7 +17,10 @@ export default function () {
         let vertical = controllers[1].getVerticalRecievers()
         for (i = 0, l = vertical.length; i < l; i++) {
           let vElement = vertical[i]
-          if (vElement.parentNode.scrollTop !== el.scrollTop) {
+          if (vElement.id === 'vertical-container') {
+            vElement = $(vElement).children('.md-virtual-repeat-scroller')
+            $(vElement).scrollTop(el.scrollTop)
+          } else if (vElement.parentNode.scrollTop !== el.scrollTop) {
             vElement.parentNode.scrollTop = el.scrollTop
           }
         }

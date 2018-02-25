@@ -6,6 +6,7 @@ export default function () {
     restrict: 'A',
     require: '^ganttScrollManager',
     link: function (scope, element, attrs, ganttScrollManagerCtrl) {
+      console.log(element)
       ganttScrollManagerCtrl.registerVerticalReceiver(element)
     }
   }
