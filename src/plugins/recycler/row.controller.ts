@@ -14,15 +14,28 @@ export default function ($scope, $rootScope, rowService) {
     return $scope.row.model.name
   }
 
-  $scope.collapseChildreen = function (row) {
-    const childreens = _.filter($scope.gantt.rowsManager.rows, o => {
-      return (o.model.parent === row.model.id)
-    })
-    _.each(childreens, row => {
-      row.isCollapsed = true
-    })
+  $scope.collapse = function () {
+    if (!$scope.row.childreenCollapsed) {
+      $scope.row.childreenCollapsed = true
+      collapseChildreen($scope.row)
+    } else {
+      $scope.row.childreenCollapsed = false
+      expandChildreen($scope.row)
+    }
 
     $scope.gantt.api.rows.refresh()
+  }
+
+  function collapseChildreen (row) {
+    _.each(rowService.getChildreens(row.model.id), row => {
+      row.isCollapsed = true
+    })
+  }
+
+  function expandChildreen (row) {
+    _.each(rowService.getChildreens(row.model.id), row => {
+      row.isCollapsed = false
+    })
   }
 
   // $scope.$watch('collapsed', function (newValue) {

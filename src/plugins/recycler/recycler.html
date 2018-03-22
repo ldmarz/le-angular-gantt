@@ -6,14 +6,14 @@
   </div>
 
   <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
-    <div md-virtual-repeat="row in treeRows" 
+    <div md-virtual-repeat="row in allRows" 
       md-on-demand
       class="repeated-item"
       ng-controller="rowController"
     >
       <div> <!-- container -->
         <div>
-          <button ng-click="collapseChildreen(row)"> x </button>Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
+          <button ng-click="collapse()"> x </button>Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
         </div>
       </div>
     </div>
