@@ -13,7 +13,7 @@ const pluginModule = 'gantt.recycler'
 require('./recycler.css')
 require('angular-material/angular-material.min.css')
 
-angular.module(pluginModule, [ngMaterial, 'gantt'])
+angular.module(pluginModule, [ngMaterial])
   .directive('ganttRecycler', recyclerPlugin)
   .directive('recycler', recycler)
   .service('rowService', rowService)

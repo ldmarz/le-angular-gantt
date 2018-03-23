@@ -145,13 +145,13 @@ amdefine@>=0.0.4, amdefine@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-animate@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.7.tgz#bc6dbe6a190d019a6fbb2c7373d40f01cfd75899"
+angular-animate@1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.5.8.tgz#535f7369225aba7fb15bf7134c71b15bc635c586"
 
-angular-aria@^1.6.9:
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.9.tgz#150fa603ba7f604f48e3715b76ab3ec4b78971a6"
+angular-aria@1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.5.8.tgz#558fa07dc82c6fa57b1438e660bbdcfcb805a2f5"
 
 angular-hot-loader@^0.9.2:
   version "0.9.6"
@@ -181,9 +181,9 @@ angular-ui-tree@^2.22.5:
   version "2.22.5"
   resolved "https://registry.yarnpkg.com/angular-ui-tree/-/angular-ui-tree-2.22.5.tgz#99071fb963feaf2eac11c98e95e40628c135813f"
 
-angular@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.7.tgz#0f89837dae1776b01ccb1fa2096db0d9373d9897"
+angular@1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.8.tgz#925a5392b8c212d09572dc446db7e01264e094cb"
 
 ansi-escapes@^1.1.0:
   version "1.4.0"

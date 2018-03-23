@@ -1,6 +1,7 @@
 import _ from 'lodash'
 
 export default function sortRows (poolRows) {
+  'ngInject'
   const rootRows = _.filter(poolRows, o => !(o.model.parent))
   const rowLevel = 1
   const orderedRows = []

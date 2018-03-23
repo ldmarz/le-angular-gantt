@@ -1,6 +1,6 @@
 {
   "name": "le-angular-gantt",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "Gantt chart component for AngularJS",
   "author": "Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com)",
   "contributors": [
@@ -34,9 +34,9 @@
     "tslint": "tslint -s node_modules/custom-tslint-formatters/formatters -t grouped 'src/**/*.ts' 'demo/**/*.ts' 'test/unit/**/*.ts' 'test/e2e/*.ts'"
   },
   "dependencies": {
-    "angular": "^1.6.7",
-    "angular-animate": "^1.6.7",
-    "angular-aria": "^1.6.9",
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8",
+    "angular-aria": "1.5.8",
     "angular-material": "1.1.5",
     "angular-native-dragdrop": "^1.2.2",
     "angular-strap": "^2.3.12",
