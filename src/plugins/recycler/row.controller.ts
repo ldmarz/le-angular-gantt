@@ -18,31 +18,13 @@ export default function ($scope, $rootScope, rowService) {
 
     if (!$scope.row.childreenCollapsed) {
       $scope.row.childreenCollapsed = true
-      collapseChildreen($scope.row)
+      rowService.collapseChildreen($scope.row)
     } else {
       $scope.row.childreenCollapsed = false
-      expandChildreen($scope.row)
+      rowService.expandChildreen($scope.row)
     }
 
     $scope.gantt.api.rows.refresh()
-  }
-
-  function collapseChildreen (row) {
-    _.each(rowService.getChildreens(row.model.id), row => {
-      if (row.model.parent) {
-        collapseChildreen(row)
-      }
-      row.isCollapsed = true
-    })
-  }
-
-  function expandChildreen (row) {
-    _.each(rowService.getChildreens(row.model.id), row => {
-      if (row.model.parent) {
-        row.childreenCollapsed = true
-      }
-      row.isCollapsed = false
-    })
   }
 
   $scope.getClassByLevel = function () {

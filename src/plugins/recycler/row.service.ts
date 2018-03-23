@@ -15,4 +15,22 @@ export default class RowService {
       return (o.model.parent === id)
     })
   }
+
+  collapseChildreen (row) {
+    _.each(this.getChildreens(row.model.id), row => {
+      if (row.model.parent) {
+        this.collapseChildreen(row)
+      }
+      row.isCollapsed = true
+    })
+  }
+
+  expandChildreen (row) {
+    _.each(this.getChildreens(row.model.id), row => {
+      if (row.model.parent) {
+        row.childreenCollapsed = true
+      }
+      row.isCollapsed = false
+    })
+  }
 }

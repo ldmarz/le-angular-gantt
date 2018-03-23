@@ -48,11 +48,15 @@ export default function ($scope, $timeout) {
   }
 
   $scope.collapse = function () {
-    $scope.api.tree.collapseAll()
+    $scope.api.recycler.collapseAll()
+  }
+
+  $scope.registerApi = function (api) {
+    $scope.api = api
   }
 
   $scope.expand = function () {
-    $scope.api.tree.expandAll()
+    $scope.api.recycler.expandAll()
   }
 
   function appendChilds (limit = 1, parent = undefined) {

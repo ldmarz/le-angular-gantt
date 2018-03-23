@@ -2,7 +2,7 @@ import angular from 'angular'
 import _ from 'lodash'
 import sortRows from './helpers/sortRows'
 
-export default function ($document, $compile) {
+export default function ($document, $compile, rowService) {
   'ngInject'
 
   return {
@@ -19,6 +19,27 @@ export default function ($document, $compile) {
           return (!o.isCollapsed)
         })
       }
+
+      function collapseAll () {
+        const rootRows = _.filter(this.gantt.rowsManager.visibleRows, o => !(o.model.parent))
+        _.each(rootRows, rootRow => {
+          rootRow.childreenCollapsed = true
+          rowService.collapseChildreen(rootRow)
+        })
+
+        this.gantt.api.rows.refresh()
+      }
+
+      function expandAll () {
+        _.each(this.gantt.rowsManager.visibleRows, rootRow => {
+          rowService.expandChildreen(rootRow)
+        })
+
+        this.gantt.api.rows.refresh()
+      }
+
+      api.registerMethod('recycler', 'collapseAll', collapseAll, ganttCtrl)
+      api.registerMethod('recycler', 'expandAll', expandAll, ganttCtrl)
 
       api.rows.addRowSorter(sortRows)
       api.rows.addRowFilter(filter)
