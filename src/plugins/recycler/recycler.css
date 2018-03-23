@@ -45,11 +45,22 @@
 
 .gantt-side-content .gantt-side-column{
     border: 1px solid;
-    max-width: 100px;
-    min-width: 100px;
+    max-width: 200px;
+    min-width: 200px;
     overflow: hidden;
     text-overflow: hidden;
     display: inline-block;
     height: 100%;
 }
 
+.gantt-side-content .row-level-2 {
+    padding-left: 20px;
+}
+
+.gantt-side-content .row-level-3 {
+    padding-left: 40px;
+}
+
+.gantt-side-content .row-level-4 {
+    padding-left: 60px;
+}

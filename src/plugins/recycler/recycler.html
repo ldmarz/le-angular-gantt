@@ -14,16 +14,19 @@
       class="repeated-item gantt-row-height"
       ng-controller="rowController"
       style="display: block"
+      row-id="{{::row.model.id}}"
     >
       <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
-        <div ng-if="::rowTemplate.type == 'tree' ">
+        <div 
+          ng-if="rowTemplate.type == 'tree' "
+          ng-class="getClassByLevel()"
+        >
           <a data-nodrag 
-             ng-if="::hasChildreen()"
              class="gantt-tree-handle-button btn btn-xs" 
              ng-class="{'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}"
              ng-click="collapse()">
 
-              <span class="gantt-tree-handle glyphicon" ng-class="{
+              <span ng-if="hasChildreen()" class="gantt-tree-handle glyphicon" ng-class="{
                           'glyphicon-chevron-right': row.childreenCollapsed, 'glyphicon-chevron-down': !row.childreenCollapsed,
                           'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}">
               </span>
@@ -31,8 +34,8 @@
           Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
         </div>
 
-        <div ng-if="::rowTemplate.type == 'column'">
-            Some column
+        <div ng-if="rowTemplate.type == 'column'">
+             {{row.model.name}}
         </div>
       </div>
     </div>

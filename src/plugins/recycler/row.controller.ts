@@ -15,6 +15,7 @@ export default function ($scope, $rootScope, rowService) {
   }
 
   $scope.collapse = function () {
+
     if (!$scope.row.childreenCollapsed) {
       $scope.row.childreenCollapsed = true
       collapseChildreen($scope.row)
@@ -28,14 +29,24 @@ export default function ($scope, $rootScope, rowService) {
 
   function collapseChildreen (row) {
     _.each(rowService.getChildreens(row.model.id), row => {
+      if (row.model.parent) {
+        collapseChildreen(row)
+      }
       row.isCollapsed = true
     })
   }
 
   function expandChildreen (row) {
     _.each(rowService.getChildreens(row.model.id), row => {
+      if (row.model.parent) {
+        row.childreenCollapsed = true
+      }
       row.isCollapsed = false
     })
+  }
+
+  $scope.getClassByLevel = function () {
+    return 'row-level-' + $scope.row.rowLevel
   }
 
   $scope.hasChildreen = function () {

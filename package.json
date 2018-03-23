@@ -27,7 +27,7 @@
     "build-demo": "node build/build-demo.js",
     "build-docs": "mkdocs build --clean && shx cp CNAME docs/CNAME && node build/postprocess-docs.js && shx cp -R demo.dist docs/demo",
     "dist": "yarn eslint && yarn tslint && yarn test && yarn build-docs && yarn build && yarn build-demo",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "e2e": "node test/e2e/runner.js",
     "test": "yarn unit && yarn e2e",
     "eslint": "eslint --ext .js src demo test/unit/specs test/e2e/specs",
@@ -47,7 +47,8 @@
     "jsplumb": "^2.3.2",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "moment-range": "^3.0.3"
+    "moment-range": "^3.0.3",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "@types/angular": "^1.6.18",

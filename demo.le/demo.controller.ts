@@ -1,6 +1,7 @@
 import moment from 'moment'
 import _ from 'lodash'
 import randomName from 'random-name'
+import uuid from 'uuid'
 
 export default function ($scope, $timeout) {
   'ngInject'
@@ -10,10 +11,20 @@ export default function ($scope, $timeout) {
     ]}
   ]
 
-  appendChilds(100)
+  appendChilds(5)
   _.each($scope.data, value => {
     appendChilds(20, value.id)
   })
+
+  const tasks = _.filter($scope.data, o => {
+    return (o.parent)
+  })
+
+  _.each(tasks, value => {
+    appendChilds(25, value.id)
+  })
+
+  console.log($scope.data)
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
@@ -24,9 +35,6 @@ export default function ($scope, $timeout) {
   $scope.algo = 'aksks'
 
   $scope.templateRows = [{
-    type: 'column',
-    headerContent: '<div> priority </div>'
-  }, {
     type: 'tree',
     headerContent: '<div> title </div>'
   }, {
@@ -52,6 +60,7 @@ export default function ($scope, $timeout) {
       const name = randomName()
       $scope.data.push(
         {
+          id: uuid(),
           name: name, mec: 'mec1', level: 1, parent: parent,
           tasks: [
             {
