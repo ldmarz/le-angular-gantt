@@ -10,7 +10,7 @@ export default function ($scope, $timeout) {
     ]}
   ]
 
-  appendChilds(2)
+  appendChilds(100)
   _.each($scope.data, value => {
     appendChilds(20, value.id)
   })
@@ -21,6 +21,19 @@ export default function ($scope, $timeout) {
   $scope.shrinkToFit = false
   $scope.width = true
   $scope.scale = 'day'
+  $scope.algo = 'aksks'
+
+  $scope.templateRows = [{
+    type: 'column',
+    headerContent: '<div> priority </div>'
+  }, {
+    type: 'tree',
+    headerContent: '<div> title </div>'
+  }, {
+    type: 'column',
+    headerContent: '<div> mec </div>'
+  }
+  ]
 
   $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
     return 140 * zoom

@@ -1,26 +1,29 @@
-<div>
-  <div class="gantt-tree-header" ng-style="{height: $parent.ganttHeaderHeight + 'px'}">
-    <div ng-if="$parent.ganttHeaderHeight" class="gantt-row-label gantt-row-label-header gantt-tree-row gantt-tree-header-row">
-      <span class="gantt-label-text" gantt-bind-compile-html="getHeaderContent()" />
+<div class="gantt-side-content">
+  <div style="display: block" ng-style="{height: $parent.ganttHeaderHeight + 'px'}">
+    <div class="gantt-side-table-header gantt-side-column" ng-repeat="row in ::templateRows">
+      <div class="gantt-side-row-label-header">
+        <span class="gantt-label-text" gantt-bind-compile-html="row.headerContent" />
+      </div>
     </div>
   </div>
-
+  
+  
   <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
     <div md-virtual-repeat="row in allRows" 
       md-on-demand
-      class="repeated-item"
+      class="repeated-item gantt-row-height"
       ng-controller="rowController"
+      style="display: block"
     >
-      <div> <!-- container -->
-        <div>
+      <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
+        <div ng-if="rowTemplate.type == 'tree' ">
           <button ng-click="collapse()"> x </button>Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
+        </div>
+
+        <div ng-if="rowTemplate.type == 'column'">
+            Some column
         </div>
       </div>
     </div>
   </md-virtual-repeat-container>
-
-
-  <!-- <div ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="rowController">
-    hola {{row.model.id}} 
-  </div> -->
 </div>

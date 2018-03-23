@@ -5,10 +5,15 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
   let builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html')
   builder.controller = function ($scope) {
     let hScrollBarHeight = ganttLayout.getScrollBarHeight()
-
+    $scope.templateRows = $scope.pluginScope.templateRows
     $scope.$watch('gantt.rowsManager.rows', newValue => {
+      // This watcher is to keep updated the visible rows
       rowService.allRows = newValue
     })
+
+    $scope.getHeaderContent = function (row) {
+      return $scope.pluginScope.headerContent
+    }
 
     $scope.getLabelsCss = function () {
       let css = {}

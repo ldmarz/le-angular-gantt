@@ -1,20 +1,18 @@
 #vertical-container {
   min-height: 292px;
-  width: 200px;
-  max-width: 400px; }
+}
 
 #vertical-container .md-virtual-repeat-scroller {
   overflow: hidden;
 }
 
 .repeated-item {
-  padding-top: 6px;
-  height: 28px;
+  /* padding-top: 6px; */
  }
 
  /* Tree css */
 
- .gantt-row-label-background {
+.gantt-row-label-background {
     position: absolute;
     width: 100%;
 }
@@ -37,42 +35,21 @@
     padding-left: 0;
 }
 
-.gantt-tree-header {
-    overflow: hidden;
-    position: relative;
-}
-
 #vertical-container {
     overflow: hidden;
 }
 
-.gantt-tree-header-row {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.gantt-side-content {
+    padding-left: 10px;
 }
 
-.gantt-tree-header-row span.gantt-label-text {
-    display: inline-block;
-    padding-top: 0.5em;
-    font-weight: bold;
-    white-space: nowrap;
+.gantt-side-content .gantt-side-column{
+    border: 1px solid;
+    max-width: 100px;
+    min-width: 100px;
     overflow: hidden;
-    text-overflow: clip;
+    text-overflow: hidden;
+    display: inline-block;
+    height: 100%;
 }
 
-.gantt-tree-body ol {
-    padding-left: 0;
-}
-
-.angular-ui-tree-handle {
-    cursor: inherit;
-    text-decoration: inherit;
-    font-weight: inherit;
-    min-height: inherit;
-    line-height: inherit;
-}
-
-.gantt-side-content-tree .gantt-tree-handle-button {
-    pointer-events: auto;
-}

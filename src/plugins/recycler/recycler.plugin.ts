@@ -8,6 +8,7 @@ export default function ($document, $compile) {
     restrict: 'E',
     require: '^gantt',
     scope: {
+      templateRows: '<?'
     },
     link: function (scope, element, attrs, ganttCtrl) {
       let api = ganttCtrl.gantt.api
