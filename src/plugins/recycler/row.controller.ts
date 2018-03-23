@@ -38,6 +38,10 @@ export default function ($scope, $rootScope, rowService) {
     })
   }
 
+  $scope.hasChildreen = function () {
+    return rowService.getChildreens($scope.row.model.id).length > 0
+  }
+
   // $scope.$watch('collapsed', function (newValue) {
   //   if ($scope.$modelValue._collapsed !== newValue) {
   //     let oldValue = $scope.$modelValue._collapsed

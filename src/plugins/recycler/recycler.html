@@ -16,11 +16,22 @@
       style="display: block"
     >
       <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
-        <div ng-if="rowTemplate.type == 'tree' ">
-          <button ng-click="collapse()"> x </button>Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
+        <div ng-if="::rowTemplate.type == 'tree' ">
+          <a data-nodrag 
+             ng-if="::hasChildreen()"
+             class="gantt-tree-handle-button btn btn-xs" 
+             ng-class="{'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}"
+             ng-click="collapse()">
+
+              <span class="gantt-tree-handle glyphicon" ng-class="{
+                          'glyphicon-chevron-right': row.childreenCollapsed, 'glyphicon-chevron-down': !row.childreenCollapsed,
+                          'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}">
+              </span>
+          </a>
+          Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
         </div>
 
-        <div ng-if="rowTemplate.type == 'column'">
+        <div ng-if="::rowTemplate.type == 'column'">
             Some column
         </div>
       </div>
