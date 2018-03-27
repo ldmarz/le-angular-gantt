@@ -11,7 +11,7 @@
         <div class="gantt-table-content"  ng-style="getMaxHeightCss()">
             <div gantt-vertical-scroll-receiver>
                 <div class="gantt-table-row" ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id" ng-controller="TableColumnRowController" row-id="{{::row.model.id}}">
-                    <div gantt-row-label  class="gantt-row-label gantt-row-height" ng-click="test(row)" ng-class="::getClasses()" ng-style="::getHeight()">
+                    <div gantt-row-label  class="gantt-row-label gantt-row-height" ng-click="test(row)" ng-class="getClasses()" ng-style="::getHeight()">
                         <div class="gantt-valign-container">
                             <div class="gantt-valign-content">
                                 <span class="gantt-label-text" gantt-bind-compile-html-one-time="::getRowContent()"></span>
