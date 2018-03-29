@@ -44,11 +44,7 @@
 }
 
 .gantt-side-content .gantt-side-column{
-    border: 1px solid;
-    max-width: 200px;
-    min-width: 200px;
     overflow: hidden;
-    text-overflow: hidden;
     display: inline-block;
     height: 100%;
 }

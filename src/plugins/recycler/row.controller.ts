@@ -35,6 +35,21 @@ export default function ($scope, $rootScope, rowService) {
     return rowService.getChildreens($scope.row.model.id).length > 0
   }
 
+  $scope.getRowContent = function () {
+    if ($scope.row.model.content !== undefined) {
+      return $scope.row.model.content
+    }
+    if ($scope.pluginScope.content !== undefined) {
+      return $scope.pluginScope.content
+    }
+
+    let content = $scope.row.rowsManager.gantt.options.value('rowContent')
+    if (content === undefined) {
+      content = '{{row.model.name}}'
+    }
+    return content
+  }
+
   // $scope.$watch('collapsed', function (newValue) {
   //   if ($scope.$modelValue._collapsed !== newValue) {
   //     let oldValue = $scope.$modelValue._collapsed

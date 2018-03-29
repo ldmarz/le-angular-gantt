@@ -1,6 +1,9 @@
-<div class="gantt-side-content">
+<div class="gantt-side-content recycler-main-container">
   <div style="display: block" ng-style="{height: $parent.ganttHeaderHeight + 'px'}">
-    <div class="gantt-side-table-header gantt-side-column" ng-repeat="row in ::templateRows">
+    <div 
+      class="gantt-side-table-header gantt-side-column" 
+      ng-class="::getClassHeaderByType(row)"
+      ng-repeat="row in ::templateRows">
       <div class="gantt-side-row-label-header">
         <span class="gantt-label-text" gantt-bind-compile-html="row.headerContent" />
       </div>
@@ -11,15 +14,18 @@
   <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
     <div md-virtual-repeat="row in allRows" 
       md-on-demand
-      class="repeated-item gantt-row-height"
+      ng-class="row.model.classes"
+      class="row-repeated gantt-row-height"
       ng-controller="rowController"
       style="display: block"
-      row-id="{{::row.model.id}}"
+      row-id="{{row.model.id}}"
     >
       <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
         <div 
           ng-if="rowTemplate.type == 'tree' "
           ng-class="getClassByLevel()"
+          class="tree-container column-repeated"
+          row-id="{{row.model.id}}"
         >
           <a data-nodrag 
              class="gantt-tree-handle-button btn btn-xs" 
@@ -31,10 +37,10 @@
                           'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}">
               </span>
           </a>
-          Un {{row.model.parent ? 'task: ' : 'wp: '}} {{row.model.name}}
+          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="::getRowContent()" />
         </div>
 
-        <div ng-if="rowTemplate.type == 'column'">
+        <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
              {{row.model.name}}
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function ($document, $compile, rowService) {
 
       const filter = function (rows) {
         return _.filter(rows, o => {
-          return (!o.isCollapsed)
+          return (!o.isCollapsed && o.model.render !== false)
         })
       }
 

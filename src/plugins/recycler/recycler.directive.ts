@@ -30,6 +30,18 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
       return css
     }
 
+    $scope.getClassHeaderByType = function (row) {
+      let classes = []
+      switch (row.type) {
+        case 'tree':
+          classes = ['tree-header']
+          break
+        case 'column':
+          classes = ['tree-header']
+      }
+      return classes
+    }
+
     // allRows contains the rows to be recycled
     $scope.allRows = {
       value: 1,
