@@ -1,7 +1,7 @@
 import angular from 'angular'
 import _ from 'lodash'
 import sortRows from './helpers/sortRows'
-
+let firstRender = true
 export default function ($document, $compile, rowService) {
   'ngInject'
 
@@ -16,14 +16,14 @@ export default function ($document, $compile, rowService) {
 
       const filter = function (rows) {
         return _.filter(rows, o => {
-          return (!o.isCollapsed && o.model.render !== false)
+          return (o.model.isCollapsed !== true && o.model.render !== false)
         })
       }
 
       function collapseAll () {
         const rootRows = _.filter(this.gantt.rowsManager.visibleRows, o => !(o.model.parent))
         _.each(rootRows, rootRow => {
-          rootRow.childreenCollapsed = true
+          rootRow.model.childreenCollapsed = true
           rowService.collapseChildreen(rootRow)
         })
 

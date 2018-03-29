@@ -78559,7 +78559,7 @@ exports.default = ["$document", "$compile", "rowService", function ($document, $
             var api = ganttCtrl.gantt.api;
             var filter = function filter(rows) {
                 return _lodash2.default.filter(rows, function (o) {
-                    return !o.isCollapsed && o.model.render !== false;
+                    return o.model.isCollapsed !== true && o.model.render !== false;
                 });
             };
             function collapseAll() {
@@ -78567,7 +78567,7 @@ exports.default = ["$document", "$compile", "rowService", function ($document, $
                     return !o.model.parent;
                 });
                 _lodash2.default.each(rootRows, function (rootRow) {
-                    rootRow.childreenCollapsed = true;
+                    rootRow.model.childreenCollapsed = true;
                     rowService.collapseChildreen(rootRow);
                 });
                 this.gantt.api.rows.refresh();
@@ -78613,6 +78613,8 @@ var _sortRows2 = _interopRequireDefault(_sortRows);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var firstRender = true;
+
 /***/ }),
 /* 243 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -78633,11 +78635,11 @@ exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $root
         return $scope.row.model.name;
     };
     $scope.collapse = function () {
-        if (!$scope.row.childreenCollapsed) {
-            $scope.row.childreenCollapsed = true;
+        if (!$scope.row.model.childreenCollapsed) {
+            $scope.row.model.childreenCollapsed = true;
             rowService.collapseChildreen($scope.row);
         } else {
-            $scope.row.childreenCollapsed = false;
+            $scope.row.model.childreenCollapsed = false;
             rowService.expandChildreen($scope.row);
         }
         $scope.gantt.api.rows.refresh();
@@ -78713,7 +78715,7 @@ var RowService = function () {
                 if (row.model.parent) {
                     _this.collapseChildreen(row);
                 }
-                row.isCollapsed = true;
+                row.model.isCollapsed = true;
             });
         }
     }, {
@@ -78721,9 +78723,9 @@ var RowService = function () {
         value: function expandChildreen(row) {
             _lodash2.default.each(this.getChildreens(row.model.id), function (row) {
                 if (row.model.parent) {
-                    row.childreenCollapsed = true;
+                    row.model.childreenCollapsed = true;
                 }
-                row.isCollapsed = false;
+                row.model.isCollapsed = false;
             });
         }
     }]);
@@ -80370,7 +80372,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
-var html = "<div class=\"gantt-side-content recycler-main-container\"> <div style=display:block ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\"> <div class=\"gantt-side-table-header gantt-side-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in ::templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss()> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"row-repeated gantt-row-height\" ng-controller=rowController style=display:block row-id={{row.model.id}}> <div ng-repeat=\"rowTemplate in ::templateRows\" class=gantt-side-column> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.childreenCollapsed, 'glyphicon-chevron-down': !row.childreenCollapsed,\n                          'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> {{row.model.name}} </div> </div> </div> </md-virtual-repeat-container> </div>";
+var html = "<div class=\"gantt-side-content recycler-main-container\"> <div style=display:block ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\"> <div class=\"gantt-side-table-header gantt-side-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in ::templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss()> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"row-repeated gantt-row-height\" ng-controller=rowController style=display:block row-id={{row.model.id}}> <div ng-repeat=\"rowTemplate in ::templateRows\" class=gantt-side-column> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=::getRowContent() /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> {{row.model.name}} </div> </div> </div> </md-virtual-repeat-container> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 

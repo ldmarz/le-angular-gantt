@@ -4,6 +4,7 @@ import { levels } from '../../constant'
 export default function ($scope, $rootScope, rowService) {
   'ngInject'
   $scope.levels = levels
+
   // $scope.$parent.nodeScopes[$scope.row.model.id] = $scope
   // if (get($scope, 'row.model.level', null) === levels.TASK) {
   //   $scope.toggle()
@@ -16,11 +17,11 @@ export default function ($scope, $rootScope, rowService) {
 
   $scope.collapse = function () {
 
-    if (!$scope.row.childreenCollapsed) {
-      $scope.row.childreenCollapsed = true
+    if (!$scope.row.model.childreenCollapsed) {
+      $scope.row.model.childreenCollapsed = true
       rowService.collapseChildreen($scope.row)
     } else {
-      $scope.row.childreenCollapsed = false
+      $scope.row.model.childreenCollapsed = false
       rowService.expandChildreen($scope.row)
     }
 

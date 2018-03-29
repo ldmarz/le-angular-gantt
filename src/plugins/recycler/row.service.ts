@@ -21,16 +21,16 @@ export default class RowService {
       if (row.model.parent) {
         this.collapseChildreen(row)
       }
-      row.isCollapsed = true
+      row.model.isCollapsed = true
     })
   }
 
   expandChildreen (row) {
     _.each(this.getChildreens(row.model.id), row => {
       if (row.model.parent) {
-        row.childreenCollapsed = true
+        row.model.childreenCollapsed = true
       }
-      row.isCollapsed = false
+      row.model.isCollapsed = false
     })
   }
 }

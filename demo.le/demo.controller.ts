@@ -6,14 +6,25 @@ import uuid from 'uuid'
 export default function ($scope, $timeout) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', mec: 'mec1', id: 1, level: 1, tasks: [
-      { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes')}
-    ]}
+    {
+      name: 'wp1', mec: 'mec1', id: 1, level: 1, childreenCollapsed: true, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    },
+    {
+      name: 'wp2', mec: 'mec1', id: 2, level: 1, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    },
+    {
+      name: 'wp3', mec: 'mec1', id: 3, level: 1, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    }
   ]
 
-  appendChilds(5)
   _.each($scope.data, value => {
-    appendChilds(20, value.id)
+    appendChilds(1, value.id)
   })
 
   const tasks = _.filter($scope.data, o => {
@@ -21,7 +32,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(25, value.id)
+    appendChilds(2, value.id)
   })
 
   console.log($scope.data)
@@ -66,6 +77,7 @@ export default function ($scope, $timeout) {
         {
           id: uuid(),
           name: name, mec: 'mec1', level: 1, parent: parent,
+          isCollapsed: true,
           tasks: [
             {
               name: name,

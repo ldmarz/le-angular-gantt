@@ -1,47 +1,31 @@
 <div class="gantt-side-content recycler-main-container">
   <div style="display: block" ng-style="{height: $parent.ganttHeaderHeight + 'px'}">
-    <div 
-      class="gantt-side-table-header gantt-side-column" 
-      ng-class="::getClassHeaderByType(row)"
-      ng-repeat="row in ::templateRows">
+    <div class="gantt-side-table-header gantt-side-column" ng-class="::getClassHeaderByType(row)" ng-repeat="row in ::templateRows">
       <div class="gantt-side-row-label-header">
         <span class="gantt-label-text" gantt-bind-compile-html="row.headerContent" />
       </div>
     </div>
   </div>
-  
-  
-  <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
-    <div md-virtual-repeat="row in allRows" 
-      md-on-demand
-      ng-class="row.model.classes"
-      class="row-repeated gantt-row-height"
-      ng-controller="rowController"
-      style="display: block"
-      row-id="{{row.model.id}}"
-    >
-      <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
-        <div 
-          ng-if="rowTemplate.type == 'tree' "
-          ng-class="getClassByLevel()"
-          class="tree-container column-repeated"
-          row-id="{{row.model.id}}"
-        >
-          <a data-nodrag 
-             class="gantt-tree-handle-button btn btn-xs" 
-             ng-class="{'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}"
-             ng-click="collapse()">
 
-              <span ng-if="hasChildreen()" class="gantt-tree-handle glyphicon" ng-class="{
-                          'glyphicon-chevron-right': row.childreenCollapsed, 'glyphicon-chevron-down': !row.childreenCollapsed,
-                          'gantt-tree-collapsed': row.childreenCollapsed, 'gantt-tree-expanded': !row.childreenCollapsed}">
-              </span>
+
+  <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
+    <div md-virtual-repeat="row in allRows" md-on-demand ng-class="row.model.classes" class="row-repeated gantt-row-height" ng-controller="rowController"
+      style="display: block" row-id="{{row.model.id}}">
+      <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
+        <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
+          <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}"
+            ng-click="collapse()">
+
+            <span ng-if="hasChildreen()" class="gantt-tree-handle glyphicon" ng-class="{
+                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,
+                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
+            </span>
           </a>
           <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="::getRowContent()" />
         </div>
 
         <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
-             {{row.model.name}}
+          {{row.model.name}}
         </div>
       </div>
     </div>
