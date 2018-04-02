@@ -33,4 +33,10 @@ export default class RowService {
       row.model.isCollapsed = false
     })
   }
+
+  findRowById (id) {
+    return _.find(this.allRows, row => {
+      return row.model.id === id
+    })
+  }
 }

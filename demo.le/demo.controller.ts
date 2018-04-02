@@ -12,12 +12,12 @@ export default function ($scope, $timeout) {
       ]
     },
     {
-      name: 'wp2', mec: 'mec1', id: 2, level: 1, tasks: [
+      name: 'wp2', mec: 'mec1', id: 2, level: 1, childreenCollapsed: true, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     },
     {
-      name: 'wp3', mec: 'mec1', id: 3, level: 1, tasks: [
+      name: 'wp3', mec: 'mec1', id: 3, level: 1, childreenCollapsed: true, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     }
@@ -54,11 +54,19 @@ export default function ($scope, $timeout) {
   }
   ]
 
+  $scope.expand = function (id) {
+    $scope.api.recycler.expand(id)
+  }
+
+  $scope.collapse = function (id) {
+    $scope.api.recycler.collapse(id)
+  }
+
   $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
     return 140 * zoom
   }
 
-  $scope.collapse = function () {
+  $scope.collapseAll = function () {
     $scope.api.recycler.collapseAll()
   }
 
@@ -66,7 +74,7 @@ export default function ($scope, $timeout) {
     $scope.api = api
   }
 
-  $scope.expand = function () {
+  $scope.expandAll = function () {
     $scope.api.recycler.expandAll()
   }
 
