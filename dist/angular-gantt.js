@@ -78574,12 +78574,35 @@ exports.default = ["$document", "$compile", "rowService", function ($document, $
             }
             function expandAll() {
                 _lodash2.default.each(this.gantt.rowsManager.visibleRows, function (rootRow) {
+                    rootRow.model.childreenCollapsed = false;
                     rowService.expandChildreen(rootRow);
                 });
                 this.gantt.api.rows.refresh();
             }
+            function expand(id) {
+                var row = rowService.findRowById(id);
+                if (row) {
+                    row.model.childreenCollapsed = false;
+                    rowService.expandChildreen(row);
+                    this.gantt.api.rows.refresh();
+                } else {
+                    console.log('Row not found!');
+                }
+            }
+            function collapse(id) {
+                var row = rowService.findRowById(id);
+                if (row) {
+                    row.model.childreenCollapsed = true;
+                    rowService.collapseChildreen(row);
+                    this.gantt.api.rows.refresh();
+                } else {
+                    console.log('Row not found!');
+                }
+            }
             api.registerMethod('recycler', 'collapseAll', collapseAll, ganttCtrl);
             api.registerMethod('recycler', 'expandAll', expandAll, ganttCtrl);
+            api.registerMethod('recycler', 'expand', expand, ganttCtrl);
+            api.registerMethod('recycler', 'collapse', collapse, ganttCtrl);
             api.rows.addRowSorter(_sortRows2.default);
             api.rows.addRowFilter(filter);
             api.directives.on.new(scope, function (directiveName, sideContentScope, sideContentElement) {
@@ -78726,6 +78749,13 @@ var RowService = function () {
                     row.model.childreenCollapsed = true;
                 }
                 row.model.isCollapsed = false;
+            });
+        }
+    }, {
+        key: 'findRowById',
+        value: function findRowById(id) {
+            return _lodash2.default.find(this.allRows, function (row) {
+                return row.model.id === id;
             });
         }
     }]);
