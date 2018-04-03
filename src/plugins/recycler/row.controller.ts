@@ -5,12 +5,6 @@ export default function ($scope, $rootScope, rowService) {
   'ngInject'
   $scope.levels = levels
 
-  // $scope.$parent.nodeScopes[$scope.row.model.id] = $scope
-  // if (get($scope, 'row.model.level', null) === levels.TASK) {
-  //   $scope.toggle()
-  //   $scope.collapsed = true
-  // }
-
   $scope.getValue = function () {
     return $scope.row.model.name
   }
@@ -36,9 +30,9 @@ export default function ($scope, $rootScope, rowService) {
     return rowService.getChildreens($scope.row.model.id).length > 0
   }
 
-  $scope.getRowContent = function () {
-    if ($scope.row.model.content !== undefined) {
-      return $scope.row.model.content
+  $scope.getRowContent = function (rowTemplate) {
+    if (rowTemplate.content !== undefined) {
+      return rowTemplate.content
     }
     if ($scope.pluginScope.content !== undefined) {
       return $scope.pluginScope.content
@@ -49,6 +43,10 @@ export default function ($scope, $rootScope, rowService) {
       content = '{{row.model.name}}'
     }
     return content
+  }
+
+  $scope.getClass = function (rowTemplate) {
+    return rowTemplate.classes
   }
 
   // $scope.$watch('collapsed', function (newValue) {

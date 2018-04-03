@@ -13,6 +13,33 @@ export default function ($document, $compile, rowService) {
     },
     link: function (scope, element, attrs, ganttCtrl) {
       let api = ganttCtrl.gantt.api
+      scope.$watch(() => checkIfNewRow(), () => {
+        intializeRows()
+      }, true)
+
+      function checkIfNewRow () {
+        const algo = _.map(rowService.allRows, 'isInitialized')
+        return algo
+      }
+
+      function intializeRows () {
+        const rowsNotInitialized = _.filter(rowService.allRows, o => !(o.isInitialized))
+        _.each(rowsNotInitialized, row => {
+          if (_.get(row, 'model.parent')) {
+            const parent = rowService.findRowById(row.model.parent)
+
+            if (parent) {
+              row.model.isCollapsed = parent.model.childreenCollapsed
+              row.model.childreenCollapsed = row.model.isCollapsed
+            }
+          }
+          row.isInitialized = true
+        })
+
+        if (rowsNotInitialized) {
+          api.rows.refresh()
+        }
+      }
 
       const filter = function (rows) {
         return _.filter(rows, o => {

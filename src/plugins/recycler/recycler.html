@@ -11,7 +11,8 @@
   <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()">
     <div md-virtual-repeat="row in allRows" md-on-demand ng-class="row.model.classes" class="row-repeated gantt-row-height" ng-controller="rowController"
       style="display: block" row-id="{{row.model.id}}">
-      <div ng-repeat="rowTemplate in ::templateRows" class="gantt-side-column ">
+      <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column " ng-class="getClass(rowTemplate)">
+        
         <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
           <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}"
             ng-click="collapse()">
@@ -21,11 +22,11 @@
                           'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
             </span>
           </a>
-          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="::getRowContent()" />
+          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(rowTemplate)" />
         </div>
 
         <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
-          {{row.model.name}}
+          <span class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(rowTemplate)"></span>
         </div>
       </div>
     </div>

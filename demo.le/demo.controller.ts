@@ -24,7 +24,7 @@ export default function ($scope, $timeout) {
   ]
 
   _.each($scope.data, value => {
-    appendChilds(1, value.id)
+    appendChilds(2, value.id)
   })
 
   const tasks = _.filter($scope.data, o => {
@@ -35,7 +35,6 @@ export default function ($scope, $timeout) {
     appendChilds(2, value.id)
   })
 
-  console.log($scope.data)
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
@@ -50,9 +49,15 @@ export default function ($scope, $timeout) {
     headerContent: '<div> title </div>'
   }, {
     type: 'column',
-    headerContent: '<div> mec </div>'
+    classes: ['input-hidden'],
+    headerContent: '<div> mec </div>',
+    content: '<div style="background-color: red"> <input type="text" ></div>'
   }
   ]
+
+  $scope.addTask = function () {
+    appendChilds(1, 1)
+  }
 
   $scope.expand = function (id) {
     $scope.api.recycler.expand(id)
@@ -85,7 +90,6 @@ export default function ($scope, $timeout) {
         {
           id: uuid(),
           name: name, mec: 'mec1', level: 1, parent: parent,
-          isCollapsed: true,
           tasks: [
             {
               name: name,

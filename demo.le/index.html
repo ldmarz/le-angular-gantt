@@ -17,6 +17,7 @@
         <button ng-click="expand(1)"> expandOneRow </button>
         <button ng-click="collapse(1)"> collapseOne </button>
         <button ng-click="test2()">noTask</button>
+        <button ng-click="addTask()">add task</button>
         <button type="button" style="width: 5em; text-align: left" class="btn btn-default" ng-model="scale" bs-options="s for s in ['minute', '5 minutes', 'hour', '3 hours', 'day', 'week', '2 weeks', 'month', 'quarter', '6 months', 'year']"
             bs-select></button>
         <div gantt data="data" 
@@ -53,6 +54,10 @@
 
     .side-element {
         min-width: 500px;
+    }
+    
+    .input-hidden input{
+        border: 1px red solid;
     }
 </style>
 </html>
