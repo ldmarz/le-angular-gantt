@@ -22,11 +22,11 @@
                           'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
             </span>
           </a>
-          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(rowTemplate)" />
+          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)" />
         </div>
 
         <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
-          <span class="gantt-label-text" gantt-bind-compile-html-one-time="getRowContent(rowTemplate)"></span>
+          <span class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)"></span>
         </div>
       </div>
     </div>
