@@ -35,7 +35,6 @@ export default function ($scope, $timeout) {
     appendChilds(10, value.id)
   })
 
-
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
   $scope.expandToFit = true
@@ -52,6 +51,37 @@ export default function ($scope, $timeout) {
     classes: ['input-hidden'],
     headerContent: '<div> mec </div>',
     content: '<div>otroValue</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> WIDTH20 </div>',
+    content: '<div>algol</div>',
+    width: '10px'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
   }, {
     type: 'column',
     classes: ['input-hidden'],

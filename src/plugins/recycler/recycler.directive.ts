@@ -1,4 +1,5 @@
 require('./recycler.html')
+import _ from 'lodash'
 
 export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
   'ngInject'
@@ -15,6 +16,15 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
 
     $scope.getHeaderContent = function (row) {
       return $scope.pluginScope.headerContent
+    }
+
+    $scope.getTemplateWidth = function () {
+      let width = []
+      _.each($scope.templateRows, templateRow => {
+        width.push(templateRow.width || '100px')
+      })
+
+      return width.join(' ')
     }
 
     $scope.getLabelsCss = function () {

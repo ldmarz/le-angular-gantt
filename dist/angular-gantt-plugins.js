@@ -78494,6 +78494,13 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", functio
         $scope.getHeaderContent = function (row) {
             return $scope.pluginScope.headerContent;
         };
+        $scope.getTemplateWidth = function () {
+            var width = [];
+            _lodash2.default.each($scope.templateRows, function (templateRow) {
+                width.push(templateRow.width || '100px');
+            });
+            return width.join(' ');
+        };
         $scope.getLabelsCss = function () {
             var css = {};
             var maxHeight = $scope.maxHeight;
@@ -78533,6 +78540,12 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", functio
     };
     return builder.build();
 }];
+
+var _lodash = __webpack_require__(19);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 __webpack_require__(273);
 
@@ -80438,7 +80451,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
-var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=grid-container ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in ::templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}}> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
+var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=\"grid-container grid-row\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}} ng-style=\"{'grid-template-columns': getTemplateWidth()}\"> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 

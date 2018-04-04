@@ -69,5 +69,4 @@
 .grid-row {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: auto 100px auto;
 }
