@@ -11,6 +11,8 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
       rowService.allRows = newValue
     })
 
+    $scope.gantt.api.registerEvent('recycler', 'topIndexChanged')
+
     $scope.getHeaderContent = function (row) {
       return $scope.pluginScope.headerContent
     }
@@ -41,7 +43,6 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
       }
       return classes
     }
-
     // allRows contains the rows to be recycled
     $scope.allRows = {
       value: 1,
@@ -52,6 +53,12 @@ export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
         return $scope.gantt.rowsManager.visibleRows.length
       }
     }
+
+    $scope.topIndex = 0
+
+    $scope.$watch('topIndex', newValue => {
+      $scope.gantt.api.recycler.raise.topIndexChanged(newValue)
+    })
   }
   return builder.build()
 }

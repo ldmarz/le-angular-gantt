@@ -8,7 +8,7 @@
   </div>
 
 
-  <md-virtual-repeat-container id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()" class="grid-container">
+  <md-virtual-repeat-container md-top-index="topIndex" id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()" class="grid-container">
     <div md-virtual-repeat="row in allRows" md-on-demand ng-class="row.model.classes" class="gantt-row-height grid-row" ng-controller="rowController"
       row-id="{{row.model.id}}">
       <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column grid-column" ng-class="getClass(rowTemplate)">

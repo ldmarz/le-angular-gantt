@@ -23,26 +23,32 @@ export default function ($scope, $rootScope, rowService) {
   }
 
   $scope.getClassByLevel = function () {
-    return 'row-level-' + $scope.row.rowLevel
+    if ($scope.row) {
+      return 'row-level-' + $scope.row.rowLevel
+    }
   }
 
   $scope.hasChildreen = function () {
-    return rowService.getChildreens($scope.row.model.id).length > 0
+    if ($scope.row) {
+      return rowService.getChildreens($scope.row.model.id).length > 0
+    }
   }
 
   $scope.getRowContent = function (rowTemplate) {
-    if (rowTemplate.content !== undefined) {
-      return rowTemplate.content
-    }
-    if ($scope.pluginScope.content !== undefined) {
-      return $scope.pluginScope.content
-    }
+    if ($scope.row) {
+      if (rowTemplate.content !== undefined) {
+        return rowTemplate.content
+      }
+      if ($scope.pluginScope.content !== undefined) {
+        return $scope.pluginScope.content
+      }
 
-    let content = $scope.row.rowsManager.gantt.options.value('rowContent')
-    if (content === undefined) {
-      content = '{{row.model.name}}'
+      let content = $scope.row.rowsManager.gantt.options.value('rowContent')
+      if (content === undefined) {
+        content = '{{row.model.name}}'
+      }
+      return content
     }
-    return content
   }
 
   $scope.getClass = function (rowTemplate) {

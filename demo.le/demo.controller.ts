@@ -82,6 +82,11 @@ export default function ($scope, $timeout) {
 
   $scope.registerApi = function (api) {
     $scope.api = api
+    $scope.api.core.on.rendered($scope, () => {
+      $scope.api.recycler.on.topIndexChanged(this, newValue => {
+        console.log(newValue)
+      })
+    })
   }
 
   $scope.expandAll = function () {

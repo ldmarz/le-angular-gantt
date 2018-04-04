@@ -7,14 +7,14 @@
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("jsPlumb"), require("ui.tree"));
+		module.exports = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("ui.tree"));
 	else if(typeof define === 'function' && define.amd)
-		define("angular-gantt-plugins", ["angular", "moment", "ElementQueries", "ResizeSensor", "angular-animate", "angular-native-dragdrop", "jsPlumb", "ui.tree"], factory);
+		define("angular-gantt-plugins", ["angular", "moment", "ElementQueries", "ResizeSensor", "angular-animate", "angular-native-dragdrop", "ui.tree"], factory);
 	else if(typeof exports === 'object')
-		exports["angular-gantt-plugins"] = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("jsPlumb"), require("ui.tree"));
+		exports["angular-gantt-plugins"] = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("ui.tree"));
 	else
-		root["angular-gantt-plugins"] = factory(root["angular"], root["moment"], root["ElementQueries"], root["ResizeSensor"], root["angular-animate"], root["angular-native-dragdrop"], root["jsPlumb"], root["ui.tree"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_282__, __WEBPACK_EXTERNAL_MODULE_283__, __WEBPACK_EXTERNAL_MODULE_284__, __WEBPACK_EXTERNAL_MODULE_285__, __WEBPACK_EXTERNAL_MODULE_286__, __WEBPACK_EXTERNAL_MODULE_287__) {
+		root["angular-gantt-plugins"] = factory(root["angular"], root["moment"], root["ElementQueries"], root["ResizeSensor"], root["angular-animate"], root["angular-native-dragdrop"], root["ui.tree"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_282__, __WEBPACK_EXTERNAL_MODULE_283__, __WEBPACK_EXTERNAL_MODULE_284__, __WEBPACK_EXTERNAL_MODULE_285__, __WEBPACK_EXTERNAL_MODULE_286__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -37372,7 +37372,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _angularUiTree = __webpack_require__(287);
+var _angularUiTree = __webpack_require__(286);
 
 var _angularUiTree2 = _interopRequireDefault(_angularUiTree);
 
@@ -76054,7 +76054,7 @@ exports.default = ["GanttDependency", "GanttDependenciesEvents", "GanttDependenc
         this.api.registerEvent('dependencies', 'add');
         this.api.registerEvent('dependencies', 'change');
         this.api.registerEvent('dependencies', 'remove');
-        this.plumb = _jsplumb2.default.jsPlumb ? _jsplumb2.default.jsPlumb.getInstance() : _jsplumb2.default.getInstance();
+
         this.plumb.importDefaults(this.pluginScope.jsPlumbDefaults);
         this.dependenciesFrom = {};
         this.dependenciesTo = {};
@@ -76597,10 +76597,6 @@ exports.default = ["GanttDependency", "GanttDependenciesEvents", "GanttDependenc
     };
     return DependenciesManager;
 }];
-
-var _jsplumb = __webpack_require__(286);
-
-var _jsplumb2 = _interopRequireDefault(_jsplumb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -78494,6 +78490,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", functio
         $scope.$watch('gantt.rowsManager.rows', function (newValue) {
             rowService.allRows = newValue;
         });
+        $scope.gantt.api.registerEvent('recycler', 'topIndexChanged');
         $scope.getHeaderContent = function (row) {
             return $scope.pluginScope.headerContent;
         };
@@ -78529,6 +78526,10 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", functio
                 return $scope.gantt.rowsManager.visibleRows.length;
             }
         };
+        $scope.topIndex = 0;
+        $scope.$watch('topIndex', function (newValue) {
+            $scope.gantt.api.recycler.raise.topIndexChanged(newValue);
+        });
     };
     return builder.build();
 }];
@@ -78694,23 +78695,29 @@ exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $root
         $scope.gantt.api.rows.refresh();
     };
     $scope.getClassByLevel = function () {
-        return 'row-level-' + $scope.row.rowLevel;
+        if ($scope.row) {
+            return 'row-level-' + $scope.row.rowLevel;
+        }
     };
     $scope.hasChildreen = function () {
-        return rowService.getChildreens($scope.row.model.id).length > 0;
+        if ($scope.row) {
+            return rowService.getChildreens($scope.row.model.id).length > 0;
+        }
     };
     $scope.getRowContent = function (rowTemplate) {
-        if (rowTemplate.content !== undefined) {
-            return rowTemplate.content;
+        if ($scope.row) {
+            if (rowTemplate.content !== undefined) {
+                return rowTemplate.content;
+            }
+            if ($scope.pluginScope.content !== undefined) {
+                return $scope.pluginScope.content;
+            }
+            var content = $scope.row.rowsManager.gantt.options.value('rowContent');
+            if (content === undefined) {
+                content = '{{row.model.name}}';
+            }
+            return content;
         }
-        if ($scope.pluginScope.content !== undefined) {
-            return $scope.pluginScope.content;
-        }
-        var content = $scope.row.rowsManager.gantt.options.value('rowContent');
-        if (content === undefined) {
-            content = '{{row.model.name}}';
-        }
-        return content;
     };
     $scope.getClass = function (rowTemplate) {
         return rowTemplate.classes;
@@ -80431,7 +80438,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
-var html = "<div class=\"gantt-side-content recycler-main-container\"> <div style=display:block ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\"> <div class=\"gantt-side-table-header gantt-side-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in ::templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss()> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"row-repeated gantt-row-height\" ng-controller=rowController style=display:block row-id={{row.model.id}}> <div ng-repeat=\"rowTemplate in templateRows\" class=gantt-side-column ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
+var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=grid-container ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in ::templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"gantt-row-height grid-row\" ng-controller=rowController row-id={{row.model.id}}> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -80536,12 +80543,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_285__;
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_286__;
-
-/***/ }),
-/* 287 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_287__;
 
 /***/ })
 /******/ ]);
