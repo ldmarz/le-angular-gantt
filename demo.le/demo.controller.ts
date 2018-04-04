@@ -32,7 +32,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(2, value.id)
+    appendChilds(10, value.id)
   })
 
 
@@ -51,7 +51,12 @@ export default function ($scope, $timeout) {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> mec </div>',
-    content: '<div style="background-color: red"> <input type="text" ></div>'
+    content: '<div>otroValue</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
   }
   ]
 

@@ -60,3 +60,14 @@
 .gantt-side-content .row-level-4 {
     padding-left: 60px;
 }
+
+.md-virtual-repeat-offsetter {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto 100px auto;
+}
