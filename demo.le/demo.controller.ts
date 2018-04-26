@@ -7,7 +7,7 @@ export default function ($scope, $timeout) {
   'ngInject'
   $scope.data = [
     {
-      name: 'wp1', mec: 'mec1', id: 1, level: 1, childreenCollapsed: true, tasks: [
+      name: '<div style="background-color: lightgreen"> Titutlo HTML </div>', mec: 'mec1', id: 1, level: 1, childreenCollapsed: true, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     },
