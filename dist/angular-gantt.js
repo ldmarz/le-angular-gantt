@@ -25003,11 +25003,12 @@ exports.default = ["$compile", function ($compile) {
         require: '^gantt',
         link: function link(scope, element, attrs, ganttCtrl) {
             scope.scope = ganttCtrl.gantt.$scope.$parent;
-            scope.$watch(function () {
+            scope.thisWatcher = scope.$watch(function () {
                 return scope.$eval(attrs.ganttBindCompileHtml);
             }, function (value) {
                 element.html(value);
                 $compile(element.contents())(scope);
+                scope.thisWatcher();
             });
         }
     };

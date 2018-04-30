@@ -7,17 +7,17 @@ export default function ($scope, $timeout) {
   'ngInject'
   $scope.data = [
     {
-      name: '<div style="background-color: lightgreen"> Titutlo HTML </div>', mec: 'mec1', id: 1, level: 1, childreenCollapsed: true, tasks: [
+      name: 'wp1', unaVar: true, mec: 'mec1', id: 1, level: 1, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     },
     {
-      name: 'wp2', mec: 'mec1', id: 2, level: 1, childreenCollapsed: true, tasks: [
+      name: 'wp2', unaVar: true, mec: 'mec1', id: 2, level: 1, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     },
     {
-      name: 'wp3', mec: 'mec1', id: 3, level: 1, childreenCollapsed: true, tasks: [
+      name: 'wp3', unaVar: true, mec: 'mec1', id: 3, level: 1, tasks: [
         { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
       ]
     }
@@ -32,7 +32,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(10, value.id)
+    appendChilds(50, value.id)
   })
 
   $scope.autoExpand = 'both'
@@ -50,23 +50,23 @@ export default function ($scope, $timeout) {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> mec </div>',
-    content: '<div>otroValue</div>'
+    content: '<div> <div ng-if="row.model.unaVar">otroValue</div> </div>'
   }, {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> WIDTH20 </div>',
-    content: '<div>algol</div>',
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>' ,
     width: '10px'
   }, {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> avic </div>',
-    content: '<div>algol</div>'
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>'
   }, {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> avic </div>',
-    content: '<div>algol</div>'
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>'
   }, {
     type: 'column',
     classes: ['input-hidden'],
