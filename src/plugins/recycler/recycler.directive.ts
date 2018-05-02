@@ -1,6 +1,5 @@
 require('./recycler.html')
 import _ from 'lodash'
-import { unwatchFile } from 'fs';
 
 export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
   'ngInject'

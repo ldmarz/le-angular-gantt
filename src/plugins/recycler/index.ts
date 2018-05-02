@@ -1,6 +1,6 @@
 import angular from 'angular'
 
-// import ganttModule from '../../index'
+import ganttModule from '../../index'
 import ngMaterial from 'angular-material'
 
 import recyclerPlugin from './recycler.plugin'
@@ -13,7 +13,7 @@ const pluginModule = 'gantt.recycler'
 require('./recycler.css')
 require('angular-material/angular-material.min.css')
 
-angular.module(pluginModule, [ngMaterial])
+angular.module(pluginModule, [ganttModule, ngMaterial])
   .directive('ganttRecycler', recyclerPlugin)
   .directive('recycler', recycler)
   .service('rowService', rowService)

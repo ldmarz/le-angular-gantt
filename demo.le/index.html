@@ -34,11 +34,14 @@
             <gantt-recycler
                 template-rows="templateRows" 
             ></gantt-recycler>
-             <!-- <gantt-movable enabled="true"
-                allow-moving="true" 
-                allow-resizing="true">
-              </gantt-movable> -->
         </div>
+
+
+        
+                <div gantt data="data" api="registerApi" auto-expand="autoExpand" task-out-of-range="taskOutOfRange" extra-scale-time="extraScaleTime"
+                  expand-to-fit="expandToFit" width="width" max-height="500" view-scale="scale" shrink-to-fit="shrinkToFit">
+                  <gantt-recycler template-rows="templateRows"></gantt-recycler>
+                </div>
     </div>
 </body>
 <style>

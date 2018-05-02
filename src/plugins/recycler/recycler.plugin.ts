@@ -111,7 +111,6 @@ export default function ($document, $compile, rowService) {
           angular.element(ifElement).append(tableElement)
 
           sideContentElement.append($compile(ifElement)(tableScope))
-          console.log(sideContentElement)
         }
       })
     }

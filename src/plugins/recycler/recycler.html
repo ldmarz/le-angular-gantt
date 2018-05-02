@@ -1,7 +1,7 @@
 <div class="gantt-side-content recycler-main-container">
   <div class="grid-container grid-row" ng-style="{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};">
     <div class="gantt-side-table-header gantt-side-column grid-column" ng-class="::getClassHeaderByType(row)" ng-repeat="row in templateRows">
-      <div class="gantt-side-row-label-header">
+      <div class="gantt-side-row-label-header" ng-class="row.classes">
         <span class="gantt-label-text" gantt-bind-compile-html="row.headerContent" />
       </div>
     </div>
