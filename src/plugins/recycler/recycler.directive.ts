@@ -1,15 +1,16 @@
 require('./recycler.html')
 import _ from 'lodash'
 
-export default function (GanttDirectiveBuilder, ganttLayout, rowService) {
+export default function (GanttDirectiveBuilder, ganttLayout) {
   'ngInject'
   let builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html')
   builder.controller = function ($scope) {
     let hScrollBarHeight = ganttLayout.getScrollBarHeight()
     $scope.templateRows = $scope.pluginScope.templateRows
+
     $scope.$watch('gantt.rowsManager.rows', newValue => {
       // This watcher is to keep updated the visible rows
-      rowService.allRows = newValue
+      $scope.pluginScope.rowService.allRows = newValue
     })
 
     $scope.gantt.api.registerEvent('recycler', 'topIndexChanged')

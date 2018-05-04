@@ -37175,16 +37175,16 @@ var _row = __webpack_require__(243);
 
 var _row2 = _interopRequireDefault(_row);
 
-var _row3 = __webpack_require__(244);
-
-var _row4 = _interopRequireDefault(_row3);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.recycler';
 __webpack_require__(208);
 __webpack_require__(198);
+<<<<<<< Updated upstream
 _angular2.default.module(pluginModule, [_index2.default, _angularMaterial2.default]).directive('ganttRecycler', _recycler2.default).directive('recycler', _recycler4.default).service('rowService', _row4.default).controller('rowController', _row2.default);
+=======
+_angular2.default.module(pluginModule, [_angularMaterial2.default]).directive('ganttRecycler', _recycler2.default).directive('recycler', _recycler4.default).controller('rowController', _row2.default);
+>>>>>>> Stashed changes
 exports.default = pluginModule;
 
 /***/ }),
@@ -78485,7 +78485,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", function (GanttDirectiveBuilder, ganttLayout, rowService) {
+exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirectiveBuilder, ganttLayout) {
     'ngInject';
 
     var builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html');
@@ -78493,7 +78493,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "rowService", functio
         var hScrollBarHeight = ganttLayout.getScrollBarHeight();
         $scope.templateRows = $scope.pluginScope.templateRows;
         $scope.$watch('gantt.rowsManager.rows', function (newValue) {
-            rowService.allRows = newValue;
+            $scope.pluginScope.rowService.allRows = newValue;
         });
         $scope.gantt.api.registerEvent('recycler', 'topIndexChanged');
         $scope.getHeaderContent = function (row) {
@@ -78579,7 +78579,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-exports.default = ["$document", "$compile", "rowService", function ($document, $compile, rowService) {
+exports.default = ["$document", "$compile", function ($document, $compile) {
     'ngInject';
 
     return {
@@ -78590,31 +78590,35 @@ exports.default = ["$document", "$compile", "rowService", function ($document, $
         },
         link: function link(scope, element, attrs, ganttCtrl) {
             var api = ganttCtrl.gantt.api;
+            scope.rowService = new _row2.default();
+            scope.lastInitialized = '';
             scope.$watch(function () {
                 return checkIfNewRow();
-            }, function () {
-                intializeRows();
-            }, true);
+            }, intializeRows, true);
             function checkIfNewRow() {
-                var algo = _lodash2.default.map(rowService.allRows, 'isInitialized');
-                return algo;
-            }
-            function intializeRows() {
-                var rowsNotInitialized = _lodash2.default.filter(rowService.allRows, function (o) {
+                var obj = _lodash2.default.find(scope.rowService.allRows, function (o) {
                     return !o.isInitialized;
                 });
-                _lodash2.default.each(rowsNotInitialized, function (row) {
-                    if (_lodash2.default.get(row, 'model.parent')) {
-                        var parent = rowService.findRowById(row.model.parent);
-                        if (parent) {
-                            row.model.isCollapsed = parent.model.childreenCollapsed;
-                            row.model.childreenCollapsed = row.model.isCollapsed;
+                return _lodash2.default.get(obj, 'model.id', false);
+            }
+            function intializeRows(results) {
+                if (!results) {
+                    var rowsNotInitialized = _lodash2.default.filter(scope.rowService.allRows, function (o) {
+                        return !o.isInitialized;
+                    });
+                    _lodash2.default.each(rowsNotInitialized, function (row) {
+                        if (_lodash2.default.get(row, 'model.parent')) {
+                            var parent = scope.rowService.findRowById(row.model.parent);
+                            if (parent) {
+                                row.model.isCollapsed = parent.model.childreenCollapsed;
+                                row.model.childreenCollapsed = row.model.isCollapsed;
+                            }
                         }
+                        row.isInitialized = true;
+                    });
+                    if (rowsNotInitialized) {
+                        api.rows.refresh();
                     }
-                    row.isInitialized = true;
-                });
-                if (rowsNotInitialized) {
-                    api.rows.refresh();
                 }
             }
             var filter = function filter(rows) {
@@ -78628,32 +78632,32 @@ exports.default = ["$document", "$compile", "rowService", function ($document, $
                 });
                 _lodash2.default.each(rootRows, function (rootRow) {
                     rootRow.model.childreenCollapsed = true;
-                    rowService.collapseChildreen(rootRow);
+                    scope.rowService.collapseChildreen(rootRow);
                 });
                 this.gantt.api.rows.refresh();
             }
             function expandAll() {
                 _lodash2.default.each(this.gantt.rowsManager.visibleRows, function (rootRow) {
                     rootRow.model.childreenCollapsed = false;
-                    rowService.expandChildreen(rootRow);
+                    scope.rowService.expandChildreen(rootRow);
                 });
                 this.gantt.api.rows.refresh();
             }
             function expand(id) {
-                var row = rowService.findRowById(id);
+                var row = scope.rowService.findRowById(id);
                 if (row) {
                     row.model.childreenCollapsed = false;
-                    rowService.expandChildreen(row);
+                    scope.rowService.expandChildreen(row);
                     this.gantt.api.rows.refresh();
                 } else {
                     console.log('Row not found!');
                 }
             }
             function collapse(id) {
-                var row = rowService.findRowById(id);
+                var row = scope.rowService.findRowById(id);
                 if (row) {
                     row.model.childreenCollapsed = true;
-                    rowService.collapseChildreen(row);
+                    scope.rowService.collapseChildreen(row);
                     this.gantt.api.rows.refresh();
                 } else {
                     console.log('Row not found!');
@@ -78693,6 +78697,10 @@ var _sortRows = __webpack_require__(240);
 
 var _sortRows2 = _interopRequireDefault(_sortRows);
 
+var _row = __webpack_require__(244);
+
+var _row2 = _interopRequireDefault(_row);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var firstRender = true;
@@ -78708,7 +78716,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $rootScope, rowService) {
+exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
     'ngInject';
 
     $scope.levels = _constant.levels;
@@ -78718,10 +78726,10 @@ exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $root
     $scope.collapse = function () {
         if (!$scope.row.model.childreenCollapsed) {
             $scope.row.model.childreenCollapsed = true;
-            rowService.collapseChildreen($scope.row);
+            $scope.pluginScope.rowService.collapseChildreen($scope.row);
         } else {
             $scope.row.model.childreenCollapsed = false;
-            rowService.expandChildreen($scope.row);
+            $scope.pluginScope.rowService.expandChildreen($scope.row);
         }
         $scope.gantt.api.rows.refresh();
     };
@@ -78732,7 +78740,7 @@ exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $root
     };
     $scope.hasChildreen = function () {
         if ($scope.row) {
-            return rowService.getChildreens($scope.row.model.id).length > 0;
+            return _angular2.default.isDefined($scope.pluginScope.rowService.hasChildreen($scope.row.model.id));
         }
     };
     $scope.getRowContent = function (rowTemplate) {
@@ -78756,6 +78764,12 @@ exports.default = ["$scope", "$rootScope", "rowService", function ($scope, $root
 }];
 
 var _constant = __webpack_require__(174);
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 244 */
@@ -78823,6 +78837,13 @@ var RowService = function () {
         value: function findRowById(id) {
             return _lodash2.default.find(this.allRows, function (row) {
                 return row.model.id === id;
+            });
+        }
+    }, {
+        key: 'hasChildreen',
+        value: function hasChildreen(id) {
+            return _lodash2.default.find(this.allRows, function (o) {
+                return o.model.parent === id;
             });
         }
     }]);
@@ -80469,7 +80490,11 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
+<<<<<<< Updated upstream
 var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=\"grid-container grid-row\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in templateRows\"> <div class=gantt-side-row-label-header ng-class=row.classes> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-virtual-repeat=\"row in allRows\" md-on-demand ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}} ng-style=\"{'grid-template-columns': getTemplateWidth()}\"> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
+=======
+var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=\"grid-container grid-row\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in templateRows\"> <div class=gantt-side-row-label-header> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-item-size md-virtual-repeat=\"row in gantt.rowsManager.visibleRows\" ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}} ng-style=\"{'grid-template-columns': getTemplateWidth()}\"> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
+>>>>>>> Stashed changes
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 

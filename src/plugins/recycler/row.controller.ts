@@ -1,7 +1,8 @@
 import _ from 'lodash'
 import { levels } from '../../constant'
+import angular from 'angular'
 
-export default function ($scope, $rootScope, rowService) {
+export default function ($scope, $rootScope) {
   'ngInject'
   $scope.levels = levels
 
@@ -13,10 +14,10 @@ export default function ($scope, $rootScope, rowService) {
 
     if (!$scope.row.model.childreenCollapsed) {
       $scope.row.model.childreenCollapsed = true
-      rowService.collapseChildreen($scope.row)
+      $scope.pluginScope.rowService.collapseChildreen($scope.row)
     } else {
       $scope.row.model.childreenCollapsed = false
-      rowService.expandChildreen($scope.row)
+      $scope.pluginScope.rowService.expandChildreen($scope.row)
     }
 
     $scope.gantt.api.rows.refresh()
@@ -30,7 +31,7 @@ export default function ($scope, $rootScope, rowService) {
 
   $scope.hasChildreen = function () {
     if ($scope.row) {
-      return rowService.getChildreens($scope.row.model.id).length > 0
+      return angular.isDefined($scope.pluginScope.rowService.hasChildreen($scope.row.model.id))
     }
   }
 

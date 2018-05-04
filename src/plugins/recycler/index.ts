@@ -16,7 +16,6 @@ require('angular-material/angular-material.min.css')
 angular.module(pluginModule, [ganttModule, ngMaterial])
   .directive('ganttRecycler', recyclerPlugin)
   .directive('recycler', recycler)
-  .service('rowService', rowService)
   .controller('rowController', rowController)
 
 export default pluginModule

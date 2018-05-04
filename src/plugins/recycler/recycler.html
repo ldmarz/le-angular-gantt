@@ -10,10 +10,9 @@
 
   <md-virtual-repeat-container md-top-index="topIndex" id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()"
     class="grid-container">
-    <div md-virtual-repeat="row in allRows" md-on-demand ng-class="row.model.classes" class="gantt-row-height grid-row row-repeated"
+    <div md-item-size md-virtual-repeat="row in gantt.rowsManager.visibleRows" ng-class="row.model.classes" class="gantt-row-height grid-row row-repeated"
       ng-controller="rowController" row-id="{{row.model.id}}" ng-style="{'grid-template-columns': getTemplateWidth()}">
       <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column grid-column" ng-class="getClass(rowTemplate)">
-
         <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
           <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}"
             ng-click="collapse()">

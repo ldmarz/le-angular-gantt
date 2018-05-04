@@ -32,7 +32,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(50, value.id)
+    appendChilds(200, value.id)
   })
 
   $scope.autoExpand = 'both'

@@ -39,4 +39,10 @@ export default class RowService {
       return row.model.id === id
     })
   }
+
+  hasChildreen (id) {
+    return _.find(this.allRows, o => {
+      return (o.model.parent === id)
+    })
+  }
 }
