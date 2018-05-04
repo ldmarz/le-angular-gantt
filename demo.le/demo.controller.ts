@@ -2,6 +2,7 @@ import moment from 'moment'
 import _ from 'lodash'
 import randomName from 'random-name'
 import uuid from 'uuid'
+import angular from 'angular'
 
 export default function ($scope, $timeout) {
   'ngInject'
@@ -34,6 +35,8 @@ export default function ($scope, $timeout) {
   _.each(tasks, value => {
     appendChilds(200, value.id)
   })
+
+  $scope.data2 = angular.copy($scope.data)
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
