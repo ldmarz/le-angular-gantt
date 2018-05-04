@@ -78794,8 +78794,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var RowService = function () {
     function RowService() {
-        'ngInject';
-
         (0, _classCallCheck3.default)(this, RowService);
     }
 

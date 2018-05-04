@@ -6,7 +6,6 @@ import ngMaterial from 'angular-material'
 import recyclerPlugin from './recycler.plugin'
 import recycler from './recycler.directive'
 import rowController from './row.controller'
-import rowService from './row.service'
 
 const pluginModule = 'gantt.recycler'
 

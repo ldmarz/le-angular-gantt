@@ -6,10 +6,6 @@ export default class RowService {
   allRows: Array<object> // binding to gantt.rowsManager.visibleRows
   $rootScope: IScope
 
-  constructor () {
-    'ngInject'
-  }
-
   getChildreens (id) {
     return _.filter(this.allRows, o => {
       return (o.model.parent === id)
