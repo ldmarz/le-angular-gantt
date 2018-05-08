@@ -3,6 +3,7 @@ import _ from 'lodash'
 import sortRows from './helpers/sortRows'
 let firstRender = true
 import rowService from './row.service'
+const promise = require('bluebird')
 
 export default function ($document, $compile) {
   'ngInject'
@@ -15,7 +16,7 @@ export default function ($document, $compile) {
     },
     link: function (scope, element, attrs, ganttCtrl) {
       let api = ganttCtrl.gantt.api
-      scope.rowService = new rowService()
+      scope.rowService = new rowService(api)
       scope.lastInitialized = ''
 
       scope.$watch(() => checkIfNewRow(), intializeRows, true)
@@ -54,21 +55,26 @@ export default function ($document, $compile) {
 
       function collapseAll () {
         const rootRows = _.filter(this.gantt.rowsManager.visibleRows, o => !(o.model.parent))
-        _.each(rootRows, rootRow => {
+        promise.map(rootRows, rootRow => {
           rootRow.model.childreenCollapsed = true
-          scope.rowService.collapseChildreen(rootRow)
+          return scope.rowService.collapseChildreen(rootRow)
         })
-
-        this.gantt.api.rows.refresh()
+          .then(() => {
+            this.gantt.api.rows.refresh()
+            scope.$apply()
+            console.timeEnd('gogo')
+          })
       }
 
       function expandAll () {
-        _.each(this.gantt.rowsManager.visibleRows, rootRow => {
+        promise.map(this.gantt.rowsManager.visibleRows, rootRow => {
           rootRow.model.childreenCollapsed = false
-          scope.rowService.expandChildreen(rootRow)
+          return scope.rowService.expandChildreen(rootRow, true)
         })
-
-        this.gantt.api.rows.refresh()
+          .then(() => {
+            this.gantt.api.rows.refresh()
+            scope.$apply()
+          })
       }
 
       function expand (id) {

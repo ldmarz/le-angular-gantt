@@ -10,17 +10,17 @@ export default function ($scope, $rootScope) {
     return $scope.row.model.name
   }
 
-  $scope.collapse = function () {
+  $scope.collapse = async function () {
 
     if (!$scope.row.model.childreenCollapsed) {
       $scope.row.model.childreenCollapsed = true
-      $scope.pluginScope.rowService.collapseChildreen($scope.row)
+      await $scope.pluginScope.rowService.collapseChildreen($scope.row)
     } else {
       $scope.row.model.childreenCollapsed = false
-      $scope.pluginScope.rowService.expandChildreen($scope.row)
+      await $scope.pluginScope.rowService.expandChildreen($scope.row)
     }
-
     $scope.gantt.api.rows.refresh()
+    $scope.$apply()
   }
 
   $scope.getClassByLevel = function () {
