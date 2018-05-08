@@ -36,12 +36,13 @@ export default class RowService {
       })
   }
 
-  expandChildreen (row, isAll = false) {
+  expandChildreen (row) {
     this.addTreeLoading(row.model.id)
 
     return promise.map(this.getChildreens(row.model.id), row => {
       row.model.isCollapsed = false
-      if (row.model.parent && !isAll) {
+
+      if (row.model.parent) {
         row.model.childreenCollapsed = true
       }
     })

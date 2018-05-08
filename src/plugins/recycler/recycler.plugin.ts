@@ -62,14 +62,13 @@ export default function ($document, $compile) {
           .then(() => {
             this.gantt.api.rows.refresh()
             scope.$apply()
-            console.timeEnd('gogo')
           })
       }
 
       function expandAll () {
-        promise.map(this.gantt.rowsManager.visibleRows, rootRow => {
+        promise.map(this.gantt.rowsManager.visibleRows, async rootRow => {
+          await scope.rowService.expandChildreen(rootRow)
           rootRow.model.childreenCollapsed = false
-          return scope.rowService.expandChildreen(rootRow, true)
         })
           .then(() => {
             this.gantt.api.rows.refresh()
