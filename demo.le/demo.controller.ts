@@ -36,7 +36,7 @@ export default function ($scope, $timeout) {
     appendChilds(200, value.id)
   })
 
-  $scope.data2 = angular.copy($scope.data)
+  console.log($scope.data.length)
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
