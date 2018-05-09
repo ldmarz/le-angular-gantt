@@ -69,16 +69,24 @@ export default class RowService {
     return angular.element(arrowDom)
   }
 
+  getRefreshDom (rowId) {
+    const refreshDom = document.querySelector(`.row-repeated[row-id="${rowId}"] .glyphicon-refresh.glyphicon-refresh-animate`)
+    return angular.element(refreshDom)
+  }
+
   addTreeLoading (rowId) {
     // This function only add a loading on the tree button, can be removed without issues
     const element = this.getArrowDom(rowId)
-    element.addClass(this.treeLoadingClass)
-    element.append('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>')
+    const refresh = this.getRefreshDom(rowId)
+    if (element && refresh.length === 0) {
+      element.addClass(this.treeLoadingClass)
+      element.append('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>')
+    }
   }
 
   removeTreeLoading (rowId) {
     const element = this.getArrowDom(rowId)
-    const refresh = document.querySelector(`.row-repeated[row-id="${rowId}"] .glyphicon-refresh.glyphicon-refresh-animate`)
+    const refresh = this.getRefreshDom(rowId)
     if (refresh) {
       refresh.remove()
     }

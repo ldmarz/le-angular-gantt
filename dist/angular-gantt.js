@@ -84946,6 +84946,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     builder.controller = function ($scope) {
         var hScrollBarHeight = ganttLayout.getScrollBarHeight();
         $scope.templateRows = $scope.pluginScope.templateRows;
+        $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : [];
         $scope.$watch('gantt.rowsManager.rows', function (newValue) {
             $scope.pluginScope.rowService.allRows = newValue;
         });
@@ -85444,17 +85445,26 @@ var RowService = function () {
             return _angular2.default.element(arrowDom);
         }
     }, {
+        key: 'getRefreshDom',
+        value: function getRefreshDom(rowId) {
+            var refreshDom = document.querySelector('.row-repeated[row-id="' + rowId + '"] .glyphicon-refresh.glyphicon-refresh-animate');
+            return _angular2.default.element(refreshDom);
+        }
+    }, {
         key: 'addTreeLoading',
         value: function addTreeLoading(rowId) {
             var element = this.getArrowDom(rowId);
-            element.addClass(this.treeLoadingClass);
-            element.append('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>');
+            var refresh = this.getRefreshDom(rowId);
+            if (element && refresh.length === 0) {
+                element.addClass(this.treeLoadingClass);
+                element.append('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>');
+            }
         }
     }, {
         key: 'removeTreeLoading',
         value: function removeTreeLoading(rowId) {
             var element = this.getArrowDom(rowId);
-            var refresh = document.querySelector('.row-repeated[row-id="' + rowId + '"] .glyphicon-refresh.glyphicon-refresh-animate');
+            var refresh = this.getRefreshDom(rowId);
             if (refresh) {
                 refresh.remove();
             }
