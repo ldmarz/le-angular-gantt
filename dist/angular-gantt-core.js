@@ -14,7 +14,7 @@
 		exports["angular-gantt-core"] = factory(require("angular"), require("moment"));
 	else
 		root["angular-gantt-core"] = factory(root["angular"], root["moment"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_3__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -100,12 +100,6 @@ exports.default = function (instance, Constructor) {
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -136,6 +130,12 @@ exports.default = function () {
     return Constructor;
   };
 }();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }),
 /* 3 */
@@ -194,7 +194,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -17928,7 +17928,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18543,7 +18543,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18776,7 +18776,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18863,7 +18863,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -19417,7 +19417,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -19554,7 +19554,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20068,7 +20068,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20165,7 +20165,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20179,7 +20179,7 @@ exports.default = ["GanttRow", "ganttArrays", "$filter", "$timeout", function (G
     return GanttRowsManager;
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -20900,7 +20900,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20946,7 +20946,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21077,7 +21077,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21149,7 +21149,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21609,7 +21609,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21658,7 +21658,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21799,7 +21799,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21954,7 +21954,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21967,7 +21967,7 @@ exports.default = ["GanttApi", "GanttOptions", "GanttCalendar", "GanttScroll", "
     return Gantt;
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -22392,7 +22392,7 @@ var _typeof2 = __webpack_require__(5);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -22412,7 +22412,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var angular = _interopRequireWildcard(_angular);
 
@@ -22724,7 +22724,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GanttTask = exports.GanttTaskModel = undefined;
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -22738,7 +22738,7 @@ exports.default = function () {
     return GanttTask;
 };
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -23094,7 +23094,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Timespan = exports.TimespanModel = undefined;
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23108,7 +23108,7 @@ exports.default = function () {
     return Timespan;
 };
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -23227,7 +23227,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23341,7 +23341,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23402,7 +23402,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23594,11 +23594,11 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -24853,7 +24853,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -24955,7 +24955,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25078,7 +25078,7 @@ exports.default = ["$injector", function ($injector) {
     }
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -25199,7 +25199,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25344,7 +25344,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25389,7 +25389,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25447,7 +25447,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 

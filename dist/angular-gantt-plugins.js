@@ -14,7 +14,7 @@
 		exports["angular-gantt-plugins"] = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("ui.tree"));
 	else
 		root["angular-gantt-plugins"] = factory(root["angular"], root["moment"], root["ElementQueries"], root["ResizeSensor"], root["angular-animate"], root["angular-native-dragdrop"], root["ui.tree"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_303__, __WEBPACK_EXTERNAL_MODULE_304__, __WEBPACK_EXTERNAL_MODULE_305__, __WEBPACK_EXTERNAL_MODULE_306__, __WEBPACK_EXTERNAL_MODULE_307__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_303__, __WEBPACK_EXTERNAL_MODULE_304__, __WEBPACK_EXTERNAL_MODULE_305__, __WEBPACK_EXTERNAL_MODULE_306__, __WEBPACK_EXTERNAL_MODULE_307__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -100,12 +100,6 @@ exports.default = function (instance, Constructor) {
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -136,6 +130,12 @@ exports.default = function () {
     return Constructor;
   };
 }();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }),
 /* 3 */
@@ -194,7 +194,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -17928,7 +17928,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18543,7 +18543,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18776,7 +18776,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -18863,7 +18863,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -19417,7 +19417,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -19554,7 +19554,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20068,7 +20068,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20165,7 +20165,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20179,7 +20179,7 @@ exports.default = ["GanttRow", "ganttArrays", "$filter", "$timeout", function (G
     return GanttRowsManager;
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -20900,7 +20900,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -20946,7 +20946,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21077,7 +21077,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21149,7 +21149,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21609,7 +21609,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21658,7 +21658,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21799,7 +21799,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21954,7 +21954,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -21967,7 +21967,7 @@ exports.default = ["GanttApi", "GanttOptions", "GanttCalendar", "GanttScroll", "
     return Gantt;
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -22392,7 +22392,7 @@ var _typeof2 = __webpack_require__(5);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -22412,7 +22412,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var angular = _interopRequireWildcard(_angular);
 
@@ -22724,7 +22724,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GanttTask = exports.GanttTaskModel = undefined;
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -22738,7 +22738,7 @@ exports.default = function () {
     return GanttTask;
 };
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -23094,7 +23094,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Timespan = exports.TimespanModel = undefined;
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23108,7 +23108,7 @@ exports.default = function () {
     return Timespan;
 };
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -23227,7 +23227,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23341,7 +23341,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23402,7 +23402,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -23594,11 +23594,11 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -24853,7 +24853,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -24955,7 +24955,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25078,7 +25078,7 @@ exports.default = ["$injector", function ($injector) {
     }
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -25199,7 +25199,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25344,7 +25344,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25389,7 +25389,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -25447,7 +25447,7 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -42630,7 +42630,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42664,7 +42664,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42698,7 +42698,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42748,7 +42748,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42777,7 +42777,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42919,7 +42919,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42961,7 +42961,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -42995,7 +42995,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43025,7 +43025,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43059,7 +43059,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43102,7 +43102,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43131,7 +43131,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43169,7 +43169,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43201,7 +43201,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43243,7 +43243,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -43277,7 +43277,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -80152,7 +80152,7 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
-__webpack_require__(1);
+__webpack_require__(2);
 
 // Load Angular and dependent libs
 __webpack_require__(305);
@@ -81800,7 +81800,7 @@ exports.default = ["$compile", "$document", function ($compile, $document) {
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -81939,7 +81939,7 @@ exports.default = ["ganttUtils", "$compile", "$document", function (ganttUtils, 
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -82254,7 +82254,7 @@ exports.default = ["$timeout", "$document", "ganttDebounce", "GanttDependenciesM
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -83410,7 +83410,7 @@ exports.default = ["$timeout", function ($timeout) {
     return TaskMouseHandler;
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -83671,7 +83671,7 @@ exports.default = ["ganttUtils", "GanttHierarchy", "$compile", "$document", func
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -83996,7 +83996,7 @@ exports.default = ["ganttUtils", "$compile", "$document", "$log", function (gant
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -84492,7 +84492,7 @@ exports.default = ["ganttMouseButton", "ganttMouseOffset", "GanttSmartEvent", "g
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -84798,7 +84798,7 @@ exports.default = ["$compile", "$document", function ($compile, $document) {
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -85042,7 +85042,7 @@ var _promise = __webpack_require__(139);
 
 var _promise2 = _interopRequireDefault(_promise);
 
-exports.default = ["$document", "$compile", function ($document, $compile) {
+exports.default = ["$document", "$compile", "$timeout", function ($document, $compile, $timeout) {
     'ngInject';
 
     return {
@@ -85095,7 +85095,7 @@ exports.default = ["$document", "$compile", function ($document, $compile) {
                 var rootRows = _lodash2.default.filter(this.gantt.rowsManager.visibleRows, function (o) {
                     return !o.model.parent;
                 });
-                promise.map(rootRows, function (rootRow) {
+                return promise.map(rootRows, function (rootRow) {
                     rootRow.model.childreenCollapsed = true;
                     return scope.rowService.collapseChildreen(rootRow);
                 }).then(function () {
@@ -85106,7 +85106,7 @@ exports.default = ["$document", "$compile", function ($document, $compile) {
             function expandAll() {
                 var _this2 = this;
 
-                promise.map(this.gantt.rowsManager.visibleRows, function (rootRow) {
+                return promise.map(this.gantt.rowsManager.visibleRows, function (rootRow) {
                     return __awaiter(_this2, void 0, void 0, _regenerator2.default.mark(function _callee() {
                         return _regenerator2.default.wrap(function _callee$(_context) {
                             while (1) {
@@ -85131,24 +85131,83 @@ exports.default = ["$document", "$compile", function ($document, $compile) {
                 });
             }
             function expand(id) {
+                var _this3 = this;
+
+                scope.rowService.addTreeLoading(id);
                 var row = scope.rowService.findRowById(id);
                 if (row) {
-                    row.model.childreenCollapsed = false;
-                    scope.rowService.expandChildreen(row);
-                    this.gantt.api.rows.refresh();
+                    $timeout(function () {
+                        return __awaiter(_this3, void 0, void 0, _regenerator2.default.mark(function _callee2() {
+                            return _regenerator2.default.wrap(function _callee2$(_context2) {
+                                while (1) {
+                                    switch (_context2.prev = _context2.next) {
+                                        case 0:
+                                            row.model.childreenCollapsed = false;
+                                            _context2.next = 3;
+                                            return scope.rowService.expandChildreen(row);
+
+                                        case 3:
+                                            this.gantt.api.rows.refresh();
+                                            scope.$apply();
+
+                                        case 5:
+                                        case 'end':
+                                            return _context2.stop();
+                                    }
+                                }
+                            }, _callee2, this);
+                        }));
+                    });
                 } else {
                     console.log('Row not found!');
                 }
             }
             function collapse(id) {
-                var row = scope.rowService.findRowById(id);
-                if (row) {
-                    row.model.childreenCollapsed = true;
-                    scope.rowService.collapseChildreen(row);
-                    this.gantt.api.rows.refresh();
-                } else {
-                    console.log('Row not found!');
-                }
+                return __awaiter(this, void 0, void 0, _regenerator2.default.mark(function _callee4() {
+                    var _this4 = this;
+
+                    var row;
+                    return _regenerator2.default.wrap(function _callee4$(_context4) {
+                        while (1) {
+                            switch (_context4.prev = _context4.next) {
+                                case 0:
+                                    scope.rowService.addTreeLoading(id);
+                                    row = scope.rowService.findRowById(id);
+
+                                    if (row) {
+                                        $timeout(function () {
+                                            return __awaiter(_this4, void 0, void 0, _regenerator2.default.mark(function _callee3() {
+                                                return _regenerator2.default.wrap(function _callee3$(_context3) {
+                                                    while (1) {
+                                                        switch (_context3.prev = _context3.next) {
+                                                            case 0:
+                                                                row.model.childreenCollapsed = true;
+                                                                _context3.next = 3;
+                                                                return scope.rowService.collapseChildreen(row);
+
+                                                            case 3:
+                                                                this.gantt.api.rows.refresh();
+                                                                scope.$apply();
+
+                                                            case 5:
+                                                            case 'end':
+                                                                return _context3.stop();
+                                                        }
+                                                    }
+                                                }, _callee3, this);
+                                            }));
+                                        });
+                                    } else {
+                                        console.log('Row not found!');
+                                    }
+
+                                case 3:
+                                case 'end':
+                                    return _context4.stop();
+                            }
+                        }
+                    }, _callee4, this);
+                }));
             }
             api.registerMethod('recycler', 'collapseAll', collapseAll, ganttCtrl);
             api.registerMethod('recycler', 'expandAll', expandAll, ganttCtrl);
@@ -85172,7 +85231,7 @@ exports.default = ["$document", "$compile", function ($document, $compile) {
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -85238,10 +85297,11 @@ var _promise = __webpack_require__(139);
 
 var _promise2 = _interopRequireDefault(_promise);
 
-exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
+exports.default = ["$scope", "$rootScope", "$timeout", function ($scope, $rootScope, $timeout) {
     'ngInject';
 
     $scope.levels = _constant.levels;
+    $scope.$timeout = $timeout;
     $scope.getValue = function () {
         return $scope.row.model.name;
     };
@@ -85251,22 +85311,39 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
                 while (1) {
                     switch (_context.prev = _context.next) {
                         case 0:
+                            $scope.pluginScope.rowService.addTreeLoading($scope.row.model.id);
+                            $scope.$timeout($scope.applyCollapse);
+
+                        case 2:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, this);
+        }));
+    };
+    $scope.applyCollapse = function () {
+        return __awaiter(this, void 0, void 0, _regenerator2.default.mark(function _callee2() {
+            return _regenerator2.default.wrap(function _callee2$(_context2) {
+                while (1) {
+                    switch (_context2.prev = _context2.next) {
+                        case 0:
                             if ($scope.row.model.childreenCollapsed) {
-                                _context.next = 6;
+                                _context2.next = 6;
                                 break;
                             }
 
                             $scope.row.model.childreenCollapsed = true;
-                            _context.next = 4;
+                            _context2.next = 4;
                             return $scope.pluginScope.rowService.collapseChildreen($scope.row);
 
                         case 4:
-                            _context.next = 9;
+                            _context2.next = 9;
                             break;
 
                         case 6:
                             $scope.row.model.childreenCollapsed = false;
-                            _context.next = 9;
+                            _context2.next = 9;
                             return $scope.pluginScope.rowService.expandChildreen($scope.row);
 
                         case 9:
@@ -85275,10 +85352,10 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
 
                         case 11:
                         case 'end':
-                            return _context.stop();
+                            return _context2.stop();
                     }
                 }
-            }, _callee, this);
+            }, _callee2, this);
         }));
     };
     $scope.getClassByLevel = function () {
@@ -85313,7 +85390,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
 
 var _constant = __webpack_require__(179);
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -85359,17 +85436,13 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(2);
+var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
 var _lodash = __webpack_require__(19);
 
 var _lodash2 = _interopRequireDefault(_lodash);
-
-var _angular = __webpack_require__(1);
-
-var _angular2 = _interopRequireDefault(_angular);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85397,15 +85470,12 @@ var RowService = function () {
         value: function collapseChildreen(row) {
             var _this = this;
 
-            if (this.hasChildreen(row.model.id)) {
-                this.addTreeLoading(row.model.id);
-            }
             return promise.map(this.getChildreens(row.model.id), function (row) {
                 row.model.isCollapsed = true;
                 if (row.model.parent) {
                     return _this.collapseChildreen(row);
                 }
-            }).delay(0).then(function () {
+            }).then(function () {
                 _this.removeTreeLoading(row.model.id);
             });
         }
@@ -85414,13 +85484,12 @@ var RowService = function () {
         value: function expandChildreen(row) {
             var _this2 = this;
 
-            this.addTreeLoading(row.model.id);
             return promise.map(this.getChildreens(row.model.id), function (row) {
                 row.model.isCollapsed = false;
                 if (row.model.parent) {
                     row.model.childreenCollapsed = true;
                 }
-            }).delay(0).then(function () {
+            }).then(function () {
                 _this2.removeTreeLoading(row.model.id);
             });
         }
@@ -85439,36 +85508,16 @@ var RowService = function () {
             });
         }
     }, {
-        key: 'getArrowDom',
-        value: function getArrowDom(rowId) {
-            var arrowDom = document.querySelector('.row-repeated[row-id="' + rowId + '"] a.gantt-tree-handle-button');
-            return _angular2.default.element(arrowDom);
-        }
-    }, {
-        key: 'getRefreshDom',
-        value: function getRefreshDom(rowId) {
-            var refreshDom = document.querySelector('.row-repeated[row-id="' + rowId + '"] .glyphicon-refresh.glyphicon-refresh-animate');
-            return _angular2.default.element(refreshDom);
-        }
-    }, {
         key: 'addTreeLoading',
         value: function addTreeLoading(rowId) {
-            var element = this.getArrowDom(rowId);
-            var refresh = this.getRefreshDom(rowId);
-            if (element && refresh.length === 0) {
-                element.addClass(this.treeLoadingClass);
-                element.append('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>');
-            }
+            var row = this.findRowById(rowId);
+            row.model.isLoading = true;
         }
     }, {
         key: 'removeTreeLoading',
         value: function removeTreeLoading(rowId) {
-            var element = this.getArrowDom(rowId);
-            var refresh = this.getRefreshDom(rowId);
-            if (refresh) {
-                refresh.remove();
-            }
-            element.removeClass(this.treeLoadingClass);
+            var row = this.findRowById(rowId);
+            row.model.isLoading = false;
         }
     }]);
     return RowService;
@@ -85647,7 +85696,7 @@ exports.default = ["$compile", "$document", function ($compile, $document) {
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -86064,7 +86113,7 @@ exports.default = ["ganttUtils", "$compile", "$document", function (ganttUtils, 
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -86349,7 +86398,7 @@ exports.default = ["$log", "$timeout", "$compile", "$document", "$templateCache"
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var angular = _interopRequireWildcard(_angular);
 
@@ -86426,7 +86475,7 @@ exports.default = ["$compile", "$document", function ($compile, $document) {
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -86850,7 +86899,7 @@ exports.default = ["ganttUtils", "$compile", "$document", function (ganttUtils, 
     };
 }];
 
-var _angular = __webpack_require__(1);
+var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
@@ -87114,7 +87163,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
-var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=\"grid-container grid-row\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in templateRows\"> <div class=gantt-side-row-label-header ng-class=row.classes> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-item-size md-virtual-repeat=\"row in gantt.rowsManager.visibleRows\" ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}} ng-style=\"{'grid-template-columns': getTemplateWidth()}\"> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\" ng-click=collapse()> <span ng-if=hasChildreen() class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                          'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                          'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
+var html = "<div class=\"gantt-side-content recycler-main-container\"> <div class=\"grid-container grid-row\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};\"> <div class=\"gantt-side-table-header gantt-side-column grid-column\" ng-class=::getClassHeaderByType(row) ng-repeat=\"row in templateRows\"> <div class=gantt-side-row-label-header ng-class=row.classes> <span class=gantt-label-text gantt-bind-compile-html=row.headerContent /> </div> </div> </div> <md-virtual-repeat-container md-top-index=topIndex id=vertical-container gantt-vertical-scroll-receiver ng-style=getLabelsCss() class=grid-container> <div md-item-size md-virtual-repeat=\"row in gantt.rowsManager.visibleRows\" ng-class=row.model.classes class=\"gantt-row-height grid-row row-repeated\" ng-controller=rowController row-id={{row.model.id}} ng-style=\"{'grid-template-columns': getTemplateWidth()}\"> <div ng-repeat=\"rowTemplate in templateRows\" class=\"gantt-side-column grid-column\" ng-class=getClass(rowTemplate)> <div ng-if=\"rowTemplate.type == 'tree' \" ng-class=getClassByLevel() class=\"tree-container column-repeated\" row-id={{row.model.id}}> <a data-nodrag class=\"gantt-tree-handle-button btn btn-xs\" ng-class=\"{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> <div ng-click=collapse() ng-if=\"hasChildreen() && !row.model.isLoading\" class=wrapper-collapsed> <span class=\"gantt-tree-handle glyphicon\" ng-class=\"{\n                                      'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,\n                                      'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}\"> </span> </div> <span ng-if=row.model.isLoading class=\"glyphicon refresh-tree glyphicon-refresh glyphicon-refresh-animate\"></span> </a> <span gantt-row-label class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate) /> </div> <div ng-if=\"rowTemplate.type == 'column'\" class=\"column-container column-repeated\"> <span class=gantt-label-text gantt-bind-compile-html=getRowContent(rowTemplate)></span> </div> </div> </div> </md-virtual-repeat-container> </div>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
