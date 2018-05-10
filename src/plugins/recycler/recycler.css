@@ -71,11 +71,7 @@
     grid-template-rows: auto;
 }
 
-.tree-loading .gantt-tree-handle {
-  display: none !important;
-}
-
-.tree-loading .glyphicon-refresh-animate {
+.glyphicon-refresh-animate {
   -animation: spin .7s infinite linear;
   -ms-animation: spin .7s infinite linear;
   -webkit-animation: spin .7s infinite linear;
@@ -96,4 +92,8 @@
 @-moz-keyframes spinm {
     from { -moz-transform: rotate(0deg);}
     to { -moz-transform: rotate(360deg);}
+}
+
+.wrapper-collapsed {
+  outline: none;
 }

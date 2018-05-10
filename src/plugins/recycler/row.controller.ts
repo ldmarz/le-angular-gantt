@@ -2,16 +2,21 @@ import _ from 'lodash'
 import { levels } from '../../constant'
 import angular from 'angular'
 
-export default function ($scope, $rootScope) {
+export default function ($scope, $rootScope, $timeout) {
   'ngInject'
   $scope.levels = levels
+  $scope.$timeout = $timeout
 
   $scope.getValue = function () {
     return $scope.row.model.name
   }
 
   $scope.collapse = async function () {
+    $scope.pluginScope.rowService.addTreeLoading($scope.row.model.id)
+    $scope.$timeout($scope.applyCollapse)
+  }
 
+  $scope.applyCollapse = async function () {
     if (!$scope.row.model.childreenCollapsed) {
       $scope.row.model.childreenCollapsed = true
       await $scope.pluginScope.rowService.collapseChildreen($scope.row)

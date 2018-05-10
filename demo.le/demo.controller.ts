@@ -25,7 +25,7 @@ export default function ($scope, $timeout) {
   ]
 
   _.each($scope.data, value => {
-    appendChilds(15, value.id)
+    appendChilds(30, value.id)
   })
 
   const tasks = _.filter($scope.data, o => {
@@ -33,7 +33,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(3, value.id)
+    appendChilds(60, value.id)
   })
 
   console.log($scope.data.length)
