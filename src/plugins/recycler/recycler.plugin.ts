@@ -5,7 +5,7 @@ let firstRender = true
 import rowService from './row.service'
 const promise = require('bluebird')
 
-export default function ($document, $compile) {
+export default function ($document, $compile, $timeout) {
   'ngInject'
 
   return {
@@ -55,7 +55,7 @@ export default function ($document, $compile) {
 
       function collapseAll () {
         const rootRows = _.filter(this.gantt.rowsManager.visibleRows, o => !(o.model.parent))
-        promise.map(rootRows, rootRow => {
+        return promise.map(rootRows, rootRow => {
           rootRow.model.childreenCollapsed = true
           return scope.rowService.collapseChildreen(rootRow)
         })
@@ -66,7 +66,7 @@ export default function ($document, $compile) {
       }
 
       function expandAll () {
-        promise.map(this.gantt.rowsManager.visibleRows, async rootRow => {
+        return promise.map(this.gantt.rowsManager.visibleRows, async rootRow => {
           await scope.rowService.expandChildreen(rootRow)
           rootRow.model.childreenCollapsed = false
         })
@@ -77,24 +77,32 @@ export default function ($document, $compile) {
       }
 
       function expand (id) {
+        scope.rowService.addTreeLoading(id)
         const row = scope.rowService.findRowById(id)
 
         if (row) {
-          row.model.childreenCollapsed = false
-          scope.rowService.expandChildreen(row)
-          this.gantt.api.rows.refresh()
+          $timeout(async () => {
+            row.model.childreenCollapsed = false
+            await scope.rowService.expandChildreen(row)
+            this.gantt.api.rows.refresh()
+            scope.$apply()
+          })
         } else {
           console.log('Row not found!')
         }
       }
 
-      function collapse (id) {
+      async function collapse (id) {
+        scope.rowService.addTreeLoading(id)
         const row = scope.rowService.findRowById(id)
 
         if (row) {
-          row.model.childreenCollapsed = true
-          scope.rowService.collapseChildreen(row)
-          this.gantt.api.rows.refresh()
+          $timeout(async () => {
+            row.model.childreenCollapsed = true
+            await scope.rowService.collapseChildreen(row)
+            this.gantt.api.rows.refresh()
+            scope.$apply()
+          })
         } else {
           console.log('Row not found!')
         }
