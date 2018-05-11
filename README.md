@@ -1,4 +1,60 @@
 # New features
+   - ## Recycler plugin for grid side
+      Display a tree hierarchy with multiple columns support... This plugins support high ammount of data because is using [md-virtual-repeat](https://material.angularjs.org/latest/demo/virtualRepeat) from angular-material
+
+     ## Dependency
+      - angular-material: 1.1.5
+
+     ## Usage
+
+          angular.module('myApp', ['gantt', 'gantt.recycler']);
+
+      <!-- -->
+
+        <div gantt>
+          <gantt-recycler template-rows="templateRows">
+          </gantt-recycler>
+        </div>
+
+      ## Model
+
+        Rows can specify a list of children using `children` property and/or a parent using `parent` property. Name and id
+        can be used to define the hierarchy. **Just like Tree plugin**
+
+            var data = [
+              {name: 'Parent', children: ['One', 'Two', 'Three']},
+              {name: 'One', tasks: [...]},
+              {name: 'Two', tasks: [...]},
+              {name: 'Three', tasks: [...]},
+            ]
+
+        <!-- -->
+      
+      ## Attributes
+        - ### template-rows
+            Here you can define the structure of your grid-side using this
+            structure
+
+              $scope.templateRows = [{
+                type: 'tree', // To make this column a tree
+                headerContent: '<div> title </div>' // Support html,
+                width: '10px' // Width to css-grid, default to 100px
+              }, {
+                type: 'column',
+                classes: ['some-cool-class'], // pass class to style this column 
+                headerContent: '<div> From </div>',
+                content: '<some-from-component></some-from-component>',
+                width: '10px' // Width to css-grid  
+              }, {
+                type: 'column',
+                classes: ['some-cool-class'],
+                headerContent: '<div> To </div>',
+                content: '<some-to-component></some-to-component>' ,
+                width: '10px'
+              }
+
+          <!-- -->
+
 
    - ## Less watchers using one-time binding
    - ## Extra scale time for gantt columns
