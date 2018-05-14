@@ -1,4 +1,4 @@
-import jsplumb from 'jsplumb'
+// import jsplumb from 'jsplumb'
 import {GanttTask} from '../../core/logic/task/task.factory'
 
 export default function (GanttDependency, GanttDependenciesEvents, GanttDependencyTaskMouseHandler) {
@@ -15,7 +15,7 @@ export default function (GanttDependency, GanttDependenciesEvents, GanttDependen
     this.api.registerEvent('dependencies', 'change')
     this.api.registerEvent('dependencies', 'remove')
 
-    this.plumb = jsplumb.jsPlumb ? jsplumb.jsPlumb.getInstance() : jsplumb.getInstance() // Workaround for build issue.
+    // this.plumb = jsplumb.jsPlumb ? jsplumb.jsPlumb.getInstance() : jsplumb.getInstance() // Workaround for build issue.
     this.plumb.importDefaults(this.pluginScope.jsPlumbDefaults)
 
     this.dependenciesFrom = {}

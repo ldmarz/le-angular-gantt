@@ -1,0 +1,86 @@
+[
+  {
+    "model": {
+      "name": "row1",
+      "mec": "mec1",
+      "id": 1,
+      "level": 1,
+      "tasks": [
+        {
+          "content": "<span id=\"span\"> task1 <button id=\"hola\" no-draggable>hola</button> </span>",
+          "from": "2018-03-23T14:45:19.527Z",
+          "to": "2018-03-23T15:45:19.528Z",
+          "id": "afac82d8-f5ec-b1ef-f1d0-0f435869bf6b"
+        }
+      ]
+    }
+  },
+  {
+    "model": {
+      "id": "123c170c-2688-40b4-bc51-01332ebb3ec6",
+      "name": "Elle Magavern",
+      "mec": "mec1",
+      "level": 1,
+      "parent": 1,
+      "tasks": [
+        {
+          "name": "Elle Magavern",
+          "from": "2018-03-23T13:45:19.529Z",
+          "to": "2018-03-23T23:45:19.529Z",
+          "id": "fae6faa4-b273-6924-cdc1-c334892a8d2b"
+        }
+      ]
+    }
+  },
+  {
+    "model": {
+      "id": "c979a273-7a14-4354-a5c5-1309fcd90aed",
+      "name": "Melisande Mechling",
+      "mec": "mec1",
+      "level": 1,
+      "parent": 1,
+      "tasks": [
+        {
+          "name": "Melisande Mechling",
+          "from": "2018-03-23T05:45:19.529Z",
+          "to": "2018-03-24T00:45:19.529Z",
+          "id": "b77c8065-b317-135f-9cf8-c0260eeaf4e6"
+        }
+      ]
+    }
+  },
+  {
+    "model": {
+      "id": "0b5e6e9c-762b-4f53-9dd3-2388409d8a0e",
+      "name": "Margalit Arand",
+      "mec": "mec1",
+      "level": 1,
+      "parent": "123c170c-2688-40b4-bc51-01332ebb3ec6",
+      "tasks": [
+        {
+          "name": "Margalit Arand",
+          "from": "2018-03-23T06:45:19.529Z",
+          "to": "2018-03-23T17:45:19.529Z",
+          "id": "3b3b61a9-9d90-a357-015c-f426c584036d"
+        }
+      ]
+    }
+  },
+  {
+    "model": {
+      "id": "28304857-beaa-42a5-a0cc-54e5a4372883",
+      "name": "Ania Garris",
+      "mec": "mec1",
+      "level": 1,
+      "parent": "c979a273-7a14-4354-a5c5-1309fcd90aed",
+      "tasks": [
+        {
+          "name": "Ania Garris",
+          "from": "2018-03-23T08:45:19.529Z",
+          "to": "2018-03-24T00:45:19.529Z",
+          "id": "3b35abc0-35f8-b94f-29a8-f28a351ff208"
+        }
+      ]
+    }
+  }
+]

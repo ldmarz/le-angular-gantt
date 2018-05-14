@@ -1,0 +1,38 @@
+<div class="gantt-side-content recycler-main-container">
+  <div class="grid-container grid-row" ng-style="{height: $parent.ganttHeaderHeight + 'px', 'grid-template-columns': getTemplateWidth()};">
+    <div class="gantt-side-table-header gantt-side-column grid-column" ng-class="::getClassHeaderByType(row)" ng-repeat="row in templateRows">
+      <div class="gantt-side-row-label-header" ng-class="row.classes">
+        <span class="gantt-label-text" gantt-bind-compile-html="row.headerContent" />
+      </div>
+    </div>
+  </div>
+
+
+  <md-virtual-repeat-container md-top-index="topIndex" id="vertical-container" gantt-vertical-scroll-receiver ng-style="getLabelsCss()"
+    class="grid-container">
+    <div md-item-size md-virtual-repeat="row in gantt.rowsManager.visibleRows" ng-class="row.model.classes" class="gantt-row-height grid-row row-repeated"
+      ng-controller="rowController" row-id="{{row.model.id}}" ng-style="{'grid-template-columns': getTemplateWidth()}">
+      <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column grid-column" ng-class="getClass(rowTemplate)">
+        <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
+          <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}"
+            >
+
+            <div ng-click="collapse()" ng-if="hasChildreen() && !row.model.isLoading" class="wrapper-collapsed">
+              <span class="gantt-tree-handle glyphicon" ng-class="{
+                                      'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,
+                                      'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
+              </span>
+            </div>
+
+            <span ng-if="row.model.isLoading" class="glyphicon refresh-tree glyphicon-refresh glyphicon-refresh-animate"></span>
+          </a>
+          <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)" />
+        </div>
+
+        <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
+          <span class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)"></span>
+        </div>
+      </div>
+    </div>
+  </md-virtual-repeat-container>
+</div>

@@ -1,43 +1,42 @@
 import moment from 'moment'
 import _ from 'lodash'
+import randomName from 'random-name'
+import uuid from 'uuid'
+import angular from 'angular'
 
-export default function ($scope) {
+export default function ($scope, $timeout) {
   'ngInject'
   $scope.data = [
-    {name: 'row1', mec: 'mec1', id: '1', level: 1, tasks: [
-      { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes')}
-    ]}
+    {
+      name: 'wp1', unaVar: true, mec: 'mec1', id: 1, level: 1, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    },
+    {
+      name: 'wp2', unaVar: true, mec: 'mec1', id: 2, level: 1, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    },
+    {
+      name: 'wp3', unaVar: true, mec: 'mec1', id: 3, level: 1, tasks: [
+        { content: '<span id="span"> task1 <button id="hola" no-draggable>hola</button> </span>', from: moment(), to: moment().add(60, 'minutes') }
+      ]
+    }
   ]
 
-  for (let index = 0; index < 1; index++) {
-    $scope.data.push(
-      {
-        name: 'row1', mec: 'mec1', level: 1,
-        tasks: [
-          {
-            name: 'hola hola',
-            from: moment().subtract(_.random(1, 10), 'hours'),
-            to: moment().add(_.random(1, 10), 'hours')
-          }
-        ]
-      }
-    )
-  }
+  _.each($scope.data, value => {
+    appendChilds(40, value.id)
+  })
 
-  $scope.backup = [{
-    id: '2', name: ' uandsnad sadas', parent: '1', level: 2, tasks: [
-      { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-    ]
-  },
-  {
-    id: '3', name: 'row2', parent: '2', level: 3, tasks: [
-      { name: 'task2', from: moment(), to: moment().add(60, 'minutes') }
-    ]
-  }]
+  const tasks = _.filter($scope.data, o => {
+    return (o.parent)
+  })
 
-  $scope.extraScaleTime = {
-    time: 16
-  }
+  _.each(tasks, value => {
+    appendChilds(10, value.id)
+  })
+
+  console.log($scope.data.length)
 
   $scope.autoExpand = 'both'
   $scope.taskOutOfRange = 'resize'
@@ -45,36 +44,99 @@ export default function ($scope) {
   $scope.shrinkToFit = false
   $scope.width = true
   $scope.scale = 'day'
+  $scope.algo = 'aksks'
+
+  $scope.templateRows = [{
+    type: 'tree',
+    headerContent: '<div> title </div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> mec </div>',
+    content: '<div> <div ng-if="row.model.unaVar">otroValue</div> </div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> WIDTH20 </div>',
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>' ,
+    width: '10px'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div> <div ng-if="row.model.unaVar">algol</div> </div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }, {
+    type: 'column',
+    classes: ['input-hidden'],
+    headerContent: '<div> avic </div>',
+    content: '<div>algol</div>'
+  }
+  ]
+
+  $scope.addTask = function () {
+    appendChilds(1, 1)
+  }
+
+  $scope.expand = function (id) {
+    $scope.api.recycler.expand(id)
+  }
+
+  $scope.collapse = function (id) {
+    $scope.api.recycler.collapse(id)
+  }
 
   $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
     return 140 * zoom
   }
 
+  $scope.collapseAll = function () {
+    $scope.api.recycler.collapseAll()
+  }
+
   $scope.registerApi = function (api) {
     $scope.api = api
-    const _this = $scope
-    api.core.on.ready($scope, (api) => {
-      window.setTimeout(() => {
-        api.tree.on.collapsed(this, (row, collapsed) => {
-          if (!collapsed._collapsed) {
-            _.each($scope.backup, value => {
-              const aux = _.find($scope.data, {id: value.id})
-              if (value.parent === collapsed.model.id && !aux) {
-                $scope.data.push(value)
-              }
-            })
-            console.log($scope.data)
-          }
-        })
-      })
-    })
   }
 
-  $scope.collapse = function () {
-    $scope.api.tree.collapseAll()
+  $scope.expandAll = function () {
+    $scope.api.recycler.expandAll()
   }
 
-  $scope.expand = function () {
-    $scope.api.tree.expandAll()
+  function appendChilds (limit = 1, parent = undefined) {
+    for (let index = 0; index < limit; index++) {
+      const name = randomName()
+      $scope.data.push(
+        {
+          id: uuid(),
+          name: name, mec: 'mec1', level: 1, parent: parent,
+          tasks: [
+            {
+              name: name,
+              from: moment().subtract(_.random(1, 10), 'hours'),
+              to: moment().add(_.random(1, 10), 'hours')
+            }
+          ]
+        }
+      )
+    }
   }
 }
