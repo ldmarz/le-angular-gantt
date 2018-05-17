@@ -107,7 +107,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(136);
+var _defineProperty = __webpack_require__(138);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -147,7 +147,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(146), __esModule: true };
+module.exports = { "default": __webpack_require__(148), __esModule: true };
 
 /***/ }),
 /* 5 */
@@ -158,11 +158,11 @@ module.exports = { "default": __webpack_require__(146), __esModule: true };
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(141);
+var _iterator = __webpack_require__(143);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(140);
+var _symbol = __webpack_require__(142);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -198,151 +198,155 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _gantt = __webpack_require__(72);
+var _gantt = __webpack_require__(73);
 
 var _gantt2 = _interopRequireDefault(_gantt);
 
-var _resizer = __webpack_require__(91);
+var _resizer = __webpack_require__(92);
 
 var _resizer2 = _interopRequireDefault(_resizer);
 
-var _containerHeightListener = __webpack_require__(97);
+var _containerHeightListener = __webpack_require__(99);
 
 var _containerHeightListener2 = _interopRequireDefault(_containerHeightListener);
 
-var _containerWidthListener = __webpack_require__(98);
+var _containerWidthListener = __webpack_require__(100);
 
 var _containerWidthListener2 = _interopRequireDefault(_containerWidthListener);
 
-var _elementHeightListener = __webpack_require__(99);
+var _elementHeightListener = __webpack_require__(101);
 
 var _elementHeightListener2 = _interopRequireDefault(_elementHeightListener);
 
-var _elementWidthListener = __webpack_require__(100);
+var _elementWidthListener = __webpack_require__(102);
 
 var _elementWidthListener2 = _interopRequireDefault(_elementWidthListener);
 
-var _horizontalScrollReceiver = __webpack_require__(92);
+var _horizontalScrollReceiver = __webpack_require__(93);
 
 var _horizontalScrollReceiver2 = _interopRequireDefault(_horizontalScrollReceiver);
 
-var _scrollable = __webpack_require__(95);
+var _scrollable = __webpack_require__(96);
 
 var _scrollable2 = _interopRequireDefault(_scrollable);
 
-var _scrollManager = __webpack_require__(93);
+var _scrollManager = __webpack_require__(94);
 
 var _scrollManager2 = _interopRequireDefault(_scrollManager);
 
-var _scrollSender = __webpack_require__(94);
+var _scrollSender = __webpack_require__(95);
 
 var _scrollSender2 = _interopRequireDefault(_scrollSender);
 
-var _verticalScrollReceiver = __webpack_require__(96);
+var _verticalScrollReceiver = __webpack_require__(98);
 
 var _verticalScrollReceiver2 = _interopRequireDefault(_verticalScrollReceiver);
 
-var _body = __webpack_require__(101);
+var _verticalScrollListener = __webpack_require__(97);
+
+var _verticalScrollListener2 = _interopRequireDefault(_verticalScrollListener);
+
+var _body = __webpack_require__(103);
 
 var _body2 = _interopRequireDefault(_body);
 
-var _bodyBackground = __webpack_require__(102);
+var _bodyBackground = __webpack_require__(104);
 
 var _bodyBackground2 = _interopRequireDefault(_bodyBackground);
 
-var _bodyColumns = __webpack_require__(103);
+var _bodyColumns = __webpack_require__(105);
 
 var _bodyColumns2 = _interopRequireDefault(_bodyColumns);
 
-var _bodyForeground = __webpack_require__(104);
+var _bodyForeground = __webpack_require__(106);
 
 var _bodyForeground2 = _interopRequireDefault(_bodyForeground);
 
-var _bodyRows = __webpack_require__(105);
+var _bodyRows = __webpack_require__(107);
 
 var _bodyRows2 = _interopRequireDefault(_bodyRows);
 
-var _column = __webpack_require__(106);
+var _column = __webpack_require__(108);
 
 var _column2 = _interopRequireDefault(_column);
 
-var _columnHeader = __webpack_require__(107);
+var _columnHeader = __webpack_require__(109);
 
 var _columnHeader2 = _interopRequireDefault(_columnHeader);
 
-var _header = __webpack_require__(108);
+var _header = __webpack_require__(110);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _headerColumns = __webpack_require__(109);
+var _headerColumns = __webpack_require__(111);
 
 var _headerColumns2 = _interopRequireDefault(_headerColumns);
 
-var _row = __webpack_require__(110);
+var _row = __webpack_require__(112);
 
 var _row2 = _interopRequireDefault(_row);
 
-var _rowBackground = __webpack_require__(111);
+var _rowBackground = __webpack_require__(113);
 
 var _rowBackground2 = _interopRequireDefault(_rowBackground);
 
-var _rowLabel = __webpack_require__(112);
+var _rowLabel = __webpack_require__(114);
 
 var _rowLabel2 = _interopRequireDefault(_rowLabel);
 
-var _scrollableHeader = __webpack_require__(113);
+var _scrollableHeader = __webpack_require__(115);
 
 var _scrollableHeader2 = _interopRequireDefault(_scrollableHeader);
 
-var _side = __webpack_require__(114);
+var _side = __webpack_require__(116);
 
 var _side2 = _interopRequireDefault(_side);
 
-var _sideBackground = __webpack_require__(115);
+var _sideBackground = __webpack_require__(117);
 
 var _sideBackground2 = _interopRequireDefault(_sideBackground);
 
-var _sideContent = __webpack_require__(116);
+var _sideContent = __webpack_require__(118);
 
 var _sideContent2 = _interopRequireDefault(_sideContent);
 
-var _task = __webpack_require__(117);
+var _task = __webpack_require__(119);
 
 var _task2 = _interopRequireDefault(_task);
 
-var _taskBackground = __webpack_require__(118);
+var _taskBackground = __webpack_require__(120);
 
 var _taskBackground2 = _interopRequireDefault(_taskBackground);
 
-var _taskContent = __webpack_require__(119);
+var _taskContent = __webpack_require__(121);
 
 var _taskContent2 = _interopRequireDefault(_taskContent);
 
-var _taskForeground = __webpack_require__(120);
+var _taskForeground = __webpack_require__(122);
 
 var _taskForeground2 = _interopRequireDefault(_taskForeground);
 
-var _timeFrame = __webpack_require__(121);
+var _timeFrame = __webpack_require__(123);
 
 var _timeFrame2 = _interopRequireDefault(_timeFrame);
 
-var _timespan = __webpack_require__(122);
+var _timespan = __webpack_require__(124);
 
 var _timespan2 = _interopRequireDefault(_timespan);
 
-var _ganttBindCompileHtml = __webpack_require__(127);
+var _ganttBindCompileHtml = __webpack_require__(129);
 
 var _ganttBindCompileHtml2 = _interopRequireDefault(_ganttBindCompileHtml);
 
-var _ganttBindCompileHtmlOneTime = __webpack_require__(128);
+var _ganttBindCompileHtmlOneTime = __webpack_require__(130);
 
 var _ganttBindCompileHtmlOneTime2 = _interopRequireDefault(_ganttBindCompileHtmlOneTime);
 
-var _ganttRecompileOn = __webpack_require__(129);
+var _ganttRecompileOn = __webpack_require__(131);
 
 var _ganttRecompileOn2 = _interopRequireDefault(_ganttRecompileOn);
 
-var _gantt3 = __webpack_require__(76);
+var _gantt3 = __webpack_require__(77);
 
 var _gantt4 = _interopRequireDefault(_gantt3);
 
@@ -366,19 +370,19 @@ var _body3 = __webpack_require__(52);
 
 var _body4 = _interopRequireDefault(_body3);
 
-var _bodyColumns3 = __webpack_require__(80);
+var _bodyColumns3 = __webpack_require__(81);
 
 var _bodyColumns4 = _interopRequireDefault(_bodyColumns3);
 
-var _bodyRows3 = __webpack_require__(82);
+var _bodyRows3 = __webpack_require__(83);
 
 var _bodyRows4 = _interopRequireDefault(_bodyRows3);
 
-var _bodyBackground3 = __webpack_require__(79);
+var _bodyBackground3 = __webpack_require__(80);
 
 var _bodyBackground4 = _interopRequireDefault(_bodyBackground3);
 
-var _bodyForeground3 = __webpack_require__(81);
+var _bodyForeground3 = __webpack_require__(82);
 
 var _bodyForeground4 = _interopRequireDefault(_bodyForeground3);
 
@@ -386,7 +390,7 @@ var _header3 = __webpack_require__(53);
 
 var _header4 = _interopRequireDefault(_header3);
 
-var _headerColumns3 = __webpack_require__(83);
+var _headerColumns3 = __webpack_require__(84);
 
 var _headerColumns4 = _interopRequireDefault(_headerColumns3);
 
@@ -398,11 +402,11 @@ var _objectModel = __webpack_require__(50);
 
 var _objectModel2 = _interopRequireDefault(_objectModel);
 
-var _task3 = __webpack_require__(78);
+var _task3 = __webpack_require__(79);
 
 var _task4 = _interopRequireDefault(_task3);
 
-var _row3 = __webpack_require__(77);
+var _row3 = __webpack_require__(78);
 
 var _row4 = _interopRequireDefault(_row3);
 
@@ -414,7 +418,7 @@ var _column3 = __webpack_require__(29);
 
 var _column4 = _interopRequireDefault(_column3);
 
-var _columnBuilder = __webpack_require__(73);
+var _columnBuilder = __webpack_require__(74);
 
 var _columnBuilder2 = _interopRequireDefault(_columnBuilder);
 
@@ -426,7 +430,7 @@ var _columnsManager = __webpack_require__(49);
 
 var _columnsManager2 = _interopRequireDefault(_columnsManager);
 
-var _timespan3 = __webpack_require__(84);
+var _timespan3 = __webpack_require__(85);
 
 var _timespan4 = _interopRequireDefault(_timespan3);
 
@@ -438,77 +442,77 @@ var _currentDateManager = __webpack_require__(47);
 
 var _currentDateManager2 = _interopRequireDefault(_currentDateManager);
 
-var _hierarchy = __webpack_require__(87);
+var _hierarchy = __webpack_require__(88);
 
 var _hierarchy2 = _interopRequireDefault(_hierarchy);
 
-var _debounce = __webpack_require__(123);
+var _debounce = __webpack_require__(125);
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
-var _smartEvent = __webpack_require__(133);
+var _smartEvent = __webpack_require__(135);
 
 var _smartEvent2 = _interopRequireDefault(_smartEvent);
 
-var _directiveBuilder = __webpack_require__(124);
+var _directiveBuilder = __webpack_require__(126);
 
 var _directiveBuilder2 = _interopRequireDefault(_directiveBuilder);
 
-var _enableNgAnimate = __webpack_require__(126);
+var _enableNgAnimate = __webpack_require__(128);
 
 var _enableNgAnimate2 = _interopRequireDefault(_enableNgAnimate);
 
-var _utils = __webpack_require__(88);
+var _utils = __webpack_require__(89);
 
 var _utils2 = _interopRequireDefault(_utils);
 
-var _arrays = __webpack_require__(85);
+var _arrays = __webpack_require__(86);
 
 var _arrays2 = _interopRequireDefault(_arrays);
 
-var _binarySearch = __webpack_require__(86);
+var _binarySearch = __webpack_require__(87);
 
 var _binarySearch2 = _interopRequireDefault(_binarySearch);
 
-var _layout = __webpack_require__(130);
+var _layout = __webpack_require__(132);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _headersGenerator = __webpack_require__(75);
+var _headersGenerator = __webpack_require__(76);
 
 var _headersGenerator2 = _interopRequireDefault(_headersGenerator);
 
-var _columnGenerator = __webpack_require__(74);
+var _columnGenerator = __webpack_require__(75);
 
 var _columnGenerator2 = _interopRequireDefault(_columnGenerator);
 
-var _dom = __webpack_require__(125);
+var _dom = __webpack_require__(127);
 
 var _dom2 = _interopRequireDefault(_dom);
 
-var _mouseButton = __webpack_require__(131);
+var _mouseButton = __webpack_require__(133);
 
 var _mouseButton2 = _interopRequireDefault(_mouseButton);
 
-var _mouseOffset = __webpack_require__(132);
+var _mouseOffset = __webpack_require__(134);
 
 var _mouseOffset2 = _interopRequireDefault(_mouseOffset);
 
-var _columnLimit = __webpack_require__(89);
+var _columnLimit = __webpack_require__(90);
 
 var _columnLimit2 = _interopRequireDefault(_columnLimit);
 
-var _taskLimit = __webpack_require__(90);
+var _taskLimit = __webpack_require__(91);
 
 var _taskLimit2 = _interopRequireDefault(_taskLimit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(134);
-__webpack_require__(71);
+__webpack_require__(136);
+__webpack_require__(72);
 
 var _module = 'gantt';
-_angular2.default.module(_module, []).directive('gantt', _gantt2.default).directive('ganttResizer', _resizer2.default).directive('ganttContainerWidthListener', _containerWidthListener2.default).directive('ganttContainerHeightListener', _containerHeightListener2.default).directive('ganttElementWidthListener', _elementWidthListener2.default).directive('ganttElementHeightListener', _elementHeightListener2.default).directive('ganttHorizontalScrollReceiver', _horizontalScrollReceiver2.default).directive('ganttScrollable', _scrollable2.default).directive('ganttScrollManager', _scrollManager2.default).directive('ganttScrollSender', _scrollSender2.default).directive('ganttVerticalScrollReceiver', _verticalScrollReceiver2.default).directive('ganttBindCompileHtml', _ganttBindCompileHtml2.default).directive('ganttBody', _body2.default).directive('ganttBodyBackground', _bodyBackground2.default).directive('ganttBodyColumns', _bodyColumns2.default).directive('ganttBodyForeground', _bodyForeground2.default).directive('ganttBodyRows', _bodyRows2.default).directive('ganttColumn', _column2.default).directive('ganttColumnHeader', _columnHeader2.default).directive('ganttHeader', _header2.default).directive('ganttHeaderColumns', _headerColumns2.default).directive('ganttRow', _row2.default).directive('ganttRowBackground', _rowBackground2.default).directive('ganttRowLabel', _rowLabel2.default).directive('ganttScrollableHeader', _scrollableHeader2.default).directive('ganttSide', _side2.default).directive('ganttSideBackground', _sideBackground2.default).directive('ganttSideContent', _sideContent2.default).directive('ganttTask', _task2.default).directive('ganttTaskBackground', _taskBackground2.default).directive('ganttTaskContent', _taskContent2.default).directive('ganttTaskForeground', _taskForeground2.default).directive('ganttTimeFrame', _timeFrame2.default).directive('ganttTimespan', _timespan2.default).directive('ganttRecompileOn', _ganttRecompileOn2.default).directive('ganttBindCompileHtmlOneTime', _ganttBindCompileHtmlOneTime2.default).factory('GanttDirectiveBuilder', _directiveBuilder2.default).factory('Gantt', _gantt4.default).factory('GanttApi', _api2.default).factory('GanttOptions', _options2.default).factory('GanttCalendar', _calendar2.default).factory('GanttScroll', _scroll2.default).factory('GanttBody', _body4.default).factory('GanttBodyColumns', _bodyColumns4.default).factory('GanttBodyRows', _bodyRows4.default).factory('GanttBodyBackground', _bodyBackground4.default).factory('GanttBodyForeground', _bodyForeground4.default).factory('GanttHeader', _header4.default).factory('GanttHeaderColumns', _headerColumns4.default).factory('GanttSide', _side4.default).factory('GanttObjectModel', _objectModel2.default).factory('GanttTask', _task4.default).factory('GanttRow', _row4.default).factory('GanttRowsManager', _rowsManager2.default).factory('GanttColumn', _column4.default).factory('GanttColumnHeader', _columnHeader4.default).factory('GanttColumnBuilder', _columnBuilder2.default).factory('GanttColumnsManager', _columnsManager2.default).factory('GanttTimespan', _timespan4.default).factory('GanttTimespansManager', _timespansManager2.default).factory('GanttCurrentDateManager', _currentDateManager2.default).factory('GanttHierarchy', _hierarchy2.default).factory('ganttDebounce', _debounce2.default).factory('GanttSmartEvent', _smartEvent2.default).service('ganttEnableNgAnimate', _enableNgAnimate2.default).service('ganttUtils', _utils2.default).service('ganttArrays', _arrays2.default).service('ganttBinarySearch', _binarySearch2.default).service('ganttLayout', _layout2.default).service('GanttHeadersGenerator', _headersGenerator2.default).service('GanttColumnGenerator', _columnGenerator2.default).service('ganttDom', _dom2.default).service('ganttMouseButton', _mouseButton2.default).service('ganttMouseOffset', _mouseOffset2.default).filter('ganttColumnLimit', _columnLimit2.default).filter('ganttTaskLimit', _taskLimit2.default);
+_angular2.default.module(_module, []).directive('gantt', _gantt2.default).directive('ganttResizer', _resizer2.default).directive('ganttContainerWidthListener', _containerWidthListener2.default).directive('ganttContainerHeightListener', _containerHeightListener2.default).directive('ganttElementWidthListener', _elementWidthListener2.default).directive('ganttElementHeightListener', _elementHeightListener2.default).directive('ganttHorizontalScrollReceiver', _horizontalScrollReceiver2.default).directive('ganttScrollable', _scrollable2.default).directive('ganttScrollManager', _scrollManager2.default).directive('ganttScrollSender', _scrollSender2.default).directive('ganttVerticalScrollReceiver', _verticalScrollReceiver2.default).directive('ganttVerticalScrollListener', _verticalScrollListener2.default).directive('ganttBindCompileHtml', _ganttBindCompileHtml2.default).directive('ganttBody', _body2.default).directive('ganttBodyBackground', _bodyBackground2.default).directive('ganttBodyColumns', _bodyColumns2.default).directive('ganttBodyForeground', _bodyForeground2.default).directive('ganttBodyRows', _bodyRows2.default).directive('ganttColumn', _column2.default).directive('ganttColumnHeader', _columnHeader2.default).directive('ganttHeader', _header2.default).directive('ganttHeaderColumns', _headerColumns2.default).directive('ganttRow', _row2.default).directive('ganttRowBackground', _rowBackground2.default).directive('ganttRowLabel', _rowLabel2.default).directive('ganttScrollableHeader', _scrollableHeader2.default).directive('ganttSide', _side2.default).directive('ganttSideBackground', _sideBackground2.default).directive('ganttSideContent', _sideContent2.default).directive('ganttTask', _task2.default).directive('ganttTaskBackground', _taskBackground2.default).directive('ganttTaskContent', _taskContent2.default).directive('ganttTaskForeground', _taskForeground2.default).directive('ganttTimeFrame', _timeFrame2.default).directive('ganttTimespan', _timespan2.default).directive('ganttRecompileOn', _ganttRecompileOn2.default).directive('ganttBindCompileHtmlOneTime', _ganttBindCompileHtmlOneTime2.default).factory('GanttDirectiveBuilder', _directiveBuilder2.default).factory('Gantt', _gantt4.default).factory('GanttApi', _api2.default).factory('GanttOptions', _options2.default).factory('GanttCalendar', _calendar2.default).factory('GanttScroll', _scroll2.default).factory('GanttBody', _body4.default).factory('GanttBodyColumns', _bodyColumns4.default).factory('GanttBodyRows', _bodyRows4.default).factory('GanttBodyBackground', _bodyBackground4.default).factory('GanttBodyForeground', _bodyForeground4.default).factory('GanttHeader', _header4.default).factory('GanttHeaderColumns', _headerColumns4.default).factory('GanttSide', _side4.default).factory('GanttObjectModel', _objectModel2.default).factory('GanttTask', _task4.default).factory('GanttRow', _row4.default).factory('GanttRowsManager', _rowsManager2.default).factory('GanttColumn', _column4.default).factory('GanttColumnHeader', _columnHeader4.default).factory('GanttColumnBuilder', _columnBuilder2.default).factory('GanttColumnsManager', _columnsManager2.default).factory('GanttTimespan', _timespan4.default).factory('GanttTimespansManager', _timespansManager2.default).factory('GanttCurrentDateManager', _currentDateManager2.default).factory('GanttHierarchy', _hierarchy2.default).factory('ganttDebounce', _debounce2.default).factory('GanttSmartEvent', _smartEvent2.default).service('ganttEnableNgAnimate', _enableNgAnimate2.default).service('ganttUtils', _utils2.default).service('ganttArrays', _arrays2.default).service('ganttBinarySearch', _binarySearch2.default).service('ganttLayout', _layout2.default).service('GanttHeadersGenerator', _headersGenerator2.default).service('GanttColumnGenerator', _columnGenerator2.default).service('ganttDom', _dom2.default).service('ganttMouseButton', _mouseButton2.default).service('ganttMouseOffset', _mouseOffset2.default).filter('ganttColumnLimit', _columnLimit2.default).filter('ganttTaskLimit', _taskLimit2.default);
 exports.default = _module;
 
 /***/ }),
@@ -590,7 +594,7 @@ module.exports = function(it, key){
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(156)
+var IObject = __webpack_require__(158)
   , defined = __webpack_require__(30);
 module.exports = function(it){
   return IObject(defined(it));
@@ -17785,7 +17789,7 @@ module.exports = function(exec){
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(181)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(182)(module)))
 
 /***/ }),
 /* 20 */
@@ -18345,7 +18349,7 @@ module.exports = (
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = __webpack_require__(10)
-  , dPs         = __webpack_require__(162)
+  , dPs         = __webpack_require__(164)
   , enumBugKeys = __webpack_require__(31)
   , IE_PROTO    = __webpack_require__(34)('IE_PROTO')
   , Empty       = function(){ /* empty */ }
@@ -18360,7 +18364,7 @@ var createDict = function(){
     , gt     = '>'
     , iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(67).appendChild(iframe);
+  __webpack_require__(68).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -18479,7 +18483,7 @@ module.exports = function(it){
 
 "use strict";
 
-var $at  = __webpack_require__(166)(true);
+var $at  = __webpack_require__(168)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(58)(String, 'String', function(iterated){
@@ -18500,7 +18504,7 @@ __webpack_require__(58)(String, 'String', function(iterated){
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(170);
+__webpack_require__(172);
 var global        = __webpack_require__(9)
   , hide          = __webpack_require__(16)
   , Iterators     = __webpack_require__(20)
@@ -19491,7 +19495,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GanttColumnHeader = undefined;
 
-var _getPrototypeOf = __webpack_require__(137);
+var _getPrototypeOf = __webpack_require__(139);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
@@ -19499,11 +19503,11 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _possibleConstructorReturn2 = __webpack_require__(143);
+var _possibleConstructorReturn2 = __webpack_require__(145);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(142);
+var _inherits2 = __webpack_require__(144);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -21284,7 +21288,7 @@ var LIBRARY        = __webpack_require__(26)
   , hide           = __webpack_require__(16)
   , has            = __webpack_require__(13)
   , Iterators      = __webpack_require__(20)
-  , $iterCreate    = __webpack_require__(158)
+  , $iterCreate    = __webpack_require__(160)
   , setToStringTag = __webpack_require__(27)
   , getPrototypeOf = __webpack_require__(62)
   , ITERATOR       = __webpack_require__(8)('iterator')
@@ -21411,7 +21415,7 @@ module.exports = Object.getPrototypeOf || function(O){
 
 var has          = __webpack_require__(13)
   , toIObject    = __webpack_require__(14)
-  , arrayIndexOf = __webpack_require__(154)(false)
+  , arrayIndexOf = __webpack_require__(156)(false)
   , IE_PROTO     = __webpack_require__(34)('IE_PROTO');
 
 module.exports = function(object, names){
@@ -21445,4863 +21449,6 @@ module.exports = function(it){
 
 /***/ }),
 /* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(21)
-  , TAG = __webpack_require__(8)('toStringTag')
-  // ES3 wrong here
-  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-
-// fallback for IE11 Script Access Denied error
-var tryGet = function(it, key){
-  try {
-    return it[key];
-  } catch(e){ /* empty */ }
-};
-
-module.exports = function(it){
-  var O, T, B;
-  return it === undefined ? 'Undefined' : it === null ? 'Null'
-    // @@toStringTag case
-    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
-    // builtinTag case
-    : ARG ? cof(O)
-    // ES3 arguments fallback
-    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-};
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(9).document && document.documentElement;
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.15 ToLength
-var toInteger = __webpack_require__(36)
-  , min       = Math.min;
-module.exports = function(it){
-  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-};
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var classof   = __webpack_require__(66)
-  , ITERATOR  = __webpack_require__(8)('iterator')
-  , Iterators = __webpack_require__(20);
-module.exports = __webpack_require__(6).getIteratorMethod = function(it){
-  if(it != undefined)return it[ITERATOR]
-    || it['@@iterator']
-    || Iterators[classof(it)];
-};
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache", function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        transclude: true,
-        templateUrl: function templateUrl(tElement, tAttrs) {
-            var templateUrl = void 0;
-            if (tAttrs.templateUrl === undefined) {
-                templateUrl = 'template/gantt.tmpl.html';
-            } else {
-                templateUrl = tAttrs.templateUrl;
-            }
-            if (tAttrs.template !== undefined) {
-                $templateCache.put(templateUrl, tAttrs.template);
-            }
-            return templateUrl;
-        },
-        scope: {
-            sortMode: '<?',
-
-            viewScale: '<?',
-            columnWidth: '<?',
-            expandToFit: '<?',
-            shrinkToFit: '<?',
-
-            fromDate: '=?',
-            toDate: '=?',
-
-            autoExpand: '<?',
-            taskOutOfRange: '<?',
-
-            maxHeight: '<?',
-            sideWidth: '<?',
-            headers: '<?',
-            headersFormats: '<?',
-            headersScales: '<?',
-
-            columnMagnet: '<?',
-            shiftColumnMagnet: '<?',
-
-            extraScaleTime: '<?',
-            data: '=?',
-            api: '=?',
-            options: '<?'
-        },
-        controller: ["$scope", "$element", "$rootScope", function controller($scope, $element, $rootScope) {
-            'ngInject';
-
-            for (var option in $scope.options) {
-                $scope[option] = $scope.options[option];
-            }
-
-            ganttEnableNgAnimate($element, false);
-            $scope.gantt = new Gantt($scope, $element, $rootScope);
-            this.gantt = $scope.gantt;
-        }],
-        link: function link(scope, element) {
-            scope.gantt.api.directives.raise.new('gantt', scope, element);
-            scope.$on('$destroy', function () {
-                scope.gantt.api.directives.raise.destroy('gantt', scope, element);
-            });
-            $timeout(function () {
-                scope.gantt.initialized();
-            });
-        }
-    };
-}];
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttColumnBuilder = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-exports.default = ["GanttColumn", function (GanttColumn) {
-    'ngInject';
-
-    GanttColumnBuilder.GanttColumn = GanttColumn;
-    return GanttColumnBuilder;
-}];
-
-var _column = __webpack_require__(29);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttColumnBuilder = exports.GanttColumnBuilder = function () {
-    function GanttColumnBuilder(columnsManager) {
-        (0, _classCallCheck3.default)(this, GanttColumnBuilder);
-
-        this.columnsManager = columnsManager;
-    }
-
-    (0, _createClass3.default)(GanttColumnBuilder, [{
-        key: 'newColumn',
-        value: function newColumn(date, endDate, left, width) {
-            var calendar = this.columnsManager.gantt.calendar;
-            var timeFramesWorkingMode = this.columnsManager.gantt.options.value('timeFramesWorkingMode');
-            var timeFramesNonWorkingMode = this.columnsManager.gantt.options.value('timeFramesNonWorkingMode');
-            return new _column.GanttColumn(date, endDate, left, width, calendar, timeFramesWorkingMode, timeFramesNonWorkingMode);
-        }
-    }]);
-    return GanttColumnBuilder;
-}();
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttColumnGenerator = function () {
-    function GanttColumnGenerator() {
-        (0, _classCallCheck3.default)(this, GanttColumnGenerator);
-    }
-
-    (0, _createClass3.default)(GanttColumnGenerator, [{
-        key: 'isToDateToExclude',
-        value: function isToDateToExclude(to, value, unit) {
-            return (0, _moment2.default)(to).add(value, unit).startOf(unit) === to;
-        }
-    }, {
-        key: 'getFirstValue',
-        value: function getFirstValue(unit) {
-            if (['hour', 'minute', 'second', 'millisecond'].indexOf(unit) >= 0) {
-                return 0;
-            }
-        }
-    }, {
-        key: 'ensureNoUnitOverflow',
-        value: function ensureNoUnitOverflow(unit, startDate, endDate) {
-            var v1 = startDate.get(unit);
-            var v2 = endDate.get(unit);
-            var firstValue = this.getFirstValue(unit);
-            if (firstValue !== undefined && v2 !== firstValue && v2 < v1) {
-                endDate.set(unit, firstValue);
-            }
-        }
-    }, {
-        key: 'generate',
-        value: function generate(builder, from, to, viewScale, columnWidth, maximumWidth, leftOffset, reverse) {
-            if (!to && !maximumWidth) {
-                throw new Error('to or maximumWidth must be defined');
-            }
-            viewScale = viewScale.trim();
-            if (viewScale.charAt(viewScale.length - 1) === 's') {
-                viewScale = viewScale.substring(0, viewScale.length - 1);
-            }
-            var viewScaleValue = void 0;
-            var viewScaleUnit = void 0;
-            var splittedViewScale = void 0;
-            if (viewScale) {
-                splittedViewScale = viewScale.split(' ');
-            }
-            if (splittedViewScale && splittedViewScale.length > 1) {
-                viewScaleValue = parseFloat(splittedViewScale[0]);
-                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
-            } else {
-                viewScaleValue = 1;
-                viewScaleUnit = viewScale;
-            }
-            var excludeTo = false;
-            from = (0, _moment2.default)(from).startOf(viewScaleUnit);
-            if (to) {
-                excludeTo = this.isToDateToExclude(to, viewScaleValue, viewScaleUnit);
-                to = (0, _moment2.default)(to).startOf(viewScaleUnit);
-            }
-            var left = 0;
-            var date = (0, _moment2.default)(from).startOf(viewScaleUnit);
-            if (reverse) {
-                date.subtract(viewScaleValue, viewScaleUnit);
-                left -= columnWidth;
-            }
-            var generatedCols = [];
-            while (true) {
-                if (maximumWidth && Math.abs(left) > maximumWidth + columnWidth) {
-                    break;
-                }
-                var startDate = (0, _moment2.default)(date);
-                var endDate = (0, _moment2.default)(startDate).add(viewScaleValue, viewScaleUnit);
-                this.ensureNoUnitOverflow(viewScaleUnit, startDate, endDate);
-                var column = builder.newColumn(startDate, endDate, leftOffset ? left + leftOffset : left, columnWidth);
-                if (!column.cropped) {
-                    generatedCols.push(column);
-                    if (reverse) {
-                        left -= columnWidth;
-                    } else {
-                        left += columnWidth;
-                    }
-                }
-                if (to) {
-                    if (reverse) {
-                        if (excludeTo && date < to || !excludeTo && date <= to) {
-                            break;
-                        }
-                    } else {
-                        if (excludeTo && date > to || !excludeTo && date >= to) {
-                            break;
-                        }
-                    }
-                }
-                if (reverse) {
-                    date.subtract(viewScaleValue, viewScaleUnit);
-                    this.ensureNoUnitOverflow(viewScaleUnit, date, startDate);
-                } else {
-                    date.add(viewScaleValue, viewScaleUnit);
-                    this.ensureNoUnitOverflow(viewScaleUnit, startDate, date);
-                }
-            }
-            if (reverse) {
-                if (this.isToDateToExclude(from, viewScaleValue, viewScaleUnit)) {
-                    generatedCols.shift();
-                }
-                generatedCols.reverse();
-            }
-            return generatedCols;
-        }
-    }]);
-    return GanttColumnGenerator;
-}();
-
-exports.default = GanttColumnGenerator;
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getIterator2 = __webpack_require__(4);
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _columnHeader = __webpack_require__(48);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttHeadersGenerator = function () {
-    function GanttHeadersGenerator() {
-        (0, _classCallCheck3.default)(this, GanttHeadersGenerator);
-    }
-
-    (0, _createClass3.default)(GanttHeadersGenerator, [{
-        key: 'generateHeaders',
-        value: function generateHeaders(columnsManager, headerName) {
-            var generatedHeaders = [];
-            var header = void 0;
-            var viewScale = columnsManager.getHeaderScale(headerName);
-            var viewScaleValue = void 0;
-            var viewScaleUnit = void 0;
-            var splittedViewScale = void 0;
-            if (viewScale) {
-                splittedViewScale = viewScale.split(' ');
-            }
-            if (splittedViewScale && splittedViewScale.length > 1) {
-                viewScaleValue = parseFloat(splittedViewScale[0]);
-                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
-            } else {
-                viewScaleValue = 1;
-                viewScaleUnit = viewScale;
-            }
-            if (columnsManager.columns.length > 0) {
-                var currentColumn = columnsManager.columns[0];
-                var currentDate = (0, _moment2.default)(currentColumn.date).startOf(viewScaleUnit);
-                var maximumDate = (0, _moment2.default)(columnsManager.columns[columnsManager.columns.length - 1].endDate);
-                while (true) {
-                    var currentPosition = currentColumn.getPositionByDate(currentDate);
-                    var endDate = _moment2.default.min((0, _moment2.default)(currentDate).add(viewScaleValue, viewScaleUnit), maximumDate);
-                    var column = columnsManager.getColumnByDate(endDate);
-                    var left = column.getPositionByDate(endDate);
-                    var width = left - currentPosition;
-                    if (width > 0) {
-                        var labelFormat = columnsManager.getHeaderFormat(headerName);
-                        header = new _columnHeader.GanttColumnHeader(currentDate, endDate, viewScaleUnit, currentPosition, width, labelFormat, headerName);
-                        generatedHeaders.push(header);
-                    }
-                    if (endDate.isSame(maximumDate) || endDate.isAfter(maximumDate)) {
-                        break;
-                    }
-                    currentColumn = column;
-                    currentDate = endDate;
-                }
-            }
-            return generatedHeaders;
-        }
-    }, {
-        key: 'generate',
-        value: function generate(columnsManager) {
-            var headerNames = [];
-            if (columnsManager.gantt.options.value('headers') === undefined) {
-                var viewScale = columnsManager.gantt.options.value('viewScale');
-                viewScale = viewScale.trim();
-                if (viewScale.charAt(viewScale.length - 1) === 's') {
-                    viewScale = viewScale.substring(0, viewScale.length - 1);
-                }
-                var viewScaleUnit = void 0;
-                var splittedViewScale = void 0;
-                if (viewScale) {
-                    splittedViewScale = viewScale.split(' ');
-                }
-                if (splittedViewScale && splittedViewScale.length > 1) {
-                    viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
-                } else {
-                    viewScaleUnit = viewScale;
-                }
-                if (['quarter', 'month'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('year');
-                }
-                if (['day', 'week'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('month');
-                }
-                if (['day'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('week');
-                }
-                if (['hour'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('day');
-                }
-                if (['minute', 'second', 'millisecond'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('hour');
-                }
-                if (['second', 'millisecond'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('minute');
-                }
-                if (['millisecond'].indexOf(viewScaleUnit) > -1) {
-                    headerNames.push('second');
-                }
-                headerNames.push(viewScale);
-            } else {
-                headerNames = columnsManager.gantt.options.value('headers');
-            }
-            var headers = [];
-            var _iteratorNormalCompletion = true;
-            var _didIteratorError = false;
-            var _iteratorError = undefined;
-
-            try {
-                for (var _iterator = (0, _getIterator3.default)(headerNames), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                    var headerName = _step.value;
-
-                    headers.push(this.generateHeaders(columnsManager, headerName));
-                }
-            } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion && _iterator.return) {
-                        _iterator.return();
-                    }
-                } finally {
-                    if (_didIteratorError) {
-                        throw _iteratorError;
-                    }
-                }
-            }
-
-            return headers;
-        }
-    }]);
-    return GanttHeadersGenerator;
-}();
-
-exports.default = GanttHeadersGenerator;
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Gantt = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-exports.default = ["GanttApi", "GanttOptions", "GanttCalendar", "GanttScroll", "GanttBody", "GanttHeader", "GanttSide", "GanttObjectModel", "GanttRowsManager", "GanttColumnsManager", "GanttTimespansManager", "GanttCurrentDateManager", "ganttArrays", "$document", "$timeout", function (GanttApi, GanttOptions, GanttCalendar, GanttScroll, GanttBody, GanttHeader, GanttSide, GanttObjectModel, GanttRowsManager, GanttColumnsManager, GanttTimespansManager, GanttCurrentDateManager, ganttArrays, $document, $timeout) {
-    'ngInject';
-
-    Gantt.ganttArrays = ganttArrays;
-    Gantt.$document = $document;
-    Gantt.$timeout = $timeout;
-    return Gantt;
-}];
-
-var _angular = __webpack_require__(2);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _api = __webpack_require__(44);
-
-var _options = __webpack_require__(45);
-
-var _calendar = __webpack_require__(46);
-
-var _currentDateManager = __webpack_require__(47);
-
-var _objectModel = __webpack_require__(50);
-
-var _rowsManager = __webpack_require__(51);
-
-var _columnsManager = __webpack_require__(49);
-
-var _timespansManager = __webpack_require__(56);
-
-var _scroll = __webpack_require__(54);
-
-var _body = __webpack_require__(52);
-
-var _header = __webpack_require__(53);
-
-var _side = __webpack_require__(55);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Gantt = exports.Gantt = function () {
-    function Gantt($scope, $element) {
-        var _this = this;
-
-        (0, _classCallCheck3.default)(this, Gantt);
-
-        this.rendered = false;
-        this.isRefreshingColumns = false;
-        this.$scope = $scope;
-        this.$element = $element;
-        this.options = new _options.GanttOptions($scope, {
-            'api': function api() {},
-            'data': [],
-            'timespans': [],
-            'viewScale': 'day',
-            'columnMagnet': '15 minutes',
-            'timeFramesMagnet': true,
-            'showSide': true,
-            'allowSideResizing': true,
-            'currentDate': 'line',
-            'currentDateValue': _moment2.default,
-            'autoExpand': 'none',
-            'taskOutOfRange': 'truncate',
-            'taskContent': '{{task.model.name}}',
-            'rowContent': '{{row.model.name}}',
-            'maxHeight': 0,
-            'timeFrames': [],
-            'dateFrames': [],
-            'timeFramesWorkingMode': 'hidden',
-            'timeFramesNonWorkingMode': 'visible',
-            'taskLimitThreshold': 100,
-            'columnLimitThreshold': 500
-        });
-        this.api = new _api.GanttApi(this);
-        this.api.registerEvent('core', 'ready');
-        this.api.registerEvent('core', 'rendered');
-        this.api.registerEvent('directives', 'controller');
-        this.api.registerEvent('directives', 'preLink');
-        this.api.registerEvent('directives', 'postLink');
-        this.api.registerEvent('directives', 'new');
-        this.api.registerEvent('directives', 'destroy');
-        this.api.registerEvent('data', 'change');
-        this.api.registerEvent('data', 'load');
-        this.api.registerEvent('data', 'remove');
-        this.api.registerEvent('data', 'clear');
-        this.api.registerMethod('core', 'getDateByPosition', this.getDateByPosition, this);
-        this.api.registerMethod('core', 'getPositionByDate', this.getPositionByDate, this);
-        this.api.registerMethod('data', 'load', this.loadData, this);
-        this.api.registerMethod('data', 'remove', this.removeData, this);
-        this.api.registerMethod('data', 'clear', this.clearData, this);
-        this.api.registerMethod('data', 'get', this.getData, this);
-        this.calendar = new _calendar.GanttCalendar();
-        this.calendar.registerTimeFrames(this.options.value('timeFrames'));
-        this.calendar.registerDateFrames(this.options.value('dateFrames'));
-        this.api.registerMethod('timeframes', 'registerTimeFrames', this.calendar.registerTimeFrames, this.calendar);
-        this.api.registerMethod('timeframes', 'clearTimeframes', this.calendar.clearTimeFrames, this.calendar);
-        this.api.registerMethod('timeframes', 'registerDateFrames', this.calendar.registerDateFrames, this.calendar);
-        this.api.registerMethod('timeframes', 'clearDateFrames', this.calendar.clearDateFrames, this.calendar);
-        this.api.registerMethod('timeframes', 'registerTimeFrameMappings', this.calendar.registerTimeFrameMappings, this.calendar);
-        this.api.registerMethod('timeframes', 'clearTimeFrameMappings', this.calendar.clearTimeFrameMappings, this.calendar);
-        $scope.$watchGroup(['timeFrames', 'dateFrames'], function (newValues, oldValues) {
-            if (newValues !== oldValues) {
-                var timeFrames = newValues[0];
-                var dateFrames = newValues[1];
-                var oldTimeFrames = oldValues[0];
-                var oldDateFrames = oldValues[1];
-                var framesChanged = false;
-                if (!_angular2.default.equals(timeFrames, oldTimeFrames)) {
-                    _this.calendar.clearTimeFrames();
-                    _this.calendar.registerTimeFrames(timeFrames);
-                    framesChanged = true;
-                }
-                if (!_angular2.default.equals(dateFrames, oldDateFrames)) {
-                    _this.calendar.clearDateFrames();
-                    _this.calendar.registerDateFrames(dateFrames);
-                    framesChanged = true;
-                }
-                if (framesChanged) {
-                    _this.columnsManager.generateColumns();
-                }
-            }
-        });
-        $scope.$watch('columnMagnet', function () {
-            var splittedColumnMagnet = void 0;
-            var columnMagnet = _this.options.value('columnMagnet');
-            if (columnMagnet) {
-                splittedColumnMagnet = columnMagnet.trim().split(' ');
-            }
-            if (splittedColumnMagnet && splittedColumnMagnet.length > 1) {
-                _this.columnMagnetValue = parseFloat(splittedColumnMagnet[0]);
-                _this.columnMagnetUnit = _moment2.default.normalizeUnits(splittedColumnMagnet[splittedColumnMagnet.length - 1]);
-            } else {
-                _this.columnMagnetValue = 1;
-                _this.columnMagnetUnit = _moment2.default.normalizeUnits(columnMagnet);
-            }
-        });
-        $scope.$watchGroup(['shiftColumnMagnet', 'viewScale'], function () {
-            var splittedColumnMagnet = void 0;
-            var shiftColumnMagnet = _this.options.value('shiftColumnMagnet');
-            if (shiftColumnMagnet) {
-                splittedColumnMagnet = shiftColumnMagnet.trim().split(' ');
-            }
-            if (splittedColumnMagnet !== undefined && splittedColumnMagnet.length > 1) {
-                _this.shiftColumnMagnetValue = parseFloat(splittedColumnMagnet[0]);
-                _this.shiftColumnMagnetUnit = _moment2.default.normalizeUnits(splittedColumnMagnet[splittedColumnMagnet.length - 1]);
-            } else {
-                _this.shiftColumnMagnetValue = 1;
-                _this.shiftColumnMagnetUnit = _moment2.default.normalizeUnits(shiftColumnMagnet);
-            }
-        });
-        Gantt.$document.on('keyup keydown', this.keyHandler);
-        $scope.$on('$destroy', function () {
-            Gantt.$document.off('keyup keydown', _this.keyHandler);
-        });
-        this.scroll = new _scroll.GanttScroll(this);
-        this.body = new _body.GanttBody(this);
-        this.header = new _header.GanttHeader(this);
-        this.side = new _side.GanttSide(this);
-        this.objectModel = new _objectModel.GanttObjectModel(this.api);
-        this.rowsManager = new _rowsManager.GanttRowsManager(this);
-        this.columnsManager = new _columnsManager.GanttColumnsManager(this);
-        this.timespansManager = new _timespansManager.GanttTimespansManager(this);
-        this.currentDateManager = new _currentDateManager.GanttCurrentDateManager(this);
-        this.originalWidth = 0;
-        this.width = 0;
-        if (typeof this.$scope.api === 'function') {
-            this.$scope.api(this.api);
-        }
-        var hasRowModelOrderChanged = function hasRowModelOrderChanged(data1, data2) {
-            if (data2 === undefined || data1.length !== data2.length) {
-                return true;
-            }
-
-            for (var i = 0, l = data1.length; i < l; i++) {
-                if (data1[i].id !== data2[i].id) {
-                    return true;
-                }
-            }
-            return false;
-        };
-        $scope.$watchCollection('data', function (newData, oldData) {
-            if (oldData !== undefined) {
-                var toRemoveIds = Gantt.ganttArrays.getRemovedIds(newData, oldData);
-                if (toRemoveIds.length === oldData.length) {
-                    _this.rowsManager.removeAll();
-
-                    _this.api.data.raise.clear();
-                } else {
-                    for (var i = 0, l = toRemoveIds.length; i < l; i++) {
-                        var toRemoveId = toRemoveIds[i];
-                        _this.rowsManager.removeRow(toRemoveId);
-                    }
-
-                    var removedRows = [];
-                    for (var _i = 0, _l = oldData.length; _i < _l; _i++) {
-                        if (toRemoveIds.indexOf(oldData[_i].id) > -1) {
-                            removedRows.push(oldData[_i]);
-                        }
-                    }
-                    _this.api.data.raise.remove(removedRows);
-                }
-            }
-            if (newData !== undefined) {
-                var modelOrderChanged = hasRowModelOrderChanged(newData, oldData);
-                if (modelOrderChanged) {
-                    _this.rowsManager.resetNonModelLists();
-                }
-                for (var j = 0, k = newData.length; j < k; j++) {
-                    var rowData = newData[j];
-                    _this.rowsManager.addRow(rowData, modelOrderChanged);
-                }
-                _this.api.data.raise.change(newData, oldData);
-
-                _this.api.data.raise.load(newData);
-            }
-        });
-    }
-
-    (0, _createClass3.default)(Gantt, [{
-        key: 'keyHandler',
-        value: function keyHandler(e) {
-            this.shiftKey = e.shiftKey;
-            return true;
-        }
-    }, {
-        key: 'getMagnetValueAndUnit',
-        value: function getMagnetValueAndUnit() {
-            if (this.shiftKey) {
-                if (this.shiftColumnMagnetValue !== undefined && this.shiftColumnMagnetUnit !== undefined) {
-                    return [this.shiftColumnMagnetValue, this.shiftColumnMagnetUnit];
-                } else {
-                    var viewScale = this.options.value('viewScale');
-                    viewScale = viewScale.trim();
-                    var viewScaleValue = void 0;
-                    var viewScaleUnit = void 0;
-                    var splittedViewScale = void 0;
-                    if (viewScale) {
-                        splittedViewScale = viewScale.split(' ');
-                    }
-                    if (splittedViewScale && splittedViewScale.length > 1) {
-                        viewScaleValue = parseFloat(splittedViewScale[0]);
-                        viewScaleUnit = _moment2.default.normalizeUnits(splittedViewScale[splittedViewScale.length - 1]);
-                    } else {
-                        viewScaleValue = 1;
-                        viewScaleUnit = _moment2.default.normalizeUnits(viewScale);
-                    }
-                    return [viewScaleValue * 0.25, viewScaleUnit];
-                }
-            } else {
-                return [this.columnMagnetValue, this.columnMagnetUnit];
-            }
-        }
-    }, {
-        key: 'getMagnetDate',
-        value: function getMagnetDate(date, disableExpand) {
-            if (date === undefined) {
-                return undefined;
-            }
-            if (!_moment2.default.isMoment(_moment2.default)) {
-                date = (0, _moment2.default)(date);
-            }
-            var column = this.columnsManager.getColumnByDate(date, disableExpand);
-            var magnetValueAndUnit = this.getMagnetValueAndUnit();
-            var magnetValue = magnetValueAndUnit[0];
-            var magnetUnit = magnetValueAndUnit[1];
-            return column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
-        }
-    }, {
-        key: 'getDateByPosition',
-        value: function getDateByPosition(x, magnet, disableExpand) {
-            var column = this.columnsManager.getColumnByPosition(x, disableExpand);
-            if (column !== undefined) {
-                var magnetValue = void 0;
-                var magnetUnit = void 0;
-                if (magnet) {
-                    var magnetValueAndUnit = this.getMagnetValueAndUnit();
-                    magnetValue = magnetValueAndUnit[0];
-                    magnetUnit = magnetValueAndUnit[1];
-                }
-                return column.getDateByPosition(x - column.left, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
-            } else {
-                return undefined;
-            }
-        }
-    }, {
-        key: 'getBodyAvailableWidth',
-        value: function getBodyAvailableWidth() {
-            var scrollWidth = this.getWidth() - this.side.getWidth();
-            var borderWidth = this.scroll.getBordersWidth();
-            var availableWidth = scrollWidth - (borderWidth !== undefined ? this.scroll.getBordersWidth() : 0);
-
-            availableWidth = availableWidth - 1;
-            return availableWidth;
-        }
-    }, {
-        key: 'getPositionByDate',
-        value: function getPositionByDate(date, disableExpand) {
-            if (date === undefined) {
-                return undefined;
-            }
-            if (!_moment2.default.isMoment(_moment2.default)) {
-                date = (0, _moment2.default)(date);
-            }
-            var column = this.columnsManager.getColumnByDate(date, disableExpand);
-            if (column !== undefined) {
-                return column.getPositionByDate(date);
-            } else {
-                return undefined;
-            }
-        }
-    }, {
-        key: 'loadData',
-        value: function loadData(data) {
-            if (!Array.isArray(data)) {
-                data = data !== undefined ? [data] : [];
-            }
-            if (this.$scope.data === undefined) {
-                this.$scope.data = data;
-            } else {
-                for (var i = 0, l = data.length; i < l; i++) {
-                    var row = data[i];
-                    var j = Gantt.ganttArrays.indexOfId(this.$scope.data, row.id);
-                    if (j > -1) {
-                        this.$scope.data[j] = row;
-                    } else {
-                        this.$scope.data.push(row);
-                    }
-                }
-            }
-            var w = this.side.getWidth();
-            if (w > 0) {
-                this.options.set('sideWidth', w);
-            }
-        }
-    }, {
-        key: 'getData',
-        value: function getData() {
-            return this.$scope.data;
-        }
-    }, {
-        key: 'removeData',
-        value: function removeData(data) {
-            if (!Array.isArray(data)) {
-                data = data !== undefined ? [data] : [];
-            }
-            if (this.$scope.data !== undefined) {
-                for (var i = 0, l = data.length; i < l; i++) {
-                    var rowToRemove = data[i];
-                    var j = Gantt.ganttArrays.indexOfId(this.$scope.data, rowToRemove.id);
-                    if (j > -1) {
-                        if (rowToRemove.tasks === undefined || rowToRemove.tasks.length === 0) {
-                            this.$scope.data.splice(j, 1);
-                        } else {
-                            var row = this.$scope.data[j];
-                            for (var ti = 0, tl = rowToRemove.tasks.length; ti < tl; ti++) {
-                                var taskToRemove = rowToRemove.tasks[ti];
-                                var tj = Gantt.ganttArrays.indexOfId(row.tasks, taskToRemove.id);
-                                if (tj > -1) {
-                                    row.tasks.splice(tj, 1);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }, {
-        key: 'clearData',
-        value: function clearData() {
-            this.$scope.data = undefined;
-        }
-    }, {
-        key: 'getWidth',
-        value: function getWidth() {
-            return this.$scope.ganttElementWidth;
-        }
-    }, {
-        key: 'getHeight',
-        value: function getHeight() {
-            return this.$scope.ganttElementHeight;
-        }
-    }, {
-        key: 'getContainerWidth',
-        value: function getContainerWidth() {
-            return this.$scope.ganttContainerWidth;
-        }
-    }, {
-        key: 'getContainerHeight',
-        value: function getContainerHeight() {
-            return this.$scope.ganttContainerHeight;
-        }
-    }, {
-        key: 'initialized',
-        value: function initialized() {
-            var _this2 = this;
-
-            this.api.core.raise.ready(this.api);
-            this.rendered = true;
-            this.columnsManager.generateColumns();
-            Gantt.$timeout(function () {
-                var w = _this2.side.getWidth();
-                if (w > 0) {
-                    _this2.options.set('sideWidth', w);
-                }
-                _this2.api.core.raise.rendered(_this2.api);
-            });
-        }
-    }]);
-    return Gantt;
-}();
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttRow = exports.GanttRowModel = undefined;
-
-var _getIterator2 = __webpack_require__(4);
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-var _typeof2 = __webpack_require__(5);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = ["GanttTask", "$filter", function (GanttTask, $filter) {
-    'ngInject';
-
-    GanttRow.GanttTask = GanttTask;
-    GanttRow.$filter = $filter;
-    return GanttRow;
-}];
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _angular = __webpack_require__(2);
-
-var angular = _interopRequireWildcard(_angular);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttRowModel = exports.GanttRowModel = function GanttRowModel() {
-    (0, _classCallCheck3.default)(this, GanttRowModel);
-};
-
-var GanttRow = exports.GanttRow = function () {
-    function GanttRow(rowsManager, model) {
-        (0, _classCallCheck3.default)(this, GanttRow);
-
-        this.rowsManager = rowsManager;
-        this.model = model;
-        this.from = undefined;
-        this.to = undefined;
-        this.tasksMap = {};
-        this.tasks = [];
-        this.filteredTasks = [];
-        this.visibleTasks = [];
-    }
-
-    (0, _createClass3.default)(GanttRow, [{
-        key: 'addTaskImpl',
-        value: function addTaskImpl(task) {
-            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-            this.tasksMap[task.model.id] = task;
-            this.tasks.push(task);
-            if (!viewOnly) {
-                if (this.model.tasks === undefined) {
-                    this.model.tasks = [];
-                }
-                if (this.model.tasks.indexOf(task.model) === -1) {
-                    this.model.tasks.push(task.model);
-                }
-            }
-        }
-    }, {
-        key: 'addTask',
-        value: function addTask(taskModel) {
-            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-            var task = void 0;
-            var isUpdate = false;
-            this.rowsManager.gantt.objectModel.cleanTask(taskModel);
-            if (taskModel.id in this.tasksMap) {
-                task = this.tasksMap[taskModel.id];
-                if (task.model === taskModel) {
-                    return task;
-                }
-                task.model = taskModel;
-                isUpdate = true;
-            } else {
-                task = new GanttRow.GanttTask(this, taskModel);
-                this.addTaskImpl(task, viewOnly);
-            }
-            this.sortTasks();
-            this.setFromToByTask(task);
-            if (!viewOnly) {
-                if (isUpdate) {
-                    this.rowsManager.gantt.api.tasks.raise.change(task);
-                } else {
-                    this.rowsManager.gantt.api.tasks.raise.add(task);
-                }
-            }
-            return task;
-        }
-    }, {
-        key: 'moveTaskToRow',
-        value: function moveTaskToRow(task) {
-            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-            this.rowsManager.gantt.api.tasks.raise.beforeViewRowChange(task, this);
-            if (!viewOnly) {
-                this.rowsManager.gantt.api.tasks.raise.beforeRowChange(task, this);
-            }
-            var oldRow = task.row;
-            oldRow.removeTask(task.model.id, viewOnly, true);
-            task.row = this;
-            this.addTaskImpl(task, viewOnly);
-            this.sortTasks();
-            this.setFromToByTask(task);
-            task.updatePosAndSize();
-            this.updateVisibleTasks();
-            oldRow.$scope.$digest();
-            task.row.$scope.$digest();
-            this.rowsManager.gantt.api.tasks.raise.viewRowChange(task, oldRow);
-            if (!viewOnly) {
-                this.rowsManager.gantt.api.tasks.raise.rowChange(task, oldRow);
-            }
-        }
-    }, {
-        key: 'updateVisibleTasks',
-        value: function updateVisibleTasks() {
-            var filterTask = this.rowsManager.gantt.options.value('filterTask');
-            if (filterTask) {
-                if ((typeof filterTask === 'undefined' ? 'undefined' : (0, _typeof3.default)(filterTask)) === 'object') {
-                    filterTask = { model: filterTask };
-                }
-                var _filterTaskComparator = this.rowsManager.gantt.options.value('filterTaskComparator');
-                if (typeof _filterTaskComparator === 'function') {
-                    _filterTaskComparator = function filterTaskComparator(actual, expected) {
-                        return _filterTaskComparator(actual.model, expected.model);
-                    };
-                }
-                this.filteredTasks = GanttRow.$filter('filter')(this.tasks, filterTask, _filterTaskComparator);
-            } else {
-                this.filteredTasks = this.tasks.slice(0);
-            }
-            var limitThreshold = this.rowsManager.gantt.options.value('taskLimitThreshold');
-            if (limitThreshold === undefined || limitThreshold > 0 && this.filteredTasks.length >= limitThreshold) {
-                this.visibleTasks = GanttRow.$filter('ganttTaskLimit')(this.filteredTasks, this.rowsManager.gantt);
-            } else {
-                this.visibleTasks = this.filteredTasks;
-            }
-        }
-    }, {
-        key: 'updateTasksPosAndSize',
-        value: function updateTasksPosAndSize() {
-            var _iteratorNormalCompletion = true;
-            var _didIteratorError = false;
-            var _iteratorError = undefined;
-
-            try {
-                for (var _iterator = (0, _getIterator3.default)(this.tasks), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                    var task = _step.value;
-
-                    task.updatePosAndSize();
-                }
-            } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion && _iterator.return) {
-                        _iterator.return();
-                    }
-                } finally {
-                    if (_didIteratorError) {
-                        throw _iteratorError;
-                    }
-                }
-            }
-        }
-    }, {
-        key: 'removeTask',
-        value: function removeTask(taskId, viewOnly, silent) {
-            if (taskId in this.tasksMap) {
-                var removedTask = this.tasksMap[taskId];
-                var task = void 0;
-                var i = void 0;
-                for (i = this.tasks.length - 1; i >= 0; i--) {
-                    task = this.tasks[i];
-                    if (task.model.id === taskId) {
-                        this.tasks.splice(i, 1);
-                        if (this.from && this.from.isSame((0, _moment2.default)(task.model.from)) || this.to && this.to.isSame((0, _moment2.default)(task.model.to))) {
-                            this.setFromTo();
-                        }
-                        break;
-                    }
-                }
-                for (i = this.filteredTasks.length - 1; i >= 0; i--) {
-                    task = this.filteredTasks[i];
-                    if (task.model.id === taskId) {
-                        this.filteredTasks.splice(i, 1);
-                        break;
-                    }
-                }
-                for (i = this.visibleTasks.length - 1; i >= 0; i--) {
-                    task = this.visibleTasks[i];
-                    if (task.model.id === taskId) {
-                        this.visibleTasks.splice(i, 1);
-                        break;
-                    }
-                }
-                if (!viewOnly) {
-                    delete this.tasksMap[taskId];
-                    if (this.model.tasks !== undefined) {
-                        var taskIndex = this.model.tasks.indexOf(removedTask.model);
-                        if (taskIndex > -1) {
-                            this.model.tasks.splice(taskIndex, 1);
-                        }
-                    }
-                    if (!silent) {
-                        this.rowsManager.gantt.api.tasks.raise.remove(removedTask);
-                    }
-                }
-                return removedTask;
-            }
-        }
-    }, {
-        key: 'removeAllTasks',
-        value: function removeAllTasks() {
-            this.from = undefined;
-            this.to = undefined;
-            this.tasksMap = {};
-            this.tasks = [];
-            this.filteredTasks = [];
-            this.visibleTasks = [];
-        }
-    }, {
-        key: 'setFromTo',
-        value: function setFromTo() {
-            this.from = undefined;
-            this.to = undefined;
-            var _iteratorNormalCompletion2 = true;
-            var _didIteratorError2 = false;
-            var _iteratorError2 = undefined;
-
-            try {
-                for (var _iterator2 = (0, _getIterator3.default)(this.tasks), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                    var task = _step2.value;
-
-                    this.setFromToByTask(task);
-                }
-            } catch (err) {
-                _didIteratorError2 = true;
-                _iteratorError2 = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                        _iterator2.return();
-                    }
-                } finally {
-                    if (_didIteratorError2) {
-                        throw _iteratorError2;
-                    }
-                }
-            }
-        }
-    }, {
-        key: 'setFromToByTask',
-        value: function setFromToByTask(task) {
-            this.setFromToByValues(task.model.from, task.model.to);
-        }
-    }, {
-        key: 'setFromToByValues',
-        value: function setFromToByValues(from, to) {
-            if (from !== undefined) {
-                if (this.from === undefined) {
-                    this.from = (0, _moment2.default)(from);
-                } else if (from < this.from) {
-                    this.from = (0, _moment2.default)(from);
-                }
-            }
-            if (to !== undefined) {
-                if (this.to === undefined) {
-                    this.to = (0, _moment2.default)(to);
-                } else if (to > this.to) {
-                    this.to = (0, _moment2.default)(to);
-                }
-            }
-        }
-    }, {
-        key: 'sortTasks',
-        value: function sortTasks() {
-            this.tasks.sort(function (t1, t2) {
-                return t1.left - t2.left;
-            });
-        }
-    }, {
-        key: 'clone',
-        value: function clone() {
-            var clone = new GanttRow(this.rowsManager, angular.copy(this.model));
-            var _iteratorNormalCompletion3 = true;
-            var _didIteratorError3 = false;
-            var _iteratorError3 = undefined;
-
-            try {
-                for (var _iterator3 = (0, _getIterator3.default)(this.tasks), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                    var task = _step3.value;
-
-                    clone.addTask(task.model);
-                }
-            } catch (err) {
-                _didIteratorError3 = true;
-                _iteratorError3 = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion3 && _iterator3.return) {
-                        _iterator3.return();
-                    }
-                } finally {
-                    if (_didIteratorError3) {
-                        throw _iteratorError3;
-                    }
-                }
-            }
-
-            return clone;
-        }
-    }]);
-    return GanttRow;
-}();
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttTask = exports.GanttTaskModel = undefined;
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttTask;
-};
-
-var _angular = __webpack_require__(2);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttTaskModel = exports.GanttTaskModel = function GanttTaskModel() {
-    (0, _classCallCheck3.default)(this, GanttTaskModel);
-};
-
-var GanttTask = exports.GanttTask = function () {
-    function GanttTask(row, model) {
-        (0, _classCallCheck3.default)(this, GanttTask);
-
-        this.rowsManager = row.rowsManager;
-        this.row = row;
-        this.model = model;
-        this.truncatedLeft = false;
-        this.truncatedRight = false;
-    }
-
-    (0, _createClass3.default)(GanttTask, [{
-        key: 'isMilestone',
-        value: function isMilestone() {
-            return !this.model.to || this.model.to.isSame(this.model.from);
-        }
-    }, {
-        key: 'isOutOfRange',
-        value: function isOutOfRange() {
-            var firstColumn = this.rowsManager.gantt.columnsManager.getFirstColumn();
-            var lastColumn = this.rowsManager.gantt.columnsManager.getLastColumn();
-            return firstColumn === undefined || this.model.to < firstColumn.date || lastColumn === undefined || this.model.from > lastColumn.endDate;
-        }
-    }, {
-        key: 'updatePosAndSize',
-        value: function updatePosAndSize() {
-            var oldViewLeft = this.left;
-            var oldViewWidth = this.width;
-            var oldTruncatedRight = this.truncatedRight;
-            var oldTruncatedLeft = this.truncatedLeft;
-            if (!this.isMoving && this.isOutOfRange()) {
-                this.modelLeft = undefined;
-                this.modelWidth = undefined;
-            } else {
-                this.modelLeft = this.rowsManager.gantt.getPositionByDate(this.model.from);
-                this.modelWidth = this.rowsManager.gantt.getPositionByDate(this.model.to) - this.modelLeft;
-            }
-            var lastColumn = this.rowsManager.gantt.columnsManager.getLastColumn();
-            var maxModelLeft = lastColumn ? lastColumn.left + lastColumn.width : 0;
-            var modelLeft = this.modelLeft;
-            var modelWidth = this.modelWidth;
-            if (this.rowsManager.gantt.options.value('daily')) {
-                modelLeft = this.rowsManager.gantt.getPositionByDate((0, _moment2.default)(this.model.from).startOf('day'));
-                modelWidth = this.rowsManager.gantt.getPositionByDate((0, _moment2.default)(this.model.to).endOf('day')) - modelLeft;
-            }
-            var minModelLeft = -modelWidth;
-            if (modelLeft < minModelLeft) {
-                modelLeft = minModelLeft;
-            }
-            if (modelLeft > maxModelLeft) {
-                modelLeft = maxModelLeft;
-            }
-            if (modelLeft === undefined || modelWidth === undefined) {
-                this.left = undefined;
-                this.width = undefined;
-            } else {
-                this.left = modelLeft;
-                this.width = modelWidth;
-                if (modelLeft < 0) {
-                    this.truncatedLeft = true;
-                    this.truncatedLeftOffset = -modelLeft;
-                    this.truncatedRight = false;
-                    this.truncatedRightOffset = undefined;
-                } else if (modelWidth + modelLeft > this.rowsManager.gantt.width) {
-                    this.truncatedRight = true;
-                    this.truncatedRightOffset = modelWidth + modelLeft - this.rowsManager.gantt.width;
-                    this.truncatedLeft = false;
-                    this.truncatedLeftOffset = undefined;
-                } else {
-                    this.truncatedLeft = false;
-                    this.truncatedLeftOffset = undefined;
-                    this.truncatedRight = false;
-                    this.truncatedRightOffset = modelWidth + modelLeft - this.rowsManager.gantt.width;
-                }
-                if (this.width < 0) {
-                    this.left = this.left + this.width;
-                    this.width = -this.width;
-                }
-            }
-            this.updateView();
-            if (!this.rowsManager.gantt.isRefreshingColumns && (oldViewLeft !== this.left || oldViewWidth !== this.width || oldTruncatedRight !== this.truncatedRight || oldTruncatedLeft !== this.truncatedLeft)) {
-                this.rowsManager.gantt.api.tasks.raise.viewChange(this);
-            }
-        }
-    }, {
-        key: 'updateView',
-        value: function updateView() {
-            if (this.$element) {
-                if (this.left === undefined || this.width === undefined) {
-                    this.$element.css('display', 'none');
-                } else {
-                    this.$element.css({ 'left': this.left + 'px', 'width': this.width + 'px', 'display': '' });
-                    if (this.model.priority > 0) {
-                        var priority = this.model.priority;
-                        var children = this.$element.children();
-                        this.$element.css('z-index', priority);
-
-                        for (var i = 0; i < children.length; i++) {
-                            _angular2.default.element(children[i]).css('z-index', priority);
-                        }
-                    }
-                    this.$element.toggleClass('gantt-task-milestone', this.isMilestone());
-                }
-            }
-        }
-    }, {
-        key: 'getBackgroundElement',
-        value: function getBackgroundElement() {
-            if (this.$element !== undefined) {
-                var backgroundElement = this.$element[0].querySelector('.gantt-task-background');
-                if (backgroundElement !== undefined) {
-                    return _angular2.default.element(backgroundElement);
-                }
-                return undefined;
-            }
-        }
-    }, {
-        key: 'getContentElement',
-        value: function getContentElement() {
-            if (this.$element !== undefined) {
-                var contentElement = this.$element[0].querySelector('.gantt-task-content');
-                if (contentElement !== undefined) {
-                    return _angular2.default.element(contentElement);
-                }
-                return undefined;
-            }
-        }
-    }, {
-        key: 'getForegroundElement',
-        value: function getForegroundElement() {
-            if (this.$element !== undefined) {
-                var foregroundElement = this.$element[0].querySelector('.gantt-task-foreground');
-                if (foregroundElement !== undefined) {
-                    return _angular2.default.element(foregroundElement);
-                }
-                return foregroundElement;
-            }
-        }
-    }, {
-        key: 'setFrom',
-        value: function setFrom(x, magnetEnabled) {
-            this.model.from = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
-            this.row.setFromTo();
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'setTo',
-        value: function setTo(x, magnetEnabled) {
-            this.model.to = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
-            this.row.setFromTo();
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'moveTo',
-        value: function moveTo(x, magnetEnabled) {
-            var newTaskRight = void 0;
-            var newTaskLeft = void 0;
-            if (x > this.modelLeft) {
-                this.model.to = this.rowsManager.gantt.getDateByPosition(x + this.modelWidth, magnetEnabled);
-                newTaskRight = this.rowsManager.gantt.getPositionByDate(this.model.to);
-                newTaskLeft = newTaskRight - this.modelWidth;
-                this.model.from = this.rowsManager.gantt.getDateByPosition(newTaskLeft, false);
-            } else {
-                this.model.from = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
-                newTaskLeft = this.rowsManager.gantt.getPositionByDate(this.model.from);
-                newTaskRight = newTaskLeft + this.modelWidth;
-                this.model.to = this.rowsManager.gantt.getDateByPosition(newTaskRight, false);
-            }
-            this.row.setFromTo();
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'clone',
-        value: function clone() {
-            return new GanttTask(this.row, _angular2.default.copy(this.model));
-        }
-    }]);
-    return GanttTask;
-}();
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttBodyBackground = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttBodyBackground;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttBodyBackground = exports.GanttBodyBackground = function GanttBodyBackground(body) {
-    (0, _classCallCheck3.default)(this, GanttBodyBackground);
-
-    this.body = body;
-};
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttBodyColumns = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttBodyColumns;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttBodyColumns = exports.GanttBodyColumns = function GanttBodyColumns(body) {
-    (0, _classCallCheck3.default)(this, GanttBodyColumns);
-
-    this.body = body;
-};
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttBodyForeground = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttBodyForeground;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttBodyForeground = exports.GanttBodyForeground = function GanttBodyForeground(body) {
-    (0, _classCallCheck3.default)(this, GanttBodyForeground);
-
-    this.body = body;
-};
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttBodyRows = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttBodyRows;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttBodyRows = exports.GanttBodyRows = function GanttBodyRows(body) {
-    (0, _classCallCheck3.default)(this, GanttBodyRows);
-
-    this.body = body;
-};
-
-/***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttHeaderColumns = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttHeaderColumns;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttHeaderColumns = exports.GanttHeaderColumns = function GanttHeaderColumns($element) {
-    (0, _classCallCheck3.default)(this, GanttHeaderColumns);
-
-    this.$element = $element;
-};
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Timespan = exports.TimespanModel = undefined;
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-exports.default = function () {
-    'ngInject';
-
-    return Timespan;
-};
-
-var _angular = __webpack_require__(2);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TimespanModel = exports.TimespanModel = function TimespanModel() {
-    (0, _classCallCheck3.default)(this, TimespanModel);
-};
-
-var Timespan = exports.Timespan = function () {
-    function Timespan(gantt, model) {
-        (0, _classCallCheck3.default)(this, Timespan);
-
-        this.gantt = gantt;
-        this.model = model;
-    }
-
-    (0, _createClass3.default)(Timespan, [{
-        key: 'updatePosAndSize',
-        value: function updatePosAndSize() {
-            this.modelLeft = this.gantt.getPositionByDate(this.model.from);
-            this.modelWidth = this.gantt.getPositionByDate(this.model.to) - this.modelLeft;
-            var lastColumn = this.gantt.columnsManager.getLastColumn();
-            var maxModelLeft = lastColumn ? lastColumn.left + lastColumn.width : 0;
-            var modelLeft = this.modelLeft;
-            var modelWidth = this.modelWidth;
-            var minModelLeft = -modelWidth;
-            if (modelLeft < minModelLeft) {
-                modelLeft = minModelLeft;
-            }
-            if (modelLeft > maxModelLeft) {
-                modelLeft = maxModelLeft;
-            }
-            if (modelLeft === undefined || modelWidth === undefined) {
-                this.left = undefined;
-                this.width = undefined;
-            } else {
-                this.left = modelLeft;
-                this.width = modelWidth;
-                if (modelLeft < 0) {
-                    this.truncatedLeft = true;
-                    this.truncatedLeftOffset = -modelLeft;
-                    this.truncatedRight = false;
-                    this.truncatedRightOffset = undefined;
-                } else if (modelWidth + modelLeft > this.gantt.width) {
-                    this.truncatedRight = true;
-                    this.truncatedRightOffset = modelWidth + modelLeft - this.gantt.width;
-                    this.truncatedLeft = false;
-                    this.truncatedLeftOffset = undefined;
-                } else {
-                    this.truncatedLeft = false;
-                    this.truncatedLeftOffset = undefined;
-                    this.truncatedRight = false;
-                    this.truncatedRightOffset = modelWidth + modelLeft - this.gantt.width;
-                }
-                if (this.width < 0) {
-                    this.left = this.left + this.width;
-                    this.width = -this.width;
-                }
-            }
-            this.updateView();
-        }
-    }, {
-        key: 'updateView',
-        value: function updateView() {
-            if (this.$element) {
-                if (this.left === undefined || this.width === undefined) {
-                    this.$element.css('display', 'none');
-                } else {
-                    this.$element.css('display', '');
-                    this.$element.css('left', this.left + 'px');
-                    this.$element.css('width', this.width + 'px');
-                }
-            }
-        }
-    }, {
-        key: 'setFrom',
-        value: function setFrom(x) {
-            this.from = this.gantt.getDateByPosition(x);
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'setTo',
-        value: function setTo(x) {
-            this.to = this.gantt.getDateByPosition(x);
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'moveTo',
-        value: function moveTo(x) {
-            this.from = this.gantt.getDateByPosition(x);
-            this.to = this.gantt.getDateByPosition(x + this.width);
-            this.updatePosAndSize();
-        }
-    }, {
-        key: 'clone',
-        value: function clone() {
-            return new Timespan(this.gantt, _angular2.default.copy(this.model));
-        }
-    }]);
-    return Timespan;
-}();
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttArrays = function () {
-    function GanttArrays() {
-        (0, _classCallCheck3.default)(this, GanttArrays);
-    }
-
-    (0, _createClass3.default)(GanttArrays, [{
-        key: 'moveToIndex',
-        value: function moveToIndex(array, oldIndex, newIndex) {
-            if (newIndex >= array.length) {
-                var k = newIndex - array.length;
-                while (k-- + 1) {
-                    array.push(undefined);
-                }
-            }
-            array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
-            return array;
-        }
-    }, {
-        key: 'getRemovedIds',
-        value: function getRemovedIds(newArray, oldArray) {
-            var idProperty = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'id';
-
-            var i = void 0;
-            var l = void 0;
-            var removedIds = [];
-            if (oldArray !== undefined) {
-                for (i = 0, l = oldArray.length; i < l; i++) {
-                    removedIds.push(oldArray[i][idProperty]);
-                }
-            }
-            if (newArray !== undefined) {
-                for (i = 0, l = newArray.length; i < l; i++) {
-                    var newObject = newArray[i];
-                    if (newObject[idProperty] !== undefined) {
-                        var newObjectIndex = removedIds.indexOf(newObject[idProperty]);
-                        if (newObjectIndex > -1) {
-                            removedIds.splice(newObjectIndex, 1);
-                        }
-                    }
-                }
-            }
-            return removedIds;
-        }
-    }, {
-        key: 'indexOfId',
-        value: function indexOfId(array, value) {
-            var idProperties = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'id';
-
-            var i = void 0;
-            if (idProperties instanceof Array) {
-                for (i = array.length - 1; i >= 0; i--) {
-                    var arrayValue = array[i];
-
-                    for (var k = 0, l = idProperties.length; k < l; k++) {
-                        arrayValue = arrayValue[idProperties[k]];
-                    }
-                    if (arrayValue === value) {
-                        return i;
-                    }
-                }
-                return -1;
-            }
-            for (i = array.length - 1; i >= 0; i--) {
-                if (array[i][idProperties] === value) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-    }, {
-        key: 'removeId',
-        value: function removeId(array, value, idProperties) {
-            var indexOf = this.indexOfId(array, value, idProperties);
-            if (indexOf > -1) {
-                return array.splice(indexOf, 1)[0];
-            }
-        }
-    }, {
-        key: 'remove',
-        value: function remove(array, value) {
-            var index = array.indexOf(value);
-            if (index > -1) {
-                array.splice(index, 1);
-                return true;
-            }
-            return false;
-        }
-    }]);
-    return GanttArrays;
-}();
-
-exports.default = GanttArrays;
-
-/***/ }),
-/* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttBinarySearch = function () {
-    function GanttBinarySearch() {
-        (0, _classCallCheck3.default)(this, GanttBinarySearch);
-    }
-
-    (0, _createClass3.default)(GanttBinarySearch, [{
-        key: "getIndicesOnly",
-        value: function getIndicesOnly(input, value, comparer, strict) {
-            var lo = -1;
-            var hi = input.length;
-            while (hi - lo > 1) {
-                var mid = Math.floor((lo + hi) / 2);
-                if (strict ? comparer(input[mid]) < value : comparer(input[mid]) <= value) {
-                    lo = mid;
-                } else {
-                    hi = mid;
-                }
-            }
-            if (!strict && input[lo] !== undefined && comparer(input[lo]) === value) {
-                hi = lo;
-            }
-            return [lo, hi];
-        }
-    }, {
-        key: "get",
-        value: function get(input, value, comparer, strict) {
-            var res = this.getIndicesOnly(input, value, comparer, strict);
-            return [input[res[0]], input[res[1]]];
-        }
-    }]);
-    return GanttBinarySearch;
-}();
-
-exports.default = GanttBinarySearch;
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttHierarchy = undefined;
-
-var _getIterator2 = __webpack_require__(4);
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-exports.default = GanttHierarchyFactory;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttHierarchy = exports.GanttHierarchy = function () {
-    function GanttHierarchy() {
-        (0, _classCallCheck3.default)(this, GanttHierarchy);
-
-        this.nameToRow = {};
-        this.idToRow = {};
-        this.nameToChildren = {};
-        this.idToChildren = {};
-        this.nameToParent = {};
-        this.idToParent = {};
-    }
-
-    (0, _createClass3.default)(GanttHierarchy, [{
-        key: 'registerChildRow',
-        value: function registerChildRow(row, childRow) {
-            if (childRow !== undefined) {
-                var nameChildren = this.nameToChildren[row.model.name];
-                if (nameChildren === undefined) {
-                    nameChildren = [];
-                    this.nameToChildren[row.model.name] = nameChildren;
-                }
-                nameChildren.push(childRow);
-                var idChildren = this.idToChildren[row.model.id];
-                if (idChildren === undefined) {
-                    idChildren = [];
-                    this.idToChildren[row.model.id] = idChildren;
-                }
-                idChildren.push(childRow);
-                this.nameToParent[childRow.model.name] = row;
-                this.idToParent[childRow.model.id] = row;
-            }
-        }
-    }, {
-        key: 'refresh',
-        value: function refresh(rows) {
-            this.nameToRow = {};
-            this.idToRow = {};
-            this.nameToChildren = {};
-            this.idToChildren = {};
-            this.nameToParent = {};
-            this.idToParent = {};
-            var row = void 0;
-            for (var i = 0; i < rows.length; i++) {
-                row = rows[i];
-                this.nameToRow[row.model.name] = row;
-                this.idToRow[row.model.id] = row;
-            }
-            for (var _i = 0; _i < rows.length; _i++) {
-                row = rows[_i];
-                if (row.model.parent !== undefined) {
-                    var parentRow = this.nameToRow[row.model.parent];
-                    if (parentRow === undefined) {
-                        parentRow = this.idToRow[row.model.parent];
-                    }
-                    if (parentRow !== undefined) {
-                        this.registerChildRow(parentRow, row);
-                    }
-                }
-                if (row.model.children !== undefined) {
-                    var children = row.model.children;
-                    var _iteratorNormalCompletion = true;
-                    var _didIteratorError = false;
-                    var _iteratorError = undefined;
-
-                    try {
-                        for (var _iterator = (0, _getIterator3.default)(children), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                            var childRowNameOrId = _step.value;
-
-                            var childRow = this.nameToRow[childRowNameOrId];
-                            if (childRow === undefined) {
-                                childRow = this.idToRow[childRowNameOrId];
-                            }
-                            if (childRow !== undefined) {
-                                this.registerChildRow(row, childRow);
-                            }
-                        }
-                    } catch (err) {
-                        _didIteratorError = true;
-                        _iteratorError = err;
-                    } finally {
-                        try {
-                            if (!_iteratorNormalCompletion && _iterator.return) {
-                                _iterator.return();
-                            }
-                        } finally {
-                            if (_didIteratorError) {
-                                throw _iteratorError;
-                            }
-                        }
-                    }
-                }
-            }
-            var rootRows = [];
-            for (var _i2 = 0; _i2 < rows.length; _i2++) {
-                row = rows[_i2];
-                if (this.parent(row) === undefined) {
-                    rootRows.push(row);
-                }
-            }
-            return rootRows;
-        }
-    }, {
-        key: 'children',
-        value: function children(row) {
-            var children = this.idToChildren[row.model.id];
-            return children;
-        }
-    }, {
-        key: 'descendants',
-        value: function descendants(row) {
-            var descendants = [];
-            var children = this.children(row);
-            descendants.push.apply(descendants, children);
-            if (children !== undefined) {
-                var _iteratorNormalCompletion2 = true;
-                var _didIteratorError2 = false;
-                var _iteratorError2 = undefined;
-
-                try {
-                    for (var _iterator2 = (0, _getIterator3.default)(children), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                        var child = _step2.value;
-
-                        var childDescendants = this.descendants(child);
-                        descendants.push.apply(descendants, childDescendants);
-                    }
-                } catch (err) {
-                    _didIteratorError2 = true;
-                    _iteratorError2 = err;
-                } finally {
-                    try {
-                        if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                            _iterator2.return();
-                        }
-                    } finally {
-                        if (_didIteratorError2) {
-                            throw _iteratorError2;
-                        }
-                    }
-                }
-            }
-            return descendants;
-        }
-    }, {
-        key: 'parent',
-        value: function parent(row) {
-            var parent = this.idToParent[row.model.id];
-            return parent;
-        }
-    }, {
-        key: 'ancestors',
-        value: function ancestors(row) {
-            var ancestors = [];
-            var parent = this.parent(row);
-            while (parent !== undefined) {
-                ancestors.push(parent);
-                parent = this.parent(parent);
-            }
-            return ancestors;
-        }
-    }]);
-    return GanttHierarchy;
-}();
-
-function GanttHierarchyFactory() {
-    'ngInject';
-
-    return GanttHierarchy;
-}
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _angular = __webpack_require__(2);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttUtils = function () {
-    function GanttUtils() {
-        (0, _classCallCheck3.default)(this, GanttUtils);
-
-        this.seedId = new Date().getTime();
-    }
-
-    (0, _createClass3.default)(GanttUtils, [{
-        key: 'createBoundedWrapper',
-        value: function createBoundedWrapper(object, method) {
-            return function () {
-                return method.apply(object, arguments);
-            };
-        }
-    }, {
-        key: 'firstProperty',
-        value: function firstProperty(objects, propertyName, defaultValue) {
-            for (var i = 0, l = objects.length; i < l; i++) {
-                var object = objects[i];
-                if (object !== undefined && propertyName in object) {
-                    if (object[propertyName] !== undefined) {
-                        return object[propertyName];
-                    }
-                }
-            }
-            return defaultValue;
-        }
-    }, {
-        key: 'angularIndexOf',
-        value: function angularIndexOf(arr, obj) {
-            for (var i = 0; i < arr.length; i++) {
-                if (_angular2.default.equals(arr[i], obj)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-    }, {
-        key: 'random4',
-        value: function random4() {
-            return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-        }
-    }, {
-        key: 'randomUuid',
-        value: function randomUuid() {
-            return this.random4() + this.random4() + '-' + this.random4() + '-' + this.random4() + '-' + this.random4() + '-' + this.random4() + this.random4() + this.random4();
-        }
-    }, {
-        key: 'newId',
-        value: function newId() {
-            return this.seedId += 1;
-        }
-    }]);
-    return GanttUtils;
-}();
-
-exports.default = GanttUtils;
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["ganttBinarySearch", function (ganttBinarySearch) {
-    'ngInject';
-
-    var leftComparator = function leftComparator(c) {
-        return c.left;
-    };
-    return function (input, gantt) {
-        var scrollLeft = gantt.scroll.getScrollLeft();
-        var scrollContainerWidth = gantt.getWidth() - gantt.side.getWidth();
-        if (scrollContainerWidth > 0) {
-            var start = ganttBinarySearch.getIndicesOnly(input, scrollLeft, leftComparator)[0];
-            var end = ganttBinarySearch.getIndicesOnly(input, scrollLeft + scrollContainerWidth, leftComparator)[1];
-            return input.slice(start, end);
-        } else {
-            return input.slice();
-        }
-    };
-}];
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return function (input, gantt) {
-        var firstColumn = gantt.columnsManager.getFirstColumn();
-        var lastColumn = gantt.columnsManager.getLastColumn();
-        if (firstColumn !== undefined && lastColumn !== undefined) {
-            var fromDate = firstColumn.date;
-            var toDate = lastColumn.endDate;
-            var res = [];
-            var scrollLeft = gantt.scroll.getScrollLeft();
-            var scrollContainerWidth = gantt.getWidth() - gantt.side.getWidth();
-
-            for (var i = 0, l = input.length; i < l; i++) {
-                var task = input[i];
-                if (task.active) {
-                    res.push(task);
-                } else {
-                    if (task.model.to >= fromDate && task.model.from <= toDate) {
-                        if (task.left === undefined) {
-                            task.updatePosAndSize();
-                        }
-
-                        if (!scrollContainerWidth || task.left >= scrollLeft && task.left <= scrollLeft + scrollContainerWidth || task.left + task.width >= scrollLeft && task.left + task.width <= scrollLeft + scrollContainerWidth || task.left < scrollLeft && task.left + task.width > scrollLeft + scrollContainerWidth) {
-                            res.push(task);
-                        }
-                    }
-                }
-            }
-            return res;
-        } else {
-            return input.splice(0);
-        }
-    };
-};
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$document", "$parse", "$timeout", "ganttMouseOffset", function ($document, $parse, $timeout, ganttMouseOffset) {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: '^gantt',
-        scope: {
-            targetElement: '=ganttResizer',
-            enabled: '@?ganttResizerEnabled'
-        },
-        link: function link($scope, $element, $attrs, ganttCtrl) {
-            var api = ganttCtrl.gantt.api;
-            var eventTopic = $attrs.ganttResizerEventTopic;
-            if ($scope.enabled === undefined) {
-                $scope.enabled = true;
-            }
-            function getWidth() {
-                return ganttCtrl.gantt.options.value($attrs.resizerWidth);
-            }
-            function setWidth(width) {
-                if (width !== getWidth()) {
-                    ganttCtrl.gantt.options.set($attrs.resizerWidth, width);
-                    if (eventTopic !== undefined) {
-                        api[eventTopic].raise.resize(width);
-                    }
-                    $timeout(function () {
-                        ganttCtrl.gantt.columnsManager.updateColumnsMeta();
-                    });
-                }
-            }
-            function dblclick(event) {
-                event.preventDefault();
-                setWidth(undefined);
-            }
-            function mousemove(event) {
-                $scope.$evalAsync(function () {
-                    var offset = ganttMouseOffset.getOffsetForElement($scope.targetElement[0], event);
-                    var maxWidth = ganttCtrl.gantt.getWidth() - ganttCtrl.gantt.scroll.getBordersWidth();
-                    var width = Math.min(Math.max(offset.x, 0), maxWidth);
-                    setWidth(width);
-                });
-            }
-            function mouseup() {
-                if (eventTopic !== undefined) {
-                    api[eventTopic].raise.resizeEnd(getWidth());
-                }
-                $document.unbind('mousemove', mousemove);
-                $document.unbind('mouseup', mouseup);
-            }
-            function mousedown(event) {
-                event.preventDefault();
-                if (eventTopic !== undefined) {
-                    api[eventTopic].raise.resizeBegin(getWidth());
-                }
-                $document.on('mousemove', mousemove);
-                $document.on('mouseup', mouseup);
-            }
-            $attrs.$observe('ganttResizerEnabled', function (value) {
-                $scope.enabled = $parse(value)();
-            });
-            $scope.$watch('enabled', function (value) {
-                if (value === undefined) {
-                    value = true;
-                }
-                $element.toggleClass('gantt-resizer-enabled', value);
-                if (value) {
-                    $element.on('dblclick', dblclick);
-                    $element.on('mousedown', mousedown);
-                } else {
-                    $element.off('dblclick', dblclick);
-                    $element.off('mousedown', mousedown);
-                }
-            });
-            $scope.$watch(function () {
-                return getWidth();
-            }, function (newValue, oldValue) {
-                if (newValue !== oldValue) {
-                    $scope.targetElement.css('width', newValue + 'px');
-
-                    if ($scope.targetElement[0].offsetWidth > 0) {
-                        setWidth($scope.targetElement[0].offsetWidth);
-                    }
-                }
-            });
-            if (eventTopic) {
-                api.registerEvent(eventTopic, 'resize');
-                api.registerEvent(eventTopic, 'resizeBegin');
-                api.registerEvent(eventTopic, 'resizeEnd');
-                api.registerMethod(eventTopic, 'setWidth', setWidth, this);
-                api.registerMethod(eventTopic, 'getWidth', getWidth, this);
-            }
-        }
-    };
-}];
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: '^ganttScrollManager',
-        link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
-            ganttScrollManagerCtrl.registerHorizontalReceiver(element);
-        }
-    };
-};
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        scope: {},
-        controller: ["$scope", function controller($scope) {
-            'ngInject';
-
-            $scope.horizontal = [];
-            $scope.vertical = [];
-            this.registerVerticalReceiver = function (element) {
-                element.css('position', 'relative');
-                $scope.vertical.push(element[0]);
-            };
-            this.registerHorizontalReceiver = function (element) {
-                element.css('position', 'relative');
-                $scope.horizontal.push(element[0]);
-            };
-            this.getHorizontalRecievers = function () {
-                return $scope.horizontal;
-            };
-            this.getVerticalRecievers = function () {
-                return $scope.vertical;
-            };
-        }]
-    };
-};
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: ['^gantt', '^ganttScrollManager'],
-        link: function link(scope, element, attrs, controllers) {
-            var el = element[0];
-            var updateListeners = function updateListeners() {
-                var i = void 0;
-                var l = void 0;
-                var vertical = controllers[1].getVerticalRecievers();
-                for (i = 0, l = vertical.length; i < l; i++) {
-                    var vElement = vertical[i];
-                    if (vElement.id === 'vertical-container') {
-                        vElement = (0, _jquery2.default)(vElement).children('.md-virtual-repeat-scroller');
-                        (0, _jquery2.default)(vElement).scrollTop(el.scrollTop);
-                    } else if (vElement.parentNode.scrollTop !== el.scrollTop) {
-                        vElement.parentNode.scrollTop = el.scrollTop;
-                    }
-                }
-                var horizontal = controllers[1].getHorizontalRecievers();
-                for (i = 0, l = horizontal.length; i < l; i++) {
-                    var hElement = horizontal[i];
-                    if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
-                        hElement.parentNode.scrollLeft = el.scrollLeft;
-                    }
-                }
-            };
-            element.bind('scroll', updateListeners);
-            scope.$watch(function () {
-                return controllers[0].gantt.width;
-            }, function (newValue, oldValue) {
-                if (newValue !== oldValue) {
-                    var horizontal = controllers[1].getHorizontalRecievers();
-
-                    for (var i = 0, l = horizontal.length; i < l; i++) {
-                        var hElement = horizontal[i];
-                        hElement.style.width = newValue + 'px';
-                    }
-                }
-            });
-        }
-    };
-};
-
-var _jquery = __webpack_require__(178);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", "$timeout", "ganttDebounce", function (GanttDirectiveBuilder, $timeout, ganttDebounce) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttScrollable');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.scroll.$element = $element;
-        var lastScrollLeft = void 0;
-        var autoExpandTimer = void 0;
-        var autoExpandColumns = function autoExpandColumns(el, date, direction) {
-            var autoExpand = $scope.gantt.options.value('autoExpand');
-            if (autoExpand !== 'both' && autoExpand !== true && autoExpand !== direction) {
-                return;
-            }
-            var from = void 0;
-            var to = void 0;
-            var viewScale = $scope.gantt.options.value('viewScale');
-            viewScale = viewScale.trim();
-            if (viewScale.charAt(viewScale.length - 1) === 's') {
-                viewScale = viewScale.substring(0, viewScale.length - 1);
-            }
-            var viewScaleValue = void 0;
-            var viewScaleUnit = void 0;
-            var splittedViewScale = void 0;
-            if (viewScale) {
-                splittedViewScale = viewScale.split(' ');
-            }
-            if (splittedViewScale && splittedViewScale.length > 1) {
-                viewScaleValue = parseFloat(splittedViewScale[0]);
-                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
-            } else {
-                viewScaleValue = 1;
-                viewScaleUnit = viewScale;
-            }
-            if (direction === 'left') {
-                from = (0, _moment2.default)(date).add(-5 * viewScaleValue, viewScaleUnit);
-                $scope.fromDate = from;
-            } else {
-                to = (0, _moment2.default)(date).add(5 * viewScaleValue, viewScaleUnit);
-                $scope.toDate = to;
-            }
-            $scope.gantt.api.scroll.raise.scroll(el.scrollLeft, date, direction);
-        };
-        $element.bind('scroll', ganttDebounce(function () {
-            var el = $element[0];
-            var currentScrollLeft = el.scrollLeft;
-            var direction = void 0;
-            var date = void 0;
-            $scope.gantt.scroll.cachedScrollLeft = currentScrollLeft;
-            $scope.gantt.columnsManager.updateVisibleColumns();
-            $scope.gantt.rowsManager.updateVisibleObjects();
-            if (currentScrollLeft < lastScrollLeft && currentScrollLeft === 0) {
-                direction = 'left';
-                date = $scope.gantt.columnsManager.from;
-            } else if (currentScrollLeft > lastScrollLeft && el.offsetWidth + currentScrollLeft >= el.scrollWidth - 1) {
-                direction = 'right';
-                date = $scope.gantt.columnsManager.to;
-            }
-            lastScrollLeft = currentScrollLeft;
-            if (date !== undefined) {
-                if (autoExpandTimer) {
-                    $timeout.cancel(autoExpandTimer);
-                }
-                var element = document.querySelector('.gantt-task-resizing, gantt-task-moving');
-                if (element) {
-                    autoExpandTimer = $timeout(function () {
-                        autoExpandColumns(el, date, direction);
-                    }, 300);
-                }
-            } else {
-                $scope.gantt.api.scroll.raise.scroll(currentScrollLeft);
-            }
-        }, 5));
-        $scope.getScrollableCss = function () {
-            var css = {};
-            var maxHeight = $scope.gantt.options.value('maxHeight');
-            if (!maxHeight) {
-                maxHeight = $scope.gantt.getContainerHeight();
-            }
-            if (maxHeight > 0) {
-                css['max-height'] = maxHeight - $scope.gantt.header.getHeight() + 'px';
-                css['overflow-y'] = 'auto';
-                if ($scope.gantt.scroll.isVScrollbarVisible()) {
-                    css['border-right'] = 'none';
-                }
-            }
-            var columnWidth = this.gantt.options.value('columnWidth');
-            var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
-            if (columnWidth !== undefined && bodySmallerThanGantt) {
-                css['width'] = $scope.gantt.width + this.gantt.scroll.getBordersWidth() + 'px';
-            }
-            return css;
-        };
-    };
-    return builder.build();
-}];
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: '^ganttScrollManager',
-        link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
-            ganttScrollManagerCtrl.registerVerticalReceiver(element);
-        }
-    };
-};
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
-            'ngInject';
-
-            var scopeVariable = $attrs.ganttContainerHeightListener;
-            if (scopeVariable === '') {
-                scopeVariable = 'ganttContainerHeight';
-            }
-            var effectiveScope = $scope;
-            while (scopeVariable.indexOf('$parent.') === 0) {
-                scopeVariable = scopeVariable.substring('$parent.'.length);
-                effectiveScope = effectiveScope.$parent;
-            }
-            effectiveScope.$watch(function () {
-                var el = $element[0].parentElement ? $element[0].parentElement.parentElement : undefined;
-                if (el) {
-                    var height = el.offsetHeight;
-                    var style = getComputedStyle(el);
-                    height = height - parseInt(style.marginTop, 10) - parseInt(style.marginBottom, 10);
-                    return height;
-                }
-                return 0;
-            }, function (newValue) {
-                if (newValue > 0) {
-                    effectiveScope[scopeVariable] = newValue;
-                }
-            });
-        }]
-    };
-};
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
-            'ngInject';
-
-            var scopeVariable = $attrs.ganttContainerWidthListener;
-            if (scopeVariable === '') {
-                scopeVariable = 'ganttContainerWidth';
-            }
-            var effectiveScope = $scope;
-            while (scopeVariable.indexOf('$parent.') === 0) {
-                scopeVariable = scopeVariable.substring('$parent.'.length);
-                effectiveScope = effectiveScope.$parent;
-            }
-            effectiveScope.$watch(function () {
-                var el = $element[0].parentElement ? $element[0].parentElement.parentElement : undefined;
-                if (el) {
-                    var width = el.offsetWidth;
-                    var style = getComputedStyle(el);
-                    width = width - parseInt(style.marginLeft, 10) - parseInt(style.marginRight, 10);
-                    return width;
-                }
-                return 0;
-            }, function (newValue) {
-                if (newValue > 0) {
-                    effectiveScope[scopeVariable] = newValue;
-                }
-            });
-        }]
-    };
-};
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
-            'ngInject';
-
-            var scopeVariable = $attrs.ganttElementHeightListener;
-            if (scopeVariable === '') {
-                scopeVariable = 'ganttElementHeight';
-            }
-            var el = $element[0];
-            var effectiveScope = $scope;
-            while (scopeVariable.indexOf('$parent.') === 0) {
-                scopeVariable = scopeVariable.substring('$parent.'.length);
-                effectiveScope = effectiveScope.$parent;
-            }
-            effectiveScope.$watch(function () {
-                return el.clientHeight;
-            }, function (newValue) {
-                if (newValue > 0) {
-                    effectiveScope[scopeVariable] = newValue;
-                }
-            });
-        }]
-    };
-};
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function () {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
-            'ngInject';
-
-            var scopeVariable = $attrs.ganttElementWidthListener;
-            if (scopeVariable === '') {
-                scopeVariable = 'ganttElementWidth';
-            }
-            var el = $element[0];
-            var effectiveScope = $scope;
-            while (scopeVariable.indexOf('$parent.') === 0) {
-                scopeVariable = scopeVariable.substring('$parent.'.length);
-                effectiveScope = effectiveScope.$parent;
-            }
-            effectiveScope.$watch(function () {
-                return el.clientWidth;
-            }, function (newValue) {
-                if (newValue > 0) {
-                    effectiveScope[scopeVariable] = newValue;
-                }
-            });
-        }]
-    };
-};
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttBody');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.body.$element = $element;
-        $scope.gantt.body.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttBodyBackground');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.body.background.$element = $element;
-        $scope.gantt.body.background.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttBodyColumns');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.body.columns.$element = $element;
-        $scope.gantt.body.background.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttBodyForeground');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.body.foreground.$element = $element;
-        $scope.gantt.body.foreground.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttBodyRows');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.body.rows.$element = $element;
-        $scope.gantt.body.rows.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttColumn');
-    builder.controller = function ($scope, $element) {
-        $scope.column.$element = $element;
-        $scope.column.$scope = $scope;
-        $scope.column.updateView();
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttColumnHeader');
-    builder.controller = function ($scope, $element) {
-        $scope.column.$element = $element;
-        $scope.column.$scope = $scope;
-        $scope.column.updateView();
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttHeader');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.header.$element = $element;
-        $scope.gantt.header.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttHeaderColumns');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.header.columns.$element = $element;
-        $scope.gantt.header.columns.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttRow');
-    builder.controller = function ($scope, $element) {
-        $scope.row.$element = $element;
-        $scope.row.$scope = $scope;
-        $scope.getHeight = function () {
-            return { 'height': $scope.row.model.height };
-        };
-        $scope.getClass = function () {
-            if ($scope.row.model.classes) {
-                return $scope.row.model.classes;
-            } else {
-                return [];
-            }
-        };
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttRowBackground');
-    return builder.build();
-}];
-
-/***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttRowLabel');
-    builder.restrict = 'A';
-    builder.templateUrl = undefined;
-    return builder.build();
-}];
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirectiveBuilder, ganttLayout) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttScrollableHeader');
-    builder.controller = function ($scope) {
-        var scrollBarWidth = ganttLayout.getScrollBarWidth();
-        $scope.getScrollableHeaderCss = function () {
-            var css = {};
-            var maxHeightActivated = $scope.gantt.scroll.isVScrollbarVisible();
-            var vScrollbarWidth = maxHeightActivated ? scrollBarWidth : 0;
-            var columnWidth = this.gantt.options.value('columnWidth');
-            var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
-            if (columnWidth !== undefined && bodySmallerThanGantt) {
-                css['width'] = $scope.gantt.width - vScrollbarWidth + this.gantt.scroll.getBordersWidth() + 'px';
-            } else if (maxHeightActivated) {
-                css['width'] = $scope.gantt.getWidth() - $scope.gantt.side.getWidth() - vScrollbarWidth + 'px';
-            }
-
-            return css;
-        };
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttSide');
-    builder.controller = function ($scope, $element) {
-        $scope.gantt.side.$element = $element;
-        $scope.gantt.side.$scope = $scope;
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 115 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirectiveBuilder, ganttLayout) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttSideBackground');
-    builder.controller = function ($scope) {
-        var hScrollBarHeight = ganttLayout.getScrollBarHeight();
-        $scope.getMaxHeightCss = function () {
-            var css = {};
-            var maxHeight = $scope.maxHeight;
-            if (!maxHeight) {
-                maxHeight = $scope.gantt.getContainerHeight();
-            }
-            var bodyScrollBarHeight = $scope.gantt.scroll.isHScrollbarVisible() ? hScrollBarHeight : 0;
-            css['max-height'] = maxHeight - bodyScrollBarHeight - $scope.gantt.header.getHeight() + 'px';
-            return css;
-        };
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttSideContent');
-    return builder.build();
-}];
-
-/***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTask');
-    builder.controller = function ($scope, $element) {
-        $scope.task.$element = $element;
-        $scope.task.$scope = $scope;
-        $scope.getTaskContent = function () {
-            if ($scope.task.model.content !== undefined) {
-                return $scope.task.model.content;
-            }
-            return $scope.task.rowsManager.gantt.options.value('taskContent');
-        };
-        $scope.simplifyMoment = function (d) {
-            return _moment2.default.isMoment(d) ? d.unix() : d;
-        };
-        $scope.$watchGroup(['simplifyMoment(task.model.from)', 'simplifyMoment(task.model.to)'], function () {
-            $scope.task.updatePosAndSize();
-        });
-        $scope.getClass = function () {
-            if ($scope.task.model.classes) {
-                return $scope.task.model.classes;
-            } else {
-                return [];
-            }
-        };
-    };
-    return builder.build();
-}];
-
-var _moment = __webpack_require__(3);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTaskBackground');
-    return builder.build();
-}];
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTaskContent');
-    return builder.build();
-}];
-
-/***/ }),
-/* 120 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTaskForeground');
-    return builder.build();
-}];
-
-/***/ }),
-/* 121 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTimeFrame');
-    builder.controller = function ($scope, $element) {
-        $scope.timeFrame.$element = $element;
-        $scope.timeFrame.$scope = $scope;
-        $scope.timeFrame.updateView();
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 122 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
-    'ngInject';
-
-    var builder = new GanttDirectiveBuilder('ganttTimespan');
-    builder.controller = function ($scope, $element) {
-        $scope.timespan.$element = $element;
-        $scope.timespan.$scope = $scope;
-        $scope.timespan.updateView();
-    };
-    return builder.build();
-}];
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$timeout", function ($timeout) {
-    'ngInject';
-
-    function debounce(fn, timeout) {
-        var invokeApply = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-        var nthCall = 0;
-        return function () {
-            var self = this;
-            var argz = arguments;
-            nthCall++;
-            var later = function (version) {
-                return function () {
-                    if (version === nthCall) {
-                        return fn.apply(self, argz);
-                    }
-                };
-            }(nthCall);
-            return $timeout(later, timeout, invokeApply === undefined ? true : invokeApply);
-        };
-    }
-    return debounce;
-}];
-
-/***/ }),
-/* 124 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttDirectiveBuilder = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-exports.default = ["$templateCache", function ($templateCache) {
-    'ngInject';
-
-    GanttDirectiveBuilder.$templateCache = $templateCache;
-    return GanttDirectiveBuilder;
-}];
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttDirectiveBuilder = exports.GanttDirectiveBuilder = function () {
-    function GanttDirectiveBuilder(directiveName, templateUrl) {
-        var require = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '^gantt';
-
-        var restrict = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'E';
-        (0, _classCallCheck3.default)(this, GanttDirectiveBuilder);
-
-        this.directiveName = directiveName;
-        this.templateUrl = templateUrl === undefined ? 'template/' + directiveName + '.tmpl.html' : templateUrl;
-        this.require = require === undefined ? '^gantt' : require;
-        this.restrict = restrict === undefined ? 'E' : restrict;
-        this.scope = false;
-        this.transclude = true;
-        this.replace = true;
-    }
-
-    (0, _createClass3.default)(GanttDirectiveBuilder, [{
-        key: 'build',
-        value: function build() {
-            var directiveName = this.directiveName;
-            var _templateUrl = this.templateUrl;
-            var controllerFunction = this.controller;
-            var directive = {
-                restrict: this.restrict,
-                require: this.require,
-                transclude: this.transclude,
-                replace: this.replace,
-                scope: this.scope,
-                templateUrl: function templateUrl(tElement, tAttrs) {
-                    if (tAttrs.templateUrl !== undefined) {
-                        _templateUrl = tAttrs.templateUrl;
-                    }
-                    if (tAttrs.template !== undefined) {
-                        GanttDirectiveBuilder.$templateCache.put(_templateUrl, tAttrs.template);
-                    }
-                    return _templateUrl;
-                },
-                compile: function compile() {
-                    return {
-                        pre: function preLink(scope, iElement, iAttrs, controller) {
-                            scope.gantt.api.directives.raise.preLink(directiveName, scope, iElement, iAttrs, controller);
-                        },
-                        post: function postLink(scope, iElement, iAttrs, controller) {
-                            scope.gantt.api.directives.raise.postLink(directiveName, scope, iElement, iAttrs, controller);
-                        }
-                    };
-                },
-                controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
-                    'ngInject';
-
-                    var controller = this;
-                    if (controllerFunction !== undefined) {
-                        controllerFunction($scope, $element, $attrs, controller);
-                    }
-                    $scope.gantt.api.directives.raise.controller(directiveName, $scope, $element, $attrs, controller);
-                    $scope.$on('$destroy', function () {
-                        $scope.gantt.api.directives.raise.destroy(directiveName, $scope, $element, $attrs, controller);
-                    });
-                    $scope.$applyAsync(function () {
-                        $scope.gantt.api.directives.raise.new(directiveName, $scope, $element, $attrs, controller);
-                    });
-                }]
-            };
-            if (!_templateUrl) {
-                delete directive.templateUrl;
-                delete directive.replace;
-                delete directive.transclude;
-            }
-            return directive;
-        }
-    }]);
-    return GanttDirectiveBuilder;
-}();
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttDom = function () {
-    GanttDom.$inject = ["$document"];
-    function GanttDom($document) {
-        'ngInject';
-
-        (0, _classCallCheck3.default)(this, GanttDom);
-        this.$document = $document;
-    }
-
-    (0, _createClass3.default)(GanttDom, [{
-        key: 'elementFromPoint',
-        value: function elementFromPoint(x, y) {
-            return this.$document[0].elementFromPoint(x, y);
-        }
-    }, {
-        key: 'elementsFromPoint',
-        value: function elementsFromPoint(x, y, depth) {
-            var elements = [];
-            var previousPointerEvents = [];
-            var cDepth = 0;
-            var current = void 0;
-            var i = void 0;
-            var l = void 0;
-            var d = void 0;
-
-            while ((current = this.elementFromPoint(x, y)) && elements.indexOf(current) === -1 && current !== null && (depth === undefined || cDepth < depth)) {
-                elements.push(current);
-                previousPointerEvents.push({
-                    value: current.style.getPropertyValue('visibility'),
-                    priority: current.style.getPropertyPriority('visibility')
-                });
-
-                current.style.setProperty('visibility', 'hidden', 'important');
-                cDepth++;
-            }
-
-            for (i = 0, l = previousPointerEvents.length; i < l; i++) {
-                d = previousPointerEvents[i];
-                elements[i].style.setProperty('visibility', d.value ? d.value : '', d.priority);
-            }
-            return elements;
-        }
-    }, {
-        key: 'findElementFromPoint',
-        value: function findElementFromPoint(x, y, checkFunction) {
-            var elements = [];
-            var previousPointerEvents = [];
-            var cDepth = 0;
-            var current = void 0;
-            var found = void 0;
-            var i = void 0;
-            var l = void 0;
-            var d = void 0;
-
-            while ((current = this.elementFromPoint(x, y)) && elements.indexOf(current) === -1 && current !== null) {
-                elements.push(current);
-                previousPointerEvents.push({
-                    value: current.style.getPropertyValue('visibility'),
-                    priority: current.style.getPropertyPriority('visibility')
-                });
-
-                current.style.setProperty('visibility', 'hidden', 'important');
-                cDepth++;
-                if (checkFunction(current)) {
-                    found = current;
-                    break;
-                }
-            }
-
-            for (i = 0, l = previousPointerEvents.length; i < l; i++) {
-                d = previousPointerEvents[i];
-                elements[i].style.setProperty('visibility', d.value ? d.value : '', d.priority);
-            }
-            return found;
-        }
-    }, {
-        key: 'isElementVisible',
-        value: function isElementVisible(element) {
-            return element.offsetParent !== undefined && element.offsetParent !== null;
-        }
-    }]);
-    return GanttDom;
-}();
-
-exports.default = GanttDom;
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$injector", function ($injector) {
-    'ngInject';
-
-    var ngAnimate = void 0;
-    try {
-        ngAnimate = $injector.get('$animate');
-    } catch (e) {}
-    if (ngAnimate !== undefined) {
-        return function (element, enabled) {
-            if (_angular2.default.version.major >= 1 && _angular2.default.version.minor >= 4) {
-                ngAnimate.enabled(element, enabled);
-            } else {
-                ngAnimate.enabled(enabled, element);
-            }
-        };
-    } else {
-        return function () {};
-    }
-}];
-
-var _angular = __webpack_require__(2);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$compile", function ($compile) {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: '^gantt',
-        link: function link(scope, element, attrs, ganttCtrl) {
-            scope.scope = ganttCtrl.gantt.$scope.$parent;
-            scope.thisWatcher = scope.$watch(function () {
-                return scope.$eval(attrs.ganttBindCompileHtml);
-            }, function (value) {
-                element.html(value);
-                $compile(element.contents())(scope);
-                scope.thisWatcher();
-            });
-        }
-    };
-}];
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$compile", function ($compile) {
-    'ngInject';
-
-    return {
-        restrict: 'A',
-        require: '^gantt',
-        link: function link(scope, element, attrs, ganttCtrl) {
-            scope.scope = ganttCtrl.gantt.$scope.$parent;
-            var result = scope.$eval(attrs.ganttBindCompileHtmlOneTime);
-            element.html(result);
-            $compile(element.contents())(scope);
-        }
-    };
-}];
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = ["$compile", function ($compile) {
-    'ngInject';
-
-    return {
-        scope: true,
-        priority: 5,
-        restrict: 'A',
-        compile: function compile(element) {
-            var html = element[0].outerHTML;
-            var removeListener = void 0;
-            return function linkFn(scope, element, attrs) {
-                var recompileOnEvent = function recompileOnEvent(eventName) {
-                    scope.$on(eventName, function (e) {
-                        if (scope.removeListener !== undefined) {
-                            scope.removeListener();
-                        }
-                        scope.$evalAsync(function () {
-                            var newEl = $compile(html)(scope.$parent);
-                            element.replaceWith(newEl);
-                            scope.$destroy();
-                        });
-                    });
-                };
-                scope.removeListener = recompileOnEvent(attrs.ganttRecompileOn);
-            };
-        }
-    };
-}];
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getIterator2 = __webpack_require__(4);
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttLayout = function () {
-    GanttLayout.$inject = ["$document"];
-    function GanttLayout($document) {
-        'ngInject';
-
-        (0, _classCallCheck3.default)(this, GanttLayout);
-        this.$document = $document;
-    }
-
-    (0, _createClass3.default)(GanttLayout, [{
-        key: 'getScrollBarWidth',
-        value: function getScrollBarWidth() {
-            var inner = this.$document[0].createElement('p');
-            inner.style.width = '100%';
-            inner.style.height = '200px';
-            var outer = this.$document[0].createElement('div');
-            outer.style.position = 'absolute';
-            outer.style.top = '0px';
-            outer.style.left = '0px';
-            outer.style.visibility = 'hidden';
-            outer.style.width = '200px';
-            outer.style.height = '150px';
-            outer.style.overflow = 'hidden';
-            outer.appendChild(inner);
-            this.$document[0].body.appendChild(outer);
-            var w1 = inner.offsetWidth;
-            outer.style.overflow = 'scroll';
-            var w2 = inner.offsetWidth;
-            if (w1 === w2) {
-                w2 = outer.clientWidth;
-            }
-            this.$document[0].body.removeChild(outer);
-            return w1 - w2;
-        }
-    }, {
-        key: 'getScrollBarHeight',
-        value: function getScrollBarHeight() {
-            var inner = this.$document[0].createElement('p');
-            inner.style.width = '200px;';
-            inner.style.height = '100%';
-            var outer = this.$document[0].createElement('div');
-            outer.style.position = 'absolute';
-            outer.style.top = '0px';
-            outer.style.left = '0px';
-            outer.style.visibility = 'hidden';
-            outer.style.width = '150px';
-            outer.style.height = '200px';
-            outer.style.overflow = 'hidden';
-            outer.appendChild(inner);
-            this.$document[0].body.appendChild(outer);
-            var h1 = inner.offsetHeight;
-            outer.style.overflow = 'scroll';
-            var h2 = inner.offsetHeight;
-            if (h1 === h2) {
-                h2 = outer.clientHeight;
-            }
-            this.$document[0].body.removeChild(outer);
-            return h1 - h2;
-        }
-    }, {
-        key: 'setColumnsWidthFactor',
-        value: function setColumnsWidthFactor(columns, widthFactor) {
-            var originalLeftOffset = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-
-            if (!columns) {
-                return;
-            }
-            var _iteratorNormalCompletion = true;
-            var _didIteratorError = false;
-            var _iteratorError = undefined;
-
-            try {
-                for (var _iterator = (0, _getIterator3.default)(columns), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                    var column = _step.value;
-
-                    column.left = widthFactor * (column.originalSize.left + originalLeftOffset) - originalLeftOffset;
-                    column.width = widthFactor * column.originalSize.width;
-                    var _iteratorNormalCompletion2 = true;
-                    var _didIteratorError2 = false;
-                    var _iteratorError2 = undefined;
-
-                    try {
-                        for (var _iterator2 = (0, _getIterator3.default)(column.timeFrames), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                            var timeFrame = _step2.value;
-
-                            timeFrame.left = widthFactor * timeFrame.originalSize.left;
-                            timeFrame.width = widthFactor * timeFrame.originalSize.width;
-                        }
-                    } catch (err) {
-                        _didIteratorError2 = true;
-                        _iteratorError2 = err;
-                    } finally {
-                        try {
-                            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                                _iterator2.return();
-                            }
-                        } finally {
-                            if (_didIteratorError2) {
-                                throw _iteratorError2;
-                            }
-                        }
-                    }
-                }
-            } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-            } finally {
-                try {
-                    if (!_iteratorNormalCompletion && _iterator.return) {
-                        _iterator.return();
-                    }
-                } finally {
-                    if (_didIteratorError) {
-                        throw _iteratorError;
-                    }
-                }
-            }
-        }
-    }]);
-    return GanttLayout;
-}();
-
-exports.default = GanttLayout;
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttMouseButton = function () {
-    function GanttMouseButton() {
-        (0, _classCallCheck3.default)(this, GanttMouseButton);
-    }
-
-    (0, _createClass3.default)(GanttMouseButton, [{
-        key: "getButton",
-        value: function getButton(e) {
-            e = e || window.event;
-            if (!e.which) {
-                if (e.button === undefined) {
-                    return 1;
-                }
-                return e.button < 2 ? 1 : e.button === 4 ? 2 : 3;
-            } else {
-                return e.which;
-            }
-        }
-    }]);
-    return GanttMouseButton;
-}();
-
-exports.default = GanttMouseButton;
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttMouseOffset = function () {
-    function GanttMouseOffset() {
-        (0, _classCallCheck3.default)(this, GanttMouseOffset);
-    }
-
-    (0, _createClass3.default)(GanttMouseOffset, [{
-        key: "getTouch",
-        value: function getTouch(evt) {
-            if (evt.touches !== undefined) {
-                return evt.touches[0];
-            }
-            return evt;
-        }
-    }, {
-        key: "getOffset",
-        value: function getOffset(evt) {
-            if (evt.offsetX && evt.offsetY) {
-                return { x: evt.offsetX, y: evt.offsetY };
-            }
-            if (evt.layerX && evt.layerY) {
-                return { x: evt.layerX, y: evt.layerY };
-            }
-            return this.getOffsetForElement(evt.target, evt);
-        }
-    }, {
-        key: "getOffsetForElement",
-        value: function getOffsetForElement(el, evt) {
-            var bb = el.getBoundingClientRect();
-            return { x: evt.clientX - bb.left, y: evt.clientY - bb.top };
-        }
-    }]);
-    return GanttMouseOffset;
-}();
-
-exports.default = GanttMouseOffset;
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GanttSmartEvent = undefined;
-
-var _classCallCheck2 = __webpack_require__(0);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(1);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-exports.default = function () {
-    'ngInject';
-
-    return GanttSmartEvent;
-};
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GanttSmartEvent = exports.GanttSmartEvent = function () {
-    function GanttSmartEvent($scope, $element, event, fn) {
-        var _this = this;
-
-        (0, _classCallCheck3.default)(this, GanttSmartEvent);
-
-        this.$element = $element;
-        this.event = event;
-        this.fn = fn;
-        $scope.$on('$destroy', function () {
-            _this.$element.unbind(_this.event, _this.fn);
-        });
-    }
-
-    (0, _createClass3.default)(GanttSmartEvent, [{
-        key: 'bindOnce',
-        value: function bindOnce() {
-            this.$element.one(this.event, this.fn);
-        }
-    }, {
-        key: 'bind',
-        value: function bind() {
-            this.$element.bind(this.event, this.fn);
-        }
-    }, {
-        key: 'unbind',
-        value: function unbind() {
-            this.$element.unbind(this.event, this.fn);
-        }
-    }]);
-    return GanttSmartEvent;
-}();
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports) {
-
-var path = 'template/gantt.tmpl.html';
-var html = "<div class=\"gantt unselectable\" ng-cloak gantt-scroll-manager gantt-container-height-listener=ganttContainerHeight gantt-container-width-listener=ganttContainerWidth gantt-element-height-listener=ganttElementHeight gantt-element-width-listener=ganttElementWidth> <gantt-side> <gantt-side-background> </gantt-side-background> <gantt-side-content> </gantt-side-content> <div gantt-resizer=gantt.side.$element gantt-resizer-event-topic=side gantt-resizer-enabled=\"{{$parent.gantt.options.value('allowSideResizing')}}\" resizer-width=sideWidth class=gantt-resizer> <div ng-show=\"::$parent.gantt.options.value('allowSideResizing')\" class=gantt-resizer-display></div> </div> </gantt-side> <gantt-scrollable-header> <gantt-header gantt-element-height-listener=$parent.ganttHeaderHeight> <gantt-header-columns> <div ng-repeat=\"header in gantt.columnsManager.visibleHeaders track by $index\"> <div class=gantt-header-row ng-class=\"{'gantt-header-row-last': $last, 'gantt-header-row-first': $first}\"> <gantt-column-header ng-repeat=\"column in header\"></gantt-column-header> </div> </div> </gantt-header-columns> </gantt-header> </gantt-scrollable-header> <gantt-scrollable> <gantt-body> <gantt-body-background> <gantt-row-background ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"></gantt-row-background> </gantt-body-background> <gantt-body-columns> <gantt-column ng-repeat=\"column in gantt.columnsManager.visibleColumns\"> </gantt-column> </gantt-body-columns> <gantt-body-rows> <gantt-row id=gantt-row-test ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"> <gantt-task id=gantt-task-test ng-repeat=\"task in ::row.visibleTasks track by task.model.id\"> </gantt-task> </gantt-row> </gantt-body-rows> </gantt-body> </gantt-scrollable> <ng-transclude></ng-transclude> <script type=text/ng-template id=template/ganttBody.tmpl.html> <div ng-transclude class=\"gantt-body\" ng-style=\"{'width': gantt.width > 0 ? gantt.width +'px' : undefined}\"></div> </script> <script type=text/ng-template id=template/ganttHeader.tmpl.html> <div ng-transclude class=\"gantt-header\"\n             ng-show=\"gantt.columnsManager.columns.length > 0 && gantt.columnsManager.headers.length > 0\"></div> </script> <script type=text/ng-template id=template/ganttSide.tmpl.html> <div ng-transclude class=\"gantt-side\" style=\"width: auto;\"></div> </script> <script type=text/ng-template id=template/ganttSideContent.tmpl.html> <div class=\"gantt-side-content\" ng-style=\"getSideCss()\">\n        </div> </script> <script type=text/ng-template id=template/ganttHeaderColumns.tmpl.html> <div ng-transclude class=\"gantt-header-columns\"\n              gantt-horizontal-scroll-receiver></div> </script> <script type=text/ng-template id=template/ganttColumnHeader.tmpl.html> <div class=\"gantt-column-header\" ng-class=\"{'gantt-column-header-last': $last, 'gantt-column-header-first': $first}\">{{::column.label}}</div> </script> <script type=text/ng-template id=template/ganttBodyBackground.tmpl.html> <div ng-transclude class=\"gantt-body-background\"></div> </script> <script type=text/ng-template id=template/ganttBodyForeground.tmpl.html> <div ng-transclude class=\"gantt-body-foreground\"></div> </script> <script type=text/ng-template id=template/ganttBodyColumns.tmpl.html> <div ng-transclude class=\"gantt-body-columns\"></div> </script> <script type=text/ng-template id=template/ganttColumn.tmpl.html> <div ng-transclude class=\"gantt-column gantt-foreground-col\" ng-class=\"{'gantt-column-last': $last, 'gantt-column-first': $first}\"></div> </script> <script type=text/ng-template id=template/ganttTimeFrame.tmpl.html> <div class=\"gantt-timeframe\"></div> </script> <script type=text/ng-template id=template/ganttScrollable.tmpl.html> <div ng-transclude class=\"gantt-scrollable\" gantt-scroll-sender ng-style=\"getScrollableCss()\"></div> </script> <script type=text/ng-template id=template/ganttScrollableHeader.tmpl.html> <div ng-transclude class=\"gantt-scrollable-header\" ng-style=\"getScrollableHeaderCss()\"></div> </script> <script type=text/ng-template id=template/ganttBodyRows.tmpl.html> <div ng-transclude class=\"gantt-body-rows\"></div> </script> <script type=text/ng-template id=template/ganttTimespan.tmpl.html> <div class=\"gantt-timespan\" ng-class=\"timespan.model.classes\">\n        </div> </script> <script type=text/ng-template id=template/ganttTask.tmpl.html> <div class=\"gantt-task\" ng-class=\"::getClass()\">\n            <gantt-task-background></gantt-task-background> \n            <gantt-task-foreground></gantt-task-foreground>\n            <gantt-task-content></gantt-task-content>  \n        </div> </script> <script type=text/ng-template id=template/ganttTaskBackground.tmpl.html> <div class=\"gantt-task-background\" ng-style=\"{'background-color': task.model.color}\"></div> </script> <script type=text/ng-template id=template/ganttTaskForeground.tmpl.html> <div class=\"gantt-task-foreground\">\n            <div ng-if=\"task.truncatedRight\" class=\"gantt-task-truncated-right\" ng-style=\"{'padding-right': task.truncatedRightOffset + 'px'}\">&gt;</div>\n            <div ng-if=\"task.truncatedLeft\" class=\"gantt-task-truncated-left\" ng-style=\"{'padding-left': task.truncatedLeftOffset + 'px'}\">&lt;</div>\n        </div> </script> <script type=text/ng-template id=template/ganttTaskContent.tmpl.html> <div class=\"gantt-task-content\" unselectable=\"on\"><span unselectable=\"on\" gantt-bind-compile-html-one-time=\"getTaskContent()\"/></div> </script> <script type=text/ng-template id=template/ganttRowBackground.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"row.model.classes\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::{'height': row.model.height}\">\n            <div class=\"gantt-row-background\"\n                 ng-style=\"{'background-color': row.model.color}\">\n            </div>\n        </div> </script> <script type=text/ng-template id=template/ganttRow.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"getClass()\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::getHeight()\">\n            <div ng-transclude class=\"gantt-row-content\"></div>\n        </div> </script> <script type=text/ng-template id=template/ganttSideBackground.tmpl.html> <div class=\"gantt-side-background\">\n            <div class=\"gantt-side-background-header\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\">\n                <div ng-show=\"::$parent.ganttHeaderHeight\" class=\"gantt-header-row gantt-side-header-row\"></div>\n            </div>\n            <div class=\"gantt-side-background-body\" ng-style=\"getMaxHeightCss()\">\n                <div gantt-vertical-scroll-receiver>\n                    <div class=\"gantt-row gantt-row-height \"\n                         ng-class-odd=\"'gantt-row-odd'\"\n                         ng-class-even=\"'gantt-row-even'\"\n                         ng-class=\"row.model.classes\"\n                         ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"\n                         ng-style=\"::{'height': row.model.height}\">\n                        <div class=\"gantt-row-label gantt-row-background\"\n                             ng-style=\"{'background-color': row.model.color}\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div> </script> </div> ";
-window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
-module.exports = path;
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(147), __esModule: true };
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(148), __esModule: true };
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(149), __esModule: true };
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(150), __esModule: true };
-
-/***/ }),
-/* 139 */,
-/* 140 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(151), __esModule: true };
-
-/***/ }),
-/* 141 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(152), __esModule: true };
-
-/***/ }),
-/* 142 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _setPrototypeOf = __webpack_require__(138);
-
-var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
-
-var _create = __webpack_require__(135);
-
-var _create2 = _interopRequireDefault(_create);
-
-var _typeof2 = __webpack_require__(5);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : (0, _typeof3.default)(superClass)));
-  }
-
-  subClass.prototype = (0, _create2.default)(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;
-};
-
-/***/ }),
-/* 143 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _typeof2 = __webpack_require__(5);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
-};
-
-/***/ }),
-/* 144 */,
-/* 145 */,
-/* 146 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(42);
-__webpack_require__(41);
-module.exports = __webpack_require__(169);
-
-/***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(171);
-var $Object = __webpack_require__(6).Object;
-module.exports = function create(P, D){
-  return $Object.create(P, D);
-};
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(172);
-var $Object = __webpack_require__(6).Object;
-module.exports = function defineProperty(it, key, desc){
-  return $Object.defineProperty(it, key, desc);
-};
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(173);
-module.exports = __webpack_require__(6).Object.getPrototypeOf;
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(174);
-module.exports = __webpack_require__(6).Object.setPrototypeOf;
-
-/***/ }),
-/* 151 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(175);
-__webpack_require__(70);
-__webpack_require__(176);
-__webpack_require__(177);
-module.exports = __webpack_require__(6).Symbol;
-
-/***/ }),
-/* 152 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(41);
-__webpack_require__(42);
-module.exports = __webpack_require__(39).f('iterator');
-
-/***/ }),
-/* 153 */
-/***/ (function(module, exports) {
-
-module.exports = function(){ /* empty */ };
-
-/***/ }),
-/* 154 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// false -> Array#indexOf
-// true  -> Array#includes
-var toIObject = __webpack_require__(14)
-  , toLength  = __webpack_require__(68)
-  , toIndex   = __webpack_require__(168);
-module.exports = function(IS_INCLUDES){
-  return function($this, el, fromIndex){
-    var O      = toIObject($this)
-      , length = toLength(O.length)
-      , index  = toIndex(fromIndex, length)
-      , value;
-    // Array#includes uses SameValueZero equality algorithm
-    if(IS_INCLUDES && el != el)while(length > index){
-      value = O[index++];
-      if(value != value)return true;
-    // Array#toIndex ignores holes, Array#includes - not
-    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
-      if(O[index] === el)return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
-  };
-};
-
-/***/ }),
-/* 155 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(23)
-  , gOPS    = __webpack_require__(61)
-  , pIE     = __webpack_require__(33);
-module.exports = function(it){
-  var result     = getKeys(it)
-    , getSymbols = gOPS.f;
-  if(getSymbols){
-    var symbols = getSymbols(it)
-      , isEnum  = pIE.f
-      , i       = 0
-      , key;
-    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
-  } return result;
-};
-
-/***/ }),
-/* 156 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(21);
-module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-  return cof(it) == 'String' ? it.split('') : Object(it);
-};
-
-/***/ }),
-/* 157 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.2.2 IsArray(argument)
-var cof = __webpack_require__(21);
-module.exports = Array.isArray || function isArray(arg){
-  return cof(arg) == 'Array';
-};
-
-/***/ }),
-/* 158 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var create         = __webpack_require__(32)
-  , descriptor     = __webpack_require__(24)
-  , setToStringTag = __webpack_require__(27)
-  , IteratorPrototype = {};
-
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(16)(IteratorPrototype, __webpack_require__(8)('iterator'), function(){ return this; });
-
-module.exports = function(Constructor, NAME, next){
-  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
-  setToStringTag(Constructor, NAME + ' Iterator');
-};
-
-/***/ }),
-/* 159 */
-/***/ (function(module, exports) {
-
-module.exports = function(done, value){
-  return {value: value, done: !!done};
-};
-
-/***/ }),
-/* 160 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getKeys   = __webpack_require__(23)
-  , toIObject = __webpack_require__(14);
-module.exports = function(object, el){
-  var O      = toIObject(object)
-    , keys   = getKeys(O)
-    , length = keys.length
-    , index  = 0
-    , key;
-  while(length > index)if(O[key = keys[index++]] === el)return key;
-};
-
-/***/ }),
-/* 161 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var META     = __webpack_require__(25)('meta')
-  , isObject = __webpack_require__(17)
-  , has      = __webpack_require__(13)
-  , setDesc  = __webpack_require__(12).f
-  , id       = 0;
-var isExtensible = Object.isExtensible || function(){
-  return true;
-};
-var FREEZE = !__webpack_require__(18)(function(){
-  return isExtensible(Object.preventExtensions({}));
-});
-var setMeta = function(it){
-  setDesc(it, META, {value: {
-    i: 'O' + ++id, // object ID
-    w: {}          // weak collections IDs
-  }});
-};
-var fastKey = function(it, create){
-  // return primitive with prefix
-  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-  if(!has(it, META)){
-    // can't set metadata to uncaught frozen object
-    if(!isExtensible(it))return 'F';
-    // not necessary to add metadata
-    if(!create)return 'E';
-    // add missing metadata
-    setMeta(it);
-  // return object ID
-  } return it[META].i;
-};
-var getWeak = function(it, create){
-  if(!has(it, META)){
-    // can't set metadata to uncaught frozen object
-    if(!isExtensible(it))return true;
-    // not necessary to add metadata
-    if(!create)return false;
-    // add missing metadata
-    setMeta(it);
-  // return hash weak collections IDs
-  } return it[META].w;
-};
-// add metadata on freeze-family methods calling
-var onFreeze = function(it){
-  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
-  return it;
-};
-var meta = module.exports = {
-  KEY:      META,
-  NEED:     false,
-  fastKey:  fastKey,
-  getWeak:  getWeak,
-  onFreeze: onFreeze
-};
-
-/***/ }),
-/* 162 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var dP       = __webpack_require__(12)
-  , anObject = __webpack_require__(10)
-  , getKeys  = __webpack_require__(23);
-
-module.exports = __webpack_require__(11) ? Object.defineProperties : function defineProperties(O, Properties){
-  anObject(O);
-  var keys   = getKeys(Properties)
-    , length = keys.length
-    , i = 0
-    , P;
-  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
-  return O;
-};
-
-/***/ }),
-/* 163 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(14)
-  , gOPN      = __webpack_require__(60).f
-  , toString  = {}.toString;
-
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
-
-var getWindowNames = function(it){
-  try {
-    return gOPN(it);
-  } catch(e){
-    return windowNames.slice();
-  }
-};
-
-module.exports.f = function getOwnPropertyNames(it){
-  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-};
-
-
-/***/ }),
-/* 164 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(15)
-  , core    = __webpack_require__(6)
-  , fails   = __webpack_require__(18);
-module.exports = function(KEY, exec){
-  var fn  = (core.Object || {})[KEY] || Object[KEY]
-    , exp = {};
-  exp[KEY] = exec(fn);
-  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
-};
-
-/***/ }),
-/* 165 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Works with __proto__ only. Old v8 can't work with null proto objects.
-/* eslint-disable no-proto */
-var isObject = __webpack_require__(17)
-  , anObject = __webpack_require__(10);
-var check = function(O, proto){
-  anObject(O);
-  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
-};
-module.exports = {
-  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
-    function(test, buggy, set){
-      try {
-        set = __webpack_require__(22)(Function.call, __webpack_require__(59).f(Object.prototype, '__proto__').set, 2);
-        set(test, []);
-        buggy = !(test instanceof Array);
-      } catch(e){ buggy = true; }
-      return function setPrototypeOf(O, proto){
-        check(O, proto);
-        if(buggy)O.__proto__ = proto;
-        else set(O, proto);
-        return O;
-      };
-    }({}, false) : undefined),
-  check: check
-};
-
-/***/ }),
-/* 166 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__(36)
-  , defined   = __webpack_require__(30);
-// true  -> String#at
-// false -> String#codePointAt
-module.exports = function(TO_STRING){
-  return function(that, pos){
-    var s = String(defined(that))
-      , i = toInteger(pos)
-      , l = s.length
-      , a, b;
-    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-    a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-  };
-};
-
-/***/ }),
-/* 167 */,
-/* 168 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__(36)
-  , max       = Math.max
-  , min       = Math.min;
-module.exports = function(index, length){
-  index = toInteger(index);
-  return index < 0 ? max(index + length, 0) : min(index, length);
-};
-
-/***/ }),
-/* 169 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject = __webpack_require__(10)
-  , get      = __webpack_require__(69);
-module.exports = __webpack_require__(6).getIterator = function(it){
-  var iterFn = get(it);
-  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
-  return anObject(iterFn.call(it));
-};
-
-/***/ }),
-/* 170 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var addToUnscopables = __webpack_require__(153)
-  , step             = __webpack_require__(159)
-  , Iterators        = __webpack_require__(20)
-  , toIObject        = __webpack_require__(14);
-
-// 22.1.3.4 Array.prototype.entries()
-// 22.1.3.13 Array.prototype.keys()
-// 22.1.3.29 Array.prototype.values()
-// 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(58)(Array, 'Array', function(iterated, kind){
-  this._t = toIObject(iterated); // target
-  this._i = 0;                   // next index
-  this._k = kind;                // kind
-// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-}, function(){
-  var O     = this._t
-    , kind  = this._k
-    , index = this._i++;
-  if(!O || index >= O.length){
-    this._t = undefined;
-    return step(1);
-  }
-  if(kind == 'keys'  )return step(0, index);
-  if(kind == 'values')return step(0, O[index]);
-  return step(0, [index, O[index]]);
-}, 'values');
-
-// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-Iterators.Arguments = Iterators.Array;
-
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
-
-/***/ }),
-/* 171 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(15)
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', {create: __webpack_require__(32)});
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(15);
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperty: __webpack_require__(12).f});
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.9 Object.getPrototypeOf(O)
-var toObject        = __webpack_require__(65)
-  , $getPrototypeOf = __webpack_require__(62);
-
-__webpack_require__(164)('getPrototypeOf', function(){
-  return function getPrototypeOf(it){
-    return $getPrototypeOf(toObject(it));
-  };
-});
-
-/***/ }),
-/* 174 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(15);
-$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(165).set});
-
-/***/ }),
-/* 175 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// ECMAScript 6 symbols shim
-var global         = __webpack_require__(9)
-  , has            = __webpack_require__(13)
-  , DESCRIPTORS    = __webpack_require__(11)
-  , $export        = __webpack_require__(15)
-  , redefine       = __webpack_require__(64)
-  , META           = __webpack_require__(161).KEY
-  , $fails         = __webpack_require__(18)
-  , shared         = __webpack_require__(35)
-  , setToStringTag = __webpack_require__(27)
-  , uid            = __webpack_require__(25)
-  , wks            = __webpack_require__(8)
-  , wksExt         = __webpack_require__(39)
-  , wksDefine      = __webpack_require__(38)
-  , keyOf          = __webpack_require__(160)
-  , enumKeys       = __webpack_require__(155)
-  , isArray        = __webpack_require__(157)
-  , anObject       = __webpack_require__(10)
-  , toIObject      = __webpack_require__(14)
-  , toPrimitive    = __webpack_require__(37)
-  , createDesc     = __webpack_require__(24)
-  , _create        = __webpack_require__(32)
-  , gOPNExt        = __webpack_require__(163)
-  , $GOPD          = __webpack_require__(59)
-  , $DP            = __webpack_require__(12)
-  , $keys          = __webpack_require__(23)
-  , gOPD           = $GOPD.f
-  , dP             = $DP.f
-  , gOPN           = gOPNExt.f
-  , $Symbol        = global.Symbol
-  , $JSON          = global.JSON
-  , _stringify     = $JSON && $JSON.stringify
-  , PROTOTYPE      = 'prototype'
-  , HIDDEN         = wks('_hidden')
-  , TO_PRIMITIVE   = wks('toPrimitive')
-  , isEnum         = {}.propertyIsEnumerable
-  , SymbolRegistry = shared('symbol-registry')
-  , AllSymbols     = shared('symbols')
-  , OPSymbols      = shared('op-symbols')
-  , ObjectProto    = Object[PROTOTYPE]
-  , USE_NATIVE     = typeof $Symbol == 'function'
-  , QObject        = global.QObject;
-// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
-
-// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-var setSymbolDesc = DESCRIPTORS && $fails(function(){
-  return _create(dP({}, 'a', {
-    get: function(){ return dP(this, 'a', {value: 7}).a; }
-  })).a != 7;
-}) ? function(it, key, D){
-  var protoDesc = gOPD(ObjectProto, key);
-  if(protoDesc)delete ObjectProto[key];
-  dP(it, key, D);
-  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
-} : dP;
-
-var wrap = function(tag){
-  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-  sym._k = tag;
-  return sym;
-};
-
-var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
-  return typeof it == 'symbol';
-} : function(it){
-  return it instanceof $Symbol;
-};
-
-var $defineProperty = function defineProperty(it, key, D){
-  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
-  anObject(it);
-  key = toPrimitive(key, true);
-  anObject(D);
-  if(has(AllSymbols, key)){
-    if(!D.enumerable){
-      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
-      it[HIDDEN][key] = true;
-    } else {
-      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
-      D = _create(D, {enumerable: createDesc(0, false)});
-    } return setSymbolDesc(it, key, D);
-  } return dP(it, key, D);
-};
-var $defineProperties = function defineProperties(it, P){
-  anObject(it);
-  var keys = enumKeys(P = toIObject(P))
-    , i    = 0
-    , l = keys.length
-    , key;
-  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
-  return it;
-};
-var $create = function create(it, P){
-  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-};
-var $propertyIsEnumerable = function propertyIsEnumerable(key){
-  var E = isEnum.call(this, key = toPrimitive(key, true));
-  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
-  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-};
-var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
-  it  = toIObject(it);
-  key = toPrimitive(key, true);
-  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
-  var D = gOPD(it, key);
-  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
-  return D;
-};
-var $getOwnPropertyNames = function getOwnPropertyNames(it){
-  var names  = gOPN(toIObject(it))
-    , result = []
-    , i      = 0
-    , key;
-  while(names.length > i){
-    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
-  } return result;
-};
-var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
-  var IS_OP  = it === ObjectProto
-    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
-    , result = []
-    , i      = 0
-    , key;
-  while(names.length > i){
-    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
-  } return result;
-};
-
-// 19.4.1.1 Symbol([description])
-if(!USE_NATIVE){
-  $Symbol = function Symbol(){
-    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
-    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-    var $set = function(value){
-      if(this === ObjectProto)$set.call(OPSymbols, value);
-      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
-      setSymbolDesc(this, tag, createDesc(1, value));
-    };
-    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
-    return wrap(tag);
-  };
-  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
-    return this._k;
-  });
-
-  $GOPD.f = $getOwnPropertyDescriptor;
-  $DP.f   = $defineProperty;
-  __webpack_require__(60).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(33).f  = $propertyIsEnumerable;
-  __webpack_require__(61).f = $getOwnPropertySymbols;
-
-  if(DESCRIPTORS && !__webpack_require__(26)){
-    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-  }
-
-  wksExt.f = function(name){
-    return wrap(wks(name));
-  }
-}
-
-$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
-
-for(var symbols = (
-  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
-
-for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
-
-$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-  // 19.4.2.1 Symbol.for(key)
-  'for': function(key){
-    return has(SymbolRegistry, key += '')
-      ? SymbolRegistry[key]
-      : SymbolRegistry[key] = $Symbol(key);
-  },
-  // 19.4.2.5 Symbol.keyFor(sym)
-  keyFor: function keyFor(key){
-    if(isSymbol(key))return keyOf(SymbolRegistry, key);
-    throw TypeError(key + ' is not a symbol!');
-  },
-  useSetter: function(){ setter = true; },
-  useSimple: function(){ setter = false; }
-});
-
-$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-  // 19.1.2.2 Object.create(O [, Properties])
-  create: $create,
-  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-  defineProperty: $defineProperty,
-  // 19.1.2.3 Object.defineProperties(O, Properties)
-  defineProperties: $defineProperties,
-  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-  // 19.1.2.7 Object.getOwnPropertyNames(O)
-  getOwnPropertyNames: $getOwnPropertyNames,
-  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-  getOwnPropertySymbols: $getOwnPropertySymbols
-});
-
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
-$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  // WebKit converts symbol values to JSON as null
-  // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
-})), 'JSON', {
-  stringify: function stringify(it){
-    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
-    var args = [it]
-      , i    = 1
-      , replacer, $replacer;
-    while(arguments.length > i)args.push(arguments[i++]);
-    replacer = args[1];
-    if(typeof replacer == 'function')$replacer = replacer;
-    if($replacer || !isArray(replacer))replacer = function(key, value){
-      if($replacer)value = $replacer.call(this, key, value);
-      if(!isSymbol(value))return value;
-    };
-    args[1] = replacer;
-    return _stringify.apply($JSON, args);
-  }
-});
-
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(16)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
-
-/***/ }),
-/* 176 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(38)('asyncIterator');
-
-/***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(38)('observable');
-
-/***/ }),
-/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -36672,9 +31819,4913 @@ return jQuery;
 
 
 /***/ }),
-/* 179 */,
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// getting tag from 19.1.3.6 Object.prototype.toString()
+var cof = __webpack_require__(21)
+  , TAG = __webpack_require__(8)('toStringTag')
+  // ES3 wrong here
+  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
+
+// fallback for IE11 Script Access Denied error
+var tryGet = function(it, key){
+  try {
+    return it[key];
+  } catch(e){ /* empty */ }
+};
+
+module.exports = function(it){
+  var O, T, B;
+  return it === undefined ? 'Undefined' : it === null ? 'Null'
+    // @@toStringTag case
+    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
+    // builtinTag case
+    : ARG ? cof(O)
+    // ES3 arguments fallback
+    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+};
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(9).document && document.documentElement;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(36)
+  , min       = Math.min;
+module.exports = function(it){
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var classof   = __webpack_require__(67)
+  , ITERATOR  = __webpack_require__(8)('iterator')
+  , Iterators = __webpack_require__(20);
+module.exports = __webpack_require__(6).getIteratorMethod = function(it){
+  if(it != undefined)return it[ITERATOR]
+    || it['@@iterator']
+    || Iterators[classof(it)];
+};
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache", function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        transclude: true,
+        templateUrl: function templateUrl(tElement, tAttrs) {
+            var templateUrl = void 0;
+            if (tAttrs.templateUrl === undefined) {
+                templateUrl = 'template/gantt.tmpl.html';
+            } else {
+                templateUrl = tAttrs.templateUrl;
+            }
+            if (tAttrs.template !== undefined) {
+                $templateCache.put(templateUrl, tAttrs.template);
+            }
+            return templateUrl;
+        },
+        scope: {
+            sortMode: '<?',
+
+            viewScale: '<?',
+            columnWidth: '<?',
+            expandToFit: '<?',
+            shrinkToFit: '<?',
+
+            fromDate: '=?',
+            toDate: '=?',
+
+            autoExpand: '<?',
+            taskOutOfRange: '<?',
+
+            maxHeight: '<?',
+            sideWidth: '<?',
+            headers: '<?',
+            headersFormats: '<?',
+            headersScales: '<?',
+
+            columnMagnet: '<?',
+            shiftColumnMagnet: '<?',
+
+            extraScaleTime: '<?',
+            data: '=?',
+            api: '=?',
+            options: '<?'
+        },
+        controller: ["$scope", "$element", "$rootScope", function controller($scope, $element, $rootScope) {
+            'ngInject';
+
+            for (var option in $scope.options) {
+                $scope[option] = $scope.options[option];
+            }
+
+            ganttEnableNgAnimate($element, false);
+            $scope.gantt = new Gantt($scope, $element, $rootScope);
+            this.gantt = $scope.gantt;
+        }],
+        link: function link(scope, element) {
+            scope.gantt.api.directives.raise.new('gantt', scope, element);
+            scope.$on('$destroy', function () {
+                scope.gantt.api.directives.raise.destroy('gantt', scope, element);
+            });
+            $timeout(function () {
+                scope.gantt.initialized();
+            });
+        }
+    };
+}];
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttColumnBuilder = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+exports.default = ["GanttColumn", function (GanttColumn) {
+    'ngInject';
+
+    GanttColumnBuilder.GanttColumn = GanttColumn;
+    return GanttColumnBuilder;
+}];
+
+var _column = __webpack_require__(29);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttColumnBuilder = exports.GanttColumnBuilder = function () {
+    function GanttColumnBuilder(columnsManager) {
+        (0, _classCallCheck3.default)(this, GanttColumnBuilder);
+
+        this.columnsManager = columnsManager;
+    }
+
+    (0, _createClass3.default)(GanttColumnBuilder, [{
+        key: 'newColumn',
+        value: function newColumn(date, endDate, left, width) {
+            var calendar = this.columnsManager.gantt.calendar;
+            var timeFramesWorkingMode = this.columnsManager.gantt.options.value('timeFramesWorkingMode');
+            var timeFramesNonWorkingMode = this.columnsManager.gantt.options.value('timeFramesNonWorkingMode');
+            return new _column.GanttColumn(date, endDate, left, width, calendar, timeFramesWorkingMode, timeFramesNonWorkingMode);
+        }
+    }]);
+    return GanttColumnBuilder;
+}();
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttColumnGenerator = function () {
+    function GanttColumnGenerator() {
+        (0, _classCallCheck3.default)(this, GanttColumnGenerator);
+    }
+
+    (0, _createClass3.default)(GanttColumnGenerator, [{
+        key: 'isToDateToExclude',
+        value: function isToDateToExclude(to, value, unit) {
+            return (0, _moment2.default)(to).add(value, unit).startOf(unit) === to;
+        }
+    }, {
+        key: 'getFirstValue',
+        value: function getFirstValue(unit) {
+            if (['hour', 'minute', 'second', 'millisecond'].indexOf(unit) >= 0) {
+                return 0;
+            }
+        }
+    }, {
+        key: 'ensureNoUnitOverflow',
+        value: function ensureNoUnitOverflow(unit, startDate, endDate) {
+            var v1 = startDate.get(unit);
+            var v2 = endDate.get(unit);
+            var firstValue = this.getFirstValue(unit);
+            if (firstValue !== undefined && v2 !== firstValue && v2 < v1) {
+                endDate.set(unit, firstValue);
+            }
+        }
+    }, {
+        key: 'generate',
+        value: function generate(builder, from, to, viewScale, columnWidth, maximumWidth, leftOffset, reverse) {
+            if (!to && !maximumWidth) {
+                throw new Error('to or maximumWidth must be defined');
+            }
+            viewScale = viewScale.trim();
+            if (viewScale.charAt(viewScale.length - 1) === 's') {
+                viewScale = viewScale.substring(0, viewScale.length - 1);
+            }
+            var viewScaleValue = void 0;
+            var viewScaleUnit = void 0;
+            var splittedViewScale = void 0;
+            if (viewScale) {
+                splittedViewScale = viewScale.split(' ');
+            }
+            if (splittedViewScale && splittedViewScale.length > 1) {
+                viewScaleValue = parseFloat(splittedViewScale[0]);
+                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
+            } else {
+                viewScaleValue = 1;
+                viewScaleUnit = viewScale;
+            }
+            var excludeTo = false;
+            from = (0, _moment2.default)(from).startOf(viewScaleUnit);
+            if (to) {
+                excludeTo = this.isToDateToExclude(to, viewScaleValue, viewScaleUnit);
+                to = (0, _moment2.default)(to).startOf(viewScaleUnit);
+            }
+            var left = 0;
+            var date = (0, _moment2.default)(from).startOf(viewScaleUnit);
+            if (reverse) {
+                date.subtract(viewScaleValue, viewScaleUnit);
+                left -= columnWidth;
+            }
+            var generatedCols = [];
+            while (true) {
+                if (maximumWidth && Math.abs(left) > maximumWidth + columnWidth) {
+                    break;
+                }
+                var startDate = (0, _moment2.default)(date);
+                var endDate = (0, _moment2.default)(startDate).add(viewScaleValue, viewScaleUnit);
+                this.ensureNoUnitOverflow(viewScaleUnit, startDate, endDate);
+                var column = builder.newColumn(startDate, endDate, leftOffset ? left + leftOffset : left, columnWidth);
+                if (!column.cropped) {
+                    generatedCols.push(column);
+                    if (reverse) {
+                        left -= columnWidth;
+                    } else {
+                        left += columnWidth;
+                    }
+                }
+                if (to) {
+                    if (reverse) {
+                        if (excludeTo && date < to || !excludeTo && date <= to) {
+                            break;
+                        }
+                    } else {
+                        if (excludeTo && date > to || !excludeTo && date >= to) {
+                            break;
+                        }
+                    }
+                }
+                if (reverse) {
+                    date.subtract(viewScaleValue, viewScaleUnit);
+                    this.ensureNoUnitOverflow(viewScaleUnit, date, startDate);
+                } else {
+                    date.add(viewScaleValue, viewScaleUnit);
+                    this.ensureNoUnitOverflow(viewScaleUnit, startDate, date);
+                }
+            }
+            if (reverse) {
+                if (this.isToDateToExclude(from, viewScaleValue, viewScaleUnit)) {
+                    generatedCols.shift();
+                }
+                generatedCols.reverse();
+            }
+            return generatedCols;
+        }
+    }]);
+    return GanttColumnGenerator;
+}();
+
+exports.default = GanttColumnGenerator;
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _getIterator2 = __webpack_require__(4);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _columnHeader = __webpack_require__(48);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttHeadersGenerator = function () {
+    function GanttHeadersGenerator() {
+        (0, _classCallCheck3.default)(this, GanttHeadersGenerator);
+    }
+
+    (0, _createClass3.default)(GanttHeadersGenerator, [{
+        key: 'generateHeaders',
+        value: function generateHeaders(columnsManager, headerName) {
+            var generatedHeaders = [];
+            var header = void 0;
+            var viewScale = columnsManager.getHeaderScale(headerName);
+            var viewScaleValue = void 0;
+            var viewScaleUnit = void 0;
+            var splittedViewScale = void 0;
+            if (viewScale) {
+                splittedViewScale = viewScale.split(' ');
+            }
+            if (splittedViewScale && splittedViewScale.length > 1) {
+                viewScaleValue = parseFloat(splittedViewScale[0]);
+                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
+            } else {
+                viewScaleValue = 1;
+                viewScaleUnit = viewScale;
+            }
+            if (columnsManager.columns.length > 0) {
+                var currentColumn = columnsManager.columns[0];
+                var currentDate = (0, _moment2.default)(currentColumn.date).startOf(viewScaleUnit);
+                var maximumDate = (0, _moment2.default)(columnsManager.columns[columnsManager.columns.length - 1].endDate);
+                while (true) {
+                    var currentPosition = currentColumn.getPositionByDate(currentDate);
+                    var endDate = _moment2.default.min((0, _moment2.default)(currentDate).add(viewScaleValue, viewScaleUnit), maximumDate);
+                    var column = columnsManager.getColumnByDate(endDate);
+                    var left = column.getPositionByDate(endDate);
+                    var width = left - currentPosition;
+                    if (width > 0) {
+                        var labelFormat = columnsManager.getHeaderFormat(headerName);
+                        header = new _columnHeader.GanttColumnHeader(currentDate, endDate, viewScaleUnit, currentPosition, width, labelFormat, headerName);
+                        generatedHeaders.push(header);
+                    }
+                    if (endDate.isSame(maximumDate) || endDate.isAfter(maximumDate)) {
+                        break;
+                    }
+                    currentColumn = column;
+                    currentDate = endDate;
+                }
+            }
+            return generatedHeaders;
+        }
+    }, {
+        key: 'generate',
+        value: function generate(columnsManager) {
+            var headerNames = [];
+            if (columnsManager.gantt.options.value('headers') === undefined) {
+                var viewScale = columnsManager.gantt.options.value('viewScale');
+                viewScale = viewScale.trim();
+                if (viewScale.charAt(viewScale.length - 1) === 's') {
+                    viewScale = viewScale.substring(0, viewScale.length - 1);
+                }
+                var viewScaleUnit = void 0;
+                var splittedViewScale = void 0;
+                if (viewScale) {
+                    splittedViewScale = viewScale.split(' ');
+                }
+                if (splittedViewScale && splittedViewScale.length > 1) {
+                    viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
+                } else {
+                    viewScaleUnit = viewScale;
+                }
+                if (['quarter', 'month'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('year');
+                }
+                if (['day', 'week'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('month');
+                }
+                if (['day'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('week');
+                }
+                if (['hour'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('day');
+                }
+                if (['minute', 'second', 'millisecond'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('hour');
+                }
+                if (['second', 'millisecond'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('minute');
+                }
+                if (['millisecond'].indexOf(viewScaleUnit) > -1) {
+                    headerNames.push('second');
+                }
+                headerNames.push(viewScale);
+            } else {
+                headerNames = columnsManager.gantt.options.value('headers');
+            }
+            var headers = [];
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = (0, _getIterator3.default)(headerNames), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var headerName = _step.value;
+
+                    headers.push(this.generateHeaders(columnsManager, headerName));
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+
+            return headers;
+        }
+    }]);
+    return GanttHeadersGenerator;
+}();
+
+exports.default = GanttHeadersGenerator;
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Gantt = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+exports.default = ["GanttApi", "GanttOptions", "GanttCalendar", "GanttScroll", "GanttBody", "GanttHeader", "GanttSide", "GanttObjectModel", "GanttRowsManager", "GanttColumnsManager", "GanttTimespansManager", "GanttCurrentDateManager", "ganttArrays", "$document", "$timeout", function (GanttApi, GanttOptions, GanttCalendar, GanttScroll, GanttBody, GanttHeader, GanttSide, GanttObjectModel, GanttRowsManager, GanttColumnsManager, GanttTimespansManager, GanttCurrentDateManager, ganttArrays, $document, $timeout) {
+    'ngInject';
+
+    Gantt.ganttArrays = ganttArrays;
+    Gantt.$document = $document;
+    Gantt.$timeout = $timeout;
+    return Gantt;
+}];
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _api = __webpack_require__(44);
+
+var _options = __webpack_require__(45);
+
+var _calendar = __webpack_require__(46);
+
+var _currentDateManager = __webpack_require__(47);
+
+var _objectModel = __webpack_require__(50);
+
+var _rowsManager = __webpack_require__(51);
+
+var _columnsManager = __webpack_require__(49);
+
+var _timespansManager = __webpack_require__(56);
+
+var _scroll = __webpack_require__(54);
+
+var _body = __webpack_require__(52);
+
+var _header = __webpack_require__(53);
+
+var _side = __webpack_require__(55);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Gantt = exports.Gantt = function () {
+    function Gantt($scope, $element) {
+        var _this = this;
+
+        (0, _classCallCheck3.default)(this, Gantt);
+
+        this.rendered = false;
+        this.isRefreshingColumns = false;
+        this.$scope = $scope;
+        this.$element = $element;
+        this.options = new _options.GanttOptions($scope, {
+            'api': function api() {},
+            'data': [],
+            'timespans': [],
+            'viewScale': 'day',
+            'columnMagnet': '15 minutes',
+            'timeFramesMagnet': true,
+            'showSide': true,
+            'allowSideResizing': true,
+            'currentDate': 'line',
+            'currentDateValue': _moment2.default,
+            'autoExpand': 'none',
+            'taskOutOfRange': 'truncate',
+            'taskContent': '{{task.model.name}}',
+            'rowContent': '{{row.model.name}}',
+            'maxHeight': 0,
+            'timeFrames': [],
+            'dateFrames': [],
+            'timeFramesWorkingMode': 'hidden',
+            'timeFramesNonWorkingMode': 'visible',
+            'taskLimitThreshold': 100,
+            'columnLimitThreshold': 500
+        });
+        this.api = new _api.GanttApi(this);
+        this.api.registerEvent('core', 'ready');
+        this.api.registerEvent('core', 'rendered');
+        this.api.registerEvent('directives', 'controller');
+        this.api.registerEvent('directives', 'preLink');
+        this.api.registerEvent('directives', 'postLink');
+        this.api.registerEvent('directives', 'new');
+        this.api.registerEvent('directives', 'destroy');
+        this.api.registerEvent('data', 'change');
+        this.api.registerEvent('data', 'load');
+        this.api.registerEvent('data', 'remove');
+        this.api.registerEvent('data', 'clear');
+        this.api.registerMethod('core', 'getDateByPosition', this.getDateByPosition, this);
+        this.api.registerMethod('core', 'getPositionByDate', this.getPositionByDate, this);
+        this.api.registerMethod('data', 'load', this.loadData, this);
+        this.api.registerMethod('data', 'remove', this.removeData, this);
+        this.api.registerMethod('data', 'clear', this.clearData, this);
+        this.api.registerMethod('data', 'get', this.getData, this);
+        this.calendar = new _calendar.GanttCalendar();
+        this.calendar.registerTimeFrames(this.options.value('timeFrames'));
+        this.calendar.registerDateFrames(this.options.value('dateFrames'));
+        this.api.registerMethod('timeframes', 'registerTimeFrames', this.calendar.registerTimeFrames, this.calendar);
+        this.api.registerMethod('timeframes', 'clearTimeframes', this.calendar.clearTimeFrames, this.calendar);
+        this.api.registerMethod('timeframes', 'registerDateFrames', this.calendar.registerDateFrames, this.calendar);
+        this.api.registerMethod('timeframes', 'clearDateFrames', this.calendar.clearDateFrames, this.calendar);
+        this.api.registerMethod('timeframes', 'registerTimeFrameMappings', this.calendar.registerTimeFrameMappings, this.calendar);
+        this.api.registerMethod('timeframes', 'clearTimeFrameMappings', this.calendar.clearTimeFrameMappings, this.calendar);
+        $scope.$watchGroup(['timeFrames', 'dateFrames'], function (newValues, oldValues) {
+            if (newValues !== oldValues) {
+                var timeFrames = newValues[0];
+                var dateFrames = newValues[1];
+                var oldTimeFrames = oldValues[0];
+                var oldDateFrames = oldValues[1];
+                var framesChanged = false;
+                if (!_angular2.default.equals(timeFrames, oldTimeFrames)) {
+                    _this.calendar.clearTimeFrames();
+                    _this.calendar.registerTimeFrames(timeFrames);
+                    framesChanged = true;
+                }
+                if (!_angular2.default.equals(dateFrames, oldDateFrames)) {
+                    _this.calendar.clearDateFrames();
+                    _this.calendar.registerDateFrames(dateFrames);
+                    framesChanged = true;
+                }
+                if (framesChanged) {
+                    _this.columnsManager.generateColumns();
+                }
+            }
+        });
+        $scope.$watch('columnMagnet', function () {
+            var splittedColumnMagnet = void 0;
+            var columnMagnet = _this.options.value('columnMagnet');
+            if (columnMagnet) {
+                splittedColumnMagnet = columnMagnet.trim().split(' ');
+            }
+            if (splittedColumnMagnet && splittedColumnMagnet.length > 1) {
+                _this.columnMagnetValue = parseFloat(splittedColumnMagnet[0]);
+                _this.columnMagnetUnit = _moment2.default.normalizeUnits(splittedColumnMagnet[splittedColumnMagnet.length - 1]);
+            } else {
+                _this.columnMagnetValue = 1;
+                _this.columnMagnetUnit = _moment2.default.normalizeUnits(columnMagnet);
+            }
+        });
+        $scope.$watchGroup(['shiftColumnMagnet', 'viewScale'], function () {
+            var splittedColumnMagnet = void 0;
+            var shiftColumnMagnet = _this.options.value('shiftColumnMagnet');
+            if (shiftColumnMagnet) {
+                splittedColumnMagnet = shiftColumnMagnet.trim().split(' ');
+            }
+            if (splittedColumnMagnet !== undefined && splittedColumnMagnet.length > 1) {
+                _this.shiftColumnMagnetValue = parseFloat(splittedColumnMagnet[0]);
+                _this.shiftColumnMagnetUnit = _moment2.default.normalizeUnits(splittedColumnMagnet[splittedColumnMagnet.length - 1]);
+            } else {
+                _this.shiftColumnMagnetValue = 1;
+                _this.shiftColumnMagnetUnit = _moment2.default.normalizeUnits(shiftColumnMagnet);
+            }
+        });
+        Gantt.$document.on('keyup keydown', this.keyHandler);
+        $scope.$on('$destroy', function () {
+            Gantt.$document.off('keyup keydown', _this.keyHandler);
+        });
+        this.scroll = new _scroll.GanttScroll(this);
+        this.body = new _body.GanttBody(this);
+        this.header = new _header.GanttHeader(this);
+        this.side = new _side.GanttSide(this);
+        this.objectModel = new _objectModel.GanttObjectModel(this.api);
+        this.rowsManager = new _rowsManager.GanttRowsManager(this);
+        this.columnsManager = new _columnsManager.GanttColumnsManager(this);
+        this.timespansManager = new _timespansManager.GanttTimespansManager(this);
+        this.currentDateManager = new _currentDateManager.GanttCurrentDateManager(this);
+        this.originalWidth = 0;
+        this.width = 0;
+        if (typeof this.$scope.api === 'function') {
+            this.$scope.api(this.api);
+        }
+        var hasRowModelOrderChanged = function hasRowModelOrderChanged(data1, data2) {
+            if (data2 === undefined || data1.length !== data2.length) {
+                return true;
+            }
+
+            for (var i = 0, l = data1.length; i < l; i++) {
+                if (data1[i].id !== data2[i].id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        $scope.$watchCollection('data', function (newData, oldData) {
+            if (oldData !== undefined) {
+                var toRemoveIds = Gantt.ganttArrays.getRemovedIds(newData, oldData);
+                if (toRemoveIds.length === oldData.length) {
+                    _this.rowsManager.removeAll();
+
+                    _this.api.data.raise.clear();
+                } else {
+                    for (var i = 0, l = toRemoveIds.length; i < l; i++) {
+                        var toRemoveId = toRemoveIds[i];
+                        _this.rowsManager.removeRow(toRemoveId);
+                    }
+
+                    var removedRows = [];
+                    for (var _i = 0, _l = oldData.length; _i < _l; _i++) {
+                        if (toRemoveIds.indexOf(oldData[_i].id) > -1) {
+                            removedRows.push(oldData[_i]);
+                        }
+                    }
+                    _this.api.data.raise.remove(removedRows);
+                }
+            }
+            if (newData !== undefined) {
+                var modelOrderChanged = hasRowModelOrderChanged(newData, oldData);
+                if (modelOrderChanged) {
+                    _this.rowsManager.resetNonModelLists();
+                }
+                for (var j = 0, k = newData.length; j < k; j++) {
+                    var rowData = newData[j];
+                    _this.rowsManager.addRow(rowData, modelOrderChanged);
+                }
+                _this.api.data.raise.change(newData, oldData);
+
+                _this.api.data.raise.load(newData);
+            }
+        });
+    }
+
+    (0, _createClass3.default)(Gantt, [{
+        key: 'keyHandler',
+        value: function keyHandler(e) {
+            this.shiftKey = e.shiftKey;
+            return true;
+        }
+    }, {
+        key: 'getMagnetValueAndUnit',
+        value: function getMagnetValueAndUnit() {
+            if (this.shiftKey) {
+                if (this.shiftColumnMagnetValue !== undefined && this.shiftColumnMagnetUnit !== undefined) {
+                    return [this.shiftColumnMagnetValue, this.shiftColumnMagnetUnit];
+                } else {
+                    var viewScale = this.options.value('viewScale');
+                    viewScale = viewScale.trim();
+                    var viewScaleValue = void 0;
+                    var viewScaleUnit = void 0;
+                    var splittedViewScale = void 0;
+                    if (viewScale) {
+                        splittedViewScale = viewScale.split(' ');
+                    }
+                    if (splittedViewScale && splittedViewScale.length > 1) {
+                        viewScaleValue = parseFloat(splittedViewScale[0]);
+                        viewScaleUnit = _moment2.default.normalizeUnits(splittedViewScale[splittedViewScale.length - 1]);
+                    } else {
+                        viewScaleValue = 1;
+                        viewScaleUnit = _moment2.default.normalizeUnits(viewScale);
+                    }
+                    return [viewScaleValue * 0.25, viewScaleUnit];
+                }
+            } else {
+                return [this.columnMagnetValue, this.columnMagnetUnit];
+            }
+        }
+    }, {
+        key: 'getMagnetDate',
+        value: function getMagnetDate(date, disableExpand) {
+            if (date === undefined) {
+                return undefined;
+            }
+            if (!_moment2.default.isMoment(_moment2.default)) {
+                date = (0, _moment2.default)(date);
+            }
+            var column = this.columnsManager.getColumnByDate(date, disableExpand);
+            var magnetValueAndUnit = this.getMagnetValueAndUnit();
+            var magnetValue = magnetValueAndUnit[0];
+            var magnetUnit = magnetValueAndUnit[1];
+            return column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
+        }
+    }, {
+        key: 'getDateByPosition',
+        value: function getDateByPosition(x, magnet, disableExpand) {
+            var column = this.columnsManager.getColumnByPosition(x, disableExpand);
+            if (column !== undefined) {
+                var magnetValue = void 0;
+                var magnetUnit = void 0;
+                if (magnet) {
+                    var magnetValueAndUnit = this.getMagnetValueAndUnit();
+                    magnetValue = magnetValueAndUnit[0];
+                    magnetUnit = magnetValueAndUnit[1];
+                }
+                return column.getDateByPosition(x - column.left, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
+            } else {
+                return undefined;
+            }
+        }
+    }, {
+        key: 'getBodyAvailableWidth',
+        value: function getBodyAvailableWidth() {
+            var scrollWidth = this.getWidth() - this.side.getWidth();
+            var borderWidth = this.scroll.getBordersWidth();
+            var availableWidth = scrollWidth - (borderWidth !== undefined ? this.scroll.getBordersWidth() : 0);
+
+            availableWidth = availableWidth - 1;
+            return availableWidth;
+        }
+    }, {
+        key: 'getPositionByDate',
+        value: function getPositionByDate(date, disableExpand) {
+            if (date === undefined) {
+                return undefined;
+            }
+            if (!_moment2.default.isMoment(_moment2.default)) {
+                date = (0, _moment2.default)(date);
+            }
+            var column = this.columnsManager.getColumnByDate(date, disableExpand);
+            if (column !== undefined) {
+                return column.getPositionByDate(date);
+            } else {
+                return undefined;
+            }
+        }
+    }, {
+        key: 'loadData',
+        value: function loadData(data) {
+            if (!Array.isArray(data)) {
+                data = data !== undefined ? [data] : [];
+            }
+            if (this.$scope.data === undefined) {
+                this.$scope.data = data;
+            } else {
+                for (var i = 0, l = data.length; i < l; i++) {
+                    var row = data[i];
+                    var j = Gantt.ganttArrays.indexOfId(this.$scope.data, row.id);
+                    if (j > -1) {
+                        this.$scope.data[j] = row;
+                    } else {
+                        this.$scope.data.push(row);
+                    }
+                }
+            }
+            var w = this.side.getWidth();
+            if (w > 0) {
+                this.options.set('sideWidth', w);
+            }
+        }
+    }, {
+        key: 'getData',
+        value: function getData() {
+            return this.$scope.data;
+        }
+    }, {
+        key: 'removeData',
+        value: function removeData(data) {
+            if (!Array.isArray(data)) {
+                data = data !== undefined ? [data] : [];
+            }
+            if (this.$scope.data !== undefined) {
+                for (var i = 0, l = data.length; i < l; i++) {
+                    var rowToRemove = data[i];
+                    var j = Gantt.ganttArrays.indexOfId(this.$scope.data, rowToRemove.id);
+                    if (j > -1) {
+                        if (rowToRemove.tasks === undefined || rowToRemove.tasks.length === 0) {
+                            this.$scope.data.splice(j, 1);
+                        } else {
+                            var row = this.$scope.data[j];
+                            for (var ti = 0, tl = rowToRemove.tasks.length; ti < tl; ti++) {
+                                var taskToRemove = rowToRemove.tasks[ti];
+                                var tj = Gantt.ganttArrays.indexOfId(row.tasks, taskToRemove.id);
+                                if (tj > -1) {
+                                    row.tasks.splice(tj, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }, {
+        key: 'clearData',
+        value: function clearData() {
+            this.$scope.data = undefined;
+        }
+    }, {
+        key: 'getWidth',
+        value: function getWidth() {
+            return this.$scope.ganttElementWidth;
+        }
+    }, {
+        key: 'getHeight',
+        value: function getHeight() {
+            return this.$scope.ganttElementHeight;
+        }
+    }, {
+        key: 'getContainerWidth',
+        value: function getContainerWidth() {
+            return this.$scope.ganttContainerWidth;
+        }
+    }, {
+        key: 'getContainerHeight',
+        value: function getContainerHeight() {
+            return this.$scope.ganttContainerHeight;
+        }
+    }, {
+        key: 'initialized',
+        value: function initialized() {
+            var _this2 = this;
+
+            this.api.core.raise.ready(this.api);
+            this.rendered = true;
+            this.columnsManager.generateColumns();
+            Gantt.$timeout(function () {
+                var w = _this2.side.getWidth();
+                if (w > 0) {
+                    _this2.options.set('sideWidth', w);
+                }
+                _this2.api.core.raise.rendered(_this2.api);
+            });
+        }
+    }]);
+    return Gantt;
+}();
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttRow = exports.GanttRowModel = undefined;
+
+var _getIterator2 = __webpack_require__(4);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _typeof2 = __webpack_require__(5);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = ["GanttTask", "$filter", function (GanttTask, $filter) {
+    'ngInject';
+
+    GanttRow.GanttTask = GanttTask;
+    GanttRow.$filter = $filter;
+    return GanttRow;
+}];
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _angular = __webpack_require__(2);
+
+var angular = _interopRequireWildcard(_angular);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttRowModel = exports.GanttRowModel = function GanttRowModel() {
+    (0, _classCallCheck3.default)(this, GanttRowModel);
+};
+
+var GanttRow = exports.GanttRow = function () {
+    function GanttRow(rowsManager, model) {
+        (0, _classCallCheck3.default)(this, GanttRow);
+
+        this.rowsManager = rowsManager;
+        this.model = model;
+        this.from = undefined;
+        this.to = undefined;
+        this.tasksMap = {};
+        this.tasks = [];
+        this.filteredTasks = [];
+        this.visibleTasks = [];
+    }
+
+    (0, _createClass3.default)(GanttRow, [{
+        key: 'addTaskImpl',
+        value: function addTaskImpl(task) {
+            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+            this.tasksMap[task.model.id] = task;
+            this.tasks.push(task);
+            if (!viewOnly) {
+                if (this.model.tasks === undefined) {
+                    this.model.tasks = [];
+                }
+                if (this.model.tasks.indexOf(task.model) === -1) {
+                    this.model.tasks.push(task.model);
+                }
+            }
+        }
+    }, {
+        key: 'addTask',
+        value: function addTask(taskModel) {
+            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+            var task = void 0;
+            var isUpdate = false;
+            this.rowsManager.gantt.objectModel.cleanTask(taskModel);
+            if (taskModel.id in this.tasksMap) {
+                task = this.tasksMap[taskModel.id];
+                if (task.model === taskModel) {
+                    return task;
+                }
+                task.model = taskModel;
+                isUpdate = true;
+            } else {
+                task = new GanttRow.GanttTask(this, taskModel);
+                this.addTaskImpl(task, viewOnly);
+            }
+            this.sortTasks();
+            this.setFromToByTask(task);
+            if (!viewOnly) {
+                if (isUpdate) {
+                    this.rowsManager.gantt.api.tasks.raise.change(task);
+                } else {
+                    this.rowsManager.gantt.api.tasks.raise.add(task);
+                }
+            }
+            return task;
+        }
+    }, {
+        key: 'moveTaskToRow',
+        value: function moveTaskToRow(task) {
+            var viewOnly = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+            this.rowsManager.gantt.api.tasks.raise.beforeViewRowChange(task, this);
+            if (!viewOnly) {
+                this.rowsManager.gantt.api.tasks.raise.beforeRowChange(task, this);
+            }
+            var oldRow = task.row;
+            oldRow.removeTask(task.model.id, viewOnly, true);
+            task.row = this;
+            this.addTaskImpl(task, viewOnly);
+            this.sortTasks();
+            this.setFromToByTask(task);
+            task.updatePosAndSize();
+            this.updateVisibleTasks();
+            oldRow.$scope.$digest();
+            task.row.$scope.$digest();
+            this.rowsManager.gantt.api.tasks.raise.viewRowChange(task, oldRow);
+            if (!viewOnly) {
+                this.rowsManager.gantt.api.tasks.raise.rowChange(task, oldRow);
+            }
+        }
+    }, {
+        key: 'updateVisibleTasks',
+        value: function updateVisibleTasks() {
+            var filterTask = this.rowsManager.gantt.options.value('filterTask');
+            if (filterTask) {
+                if ((typeof filterTask === 'undefined' ? 'undefined' : (0, _typeof3.default)(filterTask)) === 'object') {
+                    filterTask = { model: filterTask };
+                }
+                var _filterTaskComparator = this.rowsManager.gantt.options.value('filterTaskComparator');
+                if (typeof _filterTaskComparator === 'function') {
+                    _filterTaskComparator = function filterTaskComparator(actual, expected) {
+                        return _filterTaskComparator(actual.model, expected.model);
+                    };
+                }
+                this.filteredTasks = GanttRow.$filter('filter')(this.tasks, filterTask, _filterTaskComparator);
+            } else {
+                this.filteredTasks = this.tasks.slice(0);
+            }
+            var limitThreshold = this.rowsManager.gantt.options.value('taskLimitThreshold');
+            if (limitThreshold === undefined || limitThreshold > 0 && this.filteredTasks.length >= limitThreshold) {
+                this.visibleTasks = GanttRow.$filter('ganttTaskLimit')(this.filteredTasks, this.rowsManager.gantt);
+            } else {
+                this.visibleTasks = this.filteredTasks;
+            }
+        }
+    }, {
+        key: 'updateTasksPosAndSize',
+        value: function updateTasksPosAndSize() {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = (0, _getIterator3.default)(this.tasks), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var task = _step.value;
+
+                    task.updatePosAndSize();
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        }
+    }, {
+        key: 'removeTask',
+        value: function removeTask(taskId, viewOnly, silent) {
+            if (taskId in this.tasksMap) {
+                var removedTask = this.tasksMap[taskId];
+                var task = void 0;
+                var i = void 0;
+                for (i = this.tasks.length - 1; i >= 0; i--) {
+                    task = this.tasks[i];
+                    if (task.model.id === taskId) {
+                        this.tasks.splice(i, 1);
+                        if (this.from && this.from.isSame((0, _moment2.default)(task.model.from)) || this.to && this.to.isSame((0, _moment2.default)(task.model.to))) {
+                            this.setFromTo();
+                        }
+                        break;
+                    }
+                }
+                for (i = this.filteredTasks.length - 1; i >= 0; i--) {
+                    task = this.filteredTasks[i];
+                    if (task.model.id === taskId) {
+                        this.filteredTasks.splice(i, 1);
+                        break;
+                    }
+                }
+                for (i = this.visibleTasks.length - 1; i >= 0; i--) {
+                    task = this.visibleTasks[i];
+                    if (task.model.id === taskId) {
+                        this.visibleTasks.splice(i, 1);
+                        break;
+                    }
+                }
+                if (!viewOnly) {
+                    delete this.tasksMap[taskId];
+                    if (this.model.tasks !== undefined) {
+                        var taskIndex = this.model.tasks.indexOf(removedTask.model);
+                        if (taskIndex > -1) {
+                            this.model.tasks.splice(taskIndex, 1);
+                        }
+                    }
+                    if (!silent) {
+                        this.rowsManager.gantt.api.tasks.raise.remove(removedTask);
+                    }
+                }
+                return removedTask;
+            }
+        }
+    }, {
+        key: 'removeAllTasks',
+        value: function removeAllTasks() {
+            this.from = undefined;
+            this.to = undefined;
+            this.tasksMap = {};
+            this.tasks = [];
+            this.filteredTasks = [];
+            this.visibleTasks = [];
+        }
+    }, {
+        key: 'setFromTo',
+        value: function setFromTo() {
+            this.from = undefined;
+            this.to = undefined;
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
+            try {
+                for (var _iterator2 = (0, _getIterator3.default)(this.tasks), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                    var task = _step2.value;
+
+                    this.setFromToByTask(task);
+                }
+            } catch (err) {
+                _didIteratorError2 = true;
+                _iteratorError2 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                        _iterator2.return();
+                    }
+                } finally {
+                    if (_didIteratorError2) {
+                        throw _iteratorError2;
+                    }
+                }
+            }
+        }
+    }, {
+        key: 'setFromToByTask',
+        value: function setFromToByTask(task) {
+            this.setFromToByValues(task.model.from, task.model.to);
+        }
+    }, {
+        key: 'setFromToByValues',
+        value: function setFromToByValues(from, to) {
+            if (from !== undefined) {
+                if (this.from === undefined) {
+                    this.from = (0, _moment2.default)(from);
+                } else if (from < this.from) {
+                    this.from = (0, _moment2.default)(from);
+                }
+            }
+            if (to !== undefined) {
+                if (this.to === undefined) {
+                    this.to = (0, _moment2.default)(to);
+                } else if (to > this.to) {
+                    this.to = (0, _moment2.default)(to);
+                }
+            }
+        }
+    }, {
+        key: 'sortTasks',
+        value: function sortTasks() {
+            this.tasks.sort(function (t1, t2) {
+                return t1.left - t2.left;
+            });
+        }
+    }, {
+        key: 'clone',
+        value: function clone() {
+            var clone = new GanttRow(this.rowsManager, angular.copy(this.model));
+            var _iteratorNormalCompletion3 = true;
+            var _didIteratorError3 = false;
+            var _iteratorError3 = undefined;
+
+            try {
+                for (var _iterator3 = (0, _getIterator3.default)(this.tasks), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                    var task = _step3.value;
+
+                    clone.addTask(task.model);
+                }
+            } catch (err) {
+                _didIteratorError3 = true;
+                _iteratorError3 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                        _iterator3.return();
+                    }
+                } finally {
+                    if (_didIteratorError3) {
+                        throw _iteratorError3;
+                    }
+                }
+            }
+
+            return clone;
+        }
+    }]);
+    return GanttRow;
+}();
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttTask = exports.GanttTaskModel = undefined;
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttTask;
+};
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttTaskModel = exports.GanttTaskModel = function GanttTaskModel() {
+    (0, _classCallCheck3.default)(this, GanttTaskModel);
+};
+
+var GanttTask = exports.GanttTask = function () {
+    function GanttTask(row, model) {
+        (0, _classCallCheck3.default)(this, GanttTask);
+
+        this.rowsManager = row.rowsManager;
+        this.row = row;
+        this.model = model;
+        this.truncatedLeft = false;
+        this.truncatedRight = false;
+    }
+
+    (0, _createClass3.default)(GanttTask, [{
+        key: 'isMilestone',
+        value: function isMilestone() {
+            return !this.model.to || this.model.to.isSame(this.model.from);
+        }
+    }, {
+        key: 'isOutOfRange',
+        value: function isOutOfRange() {
+            var firstColumn = this.rowsManager.gantt.columnsManager.getFirstColumn();
+            var lastColumn = this.rowsManager.gantt.columnsManager.getLastColumn();
+            return firstColumn === undefined || this.model.to < firstColumn.date || lastColumn === undefined || this.model.from > lastColumn.endDate;
+        }
+    }, {
+        key: 'updatePosAndSize',
+        value: function updatePosAndSize() {
+            var oldViewLeft = this.left;
+            var oldViewWidth = this.width;
+            var oldTruncatedRight = this.truncatedRight;
+            var oldTruncatedLeft = this.truncatedLeft;
+            if (!this.isMoving && this.isOutOfRange()) {
+                this.modelLeft = undefined;
+                this.modelWidth = undefined;
+            } else {
+                this.modelLeft = this.rowsManager.gantt.getPositionByDate(this.model.from);
+                this.modelWidth = this.rowsManager.gantt.getPositionByDate(this.model.to) - this.modelLeft;
+            }
+            var lastColumn = this.rowsManager.gantt.columnsManager.getLastColumn();
+            var maxModelLeft = lastColumn ? lastColumn.left + lastColumn.width : 0;
+            var modelLeft = this.modelLeft;
+            var modelWidth = this.modelWidth;
+            if (this.rowsManager.gantt.options.value('daily')) {
+                modelLeft = this.rowsManager.gantt.getPositionByDate((0, _moment2.default)(this.model.from).startOf('day'));
+                modelWidth = this.rowsManager.gantt.getPositionByDate((0, _moment2.default)(this.model.to).endOf('day')) - modelLeft;
+            }
+            var minModelLeft = -modelWidth;
+            if (modelLeft < minModelLeft) {
+                modelLeft = minModelLeft;
+            }
+            if (modelLeft > maxModelLeft) {
+                modelLeft = maxModelLeft;
+            }
+            if (modelLeft === undefined || modelWidth === undefined) {
+                this.left = undefined;
+                this.width = undefined;
+            } else {
+                this.left = modelLeft;
+                this.width = modelWidth;
+                if (modelLeft < 0) {
+                    this.truncatedLeft = true;
+                    this.truncatedLeftOffset = -modelLeft;
+                    this.truncatedRight = false;
+                    this.truncatedRightOffset = undefined;
+                } else if (modelWidth + modelLeft > this.rowsManager.gantt.width) {
+                    this.truncatedRight = true;
+                    this.truncatedRightOffset = modelWidth + modelLeft - this.rowsManager.gantt.width;
+                    this.truncatedLeft = false;
+                    this.truncatedLeftOffset = undefined;
+                } else {
+                    this.truncatedLeft = false;
+                    this.truncatedLeftOffset = undefined;
+                    this.truncatedRight = false;
+                    this.truncatedRightOffset = modelWidth + modelLeft - this.rowsManager.gantt.width;
+                }
+                if (this.width < 0) {
+                    this.left = this.left + this.width;
+                    this.width = -this.width;
+                }
+            }
+            this.updateView();
+            if (!this.rowsManager.gantt.isRefreshingColumns && (oldViewLeft !== this.left || oldViewWidth !== this.width || oldTruncatedRight !== this.truncatedRight || oldTruncatedLeft !== this.truncatedLeft)) {
+                this.rowsManager.gantt.api.tasks.raise.viewChange(this);
+            }
+        }
+    }, {
+        key: 'updateView',
+        value: function updateView() {
+            if (this.$element) {
+                if (this.left === undefined || this.width === undefined) {
+                    this.$element.css('display', 'none');
+                } else {
+                    this.$element.css({ 'left': this.left + 'px', 'width': this.width + 'px', 'display': '' });
+                    if (this.model.priority > 0) {
+                        var priority = this.model.priority;
+                        var children = this.$element.children();
+                        this.$element.css('z-index', priority);
+
+                        for (var i = 0; i < children.length; i++) {
+                            _angular2.default.element(children[i]).css('z-index', priority);
+                        }
+                    }
+                    this.$element.toggleClass('gantt-task-milestone', this.isMilestone());
+                }
+            }
+        }
+    }, {
+        key: 'getBackgroundElement',
+        value: function getBackgroundElement() {
+            if (this.$element !== undefined) {
+                var backgroundElement = this.$element[0].querySelector('.gantt-task-background');
+                if (backgroundElement !== undefined) {
+                    return _angular2.default.element(backgroundElement);
+                }
+                return undefined;
+            }
+        }
+    }, {
+        key: 'getContentElement',
+        value: function getContentElement() {
+            if (this.$element !== undefined) {
+                var contentElement = this.$element[0].querySelector('.gantt-task-content');
+                if (contentElement !== undefined) {
+                    return _angular2.default.element(contentElement);
+                }
+                return undefined;
+            }
+        }
+    }, {
+        key: 'getForegroundElement',
+        value: function getForegroundElement() {
+            if (this.$element !== undefined) {
+                var foregroundElement = this.$element[0].querySelector('.gantt-task-foreground');
+                if (foregroundElement !== undefined) {
+                    return _angular2.default.element(foregroundElement);
+                }
+                return foregroundElement;
+            }
+        }
+    }, {
+        key: 'setFrom',
+        value: function setFrom(x, magnetEnabled) {
+            this.model.from = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
+            this.row.setFromTo();
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'setTo',
+        value: function setTo(x, magnetEnabled) {
+            this.model.to = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
+            this.row.setFromTo();
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'moveTo',
+        value: function moveTo(x, magnetEnabled) {
+            var newTaskRight = void 0;
+            var newTaskLeft = void 0;
+            if (x > this.modelLeft) {
+                this.model.to = this.rowsManager.gantt.getDateByPosition(x + this.modelWidth, magnetEnabled);
+                newTaskRight = this.rowsManager.gantt.getPositionByDate(this.model.to);
+                newTaskLeft = newTaskRight - this.modelWidth;
+                this.model.from = this.rowsManager.gantt.getDateByPosition(newTaskLeft, false);
+            } else {
+                this.model.from = this.rowsManager.gantt.getDateByPosition(x, magnetEnabled);
+                newTaskLeft = this.rowsManager.gantt.getPositionByDate(this.model.from);
+                newTaskRight = newTaskLeft + this.modelWidth;
+                this.model.to = this.rowsManager.gantt.getDateByPosition(newTaskRight, false);
+            }
+            this.row.setFromTo();
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'clone',
+        value: function clone() {
+            return new GanttTask(this.row, _angular2.default.copy(this.model));
+        }
+    }]);
+    return GanttTask;
+}();
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttBodyBackground = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttBodyBackground;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttBodyBackground = exports.GanttBodyBackground = function GanttBodyBackground(body) {
+    (0, _classCallCheck3.default)(this, GanttBodyBackground);
+
+    this.body = body;
+};
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttBodyColumns = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttBodyColumns;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttBodyColumns = exports.GanttBodyColumns = function GanttBodyColumns(body) {
+    (0, _classCallCheck3.default)(this, GanttBodyColumns);
+
+    this.body = body;
+};
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttBodyForeground = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttBodyForeground;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttBodyForeground = exports.GanttBodyForeground = function GanttBodyForeground(body) {
+    (0, _classCallCheck3.default)(this, GanttBodyForeground);
+
+    this.body = body;
+};
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttBodyRows = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttBodyRows;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttBodyRows = exports.GanttBodyRows = function GanttBodyRows(body) {
+    (0, _classCallCheck3.default)(this, GanttBodyRows);
+
+    this.body = body;
+};
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttHeaderColumns = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttHeaderColumns;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttHeaderColumns = exports.GanttHeaderColumns = function GanttHeaderColumns($element) {
+    (0, _classCallCheck3.default)(this, GanttHeaderColumns);
+
+    this.$element = $element;
+};
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Timespan = exports.TimespanModel = undefined;
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+exports.default = function () {
+    'ngInject';
+
+    return Timespan;
+};
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TimespanModel = exports.TimespanModel = function TimespanModel() {
+    (0, _classCallCheck3.default)(this, TimespanModel);
+};
+
+var Timespan = exports.Timespan = function () {
+    function Timespan(gantt, model) {
+        (0, _classCallCheck3.default)(this, Timespan);
+
+        this.gantt = gantt;
+        this.model = model;
+    }
+
+    (0, _createClass3.default)(Timespan, [{
+        key: 'updatePosAndSize',
+        value: function updatePosAndSize() {
+            this.modelLeft = this.gantt.getPositionByDate(this.model.from);
+            this.modelWidth = this.gantt.getPositionByDate(this.model.to) - this.modelLeft;
+            var lastColumn = this.gantt.columnsManager.getLastColumn();
+            var maxModelLeft = lastColumn ? lastColumn.left + lastColumn.width : 0;
+            var modelLeft = this.modelLeft;
+            var modelWidth = this.modelWidth;
+            var minModelLeft = -modelWidth;
+            if (modelLeft < minModelLeft) {
+                modelLeft = minModelLeft;
+            }
+            if (modelLeft > maxModelLeft) {
+                modelLeft = maxModelLeft;
+            }
+            if (modelLeft === undefined || modelWidth === undefined) {
+                this.left = undefined;
+                this.width = undefined;
+            } else {
+                this.left = modelLeft;
+                this.width = modelWidth;
+                if (modelLeft < 0) {
+                    this.truncatedLeft = true;
+                    this.truncatedLeftOffset = -modelLeft;
+                    this.truncatedRight = false;
+                    this.truncatedRightOffset = undefined;
+                } else if (modelWidth + modelLeft > this.gantt.width) {
+                    this.truncatedRight = true;
+                    this.truncatedRightOffset = modelWidth + modelLeft - this.gantt.width;
+                    this.truncatedLeft = false;
+                    this.truncatedLeftOffset = undefined;
+                } else {
+                    this.truncatedLeft = false;
+                    this.truncatedLeftOffset = undefined;
+                    this.truncatedRight = false;
+                    this.truncatedRightOffset = modelWidth + modelLeft - this.gantt.width;
+                }
+                if (this.width < 0) {
+                    this.left = this.left + this.width;
+                    this.width = -this.width;
+                }
+            }
+            this.updateView();
+        }
+    }, {
+        key: 'updateView',
+        value: function updateView() {
+            if (this.$element) {
+                if (this.left === undefined || this.width === undefined) {
+                    this.$element.css('display', 'none');
+                } else {
+                    this.$element.css('display', '');
+                    this.$element.css('left', this.left + 'px');
+                    this.$element.css('width', this.width + 'px');
+                }
+            }
+        }
+    }, {
+        key: 'setFrom',
+        value: function setFrom(x) {
+            this.from = this.gantt.getDateByPosition(x);
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'setTo',
+        value: function setTo(x) {
+            this.to = this.gantt.getDateByPosition(x);
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'moveTo',
+        value: function moveTo(x) {
+            this.from = this.gantt.getDateByPosition(x);
+            this.to = this.gantt.getDateByPosition(x + this.width);
+            this.updatePosAndSize();
+        }
+    }, {
+        key: 'clone',
+        value: function clone() {
+            return new Timespan(this.gantt, _angular2.default.copy(this.model));
+        }
+    }]);
+    return Timespan;
+}();
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttArrays = function () {
+    function GanttArrays() {
+        (0, _classCallCheck3.default)(this, GanttArrays);
+    }
+
+    (0, _createClass3.default)(GanttArrays, [{
+        key: 'moveToIndex',
+        value: function moveToIndex(array, oldIndex, newIndex) {
+            if (newIndex >= array.length) {
+                var k = newIndex - array.length;
+                while (k-- + 1) {
+                    array.push(undefined);
+                }
+            }
+            array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
+            return array;
+        }
+    }, {
+        key: 'getRemovedIds',
+        value: function getRemovedIds(newArray, oldArray) {
+            var idProperty = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'id';
+
+            var i = void 0;
+            var l = void 0;
+            var removedIds = [];
+            if (oldArray !== undefined) {
+                for (i = 0, l = oldArray.length; i < l; i++) {
+                    removedIds.push(oldArray[i][idProperty]);
+                }
+            }
+            if (newArray !== undefined) {
+                for (i = 0, l = newArray.length; i < l; i++) {
+                    var newObject = newArray[i];
+                    if (newObject[idProperty] !== undefined) {
+                        var newObjectIndex = removedIds.indexOf(newObject[idProperty]);
+                        if (newObjectIndex > -1) {
+                            removedIds.splice(newObjectIndex, 1);
+                        }
+                    }
+                }
+            }
+            return removedIds;
+        }
+    }, {
+        key: 'indexOfId',
+        value: function indexOfId(array, value) {
+            var idProperties = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'id';
+
+            var i = void 0;
+            if (idProperties instanceof Array) {
+                for (i = array.length - 1; i >= 0; i--) {
+                    var arrayValue = array[i];
+
+                    for (var k = 0, l = idProperties.length; k < l; k++) {
+                        arrayValue = arrayValue[idProperties[k]];
+                    }
+                    if (arrayValue === value) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+            for (i = array.length - 1; i >= 0; i--) {
+                if (array[i][idProperties] === value) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    }, {
+        key: 'removeId',
+        value: function removeId(array, value, idProperties) {
+            var indexOf = this.indexOfId(array, value, idProperties);
+            if (indexOf > -1) {
+                return array.splice(indexOf, 1)[0];
+            }
+        }
+    }, {
+        key: 'remove',
+        value: function remove(array, value) {
+            var index = array.indexOf(value);
+            if (index > -1) {
+                array.splice(index, 1);
+                return true;
+            }
+            return false;
+        }
+    }]);
+    return GanttArrays;
+}();
+
+exports.default = GanttArrays;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttBinarySearch = function () {
+    function GanttBinarySearch() {
+        (0, _classCallCheck3.default)(this, GanttBinarySearch);
+    }
+
+    (0, _createClass3.default)(GanttBinarySearch, [{
+        key: "getIndicesOnly",
+        value: function getIndicesOnly(input, value, comparer, strict) {
+            var lo = -1;
+            var hi = input.length;
+            while (hi - lo > 1) {
+                var mid = Math.floor((lo + hi) / 2);
+                if (strict ? comparer(input[mid]) < value : comparer(input[mid]) <= value) {
+                    lo = mid;
+                } else {
+                    hi = mid;
+                }
+            }
+            if (!strict && input[lo] !== undefined && comparer(input[lo]) === value) {
+                hi = lo;
+            }
+            return [lo, hi];
+        }
+    }, {
+        key: "get",
+        value: function get(input, value, comparer, strict) {
+            var res = this.getIndicesOnly(input, value, comparer, strict);
+            return [input[res[0]], input[res[1]]];
+        }
+    }]);
+    return GanttBinarySearch;
+}();
+
+exports.default = GanttBinarySearch;
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttHierarchy = undefined;
+
+var _getIterator2 = __webpack_require__(4);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+exports.default = GanttHierarchyFactory;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttHierarchy = exports.GanttHierarchy = function () {
+    function GanttHierarchy() {
+        (0, _classCallCheck3.default)(this, GanttHierarchy);
+
+        this.nameToRow = {};
+        this.idToRow = {};
+        this.nameToChildren = {};
+        this.idToChildren = {};
+        this.nameToParent = {};
+        this.idToParent = {};
+    }
+
+    (0, _createClass3.default)(GanttHierarchy, [{
+        key: 'registerChildRow',
+        value: function registerChildRow(row, childRow) {
+            if (childRow !== undefined) {
+                var nameChildren = this.nameToChildren[row.model.name];
+                if (nameChildren === undefined) {
+                    nameChildren = [];
+                    this.nameToChildren[row.model.name] = nameChildren;
+                }
+                nameChildren.push(childRow);
+                var idChildren = this.idToChildren[row.model.id];
+                if (idChildren === undefined) {
+                    idChildren = [];
+                    this.idToChildren[row.model.id] = idChildren;
+                }
+                idChildren.push(childRow);
+                this.nameToParent[childRow.model.name] = row;
+                this.idToParent[childRow.model.id] = row;
+            }
+        }
+    }, {
+        key: 'refresh',
+        value: function refresh(rows) {
+            this.nameToRow = {};
+            this.idToRow = {};
+            this.nameToChildren = {};
+            this.idToChildren = {};
+            this.nameToParent = {};
+            this.idToParent = {};
+            var row = void 0;
+            for (var i = 0; i < rows.length; i++) {
+                row = rows[i];
+                this.nameToRow[row.model.name] = row;
+                this.idToRow[row.model.id] = row;
+            }
+            for (var _i = 0; _i < rows.length; _i++) {
+                row = rows[_i];
+                if (row.model.parent !== undefined) {
+                    var parentRow = this.nameToRow[row.model.parent];
+                    if (parentRow === undefined) {
+                        parentRow = this.idToRow[row.model.parent];
+                    }
+                    if (parentRow !== undefined) {
+                        this.registerChildRow(parentRow, row);
+                    }
+                }
+                if (row.model.children !== undefined) {
+                    var children = row.model.children;
+                    var _iteratorNormalCompletion = true;
+                    var _didIteratorError = false;
+                    var _iteratorError = undefined;
+
+                    try {
+                        for (var _iterator = (0, _getIterator3.default)(children), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                            var childRowNameOrId = _step.value;
+
+                            var childRow = this.nameToRow[childRowNameOrId];
+                            if (childRow === undefined) {
+                                childRow = this.idToRow[childRowNameOrId];
+                            }
+                            if (childRow !== undefined) {
+                                this.registerChildRow(row, childRow);
+                            }
+                        }
+                    } catch (err) {
+                        _didIteratorError = true;
+                        _iteratorError = err;
+                    } finally {
+                        try {
+                            if (!_iteratorNormalCompletion && _iterator.return) {
+                                _iterator.return();
+                            }
+                        } finally {
+                            if (_didIteratorError) {
+                                throw _iteratorError;
+                            }
+                        }
+                    }
+                }
+            }
+            var rootRows = [];
+            for (var _i2 = 0; _i2 < rows.length; _i2++) {
+                row = rows[_i2];
+                if (this.parent(row) === undefined) {
+                    rootRows.push(row);
+                }
+            }
+            return rootRows;
+        }
+    }, {
+        key: 'children',
+        value: function children(row) {
+            var children = this.idToChildren[row.model.id];
+            return children;
+        }
+    }, {
+        key: 'descendants',
+        value: function descendants(row) {
+            var descendants = [];
+            var children = this.children(row);
+            descendants.push.apply(descendants, children);
+            if (children !== undefined) {
+                var _iteratorNormalCompletion2 = true;
+                var _didIteratorError2 = false;
+                var _iteratorError2 = undefined;
+
+                try {
+                    for (var _iterator2 = (0, _getIterator3.default)(children), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                        var child = _step2.value;
+
+                        var childDescendants = this.descendants(child);
+                        descendants.push.apply(descendants, childDescendants);
+                    }
+                } catch (err) {
+                    _didIteratorError2 = true;
+                    _iteratorError2 = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                            _iterator2.return();
+                        }
+                    } finally {
+                        if (_didIteratorError2) {
+                            throw _iteratorError2;
+                        }
+                    }
+                }
+            }
+            return descendants;
+        }
+    }, {
+        key: 'parent',
+        value: function parent(row) {
+            var parent = this.idToParent[row.model.id];
+            return parent;
+        }
+    }, {
+        key: 'ancestors',
+        value: function ancestors(row) {
+            var ancestors = [];
+            var parent = this.parent(row);
+            while (parent !== undefined) {
+                ancestors.push(parent);
+                parent = this.parent(parent);
+            }
+            return ancestors;
+        }
+    }]);
+    return GanttHierarchy;
+}();
+
+function GanttHierarchyFactory() {
+    'ngInject';
+
+    return GanttHierarchy;
+}
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttUtils = function () {
+    function GanttUtils() {
+        (0, _classCallCheck3.default)(this, GanttUtils);
+
+        this.seedId = new Date().getTime();
+    }
+
+    (0, _createClass3.default)(GanttUtils, [{
+        key: 'createBoundedWrapper',
+        value: function createBoundedWrapper(object, method) {
+            return function () {
+                return method.apply(object, arguments);
+            };
+        }
+    }, {
+        key: 'firstProperty',
+        value: function firstProperty(objects, propertyName, defaultValue) {
+            for (var i = 0, l = objects.length; i < l; i++) {
+                var object = objects[i];
+                if (object !== undefined && propertyName in object) {
+                    if (object[propertyName] !== undefined) {
+                        return object[propertyName];
+                    }
+                }
+            }
+            return defaultValue;
+        }
+    }, {
+        key: 'angularIndexOf',
+        value: function angularIndexOf(arr, obj) {
+            for (var i = 0; i < arr.length; i++) {
+                if (_angular2.default.equals(arr[i], obj)) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+    }, {
+        key: 'random4',
+        value: function random4() {
+            return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+        }
+    }, {
+        key: 'randomUuid',
+        value: function randomUuid() {
+            return this.random4() + this.random4() + '-' + this.random4() + '-' + this.random4() + '-' + this.random4() + '-' + this.random4() + this.random4() + this.random4();
+        }
+    }, {
+        key: 'newId',
+        value: function newId() {
+            return this.seedId += 1;
+        }
+    }]);
+    return GanttUtils;
+}();
+
+exports.default = GanttUtils;
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["ganttBinarySearch", function (ganttBinarySearch) {
+    'ngInject';
+
+    var leftComparator = function leftComparator(c) {
+        return c.left;
+    };
+    return function (input, gantt) {
+        var scrollLeft = gantt.scroll.getScrollLeft();
+        var scrollContainerWidth = gantt.getWidth() - gantt.side.getWidth();
+        if (scrollContainerWidth > 0) {
+            var start = ganttBinarySearch.getIndicesOnly(input, scrollLeft, leftComparator)[0];
+            var end = ganttBinarySearch.getIndicesOnly(input, scrollLeft + scrollContainerWidth, leftComparator)[1];
+            return input.slice(start, end);
+        } else {
+            return input.slice();
+        }
+    };
+}];
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return function (input, gantt) {
+        var firstColumn = gantt.columnsManager.getFirstColumn();
+        var lastColumn = gantt.columnsManager.getLastColumn();
+        if (firstColumn !== undefined && lastColumn !== undefined) {
+            var fromDate = firstColumn.date;
+            var toDate = lastColumn.endDate;
+            var res = [];
+            var scrollLeft = gantt.scroll.getScrollLeft();
+            var scrollContainerWidth = gantt.getWidth() - gantt.side.getWidth();
+
+            for (var i = 0, l = input.length; i < l; i++) {
+                var task = input[i];
+                if (task.active) {
+                    res.push(task);
+                } else {
+                    if (task.model.to >= fromDate && task.model.from <= toDate) {
+                        if (task.left === undefined) {
+                            task.updatePosAndSize();
+                        }
+
+                        if (!scrollContainerWidth || task.left >= scrollLeft && task.left <= scrollLeft + scrollContainerWidth || task.left + task.width >= scrollLeft && task.left + task.width <= scrollLeft + scrollContainerWidth || task.left < scrollLeft && task.left + task.width > scrollLeft + scrollContainerWidth) {
+                            res.push(task);
+                        }
+                    }
+                }
+            }
+            return res;
+        } else {
+            return input.splice(0);
+        }
+    };
+};
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$document", "$parse", "$timeout", "ganttMouseOffset", function ($document, $parse, $timeout, ganttMouseOffset) {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^gantt',
+        scope: {
+            targetElement: '=ganttResizer',
+            enabled: '@?ganttResizerEnabled'
+        },
+        link: function link($scope, $element, $attrs, ganttCtrl) {
+            var api = ganttCtrl.gantt.api;
+            var eventTopic = $attrs.ganttResizerEventTopic;
+            if ($scope.enabled === undefined) {
+                $scope.enabled = true;
+            }
+            function getWidth() {
+                return ganttCtrl.gantt.options.value($attrs.resizerWidth);
+            }
+            function setWidth(width) {
+                if (width !== getWidth()) {
+                    ganttCtrl.gantt.options.set($attrs.resizerWidth, width);
+                    if (eventTopic !== undefined) {
+                        api[eventTopic].raise.resize(width);
+                    }
+                    $timeout(function () {
+                        ganttCtrl.gantt.columnsManager.updateColumnsMeta();
+                    });
+                }
+            }
+            function dblclick(event) {
+                event.preventDefault();
+                setWidth(undefined);
+            }
+            function mousemove(event) {
+                $scope.$evalAsync(function () {
+                    var offset = ganttMouseOffset.getOffsetForElement($scope.targetElement[0], event);
+                    var maxWidth = ganttCtrl.gantt.getWidth() - ganttCtrl.gantt.scroll.getBordersWidth();
+                    var width = Math.min(Math.max(offset.x, 0), maxWidth);
+                    setWidth(width);
+                });
+            }
+            function mouseup() {
+                if (eventTopic !== undefined) {
+                    api[eventTopic].raise.resizeEnd(getWidth());
+                }
+                $document.unbind('mousemove', mousemove);
+                $document.unbind('mouseup', mouseup);
+            }
+            function mousedown(event) {
+                event.preventDefault();
+                if (eventTopic !== undefined) {
+                    api[eventTopic].raise.resizeBegin(getWidth());
+                }
+                $document.on('mousemove', mousemove);
+                $document.on('mouseup', mouseup);
+            }
+            $attrs.$observe('ganttResizerEnabled', function (value) {
+                $scope.enabled = $parse(value)();
+            });
+            $scope.$watch('enabled', function (value) {
+                if (value === undefined) {
+                    value = true;
+                }
+                $element.toggleClass('gantt-resizer-enabled', value);
+                if (value) {
+                    $element.on('dblclick', dblclick);
+                    $element.on('mousedown', mousedown);
+                } else {
+                    $element.off('dblclick', dblclick);
+                    $element.off('mousedown', mousedown);
+                }
+            });
+            $scope.$watch(function () {
+                return getWidth();
+            }, function (newValue, oldValue) {
+                if (newValue !== oldValue) {
+                    $scope.targetElement.css('width', newValue + 'px');
+
+                    if ($scope.targetElement[0].offsetWidth > 0) {
+                        setWidth($scope.targetElement[0].offsetWidth);
+                    }
+                }
+            });
+            if (eventTopic) {
+                api.registerEvent(eventTopic, 'resize');
+                api.registerEvent(eventTopic, 'resizeBegin');
+                api.registerEvent(eventTopic, 'resizeEnd');
+                api.registerMethod(eventTopic, 'setWidth', setWidth, this);
+                api.registerMethod(eventTopic, 'getWidth', getWidth, this);
+            }
+        }
+    };
+}];
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^ganttScrollManager',
+        link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
+            ganttScrollManagerCtrl.registerHorizontalReceiver(element);
+        }
+    };
+};
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        scope: {},
+        controller: ["$scope", function controller($scope) {
+            'ngInject';
+
+            $scope.horizontal = [];
+            $scope.vertical = [];
+            $scope.verticalSender = undefined;
+            this.registerVerticalReceiver = function (element) {
+                element.css('position', 'relative');
+                $scope.vertical.push(element[0]);
+            };
+            this.registerHorizontalReceiver = function (element) {
+                element.css('position', 'relative');
+                $scope.horizontal.push(element[0]);
+            };
+            this.getHorizontalRecievers = function () {
+                return $scope.horizontal;
+            };
+            this.getVerticalRecievers = function () {
+                return $scope.vertical;
+            };
+            this.registerScrollSender = function (element) {
+                $scope.verticalSender = element;
+            };
+            this.getVerticalSender = function () {
+                return $scope.verticalSender;
+            };
+        }]
+    };
+};
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: ['^gantt', '^ganttScrollManager'],
+        link: function link(scope, element, attrs, controllers) {
+            var el = element[0];
+            var updateListeners = function updateListeners() {
+                var i = void 0;
+                var l = void 0;
+                var vertical = controllers[1].getVerticalRecievers();
+                for (i = 0, l = vertical.length; i < l; i++) {
+                    var vElement = vertical[i];
+                    if (vElement.id === 'vertical-container') {
+                        vElement = (0, _jquery2.default)(vElement).children('.md-virtual-repeat-scroller');
+                        (0, _jquery2.default)(vElement).scrollTop(el.scrollTop);
+                    } else if (vElement.parentNode.scrollTop !== el.scrollTop) {
+                        vElement.parentNode.scrollTop = el.scrollTop;
+                    }
+                }
+                var horizontal = controllers[1].getHorizontalRecievers();
+                for (i = 0, l = horizontal.length; i < l; i++) {
+                    var hElement = horizontal[i];
+                    if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
+                        hElement.parentNode.scrollLeft = el.scrollLeft;
+                    }
+                }
+            };
+            element.bind('scroll', updateListeners);
+            scope.$watch(function () {
+                return controllers[0].gantt.width;
+            }, function (newValue, oldValue) {
+                if (newValue !== oldValue) {
+                    var horizontal = controllers[1].getHorizontalRecievers();
+
+                    for (var i = 0, l = horizontal.length; i < l; i++) {
+                        var hElement = horizontal[i];
+                        hElement.style.width = newValue + 'px';
+                    }
+                }
+            });
+            controllers[1].registerScrollSender(el);
+        }
+    };
+};
+
+var _jquery = __webpack_require__(66);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", "$timeout", "ganttDebounce", function (GanttDirectiveBuilder, $timeout, ganttDebounce) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttScrollable');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.scroll.$element = $element;
+        var lastScrollLeft = void 0;
+        var autoExpandTimer = void 0;
+        var autoExpandColumns = function autoExpandColumns(el, date, direction) {
+            var autoExpand = $scope.gantt.options.value('autoExpand');
+            if (autoExpand !== 'both' && autoExpand !== true && autoExpand !== direction) {
+                return;
+            }
+            var from = void 0;
+            var to = void 0;
+            var viewScale = $scope.gantt.options.value('viewScale');
+            viewScale = viewScale.trim();
+            if (viewScale.charAt(viewScale.length - 1) === 's') {
+                viewScale = viewScale.substring(0, viewScale.length - 1);
+            }
+            var viewScaleValue = void 0;
+            var viewScaleUnit = void 0;
+            var splittedViewScale = void 0;
+            if (viewScale) {
+                splittedViewScale = viewScale.split(' ');
+            }
+            if (splittedViewScale && splittedViewScale.length > 1) {
+                viewScaleValue = parseFloat(splittedViewScale[0]);
+                viewScaleUnit = splittedViewScale[splittedViewScale.length - 1];
+            } else {
+                viewScaleValue = 1;
+                viewScaleUnit = viewScale;
+            }
+            if (direction === 'left') {
+                from = (0, _moment2.default)(date).add(-5 * viewScaleValue, viewScaleUnit);
+                $scope.fromDate = from;
+            } else {
+                to = (0, _moment2.default)(date).add(5 * viewScaleValue, viewScaleUnit);
+                $scope.toDate = to;
+            }
+            $scope.gantt.api.scroll.raise.scroll(el.scrollLeft, date, direction);
+        };
+        $element.bind('scroll', ganttDebounce(function () {
+            var el = $element[0];
+            var currentScrollLeft = el.scrollLeft;
+            var direction = void 0;
+            var date = void 0;
+            $scope.gantt.scroll.cachedScrollLeft = currentScrollLeft;
+            $scope.gantt.columnsManager.updateVisibleColumns();
+            $scope.gantt.rowsManager.updateVisibleObjects();
+            if (currentScrollLeft < lastScrollLeft && currentScrollLeft === 0) {
+                direction = 'left';
+                date = $scope.gantt.columnsManager.from;
+            } else if (currentScrollLeft > lastScrollLeft && el.offsetWidth + currentScrollLeft >= el.scrollWidth - 1) {
+                direction = 'right';
+                date = $scope.gantt.columnsManager.to;
+            }
+            lastScrollLeft = currentScrollLeft;
+            if (date !== undefined) {
+                if (autoExpandTimer) {
+                    $timeout.cancel(autoExpandTimer);
+                }
+                var element = document.querySelector('.gantt-task-resizing, gantt-task-moving');
+                if (element) {
+                    autoExpandTimer = $timeout(function () {
+                        autoExpandColumns(el, date, direction);
+                    }, 300);
+                }
+            } else {
+                $scope.gantt.api.scroll.raise.scroll(currentScrollLeft);
+            }
+        }, 5));
+        $scope.getScrollableCss = function () {
+            var css = {};
+            var maxHeight = $scope.gantt.options.value('maxHeight');
+            if (!maxHeight) {
+                maxHeight = $scope.gantt.getContainerHeight();
+            }
+            if (maxHeight > 0) {
+                css['max-height'] = maxHeight - $scope.gantt.header.getHeight() + 'px';
+                css['overflow-y'] = 'auto';
+                if ($scope.gantt.scroll.isVScrollbarVisible()) {
+                    css['border-right'] = 'none';
+                }
+            }
+            var columnWidth = this.gantt.options.value('columnWidth');
+            var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
+            if (columnWidth !== undefined && bodySmallerThanGantt) {
+                css['width'] = $scope.gantt.width + this.gantt.scroll.getBordersWidth() + 'px';
+            }
+            return css;
+        };
+    };
+    return builder.build();
+}];
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^ganttScrollManager',
+        scope: {
+            opts: '=ganttVerticalScrollListenerOptions'
+        },
+        link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
+            var el = scope.opts.selector ? (0, _jquery2.default)(scope.opts.selector) : element;
+            var verticalSender = (0, _jquery2.default)(ganttScrollManagerCtrl.getVerticalSender());
+            function updateListeners() {
+                if (scope.opts.enable) {
+                    verticalSender.scrollTop(el[0].scrollTop);
+                }
+            }
+            el.bind('scroll', updateListeners);
+        }
+    };
+};
+
+var _jquery = __webpack_require__(66);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^ganttScrollManager',
+        link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
+            ganttScrollManagerCtrl.registerVerticalReceiver(element);
+        }
+    };
+};
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
+            'ngInject';
+
+            var scopeVariable = $attrs.ganttContainerHeightListener;
+            if (scopeVariable === '') {
+                scopeVariable = 'ganttContainerHeight';
+            }
+            var effectiveScope = $scope;
+            while (scopeVariable.indexOf('$parent.') === 0) {
+                scopeVariable = scopeVariable.substring('$parent.'.length);
+                effectiveScope = effectiveScope.$parent;
+            }
+            effectiveScope.$watch(function () {
+                var el = $element[0].parentElement ? $element[0].parentElement.parentElement : undefined;
+                if (el) {
+                    var height = el.offsetHeight;
+                    var style = getComputedStyle(el);
+                    height = height - parseInt(style.marginTop, 10) - parseInt(style.marginBottom, 10);
+                    return height;
+                }
+                return 0;
+            }, function (newValue) {
+                if (newValue > 0) {
+                    effectiveScope[scopeVariable] = newValue;
+                }
+            });
+        }]
+    };
+};
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
+            'ngInject';
+
+            var scopeVariable = $attrs.ganttContainerWidthListener;
+            if (scopeVariable === '') {
+                scopeVariable = 'ganttContainerWidth';
+            }
+            var effectiveScope = $scope;
+            while (scopeVariable.indexOf('$parent.') === 0) {
+                scopeVariable = scopeVariable.substring('$parent.'.length);
+                effectiveScope = effectiveScope.$parent;
+            }
+            effectiveScope.$watch(function () {
+                var el = $element[0].parentElement ? $element[0].parentElement.parentElement : undefined;
+                if (el) {
+                    var width = el.offsetWidth;
+                    var style = getComputedStyle(el);
+                    width = width - parseInt(style.marginLeft, 10) - parseInt(style.marginRight, 10);
+                    return width;
+                }
+                return 0;
+            }, function (newValue) {
+                if (newValue > 0) {
+                    effectiveScope[scopeVariable] = newValue;
+                }
+            });
+        }]
+    };
+};
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
+            'ngInject';
+
+            var scopeVariable = $attrs.ganttElementHeightListener;
+            if (scopeVariable === '') {
+                scopeVariable = 'ganttElementHeight';
+            }
+            var el = $element[0];
+            var effectiveScope = $scope;
+            while (scopeVariable.indexOf('$parent.') === 0) {
+                scopeVariable = scopeVariable.substring('$parent.'.length);
+                effectiveScope = effectiveScope.$parent;
+            }
+            effectiveScope.$watch(function () {
+                return el.clientHeight;
+            }, function (newValue) {
+                if (newValue > 0) {
+                    effectiveScope[scopeVariable] = newValue;
+                }
+            });
+        }]
+    };
+};
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
+            'ngInject';
+
+            var scopeVariable = $attrs.ganttElementWidthListener;
+            if (scopeVariable === '') {
+                scopeVariable = 'ganttElementWidth';
+            }
+            var el = $element[0];
+            var effectiveScope = $scope;
+            while (scopeVariable.indexOf('$parent.') === 0) {
+                scopeVariable = scopeVariable.substring('$parent.'.length);
+                effectiveScope = effectiveScope.$parent;
+            }
+            effectiveScope.$watch(function () {
+                return el.clientWidth;
+            }, function (newValue) {
+                if (newValue > 0) {
+                    effectiveScope[scopeVariable] = newValue;
+                }
+            });
+        }]
+    };
+};
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttBody');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.body.$element = $element;
+        $scope.gantt.body.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttBodyBackground');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.body.background.$element = $element;
+        $scope.gantt.body.background.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttBodyColumns');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.body.columns.$element = $element;
+        $scope.gantt.body.background.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttBodyForeground');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.body.foreground.$element = $element;
+        $scope.gantt.body.foreground.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttBodyRows');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.body.rows.$element = $element;
+        $scope.gantt.body.rows.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttColumn');
+    builder.controller = function ($scope, $element) {
+        $scope.column.$element = $element;
+        $scope.column.$scope = $scope;
+        $scope.column.updateView();
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttColumnHeader');
+    builder.controller = function ($scope, $element) {
+        $scope.column.$element = $element;
+        $scope.column.$scope = $scope;
+        $scope.column.updateView();
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttHeader');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.header.$element = $element;
+        $scope.gantt.header.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttHeaderColumns');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.header.columns.$element = $element;
+        $scope.gantt.header.columns.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttRow');
+    builder.controller = function ($scope, $element) {
+        $scope.row.$element = $element;
+        $scope.row.$scope = $scope;
+        $scope.getHeight = function () {
+            return { 'height': $scope.row.model.height };
+        };
+        $scope.getClass = function () {
+            if ($scope.row.model.classes) {
+                return $scope.row.model.classes;
+            } else {
+                return [];
+            }
+        };
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttRowBackground');
+    return builder.build();
+}];
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttRowLabel');
+    builder.restrict = 'A';
+    builder.templateUrl = undefined;
+    return builder.build();
+}];
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirectiveBuilder, ganttLayout) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttScrollableHeader');
+    builder.controller = function ($scope) {
+        var scrollBarWidth = ganttLayout.getScrollBarWidth();
+        $scope.getScrollableHeaderCss = function () {
+            var css = {};
+            var maxHeightActivated = $scope.gantt.scroll.isVScrollbarVisible();
+            var vScrollbarWidth = maxHeightActivated ? scrollBarWidth : 0;
+            var columnWidth = this.gantt.options.value('columnWidth');
+            var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
+            if (columnWidth !== undefined && bodySmallerThanGantt) {
+                css['width'] = $scope.gantt.width - vScrollbarWidth + this.gantt.scroll.getBordersWidth() + 'px';
+            } else if (maxHeightActivated) {
+                css['width'] = $scope.gantt.getWidth() - $scope.gantt.side.getWidth() - vScrollbarWidth + 'px';
+            }
+
+            return css;
+        };
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttSide');
+    builder.controller = function ($scope, $element) {
+        $scope.gantt.side.$element = $element;
+        $scope.gantt.side.$scope = $scope;
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirectiveBuilder, ganttLayout) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttSideBackground');
+    builder.controller = function ($scope) {
+        var hScrollBarHeight = ganttLayout.getScrollBarHeight();
+        $scope.getMaxHeightCss = function () {
+            var css = {};
+            var maxHeight = $scope.maxHeight;
+            if (!maxHeight) {
+                maxHeight = $scope.gantt.getContainerHeight();
+            }
+            var bodyScrollBarHeight = $scope.gantt.scroll.isHScrollbarVisible() ? hScrollBarHeight : 0;
+            css['max-height'] = maxHeight - bodyScrollBarHeight - $scope.gantt.header.getHeight() + 'px';
+            return css;
+        };
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttSideContent');
+    return builder.build();
+}];
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTask');
+    builder.controller = function ($scope, $element) {
+        $scope.task.$element = $element;
+        $scope.task.$scope = $scope;
+        $scope.getTaskContent = function () {
+            if ($scope.task.model.content !== undefined) {
+                return $scope.task.model.content;
+            }
+            return $scope.task.rowsManager.gantt.options.value('taskContent');
+        };
+        $scope.simplifyMoment = function (d) {
+            return _moment2.default.isMoment(d) ? d.unix() : d;
+        };
+        $scope.$watchGroup(['simplifyMoment(task.model.from)', 'simplifyMoment(task.model.to)'], function () {
+            $scope.task.updatePosAndSize();
+        });
+        $scope.getClass = function () {
+            if ($scope.task.model.classes) {
+                return $scope.task.model.classes;
+            } else {
+                return [];
+            }
+        };
+    };
+    return builder.build();
+}];
+
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTaskBackground');
+    return builder.build();
+}];
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTaskContent');
+    return builder.build();
+}];
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTaskForeground');
+    return builder.build();
+}];
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTimeFrame');
+    builder.controller = function ($scope, $element) {
+        $scope.timeFrame.$element = $element;
+        $scope.timeFrame.$scope = $scope;
+        $scope.timeFrame.updateView();
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
+    'ngInject';
+
+    var builder = new GanttDirectiveBuilder('ganttTimespan');
+    builder.controller = function ($scope, $element) {
+        $scope.timespan.$element = $element;
+        $scope.timespan.$scope = $scope;
+        $scope.timespan.updateView();
+    };
+    return builder.build();
+}];
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$timeout", function ($timeout) {
+    'ngInject';
+
+    function debounce(fn, timeout) {
+        var invokeApply = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+        var nthCall = 0;
+        return function () {
+            var self = this;
+            var argz = arguments;
+            nthCall++;
+            var later = function (version) {
+                return function () {
+                    if (version === nthCall) {
+                        return fn.apply(self, argz);
+                    }
+                };
+            }(nthCall);
+            return $timeout(later, timeout, invokeApply === undefined ? true : invokeApply);
+        };
+    }
+    return debounce;
+}];
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttDirectiveBuilder = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+exports.default = ["$templateCache", function ($templateCache) {
+    'ngInject';
+
+    GanttDirectiveBuilder.$templateCache = $templateCache;
+    return GanttDirectiveBuilder;
+}];
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttDirectiveBuilder = exports.GanttDirectiveBuilder = function () {
+    function GanttDirectiveBuilder(directiveName, templateUrl) {
+        var require = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '^gantt';
+
+        var restrict = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'E';
+        (0, _classCallCheck3.default)(this, GanttDirectiveBuilder);
+
+        this.directiveName = directiveName;
+        this.templateUrl = templateUrl === undefined ? 'template/' + directiveName + '.tmpl.html' : templateUrl;
+        this.require = require === undefined ? '^gantt' : require;
+        this.restrict = restrict === undefined ? 'E' : restrict;
+        this.scope = false;
+        this.transclude = true;
+        this.replace = true;
+    }
+
+    (0, _createClass3.default)(GanttDirectiveBuilder, [{
+        key: 'build',
+        value: function build() {
+            var directiveName = this.directiveName;
+            var _templateUrl = this.templateUrl;
+            var controllerFunction = this.controller;
+            var directive = {
+                restrict: this.restrict,
+                require: this.require,
+                transclude: this.transclude,
+                replace: this.replace,
+                scope: this.scope,
+                templateUrl: function templateUrl(tElement, tAttrs) {
+                    if (tAttrs.templateUrl !== undefined) {
+                        _templateUrl = tAttrs.templateUrl;
+                    }
+                    if (tAttrs.template !== undefined) {
+                        GanttDirectiveBuilder.$templateCache.put(_templateUrl, tAttrs.template);
+                    }
+                    return _templateUrl;
+                },
+                compile: function compile() {
+                    return {
+                        pre: function preLink(scope, iElement, iAttrs, controller) {
+                            scope.gantt.api.directives.raise.preLink(directiveName, scope, iElement, iAttrs, controller);
+                        },
+                        post: function postLink(scope, iElement, iAttrs, controller) {
+                            scope.gantt.api.directives.raise.postLink(directiveName, scope, iElement, iAttrs, controller);
+                        }
+                    };
+                },
+                controller: ["$scope", "$element", "$attrs", function controller($scope, $element, $attrs) {
+                    'ngInject';
+
+                    var controller = this;
+                    if (controllerFunction !== undefined) {
+                        controllerFunction($scope, $element, $attrs, controller);
+                    }
+                    $scope.gantt.api.directives.raise.controller(directiveName, $scope, $element, $attrs, controller);
+                    $scope.$on('$destroy', function () {
+                        $scope.gantt.api.directives.raise.destroy(directiveName, $scope, $element, $attrs, controller);
+                    });
+                    $scope.$applyAsync(function () {
+                        $scope.gantt.api.directives.raise.new(directiveName, $scope, $element, $attrs, controller);
+                    });
+                }]
+            };
+            if (!_templateUrl) {
+                delete directive.templateUrl;
+                delete directive.replace;
+                delete directive.transclude;
+            }
+            return directive;
+        }
+    }]);
+    return GanttDirectiveBuilder;
+}();
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttDom = function () {
+    GanttDom.$inject = ["$document"];
+    function GanttDom($document) {
+        'ngInject';
+
+        (0, _classCallCheck3.default)(this, GanttDom);
+        this.$document = $document;
+    }
+
+    (0, _createClass3.default)(GanttDom, [{
+        key: 'elementFromPoint',
+        value: function elementFromPoint(x, y) {
+            return this.$document[0].elementFromPoint(x, y);
+        }
+    }, {
+        key: 'elementsFromPoint',
+        value: function elementsFromPoint(x, y, depth) {
+            var elements = [];
+            var previousPointerEvents = [];
+            var cDepth = 0;
+            var current = void 0;
+            var i = void 0;
+            var l = void 0;
+            var d = void 0;
+
+            while ((current = this.elementFromPoint(x, y)) && elements.indexOf(current) === -1 && current !== null && (depth === undefined || cDepth < depth)) {
+                elements.push(current);
+                previousPointerEvents.push({
+                    value: current.style.getPropertyValue('visibility'),
+                    priority: current.style.getPropertyPriority('visibility')
+                });
+
+                current.style.setProperty('visibility', 'hidden', 'important');
+                cDepth++;
+            }
+
+            for (i = 0, l = previousPointerEvents.length; i < l; i++) {
+                d = previousPointerEvents[i];
+                elements[i].style.setProperty('visibility', d.value ? d.value : '', d.priority);
+            }
+            return elements;
+        }
+    }, {
+        key: 'findElementFromPoint',
+        value: function findElementFromPoint(x, y, checkFunction) {
+            var elements = [];
+            var previousPointerEvents = [];
+            var cDepth = 0;
+            var current = void 0;
+            var found = void 0;
+            var i = void 0;
+            var l = void 0;
+            var d = void 0;
+
+            while ((current = this.elementFromPoint(x, y)) && elements.indexOf(current) === -1 && current !== null) {
+                elements.push(current);
+                previousPointerEvents.push({
+                    value: current.style.getPropertyValue('visibility'),
+                    priority: current.style.getPropertyPriority('visibility')
+                });
+
+                current.style.setProperty('visibility', 'hidden', 'important');
+                cDepth++;
+                if (checkFunction(current)) {
+                    found = current;
+                    break;
+                }
+            }
+
+            for (i = 0, l = previousPointerEvents.length; i < l; i++) {
+                d = previousPointerEvents[i];
+                elements[i].style.setProperty('visibility', d.value ? d.value : '', d.priority);
+            }
+            return found;
+        }
+    }, {
+        key: 'isElementVisible',
+        value: function isElementVisible(element) {
+            return element.offsetParent !== undefined && element.offsetParent !== null;
+        }
+    }]);
+    return GanttDom;
+}();
+
+exports.default = GanttDom;
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$injector", function ($injector) {
+    'ngInject';
+
+    var ngAnimate = void 0;
+    try {
+        ngAnimate = $injector.get('$animate');
+    } catch (e) {}
+    if (ngAnimate !== undefined) {
+        return function (element, enabled) {
+            if (_angular2.default.version.major >= 1 && _angular2.default.version.minor >= 4) {
+                ngAnimate.enabled(element, enabled);
+            } else {
+                ngAnimate.enabled(enabled, element);
+            }
+        };
+    } else {
+        return function () {};
+    }
+}];
+
+var _angular = __webpack_require__(2);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$compile", function ($compile) {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^gantt',
+        link: function link(scope, element, attrs, ganttCtrl) {
+            scope.scope = ganttCtrl.gantt.$scope.$parent;
+            scope.thisWatcher = scope.$watch(function () {
+                return scope.$eval(attrs.ganttBindCompileHtml);
+            }, function (value) {
+                element.html(value);
+                $compile(element.contents())(scope);
+                scope.thisWatcher();
+            });
+        }
+    };
+}];
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$compile", function ($compile) {
+    'ngInject';
+
+    return {
+        restrict: 'A',
+        require: '^gantt',
+        link: function link(scope, element, attrs, ganttCtrl) {
+            scope.scope = ganttCtrl.gantt.$scope.$parent;
+            var result = scope.$eval(attrs.ganttBindCompileHtmlOneTime);
+            element.html(result);
+            $compile(element.contents())(scope);
+        }
+    };
+}];
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = ["$compile", function ($compile) {
+    'ngInject';
+
+    return {
+        scope: true,
+        priority: 5,
+        restrict: 'A',
+        compile: function compile(element) {
+            var html = element[0].outerHTML;
+            var removeListener = void 0;
+            return function linkFn(scope, element, attrs) {
+                var recompileOnEvent = function recompileOnEvent(eventName) {
+                    scope.$on(eventName, function (e) {
+                        if (scope.removeListener !== undefined) {
+                            scope.removeListener();
+                        }
+                        scope.$evalAsync(function () {
+                            var newEl = $compile(html)(scope.$parent);
+                            element.replaceWith(newEl);
+                            scope.$destroy();
+                        });
+                    });
+                };
+                scope.removeListener = recompileOnEvent(attrs.ganttRecompileOn);
+            };
+        }
+    };
+}];
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _getIterator2 = __webpack_require__(4);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttLayout = function () {
+    GanttLayout.$inject = ["$document"];
+    function GanttLayout($document) {
+        'ngInject';
+
+        (0, _classCallCheck3.default)(this, GanttLayout);
+        this.$document = $document;
+    }
+
+    (0, _createClass3.default)(GanttLayout, [{
+        key: 'getScrollBarWidth',
+        value: function getScrollBarWidth() {
+            var inner = this.$document[0].createElement('p');
+            inner.style.width = '100%';
+            inner.style.height = '200px';
+            var outer = this.$document[0].createElement('div');
+            outer.style.position = 'absolute';
+            outer.style.top = '0px';
+            outer.style.left = '0px';
+            outer.style.visibility = 'hidden';
+            outer.style.width = '200px';
+            outer.style.height = '150px';
+            outer.style.overflow = 'hidden';
+            outer.appendChild(inner);
+            this.$document[0].body.appendChild(outer);
+            var w1 = inner.offsetWidth;
+            outer.style.overflow = 'scroll';
+            var w2 = inner.offsetWidth;
+            if (w1 === w2) {
+                w2 = outer.clientWidth;
+            }
+            this.$document[0].body.removeChild(outer);
+            return w1 - w2;
+        }
+    }, {
+        key: 'getScrollBarHeight',
+        value: function getScrollBarHeight() {
+            var inner = this.$document[0].createElement('p');
+            inner.style.width = '200px;';
+            inner.style.height = '100%';
+            var outer = this.$document[0].createElement('div');
+            outer.style.position = 'absolute';
+            outer.style.top = '0px';
+            outer.style.left = '0px';
+            outer.style.visibility = 'hidden';
+            outer.style.width = '150px';
+            outer.style.height = '200px';
+            outer.style.overflow = 'hidden';
+            outer.appendChild(inner);
+            this.$document[0].body.appendChild(outer);
+            var h1 = inner.offsetHeight;
+            outer.style.overflow = 'scroll';
+            var h2 = inner.offsetHeight;
+            if (h1 === h2) {
+                h2 = outer.clientHeight;
+            }
+            this.$document[0].body.removeChild(outer);
+            return h1 - h2;
+        }
+    }, {
+        key: 'setColumnsWidthFactor',
+        value: function setColumnsWidthFactor(columns, widthFactor) {
+            var originalLeftOffset = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
+            if (!columns) {
+                return;
+            }
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = (0, _getIterator3.default)(columns), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var column = _step.value;
+
+                    column.left = widthFactor * (column.originalSize.left + originalLeftOffset) - originalLeftOffset;
+                    column.width = widthFactor * column.originalSize.width;
+                    var _iteratorNormalCompletion2 = true;
+                    var _didIteratorError2 = false;
+                    var _iteratorError2 = undefined;
+
+                    try {
+                        for (var _iterator2 = (0, _getIterator3.default)(column.timeFrames), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                            var timeFrame = _step2.value;
+
+                            timeFrame.left = widthFactor * timeFrame.originalSize.left;
+                            timeFrame.width = widthFactor * timeFrame.originalSize.width;
+                        }
+                    } catch (err) {
+                        _didIteratorError2 = true;
+                        _iteratorError2 = err;
+                    } finally {
+                        try {
+                            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                                _iterator2.return();
+                            }
+                        } finally {
+                            if (_didIteratorError2) {
+                                throw _iteratorError2;
+                            }
+                        }
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        }
+    }]);
+    return GanttLayout;
+}();
+
+exports.default = GanttLayout;
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttMouseButton = function () {
+    function GanttMouseButton() {
+        (0, _classCallCheck3.default)(this, GanttMouseButton);
+    }
+
+    (0, _createClass3.default)(GanttMouseButton, [{
+        key: "getButton",
+        value: function getButton(e) {
+            e = e || window.event;
+            if (!e.which) {
+                if (e.button === undefined) {
+                    return 1;
+                }
+                return e.button < 2 ? 1 : e.button === 4 ? 2 : 3;
+            } else {
+                return e.which;
+            }
+        }
+    }]);
+    return GanttMouseButton;
+}();
+
+exports.default = GanttMouseButton;
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttMouseOffset = function () {
+    function GanttMouseOffset() {
+        (0, _classCallCheck3.default)(this, GanttMouseOffset);
+    }
+
+    (0, _createClass3.default)(GanttMouseOffset, [{
+        key: "getTouch",
+        value: function getTouch(evt) {
+            if (evt.touches !== undefined) {
+                return evt.touches[0];
+            }
+            return evt;
+        }
+    }, {
+        key: "getOffset",
+        value: function getOffset(evt) {
+            if (evt.offsetX && evt.offsetY) {
+                return { x: evt.offsetX, y: evt.offsetY };
+            }
+            if (evt.layerX && evt.layerY) {
+                return { x: evt.layerX, y: evt.layerY };
+            }
+            return this.getOffsetForElement(evt.target, evt);
+        }
+    }, {
+        key: "getOffsetForElement",
+        value: function getOffsetForElement(el, evt) {
+            var bb = el.getBoundingClientRect();
+            return { x: evt.clientX - bb.left, y: evt.clientY - bb.top };
+        }
+    }]);
+    return GanttMouseOffset;
+}();
+
+exports.default = GanttMouseOffset;
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GanttSmartEvent = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+exports.default = function () {
+    'ngInject';
+
+    return GanttSmartEvent;
+};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GanttSmartEvent = exports.GanttSmartEvent = function () {
+    function GanttSmartEvent($scope, $element, event, fn) {
+        var _this = this;
+
+        (0, _classCallCheck3.default)(this, GanttSmartEvent);
+
+        this.$element = $element;
+        this.event = event;
+        this.fn = fn;
+        $scope.$on('$destroy', function () {
+            _this.$element.unbind(_this.event, _this.fn);
+        });
+    }
+
+    (0, _createClass3.default)(GanttSmartEvent, [{
+        key: 'bindOnce',
+        value: function bindOnce() {
+            this.$element.one(this.event, this.fn);
+        }
+    }, {
+        key: 'bind',
+        value: function bind() {
+            this.$element.bind(this.event, this.fn);
+        }
+    }, {
+        key: 'unbind',
+        value: function unbind() {
+            this.$element.unbind(this.event, this.fn);
+        }
+    }]);
+    return GanttSmartEvent;
+}();
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports) {
+
+var path = 'template/gantt.tmpl.html';
+var html = "<div class=\"gantt unselectable\" ng-cloak gantt-scroll-manager gantt-container-height-listener=ganttContainerHeight gantt-container-width-listener=ganttContainerWidth gantt-element-height-listener=ganttElementHeight gantt-element-width-listener=ganttElementWidth> <gantt-side> <gantt-side-background> </gantt-side-background> <gantt-side-content> </gantt-side-content> <div gantt-resizer=gantt.side.$element gantt-resizer-event-topic=side gantt-resizer-enabled=\"{{$parent.gantt.options.value('allowSideResizing')}}\" resizer-width=sideWidth class=gantt-resizer> <div ng-show=\"::$parent.gantt.options.value('allowSideResizing')\" class=gantt-resizer-display></div> </div> </gantt-side> <gantt-scrollable-header> <gantt-header gantt-element-height-listener=$parent.ganttHeaderHeight> <gantt-header-columns> <div ng-repeat=\"header in gantt.columnsManager.visibleHeaders track by $index\"> <div class=gantt-header-row ng-class=\"{'gantt-header-row-last': $last, 'gantt-header-row-first': $first}\"> <gantt-column-header ng-repeat=\"column in header\"></gantt-column-header> </div> </div> </gantt-header-columns> </gantt-header> </gantt-scrollable-header> <gantt-scrollable> <gantt-body> <gantt-body-background> <gantt-row-background ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"></gantt-row-background> </gantt-body-background> <gantt-body-columns> <gantt-column ng-repeat=\"column in gantt.columnsManager.visibleColumns\"> </gantt-column> </gantt-body-columns> <gantt-body-rows> <gantt-row id=gantt-row-test ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"> <gantt-task id=gantt-task-test ng-repeat=\"task in ::row.visibleTasks track by task.model.id\"> </gantt-task> </gantt-row> </gantt-body-rows> </gantt-body> </gantt-scrollable> <ng-transclude></ng-transclude> <script type=text/ng-template id=template/ganttBody.tmpl.html> <div ng-transclude class=\"gantt-body\" ng-style=\"{'width': gantt.width > 0 ? gantt.width +'px' : undefined}\"></div> </script> <script type=text/ng-template id=template/ganttHeader.tmpl.html> <div ng-transclude class=\"gantt-header\"\n             ng-show=\"gantt.columnsManager.columns.length > 0 && gantt.columnsManager.headers.length > 0\"></div> </script> <script type=text/ng-template id=template/ganttSide.tmpl.html> <div ng-transclude class=\"gantt-side\" style=\"width: auto;\"></div> </script> <script type=text/ng-template id=template/ganttSideContent.tmpl.html> <div class=\"gantt-side-content\" ng-style=\"getSideCss()\">\n        </div> </script> <script type=text/ng-template id=template/ganttHeaderColumns.tmpl.html> <div ng-transclude class=\"gantt-header-columns\"\n              gantt-horizontal-scroll-receiver></div> </script> <script type=text/ng-template id=template/ganttColumnHeader.tmpl.html> <div class=\"gantt-column-header\" ng-class=\"{'gantt-column-header-last': $last, 'gantt-column-header-first': $first}\">{{::column.label}}</div> </script> <script type=text/ng-template id=template/ganttBodyBackground.tmpl.html> <div ng-transclude class=\"gantt-body-background\"></div> </script> <script type=text/ng-template id=template/ganttBodyForeground.tmpl.html> <div ng-transclude class=\"gantt-body-foreground\"></div> </script> <script type=text/ng-template id=template/ganttBodyColumns.tmpl.html> <div ng-transclude class=\"gantt-body-columns\"></div> </script> <script type=text/ng-template id=template/ganttColumn.tmpl.html> <div ng-transclude class=\"gantt-column gantt-foreground-col\" ng-class=\"{'gantt-column-last': $last, 'gantt-column-first': $first}\"></div> </script> <script type=text/ng-template id=template/ganttTimeFrame.tmpl.html> <div class=\"gantt-timeframe\"></div> </script> <script type=text/ng-template id=template/ganttScrollable.tmpl.html> <div ng-transclude class=\"gantt-scrollable\" gantt-scroll-sender ng-style=\"getScrollableCss()\"></div> </script> <script type=text/ng-template id=template/ganttScrollableHeader.tmpl.html> <div ng-transclude class=\"gantt-scrollable-header\" ng-style=\"getScrollableHeaderCss()\"></div> </script> <script type=text/ng-template id=template/ganttBodyRows.tmpl.html> <div ng-transclude class=\"gantt-body-rows\"></div> </script> <script type=text/ng-template id=template/ganttTimespan.tmpl.html> <div class=\"gantt-timespan\" ng-class=\"timespan.model.classes\">\n        </div> </script> <script type=text/ng-template id=template/ganttTask.tmpl.html> <div class=\"gantt-task\" ng-class=\"::getClass()\">\n            <gantt-task-background></gantt-task-background> \n            <gantt-task-foreground></gantt-task-foreground>\n            <gantt-task-content></gantt-task-content>  \n        </div> </script> <script type=text/ng-template id=template/ganttTaskBackground.tmpl.html> <div class=\"gantt-task-background\" ng-style=\"{'background-color': task.model.color}\"></div> </script> <script type=text/ng-template id=template/ganttTaskForeground.tmpl.html> <div class=\"gantt-task-foreground\">\n            <div ng-if=\"task.truncatedRight\" class=\"gantt-task-truncated-right\" ng-style=\"{'padding-right': task.truncatedRightOffset + 'px'}\">&gt;</div>\n            <div ng-if=\"task.truncatedLeft\" class=\"gantt-task-truncated-left\" ng-style=\"{'padding-left': task.truncatedLeftOffset + 'px'}\">&lt;</div>\n        </div> </script> <script type=text/ng-template id=template/ganttTaskContent.tmpl.html> <div class=\"gantt-task-content\" unselectable=\"on\"><span unselectable=\"on\" gantt-bind-compile-html-one-time=\"getTaskContent()\"/></div> </script> <script type=text/ng-template id=template/ganttRowBackground.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"row.model.classes\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::{'height': row.model.height}\">\n            <div class=\"gantt-row-background\"\n                 ng-style=\"{'background-color': row.model.color}\">\n            </div>\n        </div> </script> <script type=text/ng-template id=template/ganttRow.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"getClass()\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::getHeight()\">\n            <div ng-transclude class=\"gantt-row-content\"></div>\n        </div> </script> <script type=text/ng-template id=template/ganttSideBackground.tmpl.html> <div class=\"gantt-side-background\">\n            <div class=\"gantt-side-background-header\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\">\n                <div ng-show=\"::$parent.ganttHeaderHeight\" class=\"gantt-header-row gantt-side-header-row\"></div>\n            </div>\n            <div class=\"gantt-side-background-body\" ng-style=\"getMaxHeightCss()\">\n                <div gantt-vertical-scroll-receiver>\n                    <div class=\"gantt-row gantt-row-height \"\n                         ng-class-odd=\"'gantt-row-odd'\"\n                         ng-class-even=\"'gantt-row-even'\"\n                         ng-class=\"row.model.classes\"\n                         ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"\n                         ng-style=\"::{'height': row.model.height}\">\n                        <div class=\"gantt-row-label gantt-row-background\"\n                             ng-style=\"{'background-color': row.model.color}\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div> </script> </div> ";
+window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
+module.exports = path;
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(149), __esModule: true };
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(150), __esModule: true };
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(151), __esModule: true };
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(152), __esModule: true };
+
+/***/ }),
+/* 141 */,
+/* 142 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(153), __esModule: true };
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(154), __esModule: true };
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _setPrototypeOf = __webpack_require__(140);
+
+var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
+
+var _create = __webpack_require__(137);
+
+var _create2 = _interopRequireDefault(_create);
+
+var _typeof2 = __webpack_require__(5);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : (0, _typeof3.default)(superClass)));
+  }
+
+  subClass.prototype = (0, _create2.default)(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _typeof2 = __webpack_require__(5);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
+};
+
+/***/ }),
+/* 146 */,
+/* 147 */,
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(42);
+__webpack_require__(41);
+module.exports = __webpack_require__(171);
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(173);
+var $Object = __webpack_require__(6).Object;
+module.exports = function create(P, D){
+  return $Object.create(P, D);
+};
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(174);
+var $Object = __webpack_require__(6).Object;
+module.exports = function defineProperty(it, key, desc){
+  return $Object.defineProperty(it, key, desc);
+};
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(175);
+module.exports = __webpack_require__(6).Object.getPrototypeOf;
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(176);
+module.exports = __webpack_require__(6).Object.setPrototypeOf;
+
+/***/ }),
+/* 153 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(177);
+__webpack_require__(71);
+__webpack_require__(178);
+__webpack_require__(179);
+module.exports = __webpack_require__(6).Symbol;
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(41);
+__webpack_require__(42);
+module.exports = __webpack_require__(39).f('iterator');
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports) {
+
+module.exports = function(){ /* empty */ };
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(14)
+  , toLength  = __webpack_require__(69)
+  , toIndex   = __webpack_require__(170);
+module.exports = function(IS_INCLUDES){
+  return function($this, el, fromIndex){
+    var O      = toIObject($this)
+      , length = toLength(O.length)
+      , index  = toIndex(fromIndex, length)
+      , value;
+    // Array#includes uses SameValueZero equality algorithm
+    if(IS_INCLUDES && el != el)while(length > index){
+      value = O[index++];
+      if(value != value)return true;
+    // Array#toIndex ignores holes, Array#includes - not
+    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
+      if(O[index] === el)return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+/***/ }),
+/* 157 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// all enumerable object keys, includes symbols
+var getKeys = __webpack_require__(23)
+  , gOPS    = __webpack_require__(61)
+  , pIE     = __webpack_require__(33);
+module.exports = function(it){
+  var result     = getKeys(it)
+    , getSymbols = gOPS.f;
+  if(getSymbols){
+    var symbols = getSymbols(it)
+      , isEnum  = pIE.f
+      , i       = 0
+      , key;
+    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
+  } return result;
+};
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(21);
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__(21);
+module.exports = Array.isArray || function isArray(arg){
+  return cof(arg) == 'Array';
+};
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var create         = __webpack_require__(32)
+  , descriptor     = __webpack_require__(24)
+  , setToStringTag = __webpack_require__(27)
+  , IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__webpack_require__(16)(IteratorPrototype, __webpack_require__(8)('iterator'), function(){ return this; });
+
+module.exports = function(Constructor, NAME, next){
+  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports) {
+
+module.exports = function(done, value){
+  return {value: value, done: !!done};
+};
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getKeys   = __webpack_require__(23)
+  , toIObject = __webpack_require__(14);
+module.exports = function(object, el){
+  var O      = toIObject(object)
+    , keys   = getKeys(O)
+    , length = keys.length
+    , index  = 0
+    , key;
+  while(length > index)if(O[key = keys[index++]] === el)return key;
+};
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var META     = __webpack_require__(25)('meta')
+  , isObject = __webpack_require__(17)
+  , has      = __webpack_require__(13)
+  , setDesc  = __webpack_require__(12).f
+  , id       = 0;
+var isExtensible = Object.isExtensible || function(){
+  return true;
+};
+var FREEZE = !__webpack_require__(18)(function(){
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function(it){
+  setDesc(it, META, {value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  }});
+};
+var fastKey = function(it, create){
+  // return primitive with prefix
+  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if(!has(it, META)){
+    // can't set metadata to uncaught frozen object
+    if(!isExtensible(it))return 'F';
+    // not necessary to add metadata
+    if(!create)return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function(it, create){
+  if(!has(it, META)){
+    // can't set metadata to uncaught frozen object
+    if(!isExtensible(it))return true;
+    // not necessary to add metadata
+    if(!create)return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function(it){
+  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY:      META,
+  NEED:     false,
+  fastKey:  fastKey,
+  getWeak:  getWeak,
+  onFreeze: onFreeze
+};
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP       = __webpack_require__(12)
+  , anObject = __webpack_require__(10)
+  , getKeys  = __webpack_require__(23);
+
+module.exports = __webpack_require__(11) ? Object.defineProperties : function defineProperties(O, Properties){
+  anObject(O);
+  var keys   = getKeys(Properties)
+    , length = keys.length
+    , i = 0
+    , P;
+  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+var toIObject = __webpack_require__(14)
+  , gOPN      = __webpack_require__(60).f
+  , toString  = {}.toString;
+
+var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
+  ? Object.getOwnPropertyNames(window) : [];
+
+var getWindowNames = function(it){
+  try {
+    return gOPN(it);
+  } catch(e){
+    return windowNames.slice();
+  }
+};
+
+module.exports.f = function getOwnPropertyNames(it){
+  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
+};
+
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// most Object methods by ES6 should accept primitives
+var $export = __webpack_require__(15)
+  , core    = __webpack_require__(6)
+  , fails   = __webpack_require__(18);
+module.exports = function(KEY, exec){
+  var fn  = (core.Object || {})[KEY] || Object[KEY]
+    , exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+};
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+/* eslint-disable no-proto */
+var isObject = __webpack_require__(17)
+  , anObject = __webpack_require__(10);
+var check = function(O, proto){
+  anObject(O);
+  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
+};
+module.exports = {
+  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+    function(test, buggy, set){
+      try {
+        set = __webpack_require__(22)(Function.call, __webpack_require__(59).f(Object.prototype, '__proto__').set, 2);
+        set(test, []);
+        buggy = !(test instanceof Array);
+      } catch(e){ buggy = true; }
+      return function setPrototypeOf(O, proto){
+        check(O, proto);
+        if(buggy)O.__proto__ = proto;
+        else set(O, proto);
+        return O;
+      };
+    }({}, false) : undefined),
+  check: check
+};
+
+/***/ }),
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(36)
+  , defined   = __webpack_require__(30);
+// true  -> String#at
+// false -> String#codePointAt
+module.exports = function(TO_STRING){
+  return function(that, pos){
+    var s = String(defined(that))
+      , i = toInteger(pos)
+      , l = s.length
+      , a, b;
+    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+
+/***/ }),
+/* 169 */,
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(36)
+  , max       = Math.max
+  , min       = Math.min;
+module.exports = function(index, length){
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__(10)
+  , get      = __webpack_require__(70);
+module.exports = __webpack_require__(6).getIterator = function(it){
+  var iterFn = get(it);
+  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
+  return anObject(iterFn.call(it));
+};
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var addToUnscopables = __webpack_require__(155)
+  , step             = __webpack_require__(161)
+  , Iterators        = __webpack_require__(20)
+  , toIObject        = __webpack_require__(14);
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __webpack_require__(58)(Array, 'Array', function(iterated, kind){
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function(){
+  var O     = this._t
+    , kind  = this._k
+    , index = this._i++;
+  if(!O || index >= O.length){
+    this._t = undefined;
+    return step(1);
+  }
+  if(kind == 'keys'  )return step(0, index);
+  if(kind == 'values')return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+/***/ }),
+/* 173 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(15)
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+$export($export.S, 'Object', {create: __webpack_require__(32)});
+
+/***/ }),
+/* 174 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(15);
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperty: __webpack_require__(12).f});
+
+/***/ }),
+/* 175 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 Object.getPrototypeOf(O)
+var toObject        = __webpack_require__(65)
+  , $getPrototypeOf = __webpack_require__(62);
+
+__webpack_require__(166)('getPrototypeOf', function(){
+  return function getPrototypeOf(it){
+    return $getPrototypeOf(toObject(it));
+  };
+});
+
+/***/ }),
+/* 176 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+var $export = __webpack_require__(15);
+$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(167).set});
+
+/***/ }),
+/* 177 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// ECMAScript 6 symbols shim
+var global         = __webpack_require__(9)
+  , has            = __webpack_require__(13)
+  , DESCRIPTORS    = __webpack_require__(11)
+  , $export        = __webpack_require__(15)
+  , redefine       = __webpack_require__(64)
+  , META           = __webpack_require__(163).KEY
+  , $fails         = __webpack_require__(18)
+  , shared         = __webpack_require__(35)
+  , setToStringTag = __webpack_require__(27)
+  , uid            = __webpack_require__(25)
+  , wks            = __webpack_require__(8)
+  , wksExt         = __webpack_require__(39)
+  , wksDefine      = __webpack_require__(38)
+  , keyOf          = __webpack_require__(162)
+  , enumKeys       = __webpack_require__(157)
+  , isArray        = __webpack_require__(159)
+  , anObject       = __webpack_require__(10)
+  , toIObject      = __webpack_require__(14)
+  , toPrimitive    = __webpack_require__(37)
+  , createDesc     = __webpack_require__(24)
+  , _create        = __webpack_require__(32)
+  , gOPNExt        = __webpack_require__(165)
+  , $GOPD          = __webpack_require__(59)
+  , $DP            = __webpack_require__(12)
+  , $keys          = __webpack_require__(23)
+  , gOPD           = $GOPD.f
+  , dP             = $DP.f
+  , gOPN           = gOPNExt.f
+  , $Symbol        = global.Symbol
+  , $JSON          = global.JSON
+  , _stringify     = $JSON && $JSON.stringify
+  , PROTOTYPE      = 'prototype'
+  , HIDDEN         = wks('_hidden')
+  , TO_PRIMITIVE   = wks('toPrimitive')
+  , isEnum         = {}.propertyIsEnumerable
+  , SymbolRegistry = shared('symbol-registry')
+  , AllSymbols     = shared('symbols')
+  , OPSymbols      = shared('op-symbols')
+  , ObjectProto    = Object[PROTOTYPE]
+  , USE_NATIVE     = typeof $Symbol == 'function'
+  , QObject        = global.QObject;
+// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+
+// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+var setSymbolDesc = DESCRIPTORS && $fails(function(){
+  return _create(dP({}, 'a', {
+    get: function(){ return dP(this, 'a', {value: 7}).a; }
+  })).a != 7;
+}) ? function(it, key, D){
+  var protoDesc = gOPD(ObjectProto, key);
+  if(protoDesc)delete ObjectProto[key];
+  dP(it, key, D);
+  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
+} : dP;
+
+var wrap = function(tag){
+  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
+  sym._k = tag;
+  return sym;
+};
+
+var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
+  return typeof it == 'symbol';
+} : function(it){
+  return it instanceof $Symbol;
+};
+
+var $defineProperty = function defineProperty(it, key, D){
+  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
+  anObject(it);
+  key = toPrimitive(key, true);
+  anObject(D);
+  if(has(AllSymbols, key)){
+    if(!D.enumerable){
+      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
+      it[HIDDEN][key] = true;
+    } else {
+      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
+      D = _create(D, {enumerable: createDesc(0, false)});
+    } return setSymbolDesc(it, key, D);
+  } return dP(it, key, D);
+};
+var $defineProperties = function defineProperties(it, P){
+  anObject(it);
+  var keys = enumKeys(P = toIObject(P))
+    , i    = 0
+    , l = keys.length
+    , key;
+  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
+  return it;
+};
+var $create = function create(it, P){
+  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+};
+var $propertyIsEnumerable = function propertyIsEnumerable(key){
+  var E = isEnum.call(this, key = toPrimitive(key, true));
+  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
+  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+};
+var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
+  it  = toIObject(it);
+  key = toPrimitive(key, true);
+  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
+  var D = gOPD(it, key);
+  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
+  return D;
+};
+var $getOwnPropertyNames = function getOwnPropertyNames(it){
+  var names  = gOPN(toIObject(it))
+    , result = []
+    , i      = 0
+    , key;
+  while(names.length > i){
+    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
+  } return result;
+};
+var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
+  var IS_OP  = it === ObjectProto
+    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
+    , result = []
+    , i      = 0
+    , key;
+  while(names.length > i){
+    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
+  } return result;
+};
+
+// 19.4.1.1 Symbol([description])
+if(!USE_NATIVE){
+  $Symbol = function Symbol(){
+    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
+    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
+    var $set = function(value){
+      if(this === ObjectProto)$set.call(OPSymbols, value);
+      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
+      setSymbolDesc(this, tag, createDesc(1, value));
+    };
+    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
+    return wrap(tag);
+  };
+  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
+    return this._k;
+  });
+
+  $GOPD.f = $getOwnPropertyDescriptor;
+  $DP.f   = $defineProperty;
+  __webpack_require__(60).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(33).f  = $propertyIsEnumerable;
+  __webpack_require__(61).f = $getOwnPropertySymbols;
+
+  if(DESCRIPTORS && !__webpack_require__(26)){
+    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+  }
+
+  wksExt.f = function(name){
+    return wrap(wks(name));
+  }
+}
+
+$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
+
+for(var symbols = (
+  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
+).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
+
+for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
+
+$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
+  // 19.4.2.1 Symbol.for(key)
+  'for': function(key){
+    return has(SymbolRegistry, key += '')
+      ? SymbolRegistry[key]
+      : SymbolRegistry[key] = $Symbol(key);
+  },
+  // 19.4.2.5 Symbol.keyFor(sym)
+  keyFor: function keyFor(key){
+    if(isSymbol(key))return keyOf(SymbolRegistry, key);
+    throw TypeError(key + ' is not a symbol!');
+  },
+  useSetter: function(){ setter = true; },
+  useSimple: function(){ setter = false; }
+});
+
+$export($export.S + $export.F * !USE_NATIVE, 'Object', {
+  // 19.1.2.2 Object.create(O [, Properties])
+  create: $create,
+  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+  defineProperty: $defineProperty,
+  // 19.1.2.3 Object.defineProperties(O, Properties)
+  defineProperties: $defineProperties,
+  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+  // 19.1.2.7 Object.getOwnPropertyNames(O)
+  getOwnPropertyNames: $getOwnPropertyNames,
+  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+  getOwnPropertySymbols: $getOwnPropertySymbols
+});
+
+// 24.3.2 JSON.stringify(value [, replacer [, space]])
+$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
+  var S = $Symbol();
+  // MS Edge converts symbol values to JSON as {}
+  // WebKit converts symbol values to JSON as null
+  // V8 throws on boxed symbols
+  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
+})), 'JSON', {
+  stringify: function stringify(it){
+    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
+    var args = [it]
+      , i    = 1
+      , replacer, $replacer;
+    while(arguments.length > i)args.push(arguments[i++]);
+    replacer = args[1];
+    if(typeof replacer == 'function')$replacer = replacer;
+    if($replacer || !isArray(replacer))replacer = function(key, value){
+      if($replacer)value = $replacer.call(this, key, value);
+      if(!isSymbol(value))return value;
+    };
+    args[1] = replacer;
+    return _stringify.apply($JSON, args);
+  }
+});
+
+// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(16)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+// 19.4.3.5 Symbol.prototype[@@toStringTag]
+setToStringTag($Symbol, 'Symbol');
+// 20.2.1.9 Math[@@toStringTag]
+setToStringTag(Math, 'Math', true);
+// 24.3.3 JSON[@@toStringTag]
+setToStringTag(global.JSON, 'JSON', true);
+
+/***/ }),
+/* 178 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(38)('asyncIterator');
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(38)('observable');
+
+/***/ }),
 /* 180 */,
-/* 181 */
+/* 181 */,
+/* 182 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
