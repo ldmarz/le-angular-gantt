@@ -1,4 +1,12 @@
 # New features
+   - ## Go to Row for Recycler Plugin
+      Go to a specific row of the recycler plugin
+        
+     ## Usage
+
+          const predicate = (row) => row.model.id === id)
+          $scope.api.recycler.goToRow(predicate)
+
    - ## Recycler plugin for grid side
       Display a tree hierarchy with multiple columns support... This plugins support high ammount of data because is using [md-virtual-repeat](https://material.angularjs.org/latest/demo/virtualRepeat) from angular-material
 
