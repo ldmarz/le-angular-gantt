@@ -48,6 +48,8 @@ export default function () {
           }
         }
       })
+
+      controllers[1].registerScrollSender(el)
     }
   }
 }

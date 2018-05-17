@@ -9,6 +9,7 @@ export default function () {
       'ngInject'
       $scope.horizontal = []
       $scope.vertical = []
+      $scope.verticalSender = undefined
 
       this.registerVerticalReceiver = function (element) {
         element.css('position', 'relative')
@@ -26,6 +27,14 @@ export default function () {
 
       this.getVerticalRecievers = function () {
         return $scope.vertical
+      }
+
+      this.registerScrollSender = function (element) {
+        $scope.verticalSender = element
+      }
+
+      this.getVerticalSender = function () {
+        return $scope.verticalSender
       }
     }
   }

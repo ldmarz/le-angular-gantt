@@ -1,10 +1,14 @@
 require('./recycler.html')
 import _ from 'lodash'
 
-export default function (GanttDirectiveBuilder, ganttLayout) {
+export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
   'ngInject'
   let builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html')
   builder.controller = function ($scope) {
+    $scope.verticalScrollOpts = {
+      selector: '.md-virtual-repeat-scroller',
+      enable: false
+    }
     let hScrollBarHeight = ganttLayout.getScrollBarHeight()
     $scope.templateRows = $scope.pluginScope.templateRows
     $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : []
@@ -87,6 +91,24 @@ export default function (GanttDirectiveBuilder, ganttLayout) {
     $scope.$watch('topIndex', newValue => {
       $scope.gantt.api.recycler.raise.topIndexChanged(newValue)
     })
+
+    function goToRow (predicate) {
+
+      const index = _.findIndex($scope.gantt.rowsManager.visibleRows, predicate)
+
+      if (!index) { return new Error('Row not found') }
+
+      $scope.topIndex = index
+      $scope.verticalScrollOpts.enable = true
+      $scope.gantt.api.rows.refresh()
+
+      $timeout(function () {
+        $scope.verticalScrollOpts.enable = false
+      })
+    }
+
+    $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api)
+
   }
   return builder.build()
 }

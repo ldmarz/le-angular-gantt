@@ -14,6 +14,7 @@ import ganttScrollableDirective from './core/ui/scroll/scrollable.directive'
 import ganttScrollManagerDirective from './core/ui/scroll/scrollManager.directive'
 import ganttScrollSenderDirective from './core/ui/scroll/scrollSender.directive'
 import ganttVerticalScrollReceiver from './core/ui/scroll/verticalScrollReceiver.directive'
+import ganttVerticalScrollListener from './core/ui/scroll/verticalScrollListener.directive'
 import ganttBodyDirective from './core/ui/template/body.directive'
 import ganttBodyBackgroundDirective from './core/ui/template/bodyBackground.directive'
 import ganttBodyColumnsDirective from './core/ui/template/bodyColumns.directive'
@@ -98,6 +99,7 @@ angular
   .directive('ganttScrollManager', ganttScrollManagerDirective)
   .directive('ganttScrollSender', ganttScrollSenderDirective)
   .directive('ganttVerticalScrollReceiver', ganttVerticalScrollReceiver)
+  .directive('ganttVerticalScrollListener', ganttVerticalScrollListener)
   .directive('ganttBindCompileHtml', ganttBindCompileHtmlDirective)
   .directive('ganttBody', ganttBodyDirective)
   .directive('ganttBodyBackground', ganttBodyBackgroundDirective)

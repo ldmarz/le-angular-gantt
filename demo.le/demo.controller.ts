@@ -45,6 +45,7 @@ export default function ($scope, $timeout) {
   $scope.width = true
   $scope.scale = 'day'
   $scope.algo = 'aksks'
+  $scope.selectedRow = undefined;
 
   $scope.templateRows = [{
     type: 'tree',
@@ -92,6 +93,10 @@ export default function ($scope, $timeout) {
     content: '<div>algol</div>'
   }
   ]
+
+  $scope.goToRow = function (id) {
+    $scope.api.recycler.goToRow((row) => row.model.id === id)
+  }
 
   $scope.addTask = function () {
     appendChilds(1, 1)
