@@ -419,7 +419,7 @@ describe('Gantt', function () {
         //
         // $scope.$digest()
 
-        expect(true).to.be.true;
+        expect(true).to.be.true
 
         // checkData($scope.data, ganttElement)
       }
