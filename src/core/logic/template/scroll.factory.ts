@@ -113,14 +113,63 @@ export class GanttScroll {
    * Scroll to a date
    *
    * @param {moment} date moment to scroll to.
+   * @param {integer} duration rate of time of the animation.
    */
-  scrollToDate (date) {
+  scrollToDate (date, duration) {
     let position = this.gantt.getPositionByDate(date)
-
     if (position !== undefined) {
-      this.$element[0].scrollLeft = position - this.$element[0].offsetWidth / 2
+      const element = this.$element[0];
+      const endPosition = position - this.$element[0].offsetWidth / 2
+      if (!duration) {
+        const start = element.scrollTop;
+        const change = endPosition - start;
+        const currentTime = 0;
+        const increment = 20;
+        this.easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration);
+      }
+      else {
+        element.scrollLeft = endPosition;
+      }
     }
   }
+
+  /**
+   * Ease in out quad scroll to date (recursive function)
+   *
+   * @param {jquery} element scrollable gantt element.
+   * @param {integer} currentTime start value.
+   * @param {integer} increment ratio increment.
+   * @param {integer} start start position.
+   * @param {integer} change change in value.
+   * @param {integer} duration animation duration.
+   */
+  easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration) {
+    currentTime += increment;
+    let val = this.easeInOutQuad(currentTime, start, change, duration);
+    element.scrollTop = val;
+    if(currentTime < duration) {
+        setTimeout(
+          this.easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration),
+          increment
+        );
+    }
+  }
+
+  /**
+   * ease in out quad
+   *
+   * @param {integer} time current time.
+   * @param {integer} from start value.
+   * @param {integer} change change in value.
+   * @param {integer} duration animation duration.
+   */
+  easeInOutQuad = function (time, from, change, duration) {
+    time /= duration/2;
+    if (time < 1) return change/2*time*time + from;
+    time--;
+    return -change/2 * (time*(time-2) - 1) + from;
+  };
+
 }
 
 export default function () {
