@@ -119,39 +119,27 @@ export class GanttScroll {
     let position = this.gantt.getPositionByDate(date)
     if (position !== undefined) {
       const element = this.$element[0];
-      const endPosition = position - this.$element[0].offsetWidth / 2
+      const endPosition = position - this.$element[0].offsetWidth / 2;
       if (!duration) {
-        const start = element.scrollTop;
-        const change = endPosition - start;
-        const currentTime = 0;
-        const increment = 20;
-        this.easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration);
-      }
-      else {
         element.scrollLeft = endPosition;
       }
-    }
-  }
-
-  /**
-   * Ease in out quad scroll to date (recursive function)
-   *
-   * @param {jquery} element scrollable gantt element.
-   * @param {integer} currentTime start value.
-   * @param {integer} increment ratio increment.
-   * @param {integer} start start position.
-   * @param {integer} change change in value.
-   * @param {integer} duration animation duration.
-   */
-  easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration) {
-    currentTime += increment;
-    let val = this.easeInOutQuad(currentTime, start, change, duration);
-    element.scrollTop = val;
-    if(currentTime < duration) {
-        setTimeout(
-          this.easeInOutQuadScrollToDate(element, currentTime, increment, start, change, duration),
-          increment
-        );
+      else {
+        const start = element.scrollLeft;
+        const change = (position - element.offsetWidth / 2) - start;
+        const increment = 20;
+        let currentTime = 0;
+        const animateScroll = () => {
+          currentTime += increment;
+          var val = this.easeInOutQuad(currentTime, start, change, duration);
+          element.scrollLeft = val;
+          if(currentTime < duration) {
+            setTimeout(animateScroll,
+              increment
+            );
+          }
+        };
+        animateScroll();
+      }
     }
   }
 

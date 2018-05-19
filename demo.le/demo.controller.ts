@@ -110,7 +110,7 @@ export default function ($scope, $timeout) {
     $scope.api.recycler.collapse(id)
   }
 
-  $scope.getColumnWidth = function (widthEnabled, scale, zoom) {
+  $scope.getColumnWidth = function (zoom = 0.666) {
     return 140 * zoom
   }
 
@@ -126,6 +126,14 @@ export default function ($scope, $timeout) {
     $scope.api.recycler.expandAll()
   }
 
+  $scope.scrollToDate = function () {
+    $scope.api.scroll.toDate(moment())
+  }
+
+  $scope.easeScrollToDate = function () {
+    $scope.api.scroll.toDate(moment(), 200)
+  }
+
   function appendChilds (limit = 1, parent = undefined) {
     for (let index = 0; index < limit; index++) {
       const name = randomName()
@@ -136,8 +144,8 @@ export default function ($scope, $timeout) {
           tasks: [
             {
               name: name,
-              from: moment().subtract(_.random(1, 10), 'hours'),
-              to: moment().add(_.random(1, 10), 'hours')
+              from: moment().subtract(_.random(1, 10), 'days'),
+              to: moment().add(_.random(30, 40), 'days')
             }
           ]
         }
