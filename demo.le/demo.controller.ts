@@ -132,7 +132,7 @@ export default function ($scope, $timeout) {
       $scope.data.push(
         {
           id: uuid(),
-          name: name, mec: 'mec1', level: 1, parent: parent,
+          name: name, mec: 'mec1', level: 1, parent: parent, isCollapsed: true,
           tasks: [
             {
               name: name,
