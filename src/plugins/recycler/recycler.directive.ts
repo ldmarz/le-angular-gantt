@@ -112,12 +112,21 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       const recyclerScroll = $('.md-virtual-repeat-scroller')
       const gridSideBackground = $('.gantt-side-background-body')
       const ganttSide = $('.gantt-scrollable')
-
+      let listen = false
       function callee () {
-        gridSideBackground.scrollTop(recyclerScroll.scrollTop())
-        ganttSide.scrollTop(recyclerScroll.scrollTop())
+        if (listen) {
+          gridSideBackground.scrollTop(recyclerScroll.scrollTop())
+          ganttSide.scrollTop(recyclerScroll.scrollTop())
+        }
       }
 
+      recyclerScroll.mouseenter(() => {
+        listen = true
+      })
+
+      recyclerScroll.mouseleave(() => {
+        listen = false
+      })
       recyclerScroll.scroll(callee)
     }
 
