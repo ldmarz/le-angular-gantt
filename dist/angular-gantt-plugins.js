@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.2.1 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.2.2 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -84994,7 +84994,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
     'ngInject';
 
     var builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html');
-    builder.controller = function ($scope) {
+    builder.controller = function ($scope, element) {
         $scope.verticalScrollOpts = {
             selector: '.md-virtual-repeat-scroller',
             enable: false
@@ -85079,14 +85079,25 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             });
         }
         function SyncRows() {
-            var recyclerScroll = (0, _jquery2.default)('.md-virtual-repeat-scroller');
-            var gridSideBackground = (0, _jquery2.default)('.gantt-side-background-body');
-            var ganttSide = (0, _jquery2.default)('.gantt-scrollable');
+            var $element = (0, _jquery2.default)(element[0]);
+            var $ganttSide = $element.parents('.gantt-side');
+            var $recyclerScroll = $element.find('.md-virtual-repeat-scroller');
+            var $gridSideBackground = $ganttSide.find('.gantt-side-background-body');
+            var $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable');
+            var listen = false;
             function callee() {
-                gridSideBackground.scrollTop(recyclerScroll.scrollTop());
-                ganttSide.scrollTop(recyclerScroll.scrollTop());
+                if (listen) {
+                    $gridSideBackground.scrollTop($recyclerScroll.scrollTop());
+                    $ganttSideScroll.scrollTop($recyclerScroll.scrollTop());
+                }
             }
-            recyclerScroll.scroll(callee);
+            $recyclerScroll.mouseenter(function () {
+                listen = true;
+            });
+            $recyclerScroll.mouseleave(function () {
+                listen = false;
+            });
+            $recyclerScroll.scroll(callee);
         }
         SyncRows();
         $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api);
