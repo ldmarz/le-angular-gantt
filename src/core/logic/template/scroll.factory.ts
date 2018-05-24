@@ -14,6 +14,7 @@ export class GanttScroll {
 
     this.gantt.api.registerMethod('scroll', 'to', this.scrollTo, this)
     this.gantt.api.registerMethod('scroll', 'toDate', this.scrollToDate, this)
+    this.gantt.api.registerMethod('scroll', 'toDateSoftly', this.scrollToDateSoftly, this)
     this.gantt.api.registerMethod('scroll', 'left', this.scrollToLeft, this)
     this.gantt.api.registerMethod('scroll', 'right', this.scrollToRight, this)
 
@@ -113,50 +114,66 @@ export class GanttScroll {
    * Scroll to a date
    *
    * @param {moment} date moment to scroll to.
-   * @param {integer} duration rate of time of the animation.
    */
-  scrollToDate (date, duration) {
-    let position = this.gantt.getPositionByDate(date)
+  scrollToDate (date) {
+    const position = this.gantt.getPositionByDate(date)
+
     if (position !== undefined) {
-      const element = this.$element[0];
-      const endPosition = position - this.$element[0].offsetWidth / 2;
-      if (!duration) {
-        element.scrollLeft = endPosition;
-      }
-      else {
-        const start = element.scrollLeft;
-        const change = (position - element.offsetWidth / 2) - start;
-        const increment = 20;
-        let currentTime = 0;
-        const animateScroll = () => {
-          currentTime += increment;
-          var val = this.easeInOutQuad(currentTime, start, change, duration);
-          element.scrollLeft = val;
-          if(currentTime < duration) {
-            setTimeout(animateScroll,
-              increment
-            );
-          }
-        };
-        animateScroll();
-      }
+      this.$element[0].scrollLeft = position - this.$element[0].offsetWidth / 2
+    }
+  }
+
+  /**
+   * Scroll to a date
+   *
+   * @param {moment} date moment to scroll to.
+   * @param {integer} duration rate time of the animation.
+   */
+  scrollToDateSoftly (date, duration = 200) {
+    const position = this.gantt.getPositionByDate(date)
+    const element = this.$element[0]
+    if (position !== undefined) {
+      const change = (position - element.offsetWidth / 2) - element.scrollLeft
+      this.scrollToPositionAsEaseInOutQuad(change, duration)
     }
   }
 
   /**
    * ease in out quad
    *
-   * @param {integer} time current time.
-   * @param {integer} from start value.
-   * @param {integer} change change in value.
-   * @param {integer} duration animation duration.
+   * @param {float} change is the change between the beginning and destination value of the property.
+   * @param {integer} duration is the total time of the tween.
+   */
+  scrollToPositionAsEaseInOutQuad (change, duration) {
+    const increment = 20
+    const element = this.$element[0]
+    const from = element.scrollLeft
+    let currentTime = 0
+    const animateScroll = () => {
+      currentTime += increment
+      element.scrollLeft = this.easeInOutQuad(currentTime, from, change, duration)
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment)
+      }
+    }
+    animateScroll()
+  }
+
+  /**
+   * ease in out quad
+   *
+   * @param {integer} time is the current time (or position) of the tween.
+   * @param {integer} from is the beginning value of the property.
+   * @param {float} change is the change between the beginning and destination value of the property.
+   * @param {integer} duration is the total time of the tween.
    */
   easeInOutQuad = function (time, from, change, duration) {
-    time /= duration/2;
-    if (time < 1) return change/2*time*time + from;
-    time--;
-    return -change/2 * (time*(time-2) - 1) + from;
-  };
+    console.log(time, from, change, duration)
+    time /= duration / 2
+    if (time < 1) return change / 2 * time * time + from
+    time--
+    return -change / 2 * (time * (time - 2) - 1) + from
+  }
 
 }
 
