@@ -1,7 +1,25 @@
 # New features
+   - ## Scroll to date softly
+
+      sroll to a specific date position in the gantt
+
+      ## Argument
+      ```
+        @param {moment} date moment to scroll to.
+
+        @param {integer} milliseconds of duration rate of time of the animation (default 200).
+      ```
+     ## Usage
+
+          const date = moment()
+          $scope.api.scroll.toDateSoftly(date)
+          // or
+          $scope.api.scroll.toDateSoftly(date, 300)
+
+
    - ## Go to Row for Recycler Plugin
       Go to a specific row of the recycler plugin
-        
+
      ## Usage
 
           const predicate = (row) => row.model.id === id)
@@ -37,7 +55,7 @@
             ]
 
         <!-- -->
-      
+
       ## Attributes
         - ### template-rows
             Here you can define the structure of your grid-side using this
@@ -49,10 +67,10 @@
                 width: '10px' // Width to css-grid, default to 100px
               }, {
                 type: 'column',
-                classes: ['some-cool-class'], // pass class to style this column 
+                classes: ['some-cool-class'], // pass class to style this column
                 headerContent: '<div> From </div>',
                 content: '<some-from-component></some-from-component>',
-                width: '10px' // Width to css-grid  
+                width: '10px' // Width to css-grid
               }, {
                 type: 'column',
                 classes: ['some-cool-class'],
@@ -67,14 +85,14 @@
    - ## Less watchers using one-time binding
    - ## Extra scale time for gantt columns
        Use extraScaleTime to scale symmetricaly the headerScale
-            
+
             // SomeComponent.js
             extraScaleTime: {
                 time: 3 // In Hours
             }
 
             // SomeTemplate.js
-            <div 
+            <div
                 gantt
                 extra-scale-time="$scope.extraScaleTime"
                 >
@@ -88,8 +106,8 @@
                 ]
 
 
-# angular-gantt 
-[![npm version](http://img.shields.io/npm/v/angular-gantt.svg?style=flat)](https://npmjs.org/package/angular-gantt) 
+# angular-gantt
+[![npm version](http://img.shields.io/npm/v/angular-gantt.svg?style=flat)](https://npmjs.org/package/angular-gantt)
 [![Build status](http://img.shields.io/travis/angular-gantt/angular-gantt.svg?style=flat)](https://travis-ci.org/angular-gantt/angular-gantt)
 [![Coverage Status](https://img.shields.io/coveralls/angular-gantt/angular-gantt.svg?style=flat)](https://coveralls.io/r/angular-gantt/angular-gantt)
 [![Documentation](https://readthedocs.org/projects/angular-gantt/badge/?style=flat)](https://angular-gantt.readthedocs.org)
@@ -100,7 +118,7 @@
 
 [angular-gantt](http://www.angular-gantt.com) provides a gantt chart component to your [AngularJS](https://angularjs.org/) application.
 
-<br/> 
+<br/>
 
 ![Angular Gantt](docs/img/angular-gantt.png)
 
@@ -109,10 +127,10 @@
 Try angular-gantt now using the [Demo Application](http://www.angular-gantt.com/demo).
 
 [Unstable Demo Application](http://rawgit.com/angular-gantt/angular-gantt/develop/demo.dist/index.html) is also available.
-It is build against [github develop](https://github.com/angular-gantt/angular-gantt) branch, and allows to preview 
+It is build against [github develop](https://github.com/angular-gantt/angular-gantt) branch, and allows to preview
 bleeding edge features, but may be very unstable.
 
-You can even try the API using Plunker sandbox, with [XYYkD8tf5b2LQs5kL5nx](http://plnkr.co/XYYkD8tf5b2LQs5kL5nx) 
+You can even try the API using Plunker sandbox, with [XYYkD8tf5b2LQs5kL5nx](http://plnkr.co/XYYkD8tf5b2LQs5kL5nx)
 (latest release) and [cNqoyX](http://plnkr.co/cNqoyX) (develop branch).
 
 ## Features
@@ -135,7 +153,7 @@ angular-gantt is available through [bower](http://bower.io/) and [npm](https://w
 
     npm install angular-gantt
     bower install angular-gantt
-    
+
 or
 
     npm install https://github.com/angular-gantt/angular-gantt/tarball/develop
@@ -157,7 +175,7 @@ You can find released version on CDNs.
 
 ## Download
 
-[Latest released version](https://github.com/angular-gantt/angular-gantt/releases/latest) is available to 
+[Latest released version](https://github.com/angular-gantt/angular-gantt/releases/latest) is available to
 [download](https://github.com/angular-gantt/angular-gantt/releases/latest) on Github and is the recommended and stable version.
 
 [Develop branch version](https://github.com/angular-gantt/angular-gantt/tree/develop) contains bleeding edge features, but may be very unstable.

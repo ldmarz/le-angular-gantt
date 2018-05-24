@@ -131,7 +131,7 @@ export default function ($scope, $timeout) {
   }
 
   $scope.easeScrollToDate = function () {
-    $scope.api.scroll.toDate(moment(), 200)
+    $scope.api.scroll.toDateSoftly(moment())
   }
 
   function appendChilds (limit = 1, parent = undefined) {
