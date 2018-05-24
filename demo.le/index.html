@@ -18,6 +18,8 @@
         <button ng-click="collapse(1)"> collapseOne </button>
         <button ng-click="test2()">noTask</button>
         <button ng-click="addTask()">add task</button>
+        <button ng-click="scrollToDate()">scroll to date</button>
+        <button ng-click="easeScrollToDate()">ease scroll to date</button>
         <md-input-container>
             <md-select ng-model="selectedRow" ng-change="goToRow(selectedRow)">
               <md-option ng-value="row.id" ng-repeat="row in data">{{ row.name }}</md-option>
@@ -25,15 +27,16 @@
           </md-input-container>
         <button type="button" style="width: 5em; text-align: left" class="btn btn-default" ng-model="scale" bs-options="s for s in ['minute', '5 minutes', 'hour', '3 hours', 'day', 'week', '2 weeks', 'month', 'quarter', '6 months', 'year']"
             bs-select></button>
-        <div gantt data="data" 
+        <div gantt data="data"
             api="registerApi"
-            auto-expand="autoExpand" 
+            auto-expand="autoExpand"
             task-out-of-range="taskOutOfRange"
-            extra-scale-time="extraScaleTime" 
-            expand-to-fit="expandToFit" 
+            extra-scale-time="extraScaleTime"
+            expand-to-fit="expandToFit"
             width="width"
             max-height="500"
             view-scale="scale"
+            column-width="getColumnWidth(zoom)"
 
             shrink-to-fit="shrinkToFit">
             <gantt-recycler
@@ -57,7 +60,7 @@
     .side-element {
         min-width: 500px;
     }
-    
+
     .input-hidden input{
         border: 1px red solid;
     }
