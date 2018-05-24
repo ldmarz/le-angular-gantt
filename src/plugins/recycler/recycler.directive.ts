@@ -1,3 +1,4 @@
+import $ from 'jquery'
 require('./recycler.html')
 import _ from 'lodash'
 
@@ -106,6 +107,21 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
         $scope.verticalScrollOpts.enable = false
       })
     }
+
+    function SyncRows () {
+      const recyclerScroll = $('.md-virtual-repeat-scroller')
+      const gridSideBackground = $('.gantt-side-background-body')
+      const ganttSide = $('.gantt-scrollable')
+
+      function callee () {
+        gridSideBackground.scrollTop(recyclerScroll.scrollTop())
+        ganttSide.scrollTop(recyclerScroll.scrollTop())
+      }
+
+      recyclerScroll.scroll(callee)
+    }
+
+    SyncRows()
 
     $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api)
 

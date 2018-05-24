@@ -16,7 +16,7 @@
           // or
           $scope.api.scroll.toDateSoftly(date, 300)
 
-
+   - ## Recycler Plugin Syncs scrolls with Gantt Side and Background
    - ## Go to Row for Recycler Plugin
       Go to a specific row of the recycler plugin
 
