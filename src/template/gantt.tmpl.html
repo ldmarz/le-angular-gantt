@@ -40,7 +40,7 @@
             <gantt-body-rows>
         <!--         <gantt-timespan ng-repeat="timespan in gantt.timespansManager.timespans track by timespan.model.id"></gantt-timespan> -->
                 <gantt-row id="gantt-row-test" ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id">
-                    <gantt-task id="gantt-task-test" ng-repeat="task in ::row.visibleTasks track by task.model.id">
+                    <gantt-task id="gantt-task-test" ng-repeat="task in row.visibleTasks track by task.model.id">
                     </gantt-task>
                 </gantt-row>
             </gantt-body-rows>

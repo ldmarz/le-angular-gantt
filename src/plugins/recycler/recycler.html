@@ -17,7 +17,7 @@
           <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}"
             >
 
-            <div ng-click="collapse()" ng-if="hasChildreen() && !row.model.isLoading" class="wrapper-collapsed">
+            <div ng-click="collapse()" ng-if="hasChildreen()" ng-show="!row.model.isLoading" class="wrapper-collapsed">
               <span class="gantt-tree-handle glyphicon" ng-class="{
                                       'glyphicon-chevron-right': row.model.childreenCollapsed, 'glyphicon-chevron-down': !row.model.childreenCollapsed,
                                       'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
