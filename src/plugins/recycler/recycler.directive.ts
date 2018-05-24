@@ -5,7 +5,7 @@ import _ from 'lodash'
 export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
   'ngInject'
   let builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html')
-  builder.controller = function ($scope) {
+  builder.controller = function ($scope, element) {
     $scope.verticalScrollOpts = {
       selector: '.md-virtual-repeat-scroller',
       enable: false
@@ -109,25 +109,29 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
     }
 
     function SyncRows () {
-      const recyclerScroll = $('.md-virtual-repeat-scroller')
-      const gridSideBackground = $('.gantt-side-background-body')
-      const ganttSide = $('.gantt-scrollable')
+      const $element = $(element[0])
+      const $ganttSide = $element.parents('.gantt-side')
+
+      const $recyclerScroll = $element.find('.md-virtual-repeat-scroller')
+      const $gridSideBackground = $ganttSide.find('.gantt-side-background-body')
+      const $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable')
+
       let listen = false
       function callee () {
         if (listen) {
-          gridSideBackground.scrollTop(recyclerScroll.scrollTop())
-          ganttSide.scrollTop(recyclerScroll.scrollTop())
+          $gridSideBackground.scrollTop($recyclerScroll.scrollTop())
+          $ganttSideScroll.scrollTop($recyclerScroll.scrollTop())
         }
       }
 
-      recyclerScroll.mouseenter(() => {
+      $recyclerScroll.mouseenter(() => {
         listen = true
       })
 
-      recyclerScroll.mouseleave(() => {
+      $recyclerScroll.mouseleave(() => {
         listen = false
       })
-      recyclerScroll.scroll(callee)
+      $recyclerScroll.scroll(callee)
     }
 
     SyncRows()
