@@ -31338,7 +31338,6 @@ var GanttScroll = exports.GanttScroll = function () {
         (0, _classCallCheck3.default)(this, GanttScroll);
 
         this.easeInOutQuad = function (time, from, change, duration) {
-            console.log(time, from, change, duration);
             time /= duration / 2;
             if (time < 1) return change / 2 * time * time + from;
             time--;

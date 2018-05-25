@@ -168,7 +168,6 @@ export class GanttScroll {
    * @param {integer} duration is the total time of the tween.
    */
   easeInOutQuad = function (time, from, change, duration) {
-    console.log(time, from, change, duration)
     time /= duration / 2
     if (time < 1) return change / 2 * time * time + from
     time--
