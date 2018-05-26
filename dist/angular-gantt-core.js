@@ -29952,7 +29952,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GanttColumnsManager = exports.GanttColumnsManager = function () {
-    function GanttColumnsManager(gantt) {
+    function GanttColumnsManager(gantt, GanttOptions) {
         var _this = this;
 
         (0, _classCallCheck3.default)(this, GanttColumnsManager);
@@ -29973,6 +29973,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt = gantt;
         this.from = undefined;
         this.to = undefined;
+        this.GanttOptions = GanttOptions;
         this.columns = [];
         this.visibleColumns = [];
         this.previousColumns = [];
@@ -30014,6 +30015,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt.api.registerMethod('columns', 'clear', this.clearColumns, this);
         this.gantt.api.registerMethod('columns', 'generate', this.generateColumns, this);
         this.gantt.api.registerMethod('columns', 'refresh', this.updateColumnsMeta, this);
+        this.gantt.api.registerMethod('columns', 'setColumnWidth', this.setColumnWidth, this);
         this.gantt.api.registerMethod('columns', 'getColumnsWidth', this.getColumnsWidth, this);
         this.gantt.api.registerMethod('columns', 'getColumnsWidthToFit', this.getColumnsWidthToFit, this);
         this.gantt.api.registerMethod('columns', 'getDateRange', this.getDateRange, this);
@@ -30237,6 +30239,13 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 }
             }
             return columnWidth;
+        }
+    }, {
+        key: 'setColumnWidth',
+        value: function setColumnWidth(columnWidth) {
+            console.log('here');
+            this.GanttOptions.set('columnWidth', columnWidth);
+            this.generateColumns();
         }
     }, {
         key: 'getColumnsWidthToFit',
@@ -32113,6 +32122,7 @@ var GanttColumnGenerator = function () {
             if (!to && !maximumWidth) {
                 throw new Error('to or maximumWidth must be defined');
             }
+            console.log('width generate', columnWidth);
             viewScale = viewScale.trim();
             if (viewScale.charAt(viewScale.length - 1) === 's') {
                 viewScale = viewScale.substring(0, viewScale.length - 1);
@@ -32533,7 +32543,7 @@ var Gantt = exports.Gantt = function () {
         this.side = new _side.GanttSide(this);
         this.objectModel = new _objectModel.GanttObjectModel(this.api);
         this.rowsManager = new _rowsManager.GanttRowsManager(this);
-        this.columnsManager = new _columnsManager.GanttColumnsManager(this);
+        this.columnsManager = new _columnsManager.GanttColumnsManager(this, this.options);
         this.timespansManager = new _timespansManager.GanttTimespansManager(this);
         this.currentDateManager = new _currentDateManager.GanttCurrentDateManager(this);
         this.originalWidth = 0;

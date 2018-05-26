@@ -190,7 +190,7 @@ export class Gantt {
     this.objectModel = new GanttObjectModel(this.api)
 
     this.rowsManager = new GanttRowsManager(this)
-    this.columnsManager = new GanttColumnsManager(this)
+    this.columnsManager = new GanttColumnsManager(this, this.options)
     this.timespansManager = new GanttTimespansManager(this)
     this.currentDateManager = new GanttCurrentDateManager(this)
 

@@ -34,6 +34,8 @@ export class GanttColumnsManager {
   columnBuilder: GanttColumnBuilder
   scrollAnchor: moment.Moment
 
+  GanttOptions
+
   defaultHeadersFormats = {
     year: 'YYYY',
     quarter: '[Q]Q YYYY',
@@ -49,11 +51,13 @@ export class GanttColumnsManager {
   defaultDayHeadersFormats = {day: 'LL', hour: 'H', minute: 'H:mm', second: 'H:mm:ss', millisecond: 'H:mm:ss:SSS'}
   defaultYearHeadersFormats = {'year': 'YYYY', 'quarter': '[Q]Q', month: 'MMMM'}
 
-  constructor (gantt) {
+  constructor (gantt, GanttOptions) {
     this.gantt = gantt
 
     this.from = undefined
     this.to = undefined
+
+    this.GanttOptions = GanttOptions
 
     this.columns = []
     this.visibleColumns = []
@@ -110,6 +114,7 @@ export class GanttColumnsManager {
     this.gantt.api.registerMethod('columns', 'clear', this.clearColumns, this)
     this.gantt.api.registerMethod('columns', 'generate', this.generateColumns, this)
     this.gantt.api.registerMethod('columns', 'refresh', this.updateColumnsMeta, this)
+    this.gantt.api.registerMethod('columns', 'setColumnWidth', this.setColumnWidth, this)
     this.gantt.api.registerMethod('columns', 'getColumnsWidth', this.getColumnsWidth, this)
     this.gantt.api.registerMethod('columns', 'getColumnsWidthToFit', this.getColumnsWidthToFit, this)
     this.gantt.api.registerMethod('columns', 'getDateRange', this.getDateRange, this)
@@ -358,6 +363,12 @@ export class GanttColumnsManager {
       }
     }
     return columnWidth
+  }
+
+  setColumnWidth (columnWidth) {
+    console.log('here')
+    this.GanttOptions.set('columnWidth', columnWidth)
+    this.generateColumns()
   }
 
   getColumnsWidthToFit () {

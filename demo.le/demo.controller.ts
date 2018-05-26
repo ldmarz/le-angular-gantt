@@ -106,6 +106,13 @@ export default function ($scope, $timeout) {
     $scope.api.recycler.expand(id)
   }
 
+  $scope.setWidth = function () {
+    $scope.api.columns.setColumnWidth(100)
+  }
+  $scope.setWidth2 = function () {
+    $scope.api.columns.setColumnWidth(200)
+  }
+
   $scope.collapse = function (id) {
     $scope.api.recycler.collapse(id)
   }
