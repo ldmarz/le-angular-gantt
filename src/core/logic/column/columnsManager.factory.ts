@@ -51,7 +51,7 @@ export class GanttColumnsManager {
   defaultDayHeadersFormats = {day: 'LL', hour: 'H', minute: 'H:mm', second: 'H:mm:ss', millisecond: 'H:mm:ss:SSS'}
   defaultYearHeadersFormats = {'year': 'YYYY', 'quarter': '[Q]Q', month: 'MMMM'}
 
-  oldScrollLeft
+  oldScrollDate
 
   constructor (gantt, GanttOptions) {
     this.gantt = gantt
@@ -70,7 +70,7 @@ export class GanttColumnsManager {
     this.visibleHeaders = []
 
     this.scrollAnchor = undefined
-    this.oldScrollLeft = undefined
+    this.oldScrollDate = undefined
 
     this.columnBuilder = new GanttColumnsManager.GanttColumnBuilder(this)
 
@@ -83,12 +83,13 @@ export class GanttColumnsManager {
       }
     })
 
+    // DEPRECATED
     // this.gantt.$scope.$watchCollection('headers', (newValues, oldValues) => {
     //   if (newValues !== oldValues && this.gantt.rendered) {
     //     this.generateColumns()
     //   }
     // })
-
+    // DEPRECATED
     // this.gantt.$scope.$watchCollection('headersFormats', (newValues, oldValues) => {
     //   if (newValues !== oldValues && this.gantt.rendered) {
     //     this.generateColumns()
@@ -136,7 +137,7 @@ export class GanttColumnsManager {
       const center = el.scrollLeft + el.offsetWidth / 2
       this.scrollAnchor = this.gantt.getDateByPosition(center)
 
-      this.oldScrollLeft = this.gantt.getDateByPosition(el.scrollLeft)
+      this.oldScrollDate = this.gantt.getDateByPosition(el.scrollLeft)
     }
   }
 
@@ -144,8 +145,8 @@ export class GanttColumnsManager {
     if (this.gantt.scroll.$element && this.columns.length > 0) {
       const el = this.gantt.scroll.$element[0]
 
-      if (this.oldScrollLeft) {
-        el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollLeft);
+      if (this.oldScrollDate) {
+        el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollDate);
       }
     }
   }
