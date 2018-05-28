@@ -353,6 +353,7 @@
 </li>
 <li>
 <h3 id="column-width">column-width</h3>
+<p>DEPRECATED - Use Api columns.setColumnWidth instead<</p>
 <p>The width of each column in <code>px</code>. This allows you add logic like <code>column-width="viewScale == 'day' ?  50 : 20"</code> to 
 have wider columns for days than for other column scales.</p>
 <p>If <code>undefined</code>, gantt will always fit available width.</p>
@@ -425,7 +426,8 @@ empty time before the first task, or truncate previous tasks.</p>
 tasks, or empty time after the last task, or truncate next tasks.</p>
 </li>
 <li>
-<h3 id="headers">headers</h3>
+<h3 id="headers">headers </h3>
+<p>DEPRECATED - Use Api  columns.setScale instead</p>
 <p>Array of headers to display.</p>
 <ul>
 <li><code>millisecond</code></li>
@@ -445,6 +447,7 @@ tasks, or empty time after the last task, or truncate next tasks.</p>
 </li>
 <li>
 <h3 id="headers-formats">headers-formats</h3>
+<p>DEPRECATED - Use Api columns.setScale instead</p>
 <p>Associative object of headers format. Key is the header, and value is the format.</p>
 <p>See <a href="http://momentjs.com/docs/#/displaying/format/">momentJS#format()</a></p>
 <pre><code>&lt;div gantt headers-formats="headersFormats"&gt;&lt;/div&gt;

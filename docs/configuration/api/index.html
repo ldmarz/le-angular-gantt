@@ -415,6 +415,15 @@ api.featureName.methodName();
 <p><strong>api.core.getPositionByDate(date)</strong></p>
 <p>Retrieves the position in gantt from date.</p>
 </li>
+<li>
+    <p>
+        <strong>api.core.setAttributes(AttributeName, value)</strong>
+    </p>
+    <p>Set attributes in gantt.</p>
+    <pre><code>
+        api.core.setAttributes('column-width', 100);
+    </code></pre>
+</li>
 </ul>
 <h4 id="data_1">data</h4>
 <ul>
@@ -467,8 +476,20 @@ api.featureName.methodName();
 <p>Generates all columns and display them.</p>
 </li>
 <li>
+<p>
+    <strong>api.columns.setColumnWidth(width)</strong>
+</p>
+<p>Set the actual width property of the columns.</p>
+</li>
+<li>
 <p><strong>api.columns.getColumnsWidth()</strong></p>
 <p>Get the actual width of the columns.</p>
+</li>
+<li>
+<p>
+    <strong>api.columns.setScale(scale, headers, headersFormat, width)</strong>
+</p>
+<p>Set properties required for a new scale.</p>
 </li>
 <li>
 <p><strong>api.columns.getColumnsWidthToFit()</strong></p>
