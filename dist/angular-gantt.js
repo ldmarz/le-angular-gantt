@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.2.2 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.2 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -31337,10 +31337,17 @@ var GanttScroll = exports.GanttScroll = function () {
     function GanttScroll(gantt) {
         (0, _classCallCheck3.default)(this, GanttScroll);
 
+        this.easeInOutQuad = function (time, from, change, duration) {
+            time /= duration / 2;
+            if (time < 1) return change / 2 * time * time + from;
+            time--;
+            return -change / 2 * (time * (time - 2) - 1) + from;
+        };
         this.gantt = gantt;
         this.gantt.api.registerEvent('scroll', 'scroll');
         this.gantt.api.registerMethod('scroll', 'to', this.scrollTo, this);
         this.gantt.api.registerMethod('scroll', 'toDate', this.scrollToDate, this);
+        this.gantt.api.registerMethod('scroll', 'toDateSoftly', this.scrollToDateSoftly, this);
         this.gantt.api.registerMethod('scroll', 'left', this.scrollToLeft, this);
         this.gantt.api.registerMethod('scroll', 'right', this.scrollToRight, this);
         this.gantt.api.registerMethod('scroll', 'setWidth', this.setWidth, this);
@@ -31431,6 +31438,36 @@ var GanttScroll = exports.GanttScroll = function () {
             if (position !== undefined) {
                 this.$element[0].scrollLeft = position - this.$element[0].offsetWidth / 2;
             }
+        }
+    }, {
+        key: 'scrollToDateSoftly',
+        value: function scrollToDateSoftly(date) {
+            var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
+
+            var position = this.gantt.getPositionByDate(date);
+            var element = this.$element[0];
+            if (position !== undefined) {
+                var change = position - element.offsetWidth / 2 - element.scrollLeft;
+                this.scrollToPositionAsEaseInOutQuad(change, duration);
+            }
+        }
+    }, {
+        key: 'scrollToPositionAsEaseInOutQuad',
+        value: function scrollToPositionAsEaseInOutQuad(change, duration) {
+            var _this = this;
+
+            var increment = 20;
+            var element = this.$element[0];
+            var from = element.scrollLeft;
+            var currentTime = 0;
+            var animateScroll = function animateScroll() {
+                currentTime += increment;
+                element.scrollLeft = _this.easeInOutQuad(currentTime, from, change, duration);
+                if (currentTime < duration) {
+                    setTimeout(animateScroll, increment);
+                }
+            };
+            animateScroll();
         }
     }]);
     return GanttScroll;
