@@ -108,6 +108,10 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       })
     }
 
+    $scope.isEven = (row, pool) => {
+      return _.indexOf(pool,row) % 2
+    }
+
     function SyncRows () {
       const $element = $(element[0])
       const $ganttSide = $element.parents('.gantt-side')
@@ -117,6 +121,7 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       const $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable')
 
       let listen = false
+
       function callee () {
         if (listen) {
           $gridSideBackground.scrollTop($recyclerScroll.scrollTop())
@@ -125,11 +130,14 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       }
 
       $recyclerScroll.mouseenter(() => {
-        listen = true
+        listen = true,
+        $scope.gantt.api.scroll.disableSender(true)
+
       })
 
       $recyclerScroll.mouseleave(() => {
         listen = false
+        $scope.gantt.api.scroll.disableSender(false)
       })
       $recyclerScroll.scroll(callee)
     }
