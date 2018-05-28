@@ -16,7 +16,7 @@ describe('Testing function to sort rows by Hierarchy', () => {
     expect(_.map(rowsOrdered, 'model.name')).to.eql(expectedResult)
   })
 
-  it.only('Should order', () => {
+  it('Should order', () => {
     const rowsOrdered = sortRows(rows)
     const expectedResult = [
       1,
@@ -25,7 +25,6 @@ describe('Testing function to sort rows by Hierarchy', () => {
       2,
       3
     ]
-    console.log(_.map(rowsOrdered, 'rowLevel'))
     expect(_.map(rowsOrdered, 'rowLevel')).to.eql(expectedResult)
   })
 })

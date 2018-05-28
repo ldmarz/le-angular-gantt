@@ -44,8 +44,6 @@ export default class GanttColumnGenerator {
       throw new Error('to or maximumWidth must be defined')
     }
 
-    console.log('width generate', columnWidth)
-
     viewScale = viewScale.trim()
     if (viewScale.charAt(viewScale.length - 1) === 's') {
       viewScale = viewScale.substring(0, viewScale.length - 1)
