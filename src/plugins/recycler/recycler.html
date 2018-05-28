@@ -10,7 +10,7 @@
   
     <md-virtual-repeat-container md-top-index="topIndex" id="vertical-container" gantt-vertical-scroll-receiver gantt-vertical-scroll-listener gantt-vertical-scroll-listener-options="verticalScrollOpts" ng-style="getLabelsCss()"
       class="grid-container">
-      <div md-item-size md-virtual-repeat="row in gantt.rowsManager.visibleRows" ng-class="{'gantt-row-even': isEven(row, gantt.rowsManager.visibleRows)}" ng-class="row.model.classes" class="gantt-row-height grid-row row-repeated"
+      <div md-item-size md-virtual-repeat="row in gantt.rowsManager.visibleRows" ng-class="getClasses(row, gantt.rowsManager.visibleRows)" ng-class="row.model.classes" class="gantt-row-height grid-row row-repeated"
         ng-controller="rowController" row-id="{{row.model.id}}" ng-style="{'grid-template-columns': getTemplateWidth(), 'background-color': row.model.color}">
         <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column grid-column" ng-class="getClass(rowTemplate)">
           <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
