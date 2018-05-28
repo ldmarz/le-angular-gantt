@@ -29981,23 +29981,16 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.headers = [];
         this.visibleHeaders = [];
         this.scrollAnchor = undefined;
+        this.oldScrollLeft = undefined;
         this.columnBuilder = new GanttColumnsManager.GanttColumnBuilder(this);
 
-        this.gantt.$scope.$watchGroup(['viewScale', 'columnWidth', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange'], function (newValues, oldValues) {
+        this.gantt.$scope.$watchGroup(['viewScale', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange', 'headers', 'headersFormats'], function (newValues, oldValues) {
             if (newValues !== oldValues && _this.gantt.rendered) {
                 _this.generateColumns();
+                _this.setScroll();
             }
         });
-        this.gantt.$scope.$watchCollection('headers', function (newValues, oldValues) {
-            if (newValues !== oldValues && _this.gantt.rendered) {
-                _this.generateColumns();
-            }
-        });
-        this.gantt.$scope.$watchCollection('headersFormats', function (newValues, oldValues) {
-            if (newValues !== oldValues && _this.gantt.rendered) {
-                _this.generateColumns();
-            }
-        });
+
         this.gantt.$scope.$watchGroup(['ganttElementWidth', 'showSide', 'sideWidth', 'maxHeight', 'daily'], function (newValues, oldValues) {
             if (newValues !== oldValues && _this.gantt.rendered) {
                 _this.updateColumnsMeta();
@@ -30019,6 +30012,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt.api.registerMethod('columns', 'getColumnsWidth', this.getColumnsWidth, this);
         this.gantt.api.registerMethod('columns', 'getColumnsWidthToFit', this.getColumnsWidthToFit, this);
         this.gantt.api.registerMethod('columns', 'getDateRange', this.getDateRange, this);
+        this.gantt.api.registerMethod('columns', 'setScale', this.setScale, this);
         this.gantt.api.registerEvent('columns', 'clear');
         this.gantt.api.registerEvent('columns', 'generate');
         this.gantt.api.registerEvent('columns', 'refresh');
@@ -30031,6 +30025,17 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 var el = this.gantt.scroll.$element[0];
                 var center = el.scrollLeft + el.offsetWidth / 2;
                 this.scrollAnchor = this.gantt.getDateByPosition(center);
+                this.oldScrollLeft = this.gantt.getDateByPosition(el.scrollLeft);
+            }
+        }
+    }, {
+        key: 'setScroll',
+        value: function setScroll() {
+            if (this.gantt.scroll.$element && this.columns.length > 0) {
+                var el = this.gantt.scroll.$element[0];
+                if (this.oldScrollLeft) {
+                    el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollLeft);
+                }
             }
         }
     }, {
@@ -30243,7 +30248,6 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
     }, {
         key: 'setColumnWidth',
         value: function setColumnWidth(columnWidth) {
-            console.log('here');
             this.GanttOptions.set('columnWidth', columnWidth);
             this.generateColumns();
         }
@@ -30431,6 +30435,14 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 lastColumn = this.getLastColumn();
             }
             return firstColumn && lastColumn ? [firstColumn.date, lastColumn.endDate] : undefined;
+        }
+    }, {
+        key: 'setScale',
+        value: function setScale(viewScale, headers, headersFormats, columnWidth) {
+            this.GanttOptions.set('headers', headers);
+            this.GanttOptions.set('headersFormats', headersFormats);
+            this.GanttOptions.set('columnWidth', columnWidth);
+            this.GanttOptions.set('viewScale', viewScale);
         }
     }]);
     return GanttColumnsManager;

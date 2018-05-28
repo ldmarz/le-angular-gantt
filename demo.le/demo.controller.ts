@@ -109,8 +109,17 @@ export default function ($scope, $timeout) {
   $scope.setWidth = function () {
     $scope.api.columns.setColumnWidth(100)
   }
+
   $scope.setWidth2 = function () {
     $scope.api.columns.setColumnWidth(200)
+  }
+  $scope.setScale = function () {
+    const headers = ['day', 'hour']
+    const headersFormats = {
+      day: 'DD-MMM-YYYY',
+      hour: 'HH'
+    }
+    $scope.api.columns.setScale('3 hours', headers, headersFormats)
   }
 
   $scope.collapse = function (id) {
