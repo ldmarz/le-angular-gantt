@@ -85178,7 +85178,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             });
             $recyclerScroll.scroll(callee);
         }
-
+        SyncRows();
         $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api);
     };
     return builder.build();
