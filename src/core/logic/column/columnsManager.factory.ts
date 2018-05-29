@@ -34,6 +34,8 @@ export class GanttColumnsManager {
   columnBuilder: GanttColumnBuilder
   scrollAnchor: moment.Moment
 
+  GanttOptions
+
   defaultHeadersFormats = {
     year: 'YYYY',
     quarter: '[Q]Q YYYY',
@@ -49,11 +51,15 @@ export class GanttColumnsManager {
   defaultDayHeadersFormats = {day: 'LL', hour: 'H', minute: 'H:mm', second: 'H:mm:ss', millisecond: 'H:mm:ss:SSS'}
   defaultYearHeadersFormats = {'year': 'YYYY', 'quarter': '[Q]Q', month: 'MMMM'}
 
-  constructor (gantt) {
+  oldScrollDate
+
+  constructor (gantt, GanttOptions) {
     this.gantt = gantt
 
     this.from = undefined
     this.to = undefined
+
+    this.GanttOptions = GanttOptions
 
     this.columns = []
     this.visibleColumns = []
@@ -64,28 +70,31 @@ export class GanttColumnsManager {
     this.visibleHeaders = []
 
     this.scrollAnchor = undefined
+    this.oldScrollDate = undefined
 
     this.columnBuilder = new GanttColumnsManager.GanttColumnBuilder(this)
 
     // Add a watcher if a view related setting changed from outside of the Gantt. Update the gantt accordingly if so.
     // All those changes need a recalculation of the header columns
-    this.gantt.$scope.$watchGroup(['viewScale', 'columnWidth', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange'], (newValues, oldValues) => {
+    this.gantt.$scope.$watchGroup(['viewScale', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange', 'headers', 'headersFormats'], (newValues, oldValues) => {
       if (newValues !== oldValues && this.gantt.rendered) {
         this.generateColumns()
+        this.setScroll()
       }
     })
 
-    this.gantt.$scope.$watchCollection('headers', (newValues, oldValues) => {
-      if (newValues !== oldValues && this.gantt.rendered) {
-        this.generateColumns()
-      }
-    })
-
-    this.gantt.$scope.$watchCollection('headersFormats', (newValues, oldValues) => {
-      if (newValues !== oldValues && this.gantt.rendered) {
-        this.generateColumns()
-      }
-    })
+    // DEPRECATED
+    // this.gantt.$scope.$watchCollection('headers', (newValues, oldValues) => {
+    //   if (newValues !== oldValues && this.gantt.rendered) {
+    //     this.generateColumns()
+    //   }
+    // })
+    // DEPRECATED
+    // this.gantt.$scope.$watchCollection('headersFormats', (newValues, oldValues) => {
+    //   if (newValues !== oldValues && this.gantt.rendered) {
+    //     this.generateColumns()
+    //   }
+    // })
 
     this.gantt.$scope.$watchGroup(['ganttElementWidth', 'showSide', 'sideWidth', 'maxHeight', 'daily'], (newValues, oldValues) => {
       if (newValues !== oldValues && this.gantt.rendered) {
@@ -110,9 +119,12 @@ export class GanttColumnsManager {
     this.gantt.api.registerMethod('columns', 'clear', this.clearColumns, this)
     this.gantt.api.registerMethod('columns', 'generate', this.generateColumns, this)
     this.gantt.api.registerMethod('columns', 'refresh', this.updateColumnsMeta, this)
+    this.gantt.api.registerMethod('columns', 'setColumnWidth', this.setColumnWidth, this)
     this.gantt.api.registerMethod('columns', 'getColumnsWidth', this.getColumnsWidth, this)
     this.gantt.api.registerMethod('columns', 'getColumnsWidthToFit', this.getColumnsWidthToFit, this)
     this.gantt.api.registerMethod('columns', 'getDateRange', this.getDateRange, this)
+
+    this.gantt.api.registerMethod('columns', 'setScale', this.setScale, this)
 
     this.gantt.api.registerEvent('columns', 'clear')
     this.gantt.api.registerEvent('columns', 'generate')
@@ -121,10 +133,21 @@ export class GanttColumnsManager {
 
   setScrollAnchor () {
     if (this.gantt.scroll.$element && this.columns.length > 0) {
-      let el = this.gantt.scroll.$element[0]
-      let center = el.scrollLeft + el.offsetWidth / 2
-
+      const el = this.gantt.scroll.$element[0]
+      const center = el.scrollLeft + el.offsetWidth / 2
       this.scrollAnchor = this.gantt.getDateByPosition(center)
+
+      this.oldScrollDate = this.gantt.getDateByPosition(el.scrollLeft)
+    }
+  }
+
+  setScroll () {
+    if (this.gantt.scroll.$element && this.columns.length > 0) {
+      const el = this.gantt.scroll.$element[0]
+
+      if (this.oldScrollDate) {
+        el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollDate);
+      }
     }
   }
 
@@ -189,9 +212,7 @@ export class GanttColumnsManager {
       from = this.gantt.rowsManager.getExpandedFrom(from as moment.Moment)
       to = this.gantt.rowsManager.getExpandedTo(to as moment.Moment)
     }
-
     this.setScrollAnchor()
-
     this.from = from as moment.Moment
     this.to = to as moment.Moment
 
@@ -202,7 +223,6 @@ export class GanttColumnsManager {
     this.headers = GanttColumnsManager.GanttHeadersGenerator.generate(this)
     this.updateColumnsMeta()
     this.scrollToScrollAnchor();
-
     (this.gantt.api as any).columns.raise.generate(this.columns, this.headers)
   }
 
@@ -358,6 +378,11 @@ export class GanttColumnsManager {
       }
     }
     return columnWidth
+  }
+
+  setColumnWidth (columnWidth) {
+    this.GanttOptions.set('columnWidth', columnWidth)
+    this.generateColumns()
   }
 
   getColumnsWidthToFit () {
@@ -531,6 +556,13 @@ export class GanttColumnsManager {
     }
 
     return firstColumn && lastColumn ? [firstColumn.date, lastColumn.endDate] : undefined
+  }
+
+  setScale (viewScale, headers, headersFormats, columnWidth) {
+    this.GanttOptions.set('headers', headers)
+    this.GanttOptions.set('headersFormats', headersFormats)
+    this.GanttOptions.set('columnWidth', columnWidth)
+    this.GanttOptions.set('viewScale', viewScale)
   }
 }
 

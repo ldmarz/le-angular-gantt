@@ -29952,7 +29952,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GanttColumnsManager = exports.GanttColumnsManager = function () {
-    function GanttColumnsManager(gantt) {
+    function GanttColumnsManager(gantt, GanttOptions) {
         var _this = this;
 
         (0, _classCallCheck3.default)(this, GanttColumnsManager);
@@ -29973,6 +29973,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt = gantt;
         this.from = undefined;
         this.to = undefined;
+        this.GanttOptions = GanttOptions;
         this.columns = [];
         this.visibleColumns = [];
         this.previousColumns = [];
@@ -29980,23 +29981,16 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.headers = [];
         this.visibleHeaders = [];
         this.scrollAnchor = undefined;
+        this.oldScrollDate = undefined;
         this.columnBuilder = new GanttColumnsManager.GanttColumnBuilder(this);
 
-        this.gantt.$scope.$watchGroup(['viewScale', 'columnWidth', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange'], function (newValues, oldValues) {
+        this.gantt.$scope.$watchGroup(['viewScale', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange', 'headers', 'headersFormats'], function (newValues, oldValues) {
             if (newValues !== oldValues && _this.gantt.rendered) {
                 _this.generateColumns();
+                _this.setScroll();
             }
         });
-        this.gantt.$scope.$watchCollection('headers', function (newValues, oldValues) {
-            if (newValues !== oldValues && _this.gantt.rendered) {
-                _this.generateColumns();
-            }
-        });
-        this.gantt.$scope.$watchCollection('headersFormats', function (newValues, oldValues) {
-            if (newValues !== oldValues && _this.gantt.rendered) {
-                _this.generateColumns();
-            }
-        });
+
         this.gantt.$scope.$watchGroup(['ganttElementWidth', 'showSide', 'sideWidth', 'maxHeight', 'daily'], function (newValues, oldValues) {
             if (newValues !== oldValues && _this.gantt.rendered) {
                 _this.updateColumnsMeta();
@@ -30014,9 +30008,11 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt.api.registerMethod('columns', 'clear', this.clearColumns, this);
         this.gantt.api.registerMethod('columns', 'generate', this.generateColumns, this);
         this.gantt.api.registerMethod('columns', 'refresh', this.updateColumnsMeta, this);
+        this.gantt.api.registerMethod('columns', 'setColumnWidth', this.setColumnWidth, this);
         this.gantt.api.registerMethod('columns', 'getColumnsWidth', this.getColumnsWidth, this);
         this.gantt.api.registerMethod('columns', 'getColumnsWidthToFit', this.getColumnsWidthToFit, this);
         this.gantt.api.registerMethod('columns', 'getDateRange', this.getDateRange, this);
+        this.gantt.api.registerMethod('columns', 'setScale', this.setScale, this);
         this.gantt.api.registerEvent('columns', 'clear');
         this.gantt.api.registerEvent('columns', 'generate');
         this.gantt.api.registerEvent('columns', 'refresh');
@@ -30029,6 +30025,17 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 var el = this.gantt.scroll.$element[0];
                 var center = el.scrollLeft + el.offsetWidth / 2;
                 this.scrollAnchor = this.gantt.getDateByPosition(center);
+                this.oldScrollDate = this.gantt.getDateByPosition(el.scrollLeft);
+            }
+        }
+    }, {
+        key: 'setScroll',
+        value: function setScroll() {
+            if (this.gantt.scroll.$element && this.columns.length > 0) {
+                var el = this.gantt.scroll.$element[0];
+                if (this.oldScrollDate) {
+                    el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollDate);
+                }
             }
         }
     }, {
@@ -30239,6 +30246,12 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
             return columnWidth;
         }
     }, {
+        key: 'setColumnWidth',
+        value: function setColumnWidth(columnWidth) {
+            this.GanttOptions.set('columnWidth', columnWidth);
+            this.generateColumns();
+        }
+    }, {
         key: 'getColumnsWidthToFit',
         value: function getColumnsWidthToFit() {
             return this.gantt.getBodyAvailableWidth() / this.columns.length;
@@ -30422,6 +30435,14 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
                 lastColumn = this.getLastColumn();
             }
             return firstColumn && lastColumn ? [firstColumn.date, lastColumn.endDate] : undefined;
+        }
+    }, {
+        key: 'setScale',
+        value: function setScale(viewScale, headers, headersFormats, columnWidth) {
+            this.GanttOptions.set('headers', headers);
+            this.GanttOptions.set('headersFormats', headersFormats);
+            this.GanttOptions.set('columnWidth', columnWidth);
+            this.GanttOptions.set('viewScale', viewScale);
         }
     }]);
     return GanttColumnsManager;
@@ -32460,6 +32481,7 @@ var Gantt = exports.Gantt = function () {
         this.api.registerEvent('data', 'clear');
         this.api.registerMethod('core', 'getDateByPosition', this.getDateByPosition, this);
         this.api.registerMethod('core', 'getPositionByDate', this.getPositionByDate, this);
+        this.api.registerMethod('core', 'setAttribute', this.setAttribute, this);
         this.api.registerMethod('data', 'load', this.loadData, this);
         this.api.registerMethod('data', 'remove', this.removeData, this);
         this.api.registerMethod('data', 'clear', this.clearData, this);
@@ -32533,7 +32555,7 @@ var Gantt = exports.Gantt = function () {
         this.side = new _side.GanttSide(this);
         this.objectModel = new _objectModel.GanttObjectModel(this.api);
         this.rowsManager = new _rowsManager.GanttRowsManager(this);
-        this.columnsManager = new _columnsManager.GanttColumnsManager(this);
+        this.columnsManager = new _columnsManager.GanttColumnsManager(this, this.options);
         this.timespansManager = new _timespansManager.GanttTimespansManager(this);
         this.currentDateManager = new _currentDateManager.GanttCurrentDateManager(this);
         this.originalWidth = 0;
@@ -32763,6 +32785,11 @@ var Gantt = exports.Gantt = function () {
         key: 'getContainerHeight',
         value: function getContainerHeight() {
             return this.$scope.ganttContainerHeight;
+        }
+    }, {
+        key: 'setAttribute',
+        value: function setAttribute(attributeName, value) {
+            this.options.set(attributeName, value);
         }
     }, {
         key: 'initialized',

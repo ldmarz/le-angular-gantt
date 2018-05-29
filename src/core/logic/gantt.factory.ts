@@ -101,6 +101,7 @@ export class Gantt {
 
     this.api.registerMethod('core', 'getDateByPosition', this.getDateByPosition, this)
     this.api.registerMethod('core', 'getPositionByDate', this.getPositionByDate, this)
+    this.api.registerMethod('core', 'setAttribute', this.setAttribute, this)
 
     this.api.registerMethod('data', 'load', this.loadData, this)
     this.api.registerMethod('data', 'remove', this.removeData, this)
@@ -190,7 +191,7 @@ export class Gantt {
     this.objectModel = new GanttObjectModel(this.api)
 
     this.rowsManager = new GanttRowsManager(this)
-    this.columnsManager = new GanttColumnsManager(this)
+    this.columnsManager = new GanttColumnsManager(this, this.options)
     this.timespansManager = new GanttTimespansManager(this)
     this.currentDateManager = new GanttCurrentDateManager(this)
 
@@ -444,6 +445,10 @@ export class Gantt {
 
   getContainerHeight () {
     return this.$scope.ganttContainerHeight
+  }
+
+  setAttribute (attributeName, value) {
+    this.options.set(attributeName, value)
   }
 
   initialized () {
