@@ -134,7 +134,7 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       $recyclerScroll.scroll(callee)
     }
 
-    SyncRows()
+    // SyncRows()
 
     $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api)
 
