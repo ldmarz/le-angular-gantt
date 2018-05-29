@@ -815,7 +815,7 @@ div.gantt-table-content {
 }
 
 #vertical-container .md-virtual-repeat-scroller {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .repeated-item {
