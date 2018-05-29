@@ -3,7 +3,7 @@
 }
 
 #vertical-container .md-virtual-repeat-scroller {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .repeated-item {
@@ -69,6 +69,10 @@
 .grid-row {
     display: grid;
     grid-template-rows: auto;
+}
+
+.grid-row.gantt-row-even {
+    background-color: #EFEFEF;
 }
 
 .glyphicon-refresh-animate {
