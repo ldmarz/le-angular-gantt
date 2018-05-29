@@ -71,7 +71,7 @@
     grid-template-rows: auto;
 }
 
-.gantt-row-even {
+.grid-row .gantt-row-even {
     background-color: #EFEFEF;
 }
 

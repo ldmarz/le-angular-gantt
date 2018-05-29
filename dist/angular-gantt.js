@@ -14,7 +14,7 @@
 		exports["angular-gantt"] = factory(require("angular"), require("moment"), require("ElementQueries"), require("ResizeSensor"), require("angular-animate"), require("angular-native-dragdrop"), require("ui.tree"));
 	else
 		root["angular-gantt"] = factory(root["angular"], root["moment"], root["ElementQueries"], root["ResizeSensor"], root["angular-animate"], root["angular-native-dragdrop"], root["ui.tree"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_308__, __WEBPACK_EXTERNAL_MODULE_309__, __WEBPACK_EXTERNAL_MODULE_310__, __WEBPACK_EXTERNAL_MODULE_311__, __WEBPACK_EXTERNAL_MODULE_312__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_304__, __WEBPACK_EXTERNAL_MODULE_305__, __WEBPACK_EXTERNAL_MODULE_306__, __WEBPACK_EXTERNAL_MODULE_307__, __WEBPACK_EXTERNAL_MODULE_308__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -80,7 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 313);
+/******/ 	return __webpack_require__(__webpack_require__.s = 309);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -107,7 +107,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(139);
+var _defineProperty = __webpack_require__(138);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -147,7 +147,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(149), __esModule: true };
+module.exports = { "default": __webpack_require__(148), __esModule: true };
 
 /***/ }),
 /* 5 */
@@ -158,11 +158,11 @@ module.exports = { "default": __webpack_require__(149), __esModule: true };
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(144);
+var _iterator = __webpack_require__(143);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(143);
+var _symbol = __webpack_require__(142);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -198,318 +198,318 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _gantt = __webpack_require__(74);
+var _gantt = __webpack_require__(73);
 
 var _gantt2 = _interopRequireDefault(_gantt);
 
-var _resizer = __webpack_require__(93);
+var _resizer = __webpack_require__(92);
 
 var _resizer2 = _interopRequireDefault(_resizer);
 
-var _containerHeightListener = __webpack_require__(100);
+var _containerHeightListener = __webpack_require__(99);
 
 var _containerHeightListener2 = _interopRequireDefault(_containerHeightListener);
 
-var _containerWidthListener = __webpack_require__(101);
+var _containerWidthListener = __webpack_require__(100);
 
 var _containerWidthListener2 = _interopRequireDefault(_containerWidthListener);
 
-var _elementHeightListener = __webpack_require__(102);
+var _elementHeightListener = __webpack_require__(101);
 
 var _elementHeightListener2 = _interopRequireDefault(_elementHeightListener);
 
-var _elementWidthListener = __webpack_require__(103);
+var _elementWidthListener = __webpack_require__(102);
 
 var _elementWidthListener2 = _interopRequireDefault(_elementWidthListener);
 
-var _horizontalScrollReceiver = __webpack_require__(94);
+var _horizontalScrollReceiver = __webpack_require__(93);
 
 var _horizontalScrollReceiver2 = _interopRequireDefault(_horizontalScrollReceiver);
 
-var _scrollable = __webpack_require__(97);
+var _scrollable = __webpack_require__(96);
 
 var _scrollable2 = _interopRequireDefault(_scrollable);
 
-var _scrollManager = __webpack_require__(95);
+var _scrollManager = __webpack_require__(94);
 
 var _scrollManager2 = _interopRequireDefault(_scrollManager);
 
-var _scrollSender = __webpack_require__(96);
+var _scrollSender = __webpack_require__(95);
 
 var _scrollSender2 = _interopRequireDefault(_scrollSender);
 
-var _verticalScrollReceiver = __webpack_require__(99);
+var _verticalScrollReceiver = __webpack_require__(98);
 
 var _verticalScrollReceiver2 = _interopRequireDefault(_verticalScrollReceiver);
 
-var _verticalScrollListener = __webpack_require__(98);
+var _verticalScrollListener = __webpack_require__(97);
 
 var _verticalScrollListener2 = _interopRequireDefault(_verticalScrollListener);
 
-var _body = __webpack_require__(104);
+var _body = __webpack_require__(103);
 
 var _body2 = _interopRequireDefault(_body);
 
-var _bodyBackground = __webpack_require__(105);
+var _bodyBackground = __webpack_require__(104);
 
 var _bodyBackground2 = _interopRequireDefault(_bodyBackground);
 
-var _bodyColumns = __webpack_require__(106);
+var _bodyColumns = __webpack_require__(105);
 
 var _bodyColumns2 = _interopRequireDefault(_bodyColumns);
 
-var _bodyForeground = __webpack_require__(107);
+var _bodyForeground = __webpack_require__(106);
 
 var _bodyForeground2 = _interopRequireDefault(_bodyForeground);
 
-var _bodyRows = __webpack_require__(108);
+var _bodyRows = __webpack_require__(107);
 
 var _bodyRows2 = _interopRequireDefault(_bodyRows);
 
-var _column = __webpack_require__(109);
+var _column = __webpack_require__(108);
 
 var _column2 = _interopRequireDefault(_column);
 
-var _columnHeader = __webpack_require__(110);
+var _columnHeader = __webpack_require__(109);
 
 var _columnHeader2 = _interopRequireDefault(_columnHeader);
 
-var _header = __webpack_require__(111);
+var _header = __webpack_require__(110);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _headerColumns = __webpack_require__(112);
+var _headerColumns = __webpack_require__(111);
 
 var _headerColumns2 = _interopRequireDefault(_headerColumns);
 
-var _row = __webpack_require__(113);
+var _row = __webpack_require__(112);
 
 var _row2 = _interopRequireDefault(_row);
 
-var _rowBackground = __webpack_require__(114);
+var _rowBackground = __webpack_require__(113);
 
 var _rowBackground2 = _interopRequireDefault(_rowBackground);
 
-var _rowLabel = __webpack_require__(115);
+var _rowLabel = __webpack_require__(114);
 
 var _rowLabel2 = _interopRequireDefault(_rowLabel);
 
-var _scrollableHeader = __webpack_require__(116);
+var _scrollableHeader = __webpack_require__(115);
 
 var _scrollableHeader2 = _interopRequireDefault(_scrollableHeader);
 
-var _side = __webpack_require__(117);
+var _side = __webpack_require__(116);
 
 var _side2 = _interopRequireDefault(_side);
 
-var _sideBackground = __webpack_require__(118);
+var _sideBackground = __webpack_require__(117);
 
 var _sideBackground2 = _interopRequireDefault(_sideBackground);
 
-var _sideContent = __webpack_require__(119);
+var _sideContent = __webpack_require__(118);
 
 var _sideContent2 = _interopRequireDefault(_sideContent);
 
-var _task = __webpack_require__(120);
+var _task = __webpack_require__(119);
 
 var _task2 = _interopRequireDefault(_task);
 
-var _taskBackground = __webpack_require__(121);
+var _taskBackground = __webpack_require__(120);
 
 var _taskBackground2 = _interopRequireDefault(_taskBackground);
 
-var _taskContent = __webpack_require__(122);
+var _taskContent = __webpack_require__(121);
 
 var _taskContent2 = _interopRequireDefault(_taskContent);
 
-var _taskForeground = __webpack_require__(123);
+var _taskForeground = __webpack_require__(122);
 
 var _taskForeground2 = _interopRequireDefault(_taskForeground);
 
-var _timeFrame = __webpack_require__(124);
+var _timeFrame = __webpack_require__(123);
 
 var _timeFrame2 = _interopRequireDefault(_timeFrame);
 
-var _timespan = __webpack_require__(125);
+var _timespan = __webpack_require__(124);
 
 var _timespan2 = _interopRequireDefault(_timespan);
 
-var _ganttBindCompileHtml = __webpack_require__(130);
+var _ganttBindCompileHtml = __webpack_require__(129);
 
 var _ganttBindCompileHtml2 = _interopRequireDefault(_ganttBindCompileHtml);
 
-var _ganttBindCompileHtmlOneTime = __webpack_require__(131);
+var _ganttBindCompileHtmlOneTime = __webpack_require__(130);
 
 var _ganttBindCompileHtmlOneTime2 = _interopRequireDefault(_ganttBindCompileHtmlOneTime);
 
-var _ganttRecompileOn = __webpack_require__(132);
+var _ganttRecompileOn = __webpack_require__(131);
 
 var _ganttRecompileOn2 = _interopRequireDefault(_ganttRecompileOn);
 
-var _gantt3 = __webpack_require__(78);
+var _gantt3 = __webpack_require__(77);
 
 var _gantt4 = _interopRequireDefault(_gantt3);
 
-var _api = __webpack_require__(47);
+var _api = __webpack_require__(45);
 
 var _api2 = _interopRequireDefault(_api);
 
-var _options = __webpack_require__(48);
+var _options = __webpack_require__(46);
 
 var _options2 = _interopRequireDefault(_options);
 
-var _calendar = __webpack_require__(49);
+var _calendar = __webpack_require__(47);
 
 var _calendar2 = _interopRequireDefault(_calendar);
 
-var _scroll = __webpack_require__(57);
+var _scroll = __webpack_require__(55);
 
 var _scroll2 = _interopRequireDefault(_scroll);
 
-var _body3 = __webpack_require__(55);
+var _body3 = __webpack_require__(53);
 
 var _body4 = _interopRequireDefault(_body3);
 
-var _bodyColumns3 = __webpack_require__(82);
+var _bodyColumns3 = __webpack_require__(81);
 
 var _bodyColumns4 = _interopRequireDefault(_bodyColumns3);
 
-var _bodyRows3 = __webpack_require__(84);
+var _bodyRows3 = __webpack_require__(83);
 
 var _bodyRows4 = _interopRequireDefault(_bodyRows3);
 
-var _bodyBackground3 = __webpack_require__(81);
+var _bodyBackground3 = __webpack_require__(80);
 
 var _bodyBackground4 = _interopRequireDefault(_bodyBackground3);
 
-var _bodyForeground3 = __webpack_require__(83);
+var _bodyForeground3 = __webpack_require__(82);
 
 var _bodyForeground4 = _interopRequireDefault(_bodyForeground3);
 
-var _header3 = __webpack_require__(56);
+var _header3 = __webpack_require__(54);
 
 var _header4 = _interopRequireDefault(_header3);
 
-var _headerColumns3 = __webpack_require__(85);
+var _headerColumns3 = __webpack_require__(84);
 
 var _headerColumns4 = _interopRequireDefault(_headerColumns3);
 
-var _side3 = __webpack_require__(58);
+var _side3 = __webpack_require__(56);
 
 var _side4 = _interopRequireDefault(_side3);
 
-var _objectModel = __webpack_require__(53);
+var _objectModel = __webpack_require__(51);
 
 var _objectModel2 = _interopRequireDefault(_objectModel);
 
-var _task3 = __webpack_require__(80);
+var _task3 = __webpack_require__(79);
 
 var _task4 = _interopRequireDefault(_task3);
 
-var _row3 = __webpack_require__(79);
+var _row3 = __webpack_require__(78);
 
 var _row4 = _interopRequireDefault(_row3);
 
-var _rowsManager = __webpack_require__(54);
+var _rowsManager = __webpack_require__(52);
 
 var _rowsManager2 = _interopRequireDefault(_rowsManager);
 
-var _column3 = __webpack_require__(30);
+var _column3 = __webpack_require__(29);
 
 var _column4 = _interopRequireDefault(_column3);
 
-var _columnBuilder = __webpack_require__(75);
+var _columnBuilder = __webpack_require__(74);
 
 var _columnBuilder2 = _interopRequireDefault(_columnBuilder);
 
-var _columnHeader3 = __webpack_require__(51);
+var _columnHeader3 = __webpack_require__(49);
 
 var _columnHeader4 = _interopRequireDefault(_columnHeader3);
 
-var _columnsManager = __webpack_require__(52);
+var _columnsManager = __webpack_require__(50);
 
 var _columnsManager2 = _interopRequireDefault(_columnsManager);
 
-var _timespan3 = __webpack_require__(86);
+var _timespan3 = __webpack_require__(85);
 
 var _timespan4 = _interopRequireDefault(_timespan3);
 
-var _timespansManager = __webpack_require__(59);
+var _timespansManager = __webpack_require__(57);
 
 var _timespansManager2 = _interopRequireDefault(_timespansManager);
 
-var _currentDateManager = __webpack_require__(50);
+var _currentDateManager = __webpack_require__(48);
 
 var _currentDateManager2 = _interopRequireDefault(_currentDateManager);
 
-var _hierarchy = __webpack_require__(89);
+var _hierarchy = __webpack_require__(88);
 
 var _hierarchy2 = _interopRequireDefault(_hierarchy);
 
-var _debounce = __webpack_require__(126);
+var _debounce = __webpack_require__(125);
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
-var _smartEvent = __webpack_require__(136);
+var _smartEvent = __webpack_require__(135);
 
 var _smartEvent2 = _interopRequireDefault(_smartEvent);
 
-var _directiveBuilder = __webpack_require__(127);
+var _directiveBuilder = __webpack_require__(126);
 
 var _directiveBuilder2 = _interopRequireDefault(_directiveBuilder);
 
-var _enableNgAnimate = __webpack_require__(129);
+var _enableNgAnimate = __webpack_require__(128);
 
 var _enableNgAnimate2 = _interopRequireDefault(_enableNgAnimate);
 
-var _utils = __webpack_require__(90);
+var _utils = __webpack_require__(89);
 
 var _utils2 = _interopRequireDefault(_utils);
 
-var _arrays = __webpack_require__(87);
+var _arrays = __webpack_require__(86);
 
 var _arrays2 = _interopRequireDefault(_arrays);
 
-var _binarySearch = __webpack_require__(88);
+var _binarySearch = __webpack_require__(87);
 
 var _binarySearch2 = _interopRequireDefault(_binarySearch);
 
-var _layout = __webpack_require__(133);
+var _layout = __webpack_require__(132);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _headersGenerator = __webpack_require__(77);
+var _headersGenerator = __webpack_require__(76);
 
 var _headersGenerator2 = _interopRequireDefault(_headersGenerator);
 
-var _columnGenerator = __webpack_require__(76);
+var _columnGenerator = __webpack_require__(75);
 
 var _columnGenerator2 = _interopRequireDefault(_columnGenerator);
 
-var _dom = __webpack_require__(128);
+var _dom = __webpack_require__(127);
 
 var _dom2 = _interopRequireDefault(_dom);
 
-var _mouseButton = __webpack_require__(134);
+var _mouseButton = __webpack_require__(133);
 
 var _mouseButton2 = _interopRequireDefault(_mouseButton);
 
-var _mouseOffset = __webpack_require__(135);
+var _mouseOffset = __webpack_require__(134);
 
 var _mouseOffset2 = _interopRequireDefault(_mouseOffset);
 
-var _columnLimit = __webpack_require__(91);
+var _columnLimit = __webpack_require__(90);
 
 var _columnLimit2 = _interopRequireDefault(_columnLimit);
 
-var _taskLimit = __webpack_require__(92);
+var _taskLimit = __webpack_require__(91);
 
 var _taskLimit2 = _interopRequireDefault(_taskLimit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(137);
-__webpack_require__(73);
+__webpack_require__(136);
+__webpack_require__(72);
 
 var _module = 'gantt';
 _angular2.default.module(_module, []).directive('gantt', _gantt2.default).directive('ganttResizer', _resizer2.default).directive('ganttContainerWidthListener', _containerWidthListener2.default).directive('ganttContainerHeightListener', _containerHeightListener2.default).directive('ganttElementWidthListener', _elementWidthListener2.default).directive('ganttElementHeightListener', _elementHeightListener2.default).directive('ganttHorizontalScrollReceiver', _horizontalScrollReceiver2.default).directive('ganttScrollable', _scrollable2.default).directive('ganttScrollManager', _scrollManager2.default).directive('ganttScrollSender', _scrollSender2.default).directive('ganttVerticalScrollReceiver', _verticalScrollReceiver2.default).directive('ganttVerticalScrollListener', _verticalScrollListener2.default).directive('ganttBindCompileHtml', _ganttBindCompileHtml2.default).directive('ganttBody', _body2.default).directive('ganttBodyBackground', _bodyBackground2.default).directive('ganttBodyColumns', _bodyColumns2.default).directive('ganttBodyForeground', _bodyForeground2.default).directive('ganttBodyRows', _bodyRows2.default).directive('ganttColumn', _column2.default).directive('ganttColumnHeader', _columnHeader2.default).directive('ganttHeader', _header2.default).directive('ganttHeaderColumns', _headerColumns2.default).directive('ganttRow', _row2.default).directive('ganttRowBackground', _rowBackground2.default).directive('ganttRowLabel', _rowLabel2.default).directive('ganttScrollableHeader', _scrollableHeader2.default).directive('ganttSide', _side2.default).directive('ganttSideBackground', _sideBackground2.default).directive('ganttSideContent', _sideContent2.default).directive('ganttTask', _task2.default).directive('ganttTaskBackground', _taskBackground2.default).directive('ganttTaskContent', _taskContent2.default).directive('ganttTaskForeground', _taskForeground2.default).directive('ganttTimeFrame', _timeFrame2.default).directive('ganttTimespan', _timespan2.default).directive('ganttRecompileOn', _ganttRecompileOn2.default).directive('ganttBindCompileHtmlOneTime', _ganttBindCompileHtmlOneTime2.default).factory('GanttDirectiveBuilder', _directiveBuilder2.default).factory('Gantt', _gantt4.default).factory('GanttApi', _api2.default).factory('GanttOptions', _options2.default).factory('GanttCalendar', _calendar2.default).factory('GanttScroll', _scroll2.default).factory('GanttBody', _body4.default).factory('GanttBodyColumns', _bodyColumns4.default).factory('GanttBodyRows', _bodyRows4.default).factory('GanttBodyBackground', _bodyBackground4.default).factory('GanttBodyForeground', _bodyForeground4.default).factory('GanttHeader', _header4.default).factory('GanttHeaderColumns', _headerColumns4.default).factory('GanttSide', _side4.default).factory('GanttObjectModel', _objectModel2.default).factory('GanttTask', _task4.default).factory('GanttRow', _row4.default).factory('GanttRowsManager', _rowsManager2.default).factory('GanttColumn', _column4.default).factory('GanttColumnHeader', _columnHeader4.default).factory('GanttColumnBuilder', _columnBuilder2.default).factory('GanttColumnsManager', _columnsManager2.default).factory('GanttTimespan', _timespan4.default).factory('GanttTimespansManager', _timespansManager2.default).factory('GanttCurrentDateManager', _currentDateManager2.default).factory('GanttHierarchy', _hierarchy2.default).factory('ganttDebounce', _debounce2.default).factory('GanttSmartEvent', _smartEvent2.default).service('ganttEnableNgAnimate', _enableNgAnimate2.default).service('ganttUtils', _utils2.default).service('ganttArrays', _arrays2.default).service('ganttBinarySearch', _binarySearch2.default).service('ganttLayout', _layout2.default).service('GanttHeadersGenerator', _headersGenerator2.default).service('GanttColumnGenerator', _columnGenerator2.default).service('ganttDom', _dom2.default).service('ganttMouseButton', _mouseButton2.default).service('ganttMouseOffset', _mouseOffset2.default).filter('ganttColumnLimit', _columnLimit2.default).filter('ganttTaskLimit', _taskLimit2.default);
@@ -544,7 +544,7 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(18);
+var isObject = __webpack_require__(17);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -555,7 +555,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(17)(function(){
+module.exports = !__webpack_require__(18)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -564,7 +564,7 @@ module.exports = !__webpack_require__(17)(function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject       = __webpack_require__(10)
-  , IE8_DOM_DEFINE = __webpack_require__(60)
+  , IE8_DOM_DEFINE = __webpack_require__(58)
   , toPrimitive    = __webpack_require__(37)
   , dP             = Object.defineProperty;
 
@@ -582,11 +582,31 @@ exports.f = __webpack_require__(11) ? Object.defineProperty : function definePro
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function(it, key){
+  return hasOwnProperty.call(it, key);
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(158)
+  , defined = __webpack_require__(30);
+module.exports = function(it){
+  return IObject(defined(it));
+};
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global    = __webpack_require__(9)
   , core      = __webpack_require__(6)
-  , ctx       = __webpack_require__(23)
+  , ctx       = __webpack_require__(22)
   , hide      = __webpack_require__(16)
   , PROTOTYPE = 'prototype';
 
@@ -647,26 +667,6 @@ $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-var hasOwnProperty = {}.hasOwnProperty;
-module.exports = function(it, key){
-  return hasOwnProperty.call(it, key);
-};
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(69)
-  , defined = __webpack_require__(31);
-module.exports = function(it){
-  return IObject(defined(it));
-};
-
-/***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -683,20 +683,20 @@ module.exports = __webpack_require__(11) ? function(object, key, value){
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
 };
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
 };
 
 /***/ }),
@@ -17789,7 +17789,7 @@ module.exports = function(it){
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29), __webpack_require__(182)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(182)(module)))
 
 /***/ }),
 /* 20 */
@@ -17799,18 +17799,6 @@ module.exports = {};
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys       = __webpack_require__(65)
-  , enumBugKeys = __webpack_require__(32);
-
-module.exports = Object.keys || function keys(O){
-  return $keys(O, enumBugKeys);
-};
-
-/***/ }),
-/* 22 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -17820,11 +17808,11 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(46);
+var aFunction = __webpack_require__(44);
 module.exports = function(fn, that, length){
   aFunction(fn);
   if(that === undefined)return fn;
@@ -17842,6 +17830,18 @@ module.exports = function(fn, that, length){
   return function(/* ...args */){
     return fn.apply(that, arguments);
   };
+};
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys       = __webpack_require__(64)
+  , enumBugKeys = __webpack_require__(31);
+
+module.exports = Object.keys || function keys(O){
+  return $keys(O, enumBugKeys);
 };
 
 /***/ }),
@@ -17875,16 +17875,10 @@ module.exports = true;
 
 /***/ }),
 /* 27 */
-/***/ (function(module, exports) {
-
-exports.f = {}.propertyIsEnumerable;
-
-/***/ }),
-/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var def = __webpack_require__(12).f
-  , has = __webpack_require__(14)
+  , has = __webpack_require__(13)
   , TAG = __webpack_require__(8)('toStringTag');
 
 module.exports = function(it, tag, stat){
@@ -17892,7 +17886,7 @@ module.exports = function(it, tag, stat){
 };
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17919,7 +17913,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18331,7 +18325,7 @@ var GanttColumn = exports.GanttColumn = function () {
 }();
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -18341,7 +18335,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -18350,13 +18344,13 @@ module.exports = (
 ).split(',');
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = __webpack_require__(10)
   , dPs         = __webpack_require__(164)
-  , enumBugKeys = __webpack_require__(32)
+  , enumBugKeys = __webpack_require__(31)
   , IE_PROTO    = __webpack_require__(34)('IE_PROTO')
   , Empty       = function(){ /* empty */ }
   , PROTOTYPE   = 'prototype';
@@ -18397,6 +18391,12 @@ module.exports = Object.create || function create(O, Properties){
 
 
 /***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+/***/ }),
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18433,7 +18433,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(18);
+var isObject = __webpack_require__(17);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -18469,7 +18469,7 @@ exports.f = __webpack_require__(8);
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(18)
+var isObject = __webpack_require__(17)
   , document = __webpack_require__(9).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -18479,22 +18479,6 @@ module.exports = function(it){
 
 /***/ }),
 /* 41 */
-/***/ (function(module, exports) {
-
-exports.f = Object.getOwnPropertySymbols;
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.13 ToObject(argument)
-var defined = __webpack_require__(31);
-module.exports = function(it){
-  return Object(defined(it));
-};
-
-/***/ }),
-/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18502,7 +18486,7 @@ module.exports = function(it){
 var $at  = __webpack_require__(168)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(61)(String, 'String', function(iterated){
+__webpack_require__(59)(String, 'String', function(iterated){
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -18517,7 +18501,7 @@ __webpack_require__(61)(String, 'String', function(iterated){
 });
 
 /***/ }),
-/* 44 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(172);
@@ -18535,7 +18519,7 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
 }
 
 /***/ }),
-/* 45 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28906,7 +28890,7 @@ return jQuery;
 
 
 /***/ }),
-/* 46 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = function(it){
@@ -28915,7 +28899,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29152,7 +29136,7 @@ var GanttApi = exports.GanttApi = function () {
 }();
 
 /***/ }),
-/* 48 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29235,7 +29219,7 @@ var GanttOptions = exports.GanttOptions = function () {
 }();
 
 /***/ }),
-/* 49 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29793,7 +29777,7 @@ var GanttCalendar = exports.GanttCalendar = function () {
 }();
 
 /***/ }),
-/* 50 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29871,7 +29855,7 @@ var GanttCurrentDateManager = exports.GanttCurrentDateManager = function () {
 }();
 
 /***/ }),
-/* 51 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29882,7 +29866,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GanttColumnHeader = undefined;
 
-var _getPrototypeOf = __webpack_require__(140);
+var _getPrototypeOf = __webpack_require__(139);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
@@ -29890,11 +29874,11 @@ var _classCallCheck2 = __webpack_require__(0);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _possibleConstructorReturn2 = __webpack_require__(146);
+var _possibleConstructorReturn2 = __webpack_require__(145);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(145);
+var _inherits2 = __webpack_require__(144);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -29904,7 +29888,7 @@ exports.default = function () {
     return GanttColumnHeader;
 };
 
-var _column = __webpack_require__(30);
+var _column = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29926,7 +29910,7 @@ var GanttColumnHeader = exports.GanttColumnHeader = function (_GanttColumn) {
 }(_column.GanttColumn);
 
 /***/ }),
-/* 52 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30444,7 +30428,7 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
 }();
 
 /***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30533,7 +30517,7 @@ var GanttObjectModel = exports.GanttObjectModel = function () {
 }();
 
 /***/ }),
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31238,7 +31222,7 @@ var GanttRowsManager = exports.GanttRowsManager = function () {
 }();
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31276,7 +31260,7 @@ var GanttBody = exports.GanttBody = function GanttBody(gantt) {
 };
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31322,7 +31306,7 @@ var GanttHeader = exports.GanttHeader = function () {
 }();
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31490,7 +31474,7 @@ var GanttScroll = exports.GanttScroll = function () {
 }();
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31562,7 +31546,7 @@ var GanttSide = exports.GanttSide = function () {
 }();
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31693,28 +31677,28 @@ var GanttTimespansManager = exports.GanttTimespansManager = function () {
 }();
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(11) && !__webpack_require__(17)(function(){
+module.exports = !__webpack_require__(11) && !__webpack_require__(18)(function(){
   return Object.defineProperty(__webpack_require__(40)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY        = __webpack_require__(26)
-  , $export        = __webpack_require__(13)
-  , redefine       = __webpack_require__(66)
+  , $export        = __webpack_require__(15)
+  , redefine       = __webpack_require__(65)
   , hide           = __webpack_require__(16)
-  , has            = __webpack_require__(14)
+  , has            = __webpack_require__(13)
   , Iterators      = __webpack_require__(20)
   , $iterCreate    = __webpack_require__(160)
-  , setToStringTag = __webpack_require__(28)
-  , getPrototypeOf = __webpack_require__(64)
+  , setToStringTag = __webpack_require__(27)
+  , getPrototypeOf = __webpack_require__(63)
   , ITERATOR       = __webpack_require__(8)('iterator')
   , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
   , FF_ITERATOR    = '@@iterator'
@@ -31777,15 +31761,15 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
 };
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE            = __webpack_require__(27)
+var pIE            = __webpack_require__(33)
   , createDesc     = __webpack_require__(24)
-  , toIObject      = __webpack_require__(15)
+  , toIObject      = __webpack_require__(14)
   , toPrimitive    = __webpack_require__(37)
-  , has            = __webpack_require__(14)
-  , IE8_DOM_DEFINE = __webpack_require__(60)
+  , has            = __webpack_require__(13)
+  , IE8_DOM_DEFINE = __webpack_require__(58)
   , gOPD           = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(11) ? gOPD : function getOwnPropertyDescriptor(O, P){
@@ -31798,24 +31782,30 @@ exports.f = __webpack_require__(11) ? gOPD : function getOwnPropertyDescriptor(O
 };
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys      = __webpack_require__(65)
-  , hiddenKeys = __webpack_require__(32).concat('length', 'prototype');
+var $keys      = __webpack_require__(64)
+  , hiddenKeys = __webpack_require__(31).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
   return $keys(O, hiddenKeys);
 };
 
 /***/ }),
-/* 64 */
+/* 62 */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+/***/ }),
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has         = __webpack_require__(14)
-  , toObject    = __webpack_require__(42)
+var has         = __webpack_require__(13)
+  , toObject    = __webpack_require__(66)
   , IE_PROTO    = __webpack_require__(34)('IE_PROTO')
   , ObjectProto = Object.prototype;
 
@@ -31828,12 +31818,12 @@ module.exports = Object.getPrototypeOf || function(O){
 };
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has          = __webpack_require__(14)
-  , toIObject    = __webpack_require__(15)
-  , arrayIndexOf = __webpack_require__(157)(false)
+var has          = __webpack_require__(13)
+  , toIObject    = __webpack_require__(14)
+  , arrayIndexOf = __webpack_require__(156)(false)
   , IE_PROTO     = __webpack_require__(34)('IE_PROTO');
 
 module.exports = function(object, names){
@@ -31850,17 +31840,27 @@ module.exports = function(object, names){
 };
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(16);
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(30);
+module.exports = function(it){
+  return Object(defined(it));
+};
 
 /***/ }),
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(22)
+var cof = __webpack_require__(21)
   , TAG = __webpack_require__(8)('toStringTag')
   // ES3 wrong here
   , ARG = cof(function(){ return arguments; }()) == 'Arguments';
@@ -31893,16 +31893,6 @@ module.exports = __webpack_require__(9).document && document.documentElement;
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(22);
-module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-  return cof(it) == 'String' ? it.split('') : Object(it);
-};
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
 // 7.1.15 ToLength
 var toInteger = __webpack_require__(36)
   , min       = Math.min;
@@ -31911,7 +31901,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var classof   = __webpack_require__(67)
@@ -31924,19 +31914,19 @@ module.exports = __webpack_require__(6).getIteratorMethod = function(it){
 };
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32016,7 +32006,7 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
 }];
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32042,7 +32032,7 @@ exports.default = ["GanttColumn", function (GanttColumn) {
     return GanttColumnBuilder;
 }];
 
-var _column = __webpack_require__(30);
+var _column = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32066,7 +32056,7 @@ var GanttColumnBuilder = exports.GanttColumnBuilder = function () {
 }();
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32203,7 +32193,7 @@ var GanttColumnGenerator = function () {
 exports.default = GanttColumnGenerator;
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32229,7 +32219,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _columnHeader = __webpack_require__(51);
+var _columnHeader = __webpack_require__(49);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32361,7 +32351,7 @@ var GanttHeadersGenerator = function () {
 exports.default = GanttHeadersGenerator;
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32397,29 +32387,29 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _api = __webpack_require__(47);
+var _api = __webpack_require__(45);
 
-var _options = __webpack_require__(48);
+var _options = __webpack_require__(46);
 
-var _calendar = __webpack_require__(49);
+var _calendar = __webpack_require__(47);
 
-var _currentDateManager = __webpack_require__(50);
+var _currentDateManager = __webpack_require__(48);
 
-var _objectModel = __webpack_require__(53);
+var _objectModel = __webpack_require__(51);
 
-var _rowsManager = __webpack_require__(54);
+var _rowsManager = __webpack_require__(52);
 
-var _columnsManager = __webpack_require__(52);
+var _columnsManager = __webpack_require__(50);
 
-var _timespansManager = __webpack_require__(59);
+var _timespansManager = __webpack_require__(57);
 
-var _scroll = __webpack_require__(57);
+var _scroll = __webpack_require__(55);
 
-var _body = __webpack_require__(55);
+var _body = __webpack_require__(53);
 
-var _header = __webpack_require__(56);
+var _header = __webpack_require__(54);
 
-var _side = __webpack_require__(58);
+var _side = __webpack_require__(56);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32795,7 +32785,7 @@ var Gantt = exports.Gantt = function () {
 }();
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33135,7 +33125,7 @@ var GanttRow = exports.GanttRow = function () {
 }();
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33355,7 +33345,7 @@ var GanttTask = exports.GanttTask = function () {
 }();
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33385,7 +33375,7 @@ var GanttBodyBackground = exports.GanttBodyBackground = function GanttBodyBackgr
 };
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33415,7 +33405,7 @@ var GanttBodyColumns = exports.GanttBodyColumns = function GanttBodyColumns(body
 };
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33445,7 +33435,7 @@ var GanttBodyForeground = exports.GanttBodyForeground = function GanttBodyForegr
 };
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33475,7 +33465,7 @@ var GanttBodyRows = exports.GanttBodyRows = function GanttBodyRows(body) {
 };
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33505,7 +33495,7 @@ var GanttHeaderColumns = exports.GanttHeaderColumns = function GanttHeaderColumn
 };
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33635,7 +33625,7 @@ var Timespan = exports.Timespan = function () {
 }();
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33749,7 +33739,7 @@ var GanttArrays = function () {
 exports.default = GanttArrays;
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33805,7 +33795,7 @@ var GanttBinarySearch = function () {
 exports.default = GanttBinarySearch;
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34002,7 +33992,7 @@ function GanttHierarchyFactory() {
 }
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34085,7 +34075,7 @@ var GanttUtils = function () {
 exports.default = GanttUtils;
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34115,7 +34105,7 @@ exports.default = ["ganttBinarySearch", function (ganttBinarySearch) {
 }];
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34162,7 +34152,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34268,7 +34258,7 @@ exports.default = ["$document", "$parse", "$timeout", "ganttMouseOffset", functi
 }];
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34291,7 +34281,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34338,7 +34328,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34402,14 +34392,14 @@ exports.default = function () {
     };
 };
 
-var _jquery = __webpack_require__(45);
+var _jquery = __webpack_require__(43);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34522,7 +34512,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34554,14 +34544,14 @@ exports.default = function () {
     };
 };
 
-var _jquery = __webpack_require__(45);
+var _jquery = __webpack_require__(43);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34584,7 +34574,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34630,7 +34620,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34676,7 +34666,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34716,7 +34706,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34756,7 +34746,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34778,7 +34768,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34800,7 +34790,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34822,7 +34812,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34844,7 +34834,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34866,7 +34856,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34889,7 +34879,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34912,7 +34902,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34934,7 +34924,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34956,7 +34946,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34988,7 +34978,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35006,7 +34996,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35026,7 +35016,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35061,7 +35051,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
 }];
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35083,7 +35073,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35114,7 +35104,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
 }];
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35132,7 +35122,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35179,7 +35169,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35197,7 +35187,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35215,7 +35205,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35233,7 +35223,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35256,7 +35246,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35279,7 +35269,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35314,7 +35304,7 @@ exports.default = ["$timeout", function ($timeout) {
 }];
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35417,7 +35407,7 @@ var GanttDirectiveBuilder = exports.GanttDirectiveBuilder = function () {
 }();
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35524,7 +35514,7 @@ var GanttDom = function () {
 exports.default = GanttDom;
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35561,7 +35551,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35591,7 +35581,7 @@ exports.default = ["$compile", function ($compile) {
 }];
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35617,7 +35607,7 @@ exports.default = ["$compile", function ($compile) {
 }];
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35657,7 +35647,7 @@ exports.default = ["$compile", function ($compile) {
 }];
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35806,7 +35796,7 @@ var GanttLayout = function () {
 exports.default = GanttLayout;
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35851,7 +35841,7 @@ var GanttMouseButton = function () {
 exports.default = GanttMouseButton;
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35908,7 +35898,7 @@ var GanttMouseOffset = function () {
 exports.default = GanttMouseOffset;
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35969,13 +35959,19 @@ var GanttSmartEvent = exports.GanttSmartEvent = function () {
 }();
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports) {
 
 var path = 'template/gantt.tmpl.html';
-var html = "<div class=\"gantt unselectable\" ng-cloak gantt-scroll-manager gantt-container-height-listener=ganttContainerHeight gantt-container-width-listener=ganttContainerWidth gantt-element-height-listener=ganttElementHeight gantt-element-width-listener=ganttElementWidth> <gantt-side> <gantt-side-background> </gantt-side-background> <gantt-side-content> </gantt-side-content> <div gantt-resizer=gantt.side.$element gantt-resizer-event-topic=side gantt-resizer-enabled=\"{{$parent.gantt.options.value('allowSideResizing')}}\" resizer-width=sideWidth class=gantt-resizer> <div ng-show=\"::$parent.gantt.options.value('allowSideResizing')\" class=gantt-resizer-display></div> </div> </gantt-side> <gantt-scrollable-header> <gantt-header gantt-element-height-listener=$parent.ganttHeaderHeight> <gantt-header-columns> <div ng-repeat=\"header in gantt.columnsManager.visibleHeaders track by $index\"> <div class=gantt-header-row ng-class=\"{'gantt-header-row-last': $last, 'gantt-header-row-first': $first}\"> <gantt-column-header ng-repeat=\"column in header\"></gantt-column-header> </div> </div> </gantt-header-columns> </gantt-header> </gantt-scrollable-header> <gantt-scrollable> <gantt-body> <gantt-body-background> <gantt-row-background ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"></gantt-row-background> </gantt-body-background> <gantt-body-columns> <gantt-column ng-repeat=\"column in gantt.columnsManager.visibleColumns\"> </gantt-column> </gantt-body-columns> <gantt-body-rows> <gantt-row id=gantt-row-test ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"> <gantt-task id=gantt-task-test ng-repeat=\"task in row.visibleTasks track by task.model.id\"> </gantt-task> </gantt-row> </gantt-body-rows> </gantt-body> </gantt-scrollable> <ng-transclude></ng-transclude> <script type=text/ng-template id=template/ganttBody.tmpl.html> <div ng-transclude class=\"gantt-body\" ng-style=\"{'width': gantt.width > 0 ? gantt.width +'px' : undefined}\"></div> </script> <script type=text/ng-template id=template/ganttHeader.tmpl.html> <div ng-transclude class=\"gantt-header\"\n             ng-show=\"gantt.columnsManager.columns.length > 0 && gantt.columnsManager.headers.length > 0\"></div> </script> <script type=text/ng-template id=template/ganttSide.tmpl.html> <div ng-transclude class=\"gantt-side\" style=\"width: auto;\"></div> </script> <script type=text/ng-template id=template/ganttSideContent.tmpl.html> <div class=\"gantt-side-content\" ng-style=\"getSideCss()\">\n        </div> </script> <script type=text/ng-template id=template/ganttHeaderColumns.tmpl.html> <div ng-transclude class=\"gantt-header-columns\"\n              gantt-horizontal-scroll-receiver></div> </script> <script type=text/ng-template id=template/ganttColumnHeader.tmpl.html> <div class=\"gantt-column-header\" ng-class=\"{'gantt-column-header-last': $last, 'gantt-column-header-first': $first}\">{{::column.label}}</div> </script> <script type=text/ng-template id=template/ganttBodyBackground.tmpl.html> <div ng-transclude class=\"gantt-body-background\"></div> </script> <script type=text/ng-template id=template/ganttBodyForeground.tmpl.html> <div ng-transclude class=\"gantt-body-foreground\"></div> </script> <script type=text/ng-template id=template/ganttBodyColumns.tmpl.html> <div ng-transclude class=\"gantt-body-columns\"></div> </script> <script type=text/ng-template id=template/ganttColumn.tmpl.html> <div ng-transclude class=\"gantt-column gantt-foreground-col\" ng-class=\"{'gantt-column-last': $last, 'gantt-column-first': $first}\"></div> </script> <script type=text/ng-template id=template/ganttTimeFrame.tmpl.html> <div class=\"gantt-timeframe\"></div> </script> <script type=text/ng-template id=template/ganttScrollable.tmpl.html> <div ng-transclude class=\"gantt-scrollable\" gantt-scroll-sender ng-style=\"getScrollableCss()\"></div> </script> <script type=text/ng-template id=template/ganttScrollableHeader.tmpl.html> <div ng-transclude class=\"gantt-scrollable-header\" ng-style=\"getScrollableHeaderCss()\"></div> </script> <script type=text/ng-template id=template/ganttBodyRows.tmpl.html> <div ng-transclude class=\"gantt-body-rows\"></div> </script> <script type=text/ng-template id=template/ganttTimespan.tmpl.html> <div class=\"gantt-timespan\" ng-class=\"timespan.model.classes\">\n        </div> </script> <script type=text/ng-template id=template/ganttTask.tmpl.html> <div class=\"gantt-task\" ng-class=\"::getClass()\">\n            <gantt-task-background></gantt-task-background> \n            <gantt-task-foreground></gantt-task-foreground>\n            <gantt-task-content></gantt-task-content>  \n        </div> </script> <script type=text/ng-template id=template/ganttTaskBackground.tmpl.html> <div class=\"gantt-task-background\" ng-style=\"{'background-color': task.model.color}\"></div> </script> <script type=text/ng-template id=template/ganttTaskForeground.tmpl.html> <div class=\"gantt-task-foreground\">\n            <div ng-if=\"task.truncatedRight\" class=\"gantt-task-truncated-right\" ng-style=\"{'padding-right': task.truncatedRightOffset + 'px'}\">&gt;</div>\n            <div ng-if=\"task.truncatedLeft\" class=\"gantt-task-truncated-left\" ng-style=\"{'padding-left': task.truncatedLeftOffset + 'px'}\">&lt;</div>\n        </div> </script> <script type=text/ng-template id=template/ganttTaskContent.tmpl.html> <div class=\"gantt-task-content\" unselectable=\"on\"><span unselectable=\"on\" gantt-bind-compile-html-one-time=\"getTaskContent()\"/></div> </script> <script type=text/ng-template id=template/ganttRowBackground.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"row.model.classes\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::{'height': row.model.height}\">\n            <div class=\"gantt-row-background\"\n                 ng-style=\"{'background-color': row.model.color}\">\n            </div>\n        </div> </script> <script type=text/ng-template id=template/ganttRow.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"getClass()\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::getHeight()\">\n            <div ng-transclude class=\"gantt-row-content\"></div>\n        </div> </script> <script type=text/ng-template id=template/ganttSideBackground.tmpl.html> <div class=\"gantt-side-background\">\n            <div class=\"gantt-side-background-header\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\">\n                <div ng-show=\"::$parent.ganttHeaderHeight\" class=\"gantt-header-row gantt-side-header-row\"></div>\n            </div>\n            <!-- <div class=\"gantt-side-background-body\" ng-style=\"getMaxHeightCss()\">\n                <div gantt-vertical-scroll-receiver>\n                    <div class=\"gantt-row gantt-row-height \"\n                         ng-class-odd=\"'gantt-row-odd'\"\n                         ng-class-even=\"'gantt-row-even'\"\n                         ng-class=\"row.model.classes\"\n                         ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"\n                         ng-style=\"::{'height': row.model.height}\">\n                        <div class=\"gantt-row-label gantt-row-background\"\n                             ng-style=\"{'background-color': row.model.color}\">\n                        </div>\n                    </div>\n                </div>\n            </div> -->\n        </div> </script> </div> ";
+var html = "<div class=\"gantt unselectable\" ng-cloak gantt-scroll-manager gantt-container-height-listener=ganttContainerHeight gantt-container-width-listener=ganttContainerWidth gantt-element-height-listener=ganttElementHeight gantt-element-width-listener=ganttElementWidth> <gantt-side> <gantt-side-background> </gantt-side-background> <gantt-side-content> </gantt-side-content> <div gantt-resizer=gantt.side.$element gantt-resizer-event-topic=side gantt-resizer-enabled=\"{{$parent.gantt.options.value('allowSideResizing')}}\" resizer-width=sideWidth class=gantt-resizer> <div ng-show=\"::$parent.gantt.options.value('allowSideResizing')\" class=gantt-resizer-display></div> </div> </gantt-side> <gantt-scrollable-header> <gantt-header gantt-element-height-listener=$parent.ganttHeaderHeight> <gantt-header-columns> <div ng-repeat=\"header in gantt.columnsManager.visibleHeaders track by $index\"> <div class=gantt-header-row ng-class=\"{'gantt-header-row-last': $last, 'gantt-header-row-first': $first}\"> <gantt-column-header ng-repeat=\"column in header\"></gantt-column-header> </div> </div> </gantt-header-columns> </gantt-header> </gantt-scrollable-header> <gantt-scrollable> <gantt-body> <gantt-body-background> <gantt-row-background ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"></gantt-row-background> </gantt-body-background> <gantt-body-columns> <gantt-column ng-repeat=\"column in gantt.columnsManager.visibleColumns\"> </gantt-column> </gantt-body-columns> <gantt-body-rows> <gantt-row id=gantt-row-test ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"> <gantt-task id=gantt-task-test ng-repeat=\"task in row.visibleTasks track by task.model.id\"> </gantt-task> </gantt-row> </gantt-body-rows> </gantt-body> </gantt-scrollable> <ng-transclude></ng-transclude> <script type=text/ng-template id=template/ganttBody.tmpl.html> <div ng-transclude class=\"gantt-body\" ng-style=\"{'width': gantt.width > 0 ? gantt.width +'px' : undefined}\"></div> </script> <script type=text/ng-template id=template/ganttHeader.tmpl.html> <div ng-transclude class=\"gantt-header\"\n             ng-show=\"gantt.columnsManager.columns.length > 0 && gantt.columnsManager.headers.length > 0\"></div> </script> <script type=text/ng-template id=template/ganttSide.tmpl.html> <div ng-transclude class=\"gantt-side\" style=\"width: auto;\"></div> </script> <script type=text/ng-template id=template/ganttSideContent.tmpl.html> <div class=\"gantt-side-content\" ng-style=\"getSideCss()\">\n        </div> </script> <script type=text/ng-template id=template/ganttHeaderColumns.tmpl.html> <div ng-transclude class=\"gantt-header-columns\"\n              gantt-horizontal-scroll-receiver></div> </script> <script type=text/ng-template id=template/ganttColumnHeader.tmpl.html> <div class=\"gantt-column-header\" ng-class=\"{'gantt-column-header-last': $last, 'gantt-column-header-first': $first}\">{{::column.label}}</div> </script> <script type=text/ng-template id=template/ganttBodyBackground.tmpl.html> <div ng-transclude class=\"gantt-body-background\"></div> </script> <script type=text/ng-template id=template/ganttBodyForeground.tmpl.html> <div ng-transclude class=\"gantt-body-foreground\"></div> </script> <script type=text/ng-template id=template/ganttBodyColumns.tmpl.html> <div ng-transclude class=\"gantt-body-columns\"></div> </script> <script type=text/ng-template id=template/ganttColumn.tmpl.html> <div ng-transclude class=\"gantt-column gantt-foreground-col\" ng-class=\"{'gantt-column-last': $last, 'gantt-column-first': $first}\"></div> </script> <script type=text/ng-template id=template/ganttTimeFrame.tmpl.html> <div class=\"gantt-timeframe\"></div> </script> <script type=text/ng-template id=template/ganttScrollable.tmpl.html> <div ng-transclude class=\"gantt-scrollable\" gantt-scroll-sender ng-style=\"getScrollableCss()\"></div> </script> <script type=text/ng-template id=template/ganttScrollableHeader.tmpl.html> <div ng-transclude class=\"gantt-scrollable-header\" ng-style=\"getScrollableHeaderCss()\"></div> </script> <script type=text/ng-template id=template/ganttBodyRows.tmpl.html> <div ng-transclude class=\"gantt-body-rows\"></div> </script> <script type=text/ng-template id=template/ganttTimespan.tmpl.html> <div class=\"gantt-timespan\" ng-class=\"timespan.model.classes\">\n        </div> </script> <script type=text/ng-template id=template/ganttTask.tmpl.html> <div class=\"gantt-task\" ng-class=\"::getClass()\">\n            <gantt-task-background></gantt-task-background> \n            <gantt-task-foreground></gantt-task-foreground>\n            <gantt-task-content></gantt-task-content>  \n        </div> </script> <script type=text/ng-template id=template/ganttTaskBackground.tmpl.html> <div class=\"gantt-task-background\" ng-style=\"{'background-color': task.model.color}\"></div> </script> <script type=text/ng-template id=template/ganttTaskForeground.tmpl.html> <div class=\"gantt-task-foreground\">\n            <div ng-if=\"task.truncatedRight\" class=\"gantt-task-truncated-right\" ng-style=\"{'padding-right': task.truncatedRightOffset + 'px'}\">&gt;</div>\n            <div ng-if=\"task.truncatedLeft\" class=\"gantt-task-truncated-left\" ng-style=\"{'padding-left': task.truncatedLeftOffset + 'px'}\">&lt;</div>\n        </div> </script> <script type=text/ng-template id=template/ganttTaskContent.tmpl.html> <div class=\"gantt-task-content\" unselectable=\"on\"><span unselectable=\"on\" gantt-bind-compile-html-one-time=\"getTaskContent()\"/></div> </script> <script type=text/ng-template id=template/ganttRowBackground.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"row.model.classes\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::{'height': row.model.height}\">\n            <div class=\"gantt-row-background\"\n                 ng-style=\"{'background-color': row.model.color}\">\n            </div>\n        </div> </script> <script type=text/ng-template id=template/ganttRow.tmpl.html> <div class=\"gantt-row gantt-row-height\"\n             ng-class=\"getClass()\"\n             ng-class-odd=\"'gantt-row-odd'\"\n             ng-class-even=\"'gantt-row-even'\"\n             ng-style=\"::getHeight()\">\n            <div ng-transclude class=\"gantt-row-content\"></div>\n        </div> </script> <script type=text/ng-template id=template/ganttSideBackground.tmpl.html> <div class=\"gantt-side-background\">\n            <div class=\"gantt-side-background-header\" ng-style=\"{height: $parent.ganttHeaderHeight + 'px'}\">\n                <div ng-show=\"::$parent.ganttHeaderHeight\" class=\"gantt-header-row gantt-side-header-row\"></div>\n            </div>\n            <div class=\"gantt-side-background-body\" ng-style=\"getMaxHeightCss()\">\n                <div gantt-vertical-scroll-receiver>\n                    <div class=\"gantt-row gantt-row-height \"\n                         ng-class-odd=\"'gantt-row-odd'\"\n                         ng-class-even=\"'gantt-row-even'\"\n                         ng-class=\"row.model.classes\"\n                         ng-repeat=\"row in gantt.rowsManager.visibleRows track by row.model.id\"\n                         ng-style=\"::{'height': row.model.height}\">\n                        <div class=\"gantt-row-label gantt-row-background\"\n                             ng-style=\"{'background-color': row.model.color}\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div> </script> </div> ";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(149), __esModule: true };
 
 /***/ }),
 /* 138 */
@@ -35999,13 +35995,13 @@ module.exports = { "default": __webpack_require__(152), __esModule: true };
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(153), __esModule: true };
+module.exports = { "default": __webpack_require__(204), __esModule: true };
 
 /***/ }),
 /* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(206), __esModule: true };
+module.exports = { "default": __webpack_require__(153), __esModule: true };
 
 /***/ }),
 /* 143 */
@@ -36017,22 +36013,16 @@ module.exports = { "default": __webpack_require__(154), __esModule: true };
 /* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(155), __esModule: true };
-
-/***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(141);
+var _setPrototypeOf = __webpack_require__(140);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(138);
+var _create = __webpack_require__(137);
 
 var _create2 = _interopRequireDefault(_create);
 
@@ -36059,7 +36049,7 @@ exports.default = function (subClass, superClass) {
 };
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36082,14 +36072,14 @@ exports.default = function (self, call) {
 };
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(304);
+module.exports = __webpack_require__(300);
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global, setImmediate) {/* @preserve
@@ -41711,18 +41701,18 @@ module.exports = ret;
 
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181), __webpack_require__(29), __webpack_require__(307).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(181), __webpack_require__(28), __webpack_require__(303).setImmediate))
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(44);
-__webpack_require__(43);
+__webpack_require__(42);
+__webpack_require__(41);
 module.exports = __webpack_require__(171);
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(173);
@@ -41732,7 +41722,7 @@ module.exports = function create(P, D){
 };
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(174);
@@ -41742,51 +41732,51 @@ module.exports = function defineProperty(it, key, desc){
 };
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(175);
 module.exports = __webpack_require__(6).Object.getPrototypeOf;
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(176);
 module.exports = __webpack_require__(6).Object.setPrototypeOf;
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(177);
-__webpack_require__(72);
+__webpack_require__(71);
 __webpack_require__(178);
 __webpack_require__(179);
 module.exports = __webpack_require__(6).Symbol;
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(43);
-__webpack_require__(44);
+__webpack_require__(41);
+__webpack_require__(42);
 module.exports = __webpack_require__(39).f('iterator');
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports) {
 
 module.exports = function(){ /* empty */ };
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
-var toIObject = __webpack_require__(15)
-  , toLength  = __webpack_require__(70)
+var toIObject = __webpack_require__(14)
+  , toLength  = __webpack_require__(69)
   , toIndex   = __webpack_require__(170);
 module.exports = function(IS_INCLUDES){
   return function($this, el, fromIndex){
@@ -41806,13 +41796,13 @@ module.exports = function(IS_INCLUDES){
 };
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(21)
-  , gOPS    = __webpack_require__(41)
-  , pIE     = __webpack_require__(27);
+var getKeys = __webpack_require__(23)
+  , gOPS    = __webpack_require__(62)
+  , pIE     = __webpack_require__(33);
 module.exports = function(it){
   var result     = getKeys(it)
     , getSymbols = gOPS.f;
@@ -41826,11 +41816,21 @@ module.exports = function(it){
 };
 
 /***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(21);
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+/***/ }),
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(22);
+var cof = __webpack_require__(21);
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
@@ -41841,9 +41841,9 @@ module.exports = Array.isArray || function isArray(arg){
 
 "use strict";
 
-var create         = __webpack_require__(33)
+var create         = __webpack_require__(32)
   , descriptor     = __webpack_require__(24)
-  , setToStringTag = __webpack_require__(28)
+  , setToStringTag = __webpack_require__(27)
   , IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -41866,8 +41866,8 @@ module.exports = function(done, value){
 /* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getKeys   = __webpack_require__(21)
-  , toIObject = __webpack_require__(15);
+var getKeys   = __webpack_require__(23)
+  , toIObject = __webpack_require__(14);
 module.exports = function(object, el){
   var O      = toIObject(object)
     , keys   = getKeys(O)
@@ -41882,14 +41882,14 @@ module.exports = function(object, el){
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(25)('meta')
-  , isObject = __webpack_require__(18)
-  , has      = __webpack_require__(14)
+  , isObject = __webpack_require__(17)
+  , has      = __webpack_require__(13)
   , setDesc  = __webpack_require__(12).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(17)(function(){
+var FREEZE = !__webpack_require__(18)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -41941,7 +41941,7 @@ var meta = module.exports = {
 
 var dP       = __webpack_require__(12)
   , anObject = __webpack_require__(10)
-  , getKeys  = __webpack_require__(21);
+  , getKeys  = __webpack_require__(23);
 
 module.exports = __webpack_require__(11) ? Object.defineProperties : function defineProperties(O, Properties){
   anObject(O);
@@ -41958,8 +41958,8 @@ module.exports = __webpack_require__(11) ? Object.defineProperties : function de
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(15)
-  , gOPN      = __webpack_require__(63).f
+var toIObject = __webpack_require__(14)
+  , gOPN      = __webpack_require__(61).f
   , toString  = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -41983,9 +41983,9 @@ module.exports.f = function getOwnPropertyNames(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(13)
+var $export = __webpack_require__(15)
   , core    = __webpack_require__(6)
-  , fails   = __webpack_require__(17);
+  , fails   = __webpack_require__(18);
 module.exports = function(KEY, exec){
   var fn  = (core.Object || {})[KEY] || Object[KEY]
     , exp = {};
@@ -41999,7 +41999,7 @@ module.exports = function(KEY, exec){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(18)
+var isObject = __webpack_require__(17)
   , anObject = __webpack_require__(10);
 var check = function(O, proto){
   anObject(O);
@@ -42009,7 +42009,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
       try {
-        set = __webpack_require__(23)(Function.call, __webpack_require__(62).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(22)(Function.call, __webpack_require__(60).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch(e){ buggy = true; }
@@ -42028,7 +42028,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(36)
-  , defined   = __webpack_require__(31);
+  , defined   = __webpack_require__(30);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function(TO_STRING){
@@ -42049,8 +42049,8 @@ module.exports = function(TO_STRING){
 /* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx                = __webpack_require__(23)
-  , invoke             = __webpack_require__(209)
+var ctx                = __webpack_require__(22)
+  , invoke             = __webpack_require__(207)
   , html               = __webpack_require__(68)
   , cel                = __webpack_require__(40)
   , global             = __webpack_require__(9)
@@ -42088,7 +42088,7 @@ if(!setTask || !clearTask){
     delete queue[id];
   };
   // Node.js 0.8-
-  if(__webpack_require__(22)(process) == 'process'){
+  if(__webpack_require__(21)(process) == 'process'){
     defer = function(id){
       process.nextTick(ctx(run, id, 1));
     };
@@ -42142,7 +42142,7 @@ module.exports = function(index, length){
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(10)
-  , get      = __webpack_require__(71);
+  , get      = __webpack_require__(70);
 module.exports = __webpack_require__(6).getIterator = function(it){
   var iterFn = get(it);
   if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
@@ -42155,16 +42155,16 @@ module.exports = __webpack_require__(6).getIterator = function(it){
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(156)
+var addToUnscopables = __webpack_require__(155)
   , step             = __webpack_require__(161)
   , Iterators        = __webpack_require__(20)
-  , toIObject        = __webpack_require__(15);
+  , toIObject        = __webpack_require__(14);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(61)(Array, 'Array', function(iterated, kind){
+module.exports = __webpack_require__(59)(Array, 'Array', function(iterated, kind){
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -42193,15 +42193,15 @@ addToUnscopables('entries');
 /* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(13)
+var $export = __webpack_require__(15)
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', {create: __webpack_require__(33)});
+$export($export.S, 'Object', {create: __webpack_require__(32)});
 
 /***/ }),
 /* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(13);
+var $export = __webpack_require__(15);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 $export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperty: __webpack_require__(12).f});
 
@@ -42210,8 +42210,8 @@ $export($export.S + $export.F * !__webpack_require__(11), 'Object', {definePrope
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
-var toObject        = __webpack_require__(42)
-  , $getPrototypeOf = __webpack_require__(64);
+var toObject        = __webpack_require__(66)
+  , $getPrototypeOf = __webpack_require__(63);
 
 __webpack_require__(166)('getPrototypeOf', function(){
   return function getPrototypeOf(it){
@@ -42224,7 +42224,7 @@ __webpack_require__(166)('getPrototypeOf', function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(13);
+var $export = __webpack_require__(15);
 $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(167).set});
 
 /***/ }),
@@ -42235,30 +42235,30 @@ $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(167).set});
 
 // ECMAScript 6 symbols shim
 var global         = __webpack_require__(9)
-  , has            = __webpack_require__(14)
+  , has            = __webpack_require__(13)
   , DESCRIPTORS    = __webpack_require__(11)
-  , $export        = __webpack_require__(13)
-  , redefine       = __webpack_require__(66)
+  , $export        = __webpack_require__(15)
+  , redefine       = __webpack_require__(65)
   , META           = __webpack_require__(163).KEY
-  , $fails         = __webpack_require__(17)
+  , $fails         = __webpack_require__(18)
   , shared         = __webpack_require__(35)
-  , setToStringTag = __webpack_require__(28)
+  , setToStringTag = __webpack_require__(27)
   , uid            = __webpack_require__(25)
   , wks            = __webpack_require__(8)
   , wksExt         = __webpack_require__(39)
   , wksDefine      = __webpack_require__(38)
   , keyOf          = __webpack_require__(162)
-  , enumKeys       = __webpack_require__(158)
+  , enumKeys       = __webpack_require__(157)
   , isArray        = __webpack_require__(159)
   , anObject       = __webpack_require__(10)
-  , toIObject      = __webpack_require__(15)
+  , toIObject      = __webpack_require__(14)
   , toPrimitive    = __webpack_require__(37)
   , createDesc     = __webpack_require__(24)
-  , _create        = __webpack_require__(33)
+  , _create        = __webpack_require__(32)
   , gOPNExt        = __webpack_require__(165)
-  , $GOPD          = __webpack_require__(62)
+  , $GOPD          = __webpack_require__(60)
   , $DP            = __webpack_require__(12)
-  , $keys          = __webpack_require__(21)
+  , $keys          = __webpack_require__(23)
   , gOPD           = $GOPD.f
   , dP             = $DP.f
   , gOPN           = gOPNExt.f
@@ -42381,9 +42381,9 @@ if(!USE_NATIVE){
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f   = $defineProperty;
-  __webpack_require__(63).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(27).f  = $propertyIsEnumerable;
-  __webpack_require__(41).f = $getOwnPropertySymbols;
+  __webpack_require__(61).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(33).f  = $propertyIsEnumerable;
+  __webpack_require__(62).f = $getOwnPropertySymbols;
 
   if(DESCRIPTORS && !__webpack_require__(26)){
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
@@ -42733,18 +42733,18 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _bounds = __webpack_require__(237);
+var _bounds = __webpack_require__(233);
 
 var _bounds2 = _interopRequireDefault(_bounds);
 
-var _taskBounds = __webpack_require__(238);
+var _taskBounds = __webpack_require__(234);
 
 var _taskBounds2 = _interopRequireDefault(_taskBounds);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.bounds';
-__webpack_require__(222);
+__webpack_require__(218);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttBounds', _bounds2.default).directive('ganttTaskBounds', _taskBounds2.default);
 exports.default = pluginModule;
 
@@ -42767,18 +42767,18 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _corner = __webpack_require__(239);
+var _corner = __webpack_require__(235);
 
 var _corner2 = _interopRequireDefault(_corner);
 
-var _cornerArea = __webpack_require__(240);
+var _cornerArea = __webpack_require__(236);
 
 var _cornerArea2 = _interopRequireDefault(_cornerArea);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.corner';
-__webpack_require__(223);
+__webpack_require__(219);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttCorner', _corner2.default).directive('ganttCornerArea', _cornerArea2.default);
 exports.default = pluginModule;
 
@@ -42801,34 +42801,34 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _dependencies = __webpack_require__(241);
+var _dependencies = __webpack_require__(237);
 
 var _dependencies2 = _interopRequireDefault(_dependencies);
 
-var _dependenciesEvents = __webpack_require__(243);
+var _dependenciesEvents = __webpack_require__(239);
 
 var _dependenciesEvents2 = _interopRequireDefault(_dependenciesEvents);
 
-var _dependenciesManager = __webpack_require__(244);
+var _dependenciesManager = __webpack_require__(240);
 
 var _dependenciesManager2 = _interopRequireDefault(_dependenciesManager);
 
-var _taskMouseHandler = __webpack_require__(246);
+var _taskMouseHandler = __webpack_require__(242);
 
 var _taskMouseHandler2 = _interopRequireDefault(_taskMouseHandler);
 
-var _dependenciesChecker = __webpack_require__(242);
+var _dependenciesChecker = __webpack_require__(238);
 
 var _dependenciesChecker2 = _interopRequireDefault(_dependenciesChecker);
 
-var _dependency = __webpack_require__(245);
+var _dependency = __webpack_require__(241);
 
 var _dependency2 = _interopRequireDefault(_dependency);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.dependencies';
-__webpack_require__(224);
+__webpack_require__(220);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttDependencies', _dependencies2.default).factory('GanttDependenciesEvents', _dependenciesEvents2.default).factory('GanttDependencyTaskMouseHandler', _taskMouseHandler2.default).factory('GanttDependenciesManager', _dependenciesManager2.default).factory('GanttDependenciesChecker', _dependenciesChecker2.default).factory('GanttDependency', _dependency2.default);
 exports.default = pluginModule;
 
@@ -42851,7 +42851,7 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _drawTask = __webpack_require__(247);
+var _drawTask = __webpack_require__(243);
 
 var _drawTask2 = _interopRequireDefault(_drawTask);
 
@@ -42880,30 +42880,30 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _groups = __webpack_require__(249);
+var _groups = __webpack_require__(245);
 
 var _groups2 = _interopRequireDefault(_groups);
 
-var _taskGroup = __webpack_require__(250);
+var _taskGroup = __webpack_require__(246);
 
 var _taskGroup2 = _interopRequireDefault(_taskGroup);
 
-var _taskGroup3 = __webpack_require__(251);
+var _taskGroup3 = __webpack_require__(247);
 
 var _taskGroup4 = _interopRequireDefault(_taskGroup3);
 
-var _taskOverview = __webpack_require__(252);
+var _taskOverview = __webpack_require__(248);
 
 var _taskOverview2 = _interopRequireDefault(_taskOverview);
 
-var _group = __webpack_require__(248);
+var _group = __webpack_require__(244);
 
 var _group2 = _interopRequireDefault(_group);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.groups';
-__webpack_require__(225);
+__webpack_require__(221);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttGroups', _groups2.default).directive('ganttTaskGroup', _taskGroup2.default).directive('ganttTaskOverview', _taskOverview2.default).factory('GanttTaskGroup', _taskGroup4.default).controller('GanttGroupController', _group2.default);
 exports.default = pluginModule;
 
@@ -43022,26 +43022,26 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _labels = __webpack_require__(253);
+var _labels = __webpack_require__(249);
 
 var _labels2 = _interopRequireDefault(_labels);
 
-var _sideContentLabels = __webpack_require__(256);
+var _sideContentLabels = __webpack_require__(252);
 
 var _sideContentLabels2 = _interopRequireDefault(_sideContentLabels);
 
-var _labelsHeader = __webpack_require__(255);
+var _labelsHeader = __webpack_require__(251);
 
 var _labelsHeader2 = _interopRequireDefault(_labelsHeader);
 
-var _labelsBody = __webpack_require__(254);
+var _labelsBody = __webpack_require__(250);
 
 var _labelsBody2 = _interopRequireDefault(_labelsBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.labels';
-__webpack_require__(226);
+__webpack_require__(222);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttLabels', _labels2.default).directive('ganttSideContentLabels', _sideContentLabels2.default).directive('ganttLabelsHeader', _labelsHeader2.default).directive('ganttLabelsBody', _labelsBody2.default);
 exports.default = pluginModule;
 
@@ -43064,18 +43064,18 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _movable = __webpack_require__(257);
+var _movable = __webpack_require__(253);
 
 var _movable2 = _interopRequireDefault(_movable);
 
-var _movableOptions = __webpack_require__(258);
+var _movableOptions = __webpack_require__(254);
 
 var _movableOptions2 = _interopRequireDefault(_movableOptions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.movable';
-__webpack_require__(227);
+__webpack_require__(223);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttMovable', _movable2.default).factory('ganttMovableOptions', _movableOptions2.default);
 exports.default = pluginModule;
 
@@ -43098,14 +43098,14 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _overlap = __webpack_require__(259);
+var _overlap = __webpack_require__(255);
 
 var _overlap2 = _interopRequireDefault(_overlap);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.overlap';
-__webpack_require__(228);
+__webpack_require__(224);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttOverlap', _overlap2.default);
 exports.default = pluginModule;
 
@@ -43128,18 +43128,18 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _progress = __webpack_require__(260);
+var _progress = __webpack_require__(256);
 
 var _progress2 = _interopRequireDefault(_progress);
 
-var _taskProgress = __webpack_require__(261);
+var _taskProgress = __webpack_require__(257);
 
 var _taskProgress2 = _interopRequireDefault(_taskProgress);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.progress';
-__webpack_require__(229);
+__webpack_require__(225);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttProgress', _progress2.default).directive('ganttTaskProgress', _taskProgress2.default);
 exports.default = pluginModule;
 
@@ -43166,23 +43166,23 @@ var _angularMaterial = __webpack_require__(203);
 
 var _angularMaterial2 = _interopRequireDefault(_angularMaterial);
 
-var _recycler = __webpack_require__(264);
+var _recycler = __webpack_require__(260);
 
 var _recycler2 = _interopRequireDefault(_recycler);
 
-var _recycler3 = __webpack_require__(263);
+var _recycler3 = __webpack_require__(259);
 
 var _recycler4 = _interopRequireDefault(_recycler3);
 
-var _row = __webpack_require__(265);
+var _row = __webpack_require__(261);
 
 var _row2 = _interopRequireDefault(_row);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.recycler';
-__webpack_require__(230);
-__webpack_require__(220);
+__webpack_require__(226);
+__webpack_require__(216);
 _angular2.default.module(pluginModule, [_index2.default, _angularMaterial2.default]).directive('ganttRecycler', _recycler2.default).directive('recycler', _recycler4.default).controller('rowController', _row2.default);
 exports.default = pluginModule;
 
@@ -43205,7 +43205,7 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _resizeSensor = __webpack_require__(267);
+var _resizeSensor = __webpack_require__(263);
 
 var _resizeSensor2 = _interopRequireDefault(_resizeSensor);
 
@@ -43234,22 +43234,22 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _sections = __webpack_require__(268);
+var _sections = __webpack_require__(264);
 
 var _sections2 = _interopRequireDefault(_sections);
 
-var _taskSection = __webpack_require__(269);
+var _taskSection = __webpack_require__(265);
 
 var _taskSection2 = _interopRequireDefault(_taskSection);
 
-var _taskSections = __webpack_require__(270);
+var _taskSections = __webpack_require__(266);
 
 var _taskSections2 = _interopRequireDefault(_taskSections);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.sections';
-__webpack_require__(231);
+__webpack_require__(227);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttSections', _sections2.default).directive('ganttTaskSection', _taskSection2.default).directive('ganttTaskSections', _taskSections2.default);
 exports.default = pluginModule;
 
@@ -43268,20 +43268,20 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-__webpack_require__(311);
+__webpack_require__(307);
 
 var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _sortable = __webpack_require__(271);
+var _sortable = __webpack_require__(267);
 
 var _sortable2 = _interopRequireDefault(_sortable);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.sortable';
-__webpack_require__(232);
+__webpack_require__(228);
 _angular2.default.module(pluginModule, ['ang-drag-drop', _index2.default]).directive('ganttSortable', _sortable2.default);
 exports.default = pluginModule;
 
@@ -43304,26 +43304,26 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _table = __webpack_require__(273);
+var _table = __webpack_require__(269);
 
 var _table2 = _interopRequireDefault(_table);
 
-var _sideContentTable = __webpack_require__(272);
+var _sideContentTable = __webpack_require__(268);
 
 var _sideContentTable2 = _interopRequireDefault(_sideContentTable);
 
-var _tableColumn = __webpack_require__(274);
+var _tableColumn = __webpack_require__(270);
 
 var _tableColumn2 = _interopRequireDefault(_tableColumn);
 
-var _tableColumnRow = __webpack_require__(275);
+var _tableColumnRow = __webpack_require__(271);
 
 var _tableColumnRow2 = _interopRequireDefault(_tableColumnRow);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.table';
-__webpack_require__(233);
+__webpack_require__(229);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttTable', _table2.default).directive('ganttSideContentTable', _sideContentTable2.default).controller('TableColumnController', _tableColumn2.default).controller('TableColumnRowController', _tableColumnRow2.default);
 exports.default = pluginModule;
 
@@ -43346,18 +43346,18 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _tooltips = __webpack_require__(277);
+var _tooltips = __webpack_require__(273);
 
 var _tooltips2 = _interopRequireDefault(_tooltips);
 
-var _tooltip = __webpack_require__(276);
+var _tooltip = __webpack_require__(272);
 
 var _tooltip2 = _interopRequireDefault(_tooltip);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.tooltips';
-__webpack_require__(234);
+__webpack_require__(230);
 _angular2.default.module(pluginModule, [_index2.default]).directive('ganttTooltips', _tooltips2.default).directive('ganttTooltip', _tooltip2.default);
 exports.default = pluginModule;
 
@@ -43376,7 +43376,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _angularUiTree = __webpack_require__(312);
+var _angularUiTree = __webpack_require__(308);
 
 var _angularUiTree2 = _interopRequireDefault(_angularUiTree);
 
@@ -43384,47 +43384,47 @@ var _index = __webpack_require__(7);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _config = __webpack_require__(278);
+var _config = __webpack_require__(274);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _tree = __webpack_require__(282);
+var _tree = __webpack_require__(278);
 
 var _tree2 = _interopRequireDefault(_tree);
 
-var _rowTreeLabel = __webpack_require__(279);
+var _rowTreeLabel = __webpack_require__(275);
 
 var _rowTreeLabel2 = _interopRequireDefault(_rowTreeLabel);
 
-var _sideContentTree = __webpack_require__(280);
+var _sideContentTree = __webpack_require__(276);
 
 var _sideContentTree2 = _interopRequireDefault(_sideContentTree);
 
-var _treeBody = __webpack_require__(283);
+var _treeBody = __webpack_require__(279);
 
 var _treeBody2 = _interopRequireDefault(_treeBody);
 
-var _treeHeader = __webpack_require__(284);
+var _treeHeader = __webpack_require__(280);
 
 var _treeHeader2 = _interopRequireDefault(_treeHeader);
 
-var _uiTree = __webpack_require__(286);
+var _uiTree = __webpack_require__(282);
 
 var _uiTree2 = _interopRequireDefault(_uiTree);
 
-var _treeNode = __webpack_require__(285);
+var _treeNode = __webpack_require__(281);
 
 var _treeNode2 = _interopRequireDefault(_treeNode);
 
-var _tree3 = __webpack_require__(281);
+var _tree3 = __webpack_require__(277);
 
 var _tree4 = _interopRequireDefault(_tree3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pluginModule = 'gantt.tree';
-__webpack_require__(221);
-__webpack_require__(235);
+__webpack_require__(217);
+__webpack_require__(231);
 _angular2.default.module(pluginModule, [_index2.default, _angularUiTree2.default || 'ui.tree']).config(_config2.default).directive('ganttTree', _tree2.default).directive('ganttRowTreeLabel', _rowTreeLabel2.default).directive('ganttSideContentTree', _sideContentTree2.default).directive('ganttTreeBody', _treeBody2.default).directive('ganttTreeHeader', _treeHeader2.default).controller('GanttUiTreeController', _uiTree2.default).controller('GanttTreeNodeController', _treeNode2.default).controller('GanttTreeController', _tree4.default);
 exports.default = pluginModule;
 
@@ -80250,7 +80250,7 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 __webpack_require__(2);
 
 // Load Angular and dependent libs
-__webpack_require__(310);
+__webpack_require__(306);
 __webpack_require__(201);
 
 // Now load Angular Material
@@ -80264,27 +80264,14 @@ module.exports = 'ngMaterial';
 /* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(205), __esModule: true };
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(218);
-module.exports = __webpack_require__(6).Object.assign;
-
-/***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(72);
-__webpack_require__(43);
-__webpack_require__(44);
-__webpack_require__(219);
+__webpack_require__(71);
+__webpack_require__(41);
+__webpack_require__(42);
+__webpack_require__(215);
 module.exports = __webpack_require__(6).Promise;
 
 /***/ }),
-/* 207 */
+/* 205 */
 /***/ (function(module, exports) {
 
 module.exports = function(it, Constructor, name, forbiddenField){
@@ -80294,15 +80281,15 @@ module.exports = function(it, Constructor, name, forbiddenField){
 };
 
 /***/ }),
-/* 208 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx         = __webpack_require__(23)
-  , call        = __webpack_require__(211)
-  , isArrayIter = __webpack_require__(210)
+var ctx         = __webpack_require__(22)
+  , call        = __webpack_require__(209)
+  , isArrayIter = __webpack_require__(208)
   , anObject    = __webpack_require__(10)
-  , toLength    = __webpack_require__(70)
-  , getIterFn   = __webpack_require__(71)
+  , toLength    = __webpack_require__(69)
+  , getIterFn   = __webpack_require__(70)
   , BREAK       = {}
   , RETURN      = {};
 var exports = module.exports = function(iterable, entries, fn, that, ITERATOR){
@@ -80324,7 +80311,7 @@ exports.BREAK  = BREAK;
 exports.RETURN = RETURN;
 
 /***/ }),
-/* 209 */
+/* 207 */
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -80345,7 +80332,7 @@ module.exports = function(fn, args, that){
 };
 
 /***/ }),
-/* 210 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
@@ -80358,7 +80345,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 211 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
@@ -80375,7 +80362,7 @@ module.exports = function(iterator, fn, value, entries){
 };
 
 /***/ }),
-/* 212 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR     = __webpack_require__(8)('iterator')
@@ -80401,7 +80388,7 @@ module.exports = function(exec, skipClosing){
 };
 
 /***/ }),
-/* 213 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global    = __webpack_require__(9)
@@ -80409,7 +80396,7 @@ var global    = __webpack_require__(9)
   , Observer  = global.MutationObserver || global.WebKitMutationObserver
   , process   = global.process
   , Promise   = global.Promise
-  , isNode    = __webpack_require__(22)(process) == 'process';
+  , isNode    = __webpack_require__(21)(process) == 'process';
 
 module.exports = function(){
   var head, last, notify;
@@ -80474,46 +80461,7 @@ module.exports = function(){
 };
 
 /***/ }),
-/* 214 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// 19.1.2.1 Object.assign(target, source, ...)
-var getKeys  = __webpack_require__(21)
-  , gOPS     = __webpack_require__(41)
-  , pIE      = __webpack_require__(27)
-  , toObject = __webpack_require__(42)
-  , IObject  = __webpack_require__(69)
-  , $assign  = Object.assign;
-
-// should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(17)(function(){
-  var A = {}
-    , B = {}
-    , S = Symbol()
-    , K = 'abcdefghijklmnopqrst';
-  A[S] = 7;
-  K.split('').forEach(function(k){ B[k] = k; });
-  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-  var T     = toObject(target)
-    , aLen  = arguments.length
-    , index = 1
-    , getSymbols = gOPS.f
-    , isEnum     = pIE.f;
-  while(aLen > index){
-    var S      = IObject(arguments[index++])
-      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-      , length = keys.length
-      , j      = 0
-      , key;
-    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-  } return T;
-} : $assign;
-
-/***/ }),
-/* 215 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var hide = __webpack_require__(16);
@@ -80525,7 +80473,7 @@ module.exports = function(target, src, safe){
 };
 
 /***/ }),
-/* 216 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -80545,12 +80493,12 @@ module.exports = function(KEY){
 };
 
 /***/ }),
-/* 217 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
 var anObject  = __webpack_require__(10)
-  , aFunction = __webpack_require__(46)
+  , aFunction = __webpack_require__(44)
   , SPECIES   = __webpack_require__(8)('species');
 module.exports = function(O, D){
   var C = anObject(O).constructor, S;
@@ -80558,32 +80506,23 @@ module.exports = function(O, D){
 };
 
 /***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(13);
-
-$export($export.S + $export.F, 'Object', {assign: __webpack_require__(214)});
-
-/***/ }),
-/* 219 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY            = __webpack_require__(26)
   , global             = __webpack_require__(9)
-  , ctx                = __webpack_require__(23)
+  , ctx                = __webpack_require__(22)
   , classof            = __webpack_require__(67)
-  , $export            = __webpack_require__(13)
-  , isObject           = __webpack_require__(18)
-  , aFunction          = __webpack_require__(46)
-  , anInstance         = __webpack_require__(207)
-  , forOf              = __webpack_require__(208)
-  , speciesConstructor = __webpack_require__(217)
+  , $export            = __webpack_require__(15)
+  , isObject           = __webpack_require__(17)
+  , aFunction          = __webpack_require__(44)
+  , anInstance         = __webpack_require__(205)
+  , forOf              = __webpack_require__(206)
+  , speciesConstructor = __webpack_require__(214)
   , task               = __webpack_require__(169).set
-  , microtask          = __webpack_require__(213)()
+  , microtask          = __webpack_require__(211)()
   , PROMISE            = 'Promise'
   , TypeError          = global.TypeError
   , process            = global.process
@@ -80775,7 +80714,7 @@ if(!USE_NATIVE){
     this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
     this._n = false;          // <- notify
   };
-  Internal.prototype = __webpack_require__(215)($Promise.prototype, {
+  Internal.prototype = __webpack_require__(212)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected){
       var reaction    = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -80801,8 +80740,8 @@ if(!USE_NATIVE){
 }
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, {Promise: $Promise});
-__webpack_require__(28)($Promise, PROMISE);
-__webpack_require__(216)(PROMISE);
+__webpack_require__(27)($Promise, PROMISE);
+__webpack_require__(213)(PROMISE);
 Wrapper = __webpack_require__(6)[PROMISE];
 
 // statics
@@ -80826,7 +80765,7 @@ $export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
     return capability.promise;
   }
 });
-$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(212)(function(iter){
+$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(210)(function(iter){
   $Promise.all(iter)['catch'](empty);
 })), PROMISE, {
   // 25.4.4.1 Promise.all(iterable)
@@ -80870,6 +80809,30 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(212)(functio
     return capability.promise;
   }
 });
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 220 */
@@ -80945,30 +80908,6 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(212)(functio
 
 /***/ }),
 /* 232 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 233 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 234 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 235 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -81893,7 +81832,7 @@ function extendMoment(moment) {
 //# sourceMappingURL=moment-range.js.map
 
 /***/ }),
-/* 237 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -81967,7 +81906,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 238 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82040,10 +81979,10 @@ var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(287);
+__webpack_require__(283);
 
 /***/ }),
-/* 239 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82101,10 +82040,10 @@ var _angular2 = _interopRequireDefault(_angular);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(288);
+__webpack_require__(284);
 
 /***/ }),
-/* 240 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82199,7 +82138,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 241 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82417,7 +82356,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 242 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82530,7 +82469,7 @@ exports.default = function () {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 243 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82644,7 +82583,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 244 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83216,7 +83155,7 @@ exports.default = ["GanttDependency", "GanttDependenciesEvents", "GanttDependenc
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 245 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83366,7 +83305,7 @@ exports.default = ["ganttUtils", "ganttDom", function (ganttUtils, ganttDom) {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 246 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83573,7 +83512,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 247 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83706,7 +83645,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 248 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83760,7 +83699,7 @@ exports.default = ["$scope", "GanttTaskGroup", "ganttUtils", function ($scope, G
 }];
 
 /***/ }),
-/* 249 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83834,7 +83773,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 250 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83851,10 +83790,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(289);
+__webpack_require__(285);
 
 /***/ }),
-/* 251 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84034,7 +83973,7 @@ exports.default = ["ganttUtils", "GanttTask", function (ganttUtils, GanttTask) {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 252 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84056,10 +83995,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(290);
+__webpack_require__(286);
 
 /***/ }),
-/* 253 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84159,7 +84098,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 254 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84189,10 +84128,10 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(291);
+__webpack_require__(287);
 
 /***/ }),
-/* 255 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84209,10 +84148,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(292);
+__webpack_require__(288);
 
 /***/ }),
-/* 256 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84229,10 +84168,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(293);
+__webpack_require__(289);
 
 /***/ }),
-/* 257 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84657,7 +84596,7 @@ var _lodash = __webpack_require__(19);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 258 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84684,7 +84623,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 259 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84884,14 +84823,14 @@ exports.default = ["$timeout", function ($timeout) {
     };
 }];
 
-var _momentRange = __webpack_require__(236);
+var _momentRange = __webpack_require__(232);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var moment = (0, _momentRange.extendMoment)(__webpack_require__(3));
 
 /***/ }),
-/* 260 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84965,7 +84904,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 261 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85039,10 +84978,10 @@ exports.default = ["$templateCache", function ($templateCache) {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(294);
+__webpack_require__(290);
 
 /***/ }),
-/* 262 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85085,7 +85024,7 @@ function sortRows(poolRows) {
 }
 
 /***/ }),
-/* 263 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85094,10 +85033,6 @@ function sortRows(poolRows) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
-var _assign = __webpack_require__(204);
-
-var _assign2 = _interopRequireDefault(_assign);
 
 exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function (GanttDirectiveBuilder, ganttLayout, $timeout) {
     'ngInject';
@@ -85189,7 +85124,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
         }
         $scope.getClasses = function (row, pool) {
             var eventRow = isEven(row, pool);
-            return (0, _assign2.default)({}, row.model.classes, { 'gantt-row-even': eventRow, 'gantt-row-odd': !eventRow });
+            return [].concat(row.model.classes).concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd');
         };
         function isEven(row, pool) {
             return _lodash2.default.indexOf(pool, row) % 2;
@@ -85222,7 +85157,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
     return builder.build();
 }];
 
-var _jquery = __webpack_require__(45);
+var _jquery = __webpack_require__(43);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -85232,10 +85167,10 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(295);
+__webpack_require__(291);
 
 /***/ }),
-/* 264 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85245,11 +85180,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _regenerator = __webpack_require__(147);
+var _regenerator = __webpack_require__(146);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _promise = __webpack_require__(142);
+var _promise = __webpack_require__(141);
 
 var _promise2 = _interopRequireDefault(_promise);
 
@@ -85450,11 +85385,11 @@ var _lodash = __webpack_require__(19);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _sortRows = __webpack_require__(262);
+var _sortRows = __webpack_require__(258);
 
 var _sortRows2 = _interopRequireDefault(_sortRows);
 
-var _row = __webpack_require__(266);
+var _row = __webpack_require__(262);
 
 var _row2 = _interopRequireDefault(_row);
 
@@ -85487,10 +85422,10 @@ var __awaiter = undefined && undefined.__awaiter || function (thisArg, _argument
 
 var firstRender = true;
 
-var promise = __webpack_require__(148);
+var promise = __webpack_require__(147);
 
 /***/ }),
-/* 265 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85500,11 +85435,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _regenerator = __webpack_require__(147);
+var _regenerator = __webpack_require__(146);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _promise = __webpack_require__(142);
+var _promise = __webpack_require__(141);
 
 var _promise2 = _interopRequireDefault(_promise);
 
@@ -85633,7 +85568,7 @@ var __awaiter = undefined && undefined.__awaiter || function (thisArg, _argument
 };
 
 /***/ }),
-/* 266 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85657,7 +85592,7 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var promise = __webpack_require__(148);
+var promise = __webpack_require__(147);
 
 var RowService = function () {
     RowService.$inject = ["api"];
@@ -85737,7 +85672,7 @@ var RowService = function () {
 exports.default = RowService;
 
 /***/ }),
-/* 267 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85831,11 +85766,11 @@ exports.default = function () {
     };
 };
 
-var _ElementQueries = __webpack_require__(308);
+var _ElementQueries = __webpack_require__(304);
 
 var _ElementQueries2 = _interopRequireDefault(_ElementQueries);
 
-var _ResizeSensor = __webpack_require__(309);
+var _ResizeSensor = __webpack_require__(305);
 
 var _ResizeSensor2 = _interopRequireDefault(_ResizeSensor);
 
@@ -85844,7 +85779,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _ElementQueries2.default.listen();
 
 /***/ }),
-/* 268 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85914,7 +85849,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 269 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86100,10 +86035,10 @@ var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(296);
+__webpack_require__(292);
 
 /***/ }),
-/* 270 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86144,10 +86079,10 @@ exports.default = ["$templateCache", function ($templateCache) {
     };
 }];
 
-__webpack_require__(297);
+__webpack_require__(293);
 
 /***/ }),
-/* 271 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86216,7 +86151,7 @@ exports.default = ["ganttUtils", "$compile", function (ganttUtils, $compile) {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 272 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86246,10 +86181,10 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(298);
+__webpack_require__(294);
 
 /***/ }),
-/* 273 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86331,7 +86266,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 274 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86370,7 +86305,7 @@ exports.default = ["$scope", function ($scope) {
 }];
 
 /***/ }),
-/* 275 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86426,7 +86361,7 @@ exports.default = ["$scope", function ($scope) {
 }];
 
 /***/ }),
-/* 276 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86615,10 +86550,10 @@ var angular = _interopRequireWildcard(_angular);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-__webpack_require__(299);
+__webpack_require__(295);
 
 /***/ }),
-/* 277 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86693,7 +86628,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 278 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86710,7 +86645,7 @@ exports.default = ["treeConfig", function (treeConfig) {
 }];
 
 /***/ }),
-/* 279 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86730,7 +86665,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 }];
 
 /***/ }),
-/* 280 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86747,10 +86682,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(300);
+__webpack_require__(296);
 
 /***/ }),
-/* 281 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87047,7 +86982,7 @@ exports.default = ["$scope", "$filter", "GanttHierarchy", function ($scope, $fil
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 282 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87117,7 +87052,7 @@ var _angular2 = _interopRequireDefault(_angular);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 283 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87147,11 +87082,11 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
     return builder.build();
 }];
 
-__webpack_require__(301);
-__webpack_require__(302);
+__webpack_require__(297);
+__webpack_require__(298);
 
 /***/ }),
-/* 284 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87168,10 +87103,10 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
     return builder.build();
 }];
 
-__webpack_require__(303);
+__webpack_require__(299);
 
 /***/ }),
-/* 285 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87274,7 +87209,7 @@ var _constant = __webpack_require__(180);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 286 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87298,7 +87233,7 @@ exports.default = ["$scope", function ($scope) {
 }];
 
 /***/ }),
-/* 287 */
+/* 283 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/bounds/taskBounds.tmpl.html';
@@ -87307,7 +87242,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 288 */
+/* 284 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/corner/corner.tmpl.html';
@@ -87316,7 +87251,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 289 */
+/* 285 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/groups/taskGroup.tmpl.html';
@@ -87325,7 +87260,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 290 */
+/* 286 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/groups/taskOverview.tmpl.html';
@@ -87334,7 +87269,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 291 */
+/* 287 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/labelsBody.tmpl.html';
@@ -87343,7 +87278,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 292 */
+/* 288 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/labelsHeader.tmpl.html';
@@ -87352,7 +87287,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 293 */
+/* 289 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/labels/sideContentLabels.tmpl.html';
@@ -87361,7 +87296,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 294 */
+/* 290 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/progress/taskProgress.tmpl.html';
@@ -87370,7 +87305,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 295 */
+/* 291 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/recycler/recycler.html';
@@ -87379,7 +87314,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 296 */
+/* 292 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/sections/taskSection.tmpl.html';
@@ -87388,7 +87323,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 297 */
+/* 293 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/sections/taskSections.tmpl.html';
@@ -87397,7 +87332,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 298 */
+/* 294 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/table/sideContentTable.tmpl.html';
@@ -87406,7 +87341,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 299 */
+/* 295 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tooltips/tooltip.tmpl.html';
@@ -87415,7 +87350,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 300 */
+/* 296 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/sideContentTree.tmpl.html';
@@ -87424,7 +87359,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 301 */
+/* 297 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeBody.tmpl.html';
@@ -87433,7 +87368,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 302 */
+/* 298 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeBodyChildren.tmpl.html';
@@ -87442,7 +87377,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 303 */
+/* 299 */
 /***/ (function(module, exports) {
 
 var path = 'plugins/tree/treeHeader.tmpl.html';
@@ -87451,7 +87386,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 304 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {// This method of obtaining a reference to the global object needs to be
@@ -87472,7 +87407,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(305);
+module.exports = __webpack_require__(301);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -87486,10 +87421,10 @@ if (hadRuntime) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
 
 /***/ }),
-/* 305 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -88229,10 +88164,10 @@ if (hadRuntime) {
   typeof self === "object" ? self : this
 );
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
 
 /***/ }),
-/* 306 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -88422,10 +88357,10 @@ if (hadRuntime) {
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29), __webpack_require__(181)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(181)))
 
 /***/ }),
-/* 307 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -88478,10 +88413,34 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(306);
+__webpack_require__(302);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_304__;
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_305__;
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_306__;
+
+/***/ }),
+/* 307 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_307__;
 
 /***/ }),
 /* 308 */
@@ -88491,30 +88450,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_308__;
 
 /***/ }),
 /* 309 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_309__;
-
-/***/ }),
-/* 310 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_310__;
-
-/***/ }),
-/* 311 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_311__;
-
-/***/ }),
-/* 312 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_312__;
-
-/***/ }),
-/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
