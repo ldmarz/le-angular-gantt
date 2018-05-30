@@ -129,25 +129,30 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       const $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable')
 
       let listen = false
+      const enableSenderInNextTick = _.debounce((enableSender), 100)
 
-      function callee () {
+      function scrollHandler () {
         if (listen) {
+          $scope.gantt.api.scroll.disableSender(true)
           $gridSideBackground.scrollTop($recyclerScroll.scrollTop())
           $ganttSideScroll.scrollTop($recyclerScroll.scrollTop())
+          enableSenderInNextTick()
         }
       }
 
-      $recyclerScroll.mouseenter(() => {
-        listen = true,
-        $scope.gantt.api.scroll.disableSender(true)
+      function enableSender () {
+        $scope.gantt.api.scroll.disableSender(false)
+      }
 
+      $recyclerScroll.mouseenter(() => {
+        listen = true
       })
 
       $recyclerScroll.mouseleave(() => {
         listen = false
-        $scope.gantt.api.scroll.disableSender(false)
+
       })
-      $recyclerScroll.scroll(callee)
+      $recyclerScroll.scroll(scrollHandler)
     }
 
     SyncRows()

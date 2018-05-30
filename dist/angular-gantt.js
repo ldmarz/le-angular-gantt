@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.3.5 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.6 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -85163,20 +85163,25 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             var $gridSideBackground = $ganttSide.find('.gantt-side-background-body');
             var $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable');
             var listen = false;
-            function callee() {
+            var enableSenderInNextTick = _lodash2.default.debounce(enableSender, 100);
+            function scrollHandler() {
                 if (listen) {
+                    $scope.gantt.api.scroll.disableSender(true);
                     $gridSideBackground.scrollTop($recyclerScroll.scrollTop());
                     $ganttSideScroll.scrollTop($recyclerScroll.scrollTop());
+                    enableSenderInNextTick();
                 }
             }
+            function enableSender() {
+                $scope.gantt.api.scroll.disableSender(false);
+            }
             $recyclerScroll.mouseenter(function () {
-                listen = true, $scope.gantt.api.scroll.disableSender(true);
+                listen = true;
             });
             $recyclerScroll.mouseleave(function () {
                 listen = false;
-                $scope.gantt.api.scroll.disableSender(false);
             });
-            $recyclerScroll.scroll(callee);
+            $recyclerScroll.scroll(scrollHandler);
         }
         SyncRows();
         $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api);
