@@ -181,6 +181,10 @@ angular-ui-tree@^2.22.5:
   version "2.22.5"
   resolved "https://registry.yarnpkg.com/angular-ui-tree/-/angular-ui-tree-2.22.5.tgz#99071fb963feaf2eac11c98e95e40628c135813f"
 
+"angular-viewport-watch@https://github.com/Bohrlotto/angular-viewport-watch.git#0.1.132":
+  version "0.1.4"
+  resolved "https://github.com/Bohrlotto/angular-viewport-watch.git#a5fb7fcdc19bf740622317b7566189f38641bc56"
+
 angular@1.5.8:
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.8.tgz#925a5392b8c212d09572dc446db7e01264e094cb"

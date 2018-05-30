@@ -19,33 +19,33 @@ export default function ($document, $compile, $timeout) {
       scope.rowService = new rowService(api)
       scope.lastInitialized = ''
 
-      scope.$watch(() => checkIfNewRow(), intializeRows, true)
+      // scope.$watch(() => checkIfNewRow(), intializeRows, true)
 
-      function checkIfNewRow () {
-        const obj = _.find(scope.rowService.allRows, o => !o.isInitialized)
-        return _.get(obj, 'model.id', false)
-      }
+      // function checkIfNewRow () {
+      //   const obj = _.find(scope.rowService.allRows, o => !o.isInitialized)
+      //   return _.get(obj, 'model.id', false)
+      // }
 
-      function intializeRows (results) {
-        if (!results) {
-          const rowsNotInitialized = _.filter(scope.rowService.allRows, o => !(o.isInitialized))
-          _.each(rowsNotInitialized, row => {
-            if (_.get(row, 'model.parent')) {
-              const parent = scope.rowService.findRowById(row.model.parent)
+      // function intializeRows (results) {
+      //   if (!results) {
+      //     const rowsNotInitialized = _.filter(scope.rowService.allRows, o => !(o.isInitialized))
+      //     _.each(rowsNotInitialized, row => {
+      //       if (_.get(row, 'model.parent')) {
+      //         const parent = scope.rowService.findRowById(row.model.parent)
 
-              if (parent) {
-                row.model.isCollapsed = parent.model.childreenCollapsed
-                row.model.childreenCollapsed = row.model.isCollapsed
-              }
-            }
-            row.isInitialized = true
-          })
+      //         if (parent) {
+      //           row.model.isCollapsed = parent.model.childreenCollapsed
+      //           row.model.childreenCollapsed = row.model.isCollapsed
+      //         }
+      //       }
+      //       row.isInitialized = true
+      //     })
 
-          if (rowsNotInitialized) {
-            api.rows.refresh()
-          }
-        }
-      }
+      //     if (rowsNotInitialized) {
+      //       api.rows.refresh()
+      //     }
+      //   }
+      // }
 
       const filter = function (rows) {
         return _.filter(rows, o => {

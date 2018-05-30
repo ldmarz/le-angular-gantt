@@ -11,8 +11,9 @@ const pluginModule = 'gantt.recycler'
 
 require('./recycler.css')
 require('angular-material/angular-material.min.css')
+require('angular-viewport-watch/angular-viewport-watch')
 
-angular.module(pluginModule, [ganttModule, ngMaterial])
+angular.module(pluginModule, [ganttModule, ngMaterial, 'angularViewportWatch'])
   .directive('ganttRecycler', recyclerPlugin)
   .directive('recycler', recycler)
   .controller('rowController', rowController)

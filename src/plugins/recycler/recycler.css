@@ -101,3 +101,7 @@
 .wrapper-collapsed {
   outline: none;
 }
+
+.gantt-scrollable {
+  max-height: initial !important;
+}
