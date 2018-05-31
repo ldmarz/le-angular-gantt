@@ -23,7 +23,7 @@
             </gantt-header-columns>
         </gantt-header>
     </gantt-scrollable-header>
-    <gantt-scrollable>
+    <gantt-scrollable class="syncscroll" name="sync">
         <gantt-body>
             <gantt-body-background>
                 <gantt-row-background ng-repeat="row in gantt.rowsManager.visibleRows track by row.model.id"></gantt-row-background>
