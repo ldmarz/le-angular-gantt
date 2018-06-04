@@ -9,13 +9,21 @@ export default function () {
     require: ['^gantt', '^ganttScrollManager'],
     link: function (scope, element, attrs, controllers) {
       let el = element[0]
-      let disable = false
-
-      let updateListeners = function () {
+      let disableVerticalScroll = false
+      let lastTopScroll
+      let isVerticalScroll = false
+      let updateListeners = function (e) {
         let i
         let l
 
-        if (!disable) {
+        if (el.scrollTop === lastTopScroll) {
+          isVerticalScroll = false
+        } else {
+          isVerticalScroll = true
+          lastTopScroll = el.scrollTop
+        }
+
+        if (!disableVerticalScroll && isVerticalScroll) {
           let vertical = controllers[1].getVerticalRecievers()
           for (i = 0, l = vertical.length; i < l; i++) {
             let vElement = vertical[i]
@@ -26,13 +34,13 @@ export default function () {
               vElement.parentNode.scrollTop = el.scrollTop
             }
           }
+        }
 
-          let horizontal = controllers[1].getHorizontalRecievers()
-          for (i = 0, l = horizontal.length; i < l; i++) {
-            let hElement = horizontal[i]
-            if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
-              hElement.parentNode.scrollLeft = el.scrollLeft
-            }
+        let horizontal = controllers[1].getHorizontalRecievers()
+        for (i = 0, l = horizontal.length; i < l; i++) {
+          let hElement = horizontal[i]
+          if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
+            hElement.parentNode.scrollLeft = el.scrollLeft
           }
         }
       }
@@ -55,7 +63,7 @@ export default function () {
       controllers[1].registerScrollSender(el)
 
       function disableSender (val: boolean) {
-        disable = val
+        disableVerticalScroll = val
       }
 
       controllers[0].gantt.api.registerMethod('scroll', 'disableSender', disableSender, this)
