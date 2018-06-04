@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.3.7 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.8 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -85173,9 +85173,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             var enableSenderInNextTick = _lodash2.default.debounce(enableSender, 100);
             function scrollHandler() {
                 if (listen) {
-                    $scope.gantt.api.scroll.disableSender(true);
                     $ganttSideScroll.scrollTop($recyclerScroll.scrollTop());
-                    enableSenderInNextTick();
                 }
             }
             function enableSender() {
@@ -85187,9 +85185,11 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             }
             $recyclerScroll.mouseenter(function () {
                 listen = true;
+                $scope.gantt.api.scroll.disableSender(true);
             });
             $recyclerScroll.mouseleave(function () {
                 listen = false;
+                enableSenderInNextTick();
             });
             $recyclerScroll.scroll(scrollHandler);
         }
