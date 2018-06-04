@@ -79,7 +79,6 @@ export class GanttColumnsManager {
     this.gantt.$scope.$watchGroup(['viewScale', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange', 'headers', 'headersFormats'], (newValues, oldValues) => {
       if (newValues !== oldValues && this.gantt.rendered) {
         this.generateColumns()
-        this.setScroll()
       }
     })
 
@@ -141,22 +140,9 @@ export class GanttColumnsManager {
     }
   }
 
-  setScroll () {
-    if (this.gantt.scroll.$element && this.columns.length > 0) {
-      const el = this.gantt.scroll.$element[0]
-
-      if (this.oldScrollDate) {
-        el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollDate);
-      }
-    }
-  }
-
   scrollToScrollAnchor () {
     if (this.columns.length > 0 && this.scrollAnchor !== undefined) {
-      // Ugly but prevents screen flickering (unlike $timeout)
-      this.gantt.$scope.$$postDigest(() => {
-        (this.gantt.api as any).scroll.toDate(this.scrollAnchor)
-      })
+      (this.gantt.api as any).scroll.toDate(this.scrollAnchor)
     }
   }
 

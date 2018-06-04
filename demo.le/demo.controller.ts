@@ -149,6 +149,23 @@ export default function ($scope, $timeout) {
   $scope.easeScrollToDate = function () {
     $scope.api.scroll.toDateSoftly(moment())
   }
+  $scope.zoomSlider = 0
+  $scope.zoomSliderIsChange = function () {
+    const zoom = calcZoom($scope.zoomSlider)
+    const width = getColumnWidth(true, zoom)
+    $scope.api.columns.setColumnWidth(width)
+  }
+
+  function calcZoom (indexZoomScale) {
+    return 0.25 + ((indexZoomScale) * 0.05)
+  }
+
+  function getColumnWidth (widthEnabled, zoom) {
+    if (!widthEnabled) {
+      return undefined
+    }
+    return (140 * zoom)
+  }
 
   function appendChilds (limit = 1, parent = undefined) {
     for (let index = 0; index < limit; index++) {
