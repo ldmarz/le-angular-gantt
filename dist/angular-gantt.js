@@ -85160,20 +85160,22 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             var $element = (0, _jquery2.default)(element[0]);
             var $ganttSide = $element.parents('.gantt-side');
             var $recyclerScroll = $element.find('.md-virtual-repeat-scroller');
-            var $gridSideBackground = $ganttSide.find('.gantt-side-background-body');
             var $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable');
             var listen = false;
             var enableSenderInNextTick = _lodash2.default.debounce(enableSender, 100);
             function scrollHandler() {
                 if (listen) {
                     $scope.gantt.api.scroll.disableSender(true);
-                    $gridSideBackground.scrollTop($recyclerScroll.scrollTop());
                     $ganttSideScroll.scrollTop($recyclerScroll.scrollTop());
                     enableSenderInNextTick();
                 }
             }
             function enableSender() {
-                $scope.gantt.api.scroll.disableSender(false);
+                if ($ganttSideScroll.scrollTop() === $recyclerScroll.scrollTop()) {
+                    $scope.gantt.api.scroll.disableSender(false);
+                } else {
+                    enableSenderInNextTick();
+                }
             }
             $recyclerScroll.mouseenter(function () {
                 listen = true;
