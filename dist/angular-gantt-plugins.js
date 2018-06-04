@@ -29987,7 +29987,6 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
         this.gantt.$scope.$watchGroup(['viewScale', 'timeFramesWorkingMode', 'timeFramesNonWorkingMode', 'fromDate', 'toDate', 'autoExpand', 'taskOutOfRange', 'headers', 'headersFormats'], function (newValues, oldValues) {
             if (newValues !== oldValues && _this.gantt.rendered) {
                 _this.generateColumns();
-                _this.setScroll();
             }
         });
 
@@ -30029,24 +30028,10 @@ var GanttColumnsManager = exports.GanttColumnsManager = function () {
             }
         }
     }, {
-        key: 'setScroll',
-        value: function setScroll() {
-            if (this.gantt.scroll.$element && this.columns.length > 0) {
-                var el = this.gantt.scroll.$element[0];
-                if (this.oldScrollDate) {
-                    el.scrollLeft = this.gantt.getPositionByDate(this.oldScrollDate);
-                }
-            }
-        }
-    }, {
         key: 'scrollToScrollAnchor',
         value: function scrollToScrollAnchor() {
-            var _this2 = this;
-
             if (this.columns.length > 0 && this.scrollAnchor !== undefined) {
-                this.gantt.$scope.$$postDigest(function () {
-                    _this2.gantt.api.scroll.toDate(_this2.scrollAnchor);
-                });
+                this.gantt.api.scroll.toDate(this.scrollAnchor);
             }
         }
     }, {
