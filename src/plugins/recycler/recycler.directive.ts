@@ -132,9 +132,7 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
 
       function scrollHandler () {
         if (listen) {
-          $scope.gantt.api.scroll.disableSender(true)
           $ganttSideScroll.scrollTop($recyclerScroll.scrollTop())
-          enableSenderInNextTick()
         }
       }
 
@@ -148,11 +146,12 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
 
       $recyclerScroll.mouseenter(() => {
         listen = true
+        $scope.gantt.api.scroll.disableSender(true)
       })
 
       $recyclerScroll.mouseleave(() => {
         listen = false
-
+        enableSenderInNextTick()
       })
       $recyclerScroll.scroll(scrollHandler)
     }

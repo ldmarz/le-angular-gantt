@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.3.6 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.8 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -34358,11 +34358,19 @@ exports.default = function () {
         require: ['^gantt', '^ganttScrollManager'],
         link: function link(scope, element, attrs, controllers) {
             var el = element[0];
-            var disable = false;
-            var updateListeners = function updateListeners() {
+            var disableVerticalScroll = false;
+            var lastTopScroll = void 0;
+            var isVerticalScroll = false;
+            var updateListeners = function updateListeners(e) {
                 var i = void 0;
                 var l = void 0;
-                if (!disable) {
+                if (el.scrollTop === lastTopScroll) {
+                    isVerticalScroll = false;
+                } else {
+                    isVerticalScroll = true;
+                    lastTopScroll = el.scrollTop;
+                }
+                if (!disableVerticalScroll && isVerticalScroll) {
                     var vertical = controllers[1].getVerticalRecievers();
                     for (i = 0, l = vertical.length; i < l; i++) {
                         var vElement = vertical[i];
@@ -34373,12 +34381,12 @@ exports.default = function () {
                             vElement.parentNode.scrollTop = el.scrollTop;
                         }
                     }
-                    var horizontal = controllers[1].getHorizontalRecievers();
-                    for (i = 0, l = horizontal.length; i < l; i++) {
-                        var hElement = horizontal[i];
-                        if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
-                            hElement.parentNode.scrollLeft = el.scrollLeft;
-                        }
+                }
+                var horizontal = controllers[1].getHorizontalRecievers();
+                for (i = 0, l = horizontal.length; i < l; i++) {
+                    var hElement = horizontal[i];
+                    if (hElement.parentNode.scrollLeft !== el.scrollLeft) {
+                        hElement.parentNode.scrollLeft = el.scrollLeft;
                     }
                 }
             };
@@ -34397,7 +34405,7 @@ exports.default = function () {
             });
             controllers[1].registerScrollSender(el);
             function disableSender(val) {
-                disable = val;
+                disableVerticalScroll = val;
             }
             controllers[0].gantt.api.registerMethod('scroll', 'disableSender', disableSender, this);
         }
