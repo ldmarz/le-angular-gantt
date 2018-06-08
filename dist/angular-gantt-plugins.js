@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.3.8 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.10 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -85154,27 +85154,22 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             var $ganttSide = $element.parents('.gantt-side');
             var $recyclerScroll = $element.find('.md-virtual-repeat-scroller');
             var $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable');
-            var listen = false;
-            var enableSenderInNextTick = _lodash2.default.debounce(enableSender, 100);
-            function scrollHandler() {
-                if (listen) {
+            var listenRecyclerScroll = false;
+            var scrollHandler = _lodash2.default.throttle(function () {
+                if (listenRecyclerScroll) {
                     $ganttSideScroll.scrollTop($recyclerScroll.scrollTop());
                 }
-            }
-            function enableSender() {
-                if ($ganttSideScroll.scrollTop() === $recyclerScroll.scrollTop()) {
-                    $scope.gantt.api.scroll.disableSender(false);
-                } else {
-                    enableSenderInNextTick();
-                }
+            }, 100);
+            function enableGanttSideScrollSender() {
+                $scope.gantt.api.scroll.disableSender(false);
             }
             $recyclerScroll.mouseenter(function () {
-                listen = true;
+                listenRecyclerScroll = true;
                 $scope.gantt.api.scroll.disableSender(true);
             });
             $recyclerScroll.mouseleave(function () {
-                listen = false;
-                enableSenderInNextTick();
+                listenRecyclerScroll = false;
+                enableGanttSideScrollSender();
             });
             $recyclerScroll.scroll(scrollHandler);
         }
