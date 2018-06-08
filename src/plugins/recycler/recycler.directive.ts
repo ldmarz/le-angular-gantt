@@ -127,33 +127,30 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       const $recyclerScroll = $element.find('.md-virtual-repeat-scroller')
       const $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable')
 
-      let listen = false
-      const enableSenderInNextTick = _.debounce(enableSender, 100)
+      let listenRecyclerScroll = false
 
-      function scrollHandler () {
-        if (listen) {
+      const scrollHandler = _.throttle(() => {
+        if (listenRecyclerScroll) {
           $ganttSideScroll.scrollTop($recyclerScroll.scrollTop())
         }
-      }
+      }, 100)
 
-      function enableSender () {
-        if ($ganttSideScroll.scrollTop() === $recyclerScroll.scrollTop()) {
-          $scope.gantt.api.scroll.disableSender(false)
-        } else {
-          enableSenderInNextTick()
-        }
+      function enableGanttSideScrollSender () {
+        $scope.gantt.api.scroll.disableSender(false)
       }
 
       $recyclerScroll.mouseenter(() => {
-        listen = true
+        listenRecyclerScroll = true
         $scope.gantt.api.scroll.disableSender(true)
       })
 
       $recyclerScroll.mouseleave(() => {
-        listen = false
-        enableSenderInNextTick()
+        listenRecyclerScroll = false
+        enableGanttSideScrollSender()
       })
+
       $recyclerScroll.scroll(scrollHandler)
+
     }
 
     SyncRows()
