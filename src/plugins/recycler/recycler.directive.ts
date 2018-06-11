@@ -109,15 +109,15 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
     }
 
     $scope.getClasses = (row, pool) => {
-      const eventRow = isEven(row,pool)
+      const eventRow = isEven(row, pool)
 
       return []
-      .concat(row.model.classes)
-      .concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd')
+        .concat(row.model.classes)
+        .concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd')
     }
 
     function isEven (row, pool) {
-      return _.indexOf(pool,row) % 2
+      return _.indexOf(pool, row) % 2
     }
 
     function SyncRows () {
@@ -142,6 +142,16 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       $recyclerScroll.mouseenter(() => {
         listenRecyclerScroll = true
         $scope.gantt.api.scroll.disableSender(true)
+      })
+
+      $(window).blur(() => {
+        $ganttSideScroll.css('overflow-y', 'hidden')
+        $recyclerScroll.css('overflow-y', 'hidden')
+      })
+
+      $(window).focus(() => {
+        $ganttSideScroll.css('overflow-y', 'initial')
+        $recyclerScroll.css('overflow-y', 'initial')
       })
 
       $recyclerScroll.mouseleave(() => {

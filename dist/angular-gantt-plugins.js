@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.3.10 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.3.11 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -85166,6 +85166,14 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             $recyclerScroll.mouseenter(function () {
                 listenRecyclerScroll = true;
                 $scope.gantt.api.scroll.disableSender(true);
+            });
+            (0, _jquery2.default)(window).blur(function () {
+                $ganttSideScroll.css('overflow-y', 'hidden');
+                $recyclerScroll.css('overflow-y', 'hidden');
+            });
+            (0, _jquery2.default)(window).focus(function () {
+                $ganttSideScroll.css('overflow-y', 'initial');
+                $recyclerScroll.css('overflow-y', 'initial');
             });
             $recyclerScroll.mouseleave(function () {
                 listenRecyclerScroll = false;
