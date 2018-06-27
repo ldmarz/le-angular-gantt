@@ -120,51 +120,6 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       return _.indexOf(pool, row) % 2
     }
 
-    function SyncRows () {
-      const $element = $(element[0])
-      const $ganttSide = $element.parents('.gantt-side')
-
-      const $recyclerScroll = $element.find('.md-virtual-repeat-scroller')
-      const $ganttSideScroll = $ganttSide.siblings('.gantt-scrollable')
-
-      let listenRecyclerScroll = false
-
-      const scrollHandler = _.throttle(() => {
-        if (listenRecyclerScroll) {
-          $ganttSideScroll.scrollTop($recyclerScroll.scrollTop())
-        }
-      }, 100)
-
-      function enableGanttSideScrollSender () {
-        $scope.gantt.api.scroll.disableSender(false)
-      }
-
-      $recyclerScroll.mouseenter(() => {
-        listenRecyclerScroll = true
-        $scope.gantt.api.scroll.disableSender(true)
-      })
-
-      $(window).blur(() => {
-        $ganttSideScroll.css('overflow-y', 'hidden')
-        $recyclerScroll.css('overflow-y', 'hidden')
-      })
-
-      $(window).focus(() => {
-        $ganttSideScroll.css('overflow-y', 'initial')
-        $recyclerScroll.css('overflow-y', 'initial')
-      })
-
-      $recyclerScroll.mouseleave(() => {
-        listenRecyclerScroll = false
-        enableGanttSideScrollSender()
-      })
-
-      $recyclerScroll.scroll(scrollHandler)
-
-    }
-
-    SyncRows()
-
     $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api)
 
   }
