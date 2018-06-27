@@ -10,6 +10,9 @@ export default function () {
       $scope.horizontal = []
       $scope.vertical = []
       $scope.verticalSender = undefined
+      $scope.registerAsVerticalScrollDuplexSender = undefined
+      $scope.registerAsVerticalScrollDuplexReceiver = []
+      $scope.verticalScrollDuplexIsSending = false
 
       this.registerVerticalReceiver = function (element) {
         element.css('position', 'relative')
@@ -36,6 +39,31 @@ export default function () {
       this.getVerticalSender = function () {
         return $scope.verticalSender
       }
+
+      this.registerAsVerticalScrollDuplexSender = function (element) {
+        $scope.registerAsVerticalScrollDuplexSender = element
+      }
+
+      this.registerAsVerticalScrollDuplexReceiver = function (element) {
+        $scope.registerAsVerticalScrollDuplexReceiver.push(element)
+      }
+
+      this.getVerticalScrollDuplexSender = function (element) {
+        return $scope.registerAsVerticalScrollDuplexSender
+      }
+
+      this.getVerticalScrollDuplexReceivers = function (element) {
+        return $scope.registerAsVerticalScrollDuplexReceiver
+      }
+
+      this.isVerticalScrollDuplexSending = function () {
+        return $scope.verticalScrollDuplexIsSending
+      }
+
+      this.setVerticalScrollDuplexSending = function (val) {
+        $scope.verticalScrollDuplexIsSending = val
+      }
+
     }
   }
 }
