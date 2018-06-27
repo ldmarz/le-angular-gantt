@@ -1,5 +1,16 @@
 #vertical-container {
   min-height: 292px;
+  max-height: 400px;
+}
+
+.gantt-body .recycler-gantt-side {
+  overflow-x: visible !important;
+  overflow-y: auto !important;
+}
+
+.gantt-body .recycler-gantt-side .md-virtual-repeat-scroller{
+  overflow-x: visible !important ;
+  overflow-y: auto !important ;
 }
 
 #vertical-container .md-virtual-repeat-scroller {
