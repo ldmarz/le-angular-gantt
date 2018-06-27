@@ -1,4 +1,6 @@
 # New features
+   - ## Core scroll is upgraded to Scroll Duplex
+      When a scroll is performed over any "scroll duplex" element becomes master and all other duplex receivers
    - ## Scroll to date softly
 
       sroll to a specific date position in the gantt
