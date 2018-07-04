@@ -10,12 +10,13 @@ import ganttContainerWidthListenerDirective from './core/ui/size/containerWidthL
 import ganttElementHeightListenerDirective from './core/ui/size/elementHeightListener.directive'
 import ganttElementWidthListenerDirective from './core/ui/size/elementWidthListener.directive'
 import ganttHorizontalScrollReceiverDirective from './core/ui/scroll/horizontalScrollReceiver.directive'
+import ganttHorizontalScrollSenderDirective from './core/ui/scroll/horizontalScrollSender.directive'
 import ganttScrollableDirective from './core/ui/scroll/scrollable.directive'
 import ganttScrollManagerDirective from './core/ui/scroll/scrollManager.directive'
 import ganttScrollSenderDirective from './core/ui/scroll/scrollSender.directive'
 import ganttVerticalScrollReceiver from './core/ui/scroll/verticalScrollReceiver.directive'
 import ganttVerticalScrollListener from './core/ui/scroll/verticalScrollListener.directive'
-import ganttVerticalScrollDuplex from './core/ui/scroll/verticalScrollDuplex.directive'
+import ganttVerticalScrollDuplexDirective from './core/ui/scroll/verticalScrollDuplex.directive'
 import ganttBodyDirective from './core/ui/template/body.directive'
 import ganttBodyBackgroundDirective from './core/ui/template/bodyBackground.directive'
 import ganttBodyColumnsDirective from './core/ui/template/bodyColumns.directive'
@@ -96,12 +97,13 @@ angular
   .directive('ganttElementWidthListener', ganttElementWidthListenerDirective)
   .directive('ganttElementHeightListener', ganttElementHeightListenerDirective)
   .directive('ganttHorizontalScrollReceiver', ganttHorizontalScrollReceiverDirective)
+  .directive('ganttHorizontalScrollSender', ganttHorizontalScrollSenderDirective)
   .directive('ganttScrollable', ganttScrollableDirective)
   .directive('ganttScrollManager', ganttScrollManagerDirective)
   .directive('ganttScrollSender', ganttScrollSenderDirective)
   .directive('ganttVerticalScrollReceiver', ganttVerticalScrollReceiver)
   .directive('ganttVerticalScrollListener', ganttVerticalScrollListener)
-  .directive('ganttVerticalScrollDuplex', ganttVerticalScrollDuplex)
+  .directive('ganttVerticalScrollDuplex', ganttVerticalScrollDuplexDirective)
   .directive('ganttBindCompileHtml', ganttBindCompileHtmlDirective)
   .directive('ganttBody', ganttBodyDirective)
   .directive('ganttBodyBackground', ganttBodyBackgroundDirective)
