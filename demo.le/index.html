@@ -30,13 +30,13 @@
             </md-slider-container>
         </md-slider-container>
 
-        <md-input-container>
+        <!--md-input-container>
             <md-select ng-model="selectedRow" ng-change="goToRow(selectedRow)">
               <md-option ng-value="row.id" ng-repeat="row in data">{{ row.name }}</md-option>
             </md-select>
-          </md-input-container>
-        <button type="button" style="width: 5em; text-align: left" class="btn btn-default" ng-model="scale" bs-options="s for s in ['minute', '5 minutes', 'hour', '3 hours', 'day', 'week', '2 weeks', 'month', 'quarter', '6 months', 'year']"
-            bs-select></button>
+          </md-input-container> -->
+        <!-- <button type="button" style="width: 5em; text-align: left" class="btn btn-default" ng-model="scale" bs-options="s for s in ['minute', '5 minutes', 'hour', '3 hours', 'day', 'week', '2 weeks', 'month', 'quarter', '6 months', 'year']"
+            bs-select></button> -->
         <div gantt data="data"
             api="registerApi"
             auto-expand="autoExpand"
@@ -47,6 +47,7 @@
             max-height="500"
             view-scale="scale"
             column-width="getColumnWidth(zoom)"
+            watch-row-tasks="watchRowTasks"
 
             shrink-to-fit="shrinkToFit">
             <gantt-recycler

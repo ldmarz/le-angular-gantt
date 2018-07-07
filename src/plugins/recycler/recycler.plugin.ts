@@ -19,7 +19,7 @@ export default function ($document, $compile, $timeout) {
       scope.rowService = new rowService(api)
       scope.lastInitialized = ''
 
-      scope.$watch(() => checkIfNewRow(), intializeRows, true)
+      scope.$watchCollection(() => checkIfNewRow(), intializeRows, true)
 
       function checkIfNewRow () {
         const obj = _.find(scope.rowService.allRows, o => !o.isInitialized)

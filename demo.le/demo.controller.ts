@@ -46,6 +46,7 @@ export default function ($scope, $timeout) {
   $scope.scale = 'day'
   $scope.algo = 'aksks'
   $scope.selectedRow = undefined
+  $scope.watchRowTasks = false
 
   $scope.templateRows = [{
     type: 'tree',

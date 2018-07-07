@@ -30721,7 +30721,7 @@ var GanttRowsManager = exports.GanttRowsManager = function () {
             } else {
                 this.gantt.api.rows.raise.add(row);
             }
-            if (!isUpdate) {
+            if (this.gantt.options.value('watchRowTasks') && !isUpdate) {
                 var watcher = this.gantt.$scope.$watchCollection(function () {
                     return rowModel.tasks;
                 }, function (newTasks, oldTasks) {
@@ -31994,7 +31994,8 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
             extraScaleTime: '<?',
             data: '=?',
             api: '=?',
-            options: '<?'
+            options: '<?',
+            watchRowTasks: '<?'
         },
         controller: ["$scope", "$element", "$rootScope", function controller($scope, $element, $rootScope) {
             'ngInject';
@@ -32458,7 +32459,8 @@ var Gantt = exports.Gantt = function () {
             'timeFramesWorkingMode': 'hidden',
             'timeFramesNonWorkingMode': 'visible',
             'taskLimitThreshold': 100,
-            'columnLimitThreshold': 500
+            'columnLimitThreshold': 500,
+            'watchRowTasks': true
         });
         this.api = new _api.GanttApi(this);
         this.api.registerEvent('core', 'ready');

@@ -30721,7 +30721,7 @@ var GanttRowsManager = exports.GanttRowsManager = function () {
             } else {
                 this.gantt.api.rows.raise.add(row);
             }
-            if (!isUpdate) {
+            if (this.gantt.options.value('watchRowTasks') && !isUpdate) {
                 var watcher = this.gantt.$scope.$watchCollection(function () {
                     return rowModel.tasks;
                 }, function (newTasks, oldTasks) {
@@ -31994,7 +31994,8 @@ exports.default = ["Gantt", "ganttEnableNgAnimate", "$timeout", "$templateCache"
             extraScaleTime: '<?',
             data: '=?',
             api: '=?',
-            options: '<?'
+            options: '<?',
+            watchRowTasks: '<?'
         },
         controller: ["$scope", "$element", "$rootScope", function controller($scope, $element, $rootScope) {
             'ngInject';
@@ -32458,7 +32459,8 @@ var Gantt = exports.Gantt = function () {
             'timeFramesWorkingMode': 'hidden',
             'timeFramesNonWorkingMode': 'visible',
             'taskLimitThreshold': 100,
-            'columnLimitThreshold': 500
+            'columnLimitThreshold': 500,
+            'watchRowTasks': true
         });
         this.api = new _api.GanttApi(this);
         this.api.registerEvent('core', 'ready');
@@ -85213,7 +85215,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
         var hScrollBarHeight = ganttLayout.getScrollBarHeight();
         $scope.templateRows = $scope.pluginScope.templateRows;
         $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : [];
-        $scope.$watch('gantt.rowsManager.rows', function (newValue) {
+        $scope.$watchCollection('gantt.rowsManager.rows', function (newValue) {
             $scope.pluginScope.rowService.allRows = newValue;
         });
         $scope.gantt.api.registerEvent('recycler', 'topIndexChanged');
@@ -85249,20 +85251,6 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             }
             return classes;
         };
-        $scope.$watch(function () {
-            var rowRepeated = document.querySelector('.row-repeated');
-            if (rowRepeated) {
-                return rowRepeated.offsetWidth;
-            }
-            return undefined;
-        }, function (width) {
-            if (width) {
-                var recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter');
-                recyclerElements.forEach(function (element) {
-                    element.style.width = width + 'px';
-                });
-            }
-        });
 
         $scope.allRows = {
             value: 1,
@@ -85341,7 +85329,7 @@ exports.default = ["$document", "$compile", "$timeout", function ($document, $co
             var api = ganttCtrl.gantt.api;
             scope.rowService = new _row2.default(api);
             scope.lastInitialized = '';
-            scope.$watch(function () {
+            scope.$watchCollection(function () {
                 return checkIfNewRow();
             }, intializeRows, true);
             function checkIfNewRow() {

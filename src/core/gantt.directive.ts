@@ -52,7 +52,8 @@ export default function (Gantt, ganttEnableNgAnimate, $timeout, $templateCache) 
       extraScaleTime: '<?',
       data: '=?',
       api: '=?',
-      options: '<?'
+      options: '<?',
+      watchRowTasks: '<?'
     },
     controller: function ($scope, $element, $rootScope) {
       'ngInject'

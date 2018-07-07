@@ -80,7 +80,8 @@ export class Gantt {
       'timeFramesWorkingMode': 'hidden',
       'timeFramesNonWorkingMode': 'visible',
       'taskLimitThreshold': 100,
-      'columnLimitThreshold': 500
+      'columnLimitThreshold': 500,
+      'watchRowTasks': true
     })
 
     this.api = new GanttApi(this)

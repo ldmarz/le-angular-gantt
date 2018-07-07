@@ -14,7 +14,7 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
     $scope.templateRows = $scope.pluginScope.templateRows
     $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : []
 
-    $scope.$watch('gantt.rowsManager.rows', newValue => {
+    $scope.$watchCollection('gantt.rowsManager.rows', newValue => {
       // This watcher is to keep updated the visible rows
       $scope.pluginScope.rowService.allRows = newValue
     })
@@ -61,20 +61,21 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       return classes
     }
 
-    $scope.$watch(() => {
-      const rowRepeated = document.querySelector('.row-repeated') as HTMLElement
-      if (rowRepeated) {
-        return rowRepeated.offsetWidth
-      }
-      return undefined
-    }, width => {
-      if (width) {
-        const recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter') as NodeListOf<HTMLElement>
-        recyclerElements.forEach(element => {
-          element.style.width = width + 'px'
-        })
-      }
-    })
+    // $scope.$watch(() => {
+    //   const rowRepeated = document.querySelector('.row-repeated') as HTMLElement
+    //   if (rowRepeated) {
+    //     return rowRepeated.offsetWidth
+    //   }
+    //   return undefined
+    // }, width => {
+    //   console.log(width)
+    //   if (width) {
+    //     const recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter') as NodeListOf<HTMLElement>
+    //     recyclerElements.forEach(element => {
+    //       element.style.width = width + 'px'
+    //     })
+    //   }
+    // })
 
     // allRows contains the rows to be recycled
     $scope.allRows = {

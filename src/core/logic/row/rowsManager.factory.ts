@@ -190,7 +190,7 @@ export class GanttRowsManager {
       (this.gantt.api as any).rows.raise.add(row)
     }
 
-    if (!isUpdate) {
+    if (this.gantt.options.value('watchRowTasks') && !isUpdate) {
       let watcher = this.gantt.$scope.$watchCollection(() => {
         return rowModel.tasks
       }, (newTasks, oldTasks) => {
