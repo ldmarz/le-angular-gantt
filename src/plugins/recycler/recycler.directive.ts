@@ -14,7 +14,7 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
     $scope.templateRows = $scope.pluginScope.templateRows
     $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : []
 
-    $scope.$watchCollection('gantt.rowsManager.rows', newValue => {
+    $scope.$watch('gantt.rowsManager.rows', newValue => {
       // This watcher is to keep updated the visible rows
       $scope.pluginScope.rowService.allRows = newValue
     })

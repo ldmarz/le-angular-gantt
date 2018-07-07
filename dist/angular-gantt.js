@@ -85215,7 +85215,7 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
         var hScrollBarHeight = ganttLayout.getScrollBarHeight();
         $scope.templateRows = $scope.pluginScope.templateRows;
         $scope.pluginScope.noCollapsible = $scope.pluginScope.noCollapsible ? $scope.pluginScope.noCollapsible : [];
-        $scope.$watchCollection('gantt.rowsManager.rows', function (newValue) {
+        $scope.$watch('gantt.rowsManager.rows', function (newValue) {
             $scope.pluginScope.rowService.allRows = newValue;
         });
         $scope.gantt.api.registerEvent('recycler', 'topIndexChanged');
@@ -85343,7 +85343,7 @@ exports.default = ["$document", "$compile", "$timeout", function ($document, $co
             var api = ganttCtrl.gantt.api;
             scope.rowService = new _row2.default(api);
             scope.lastInitialized = '';
-            scope.$watchCollection(function () {
+            scope.$watch(function () {
                 return checkIfNewRow();
             }, intializeRows, true);
             function checkIfNewRow() {
