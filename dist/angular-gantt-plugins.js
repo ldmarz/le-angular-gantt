@@ -85251,6 +85251,20 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
             }
             return classes;
         };
+        $scope.$watch(function () {
+            var rowRepeated = document.querySelector('.row-repeated');
+            if (rowRepeated) {
+                return rowRepeated.offsetWidth;
+            }
+            return undefined;
+        }, function (width) {
+            if (width) {
+                var recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter');
+                recyclerElements.forEach(function (element) {
+                    element.style.width = width + 'px';
+                });
+            }
+        });
 
         $scope.allRows = {
             value: 1,

@@ -61,21 +61,20 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       return classes
     }
 
-    // $scope.$watch(() => {
-    //   const rowRepeated = document.querySelector('.row-repeated') as HTMLElement
-    //   if (rowRepeated) {
-    //     return rowRepeated.offsetWidth
-    //   }
-    //   return undefined
-    // }, width => {
-    //   console.log(width)
-    //   if (width) {
-    //     const recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter') as NodeListOf<HTMLElement>
-    //     recyclerElements.forEach(element => {
-    //       element.style.width = width + 'px'
-    //     })
-    //   }
-    // })
+    $scope.$watch(() => {
+      const rowRepeated = document.querySelector('.row-repeated') as HTMLElement
+      if (rowRepeated) {
+        return rowRepeated.offsetWidth
+      }
+      return undefined
+    }, width => {
+      if (width) {
+        const recyclerElements = document.querySelectorAll('#vertical-container, .md-virtual-repeat-scroller, .md-virtual-repeat-offsetter') as NodeListOf<HTMLElement>
+        recyclerElements.forEach(element => {
+          element.style.width = width + 'px'
+        })
+      }
+    })
 
     // allRows contains the rows to be recycled
     $scope.allRows = {
