@@ -11,3 +11,4 @@ selenium-debug.log
 *.map
 /src/docs/_build/
 /demo.dist/
+.vscode/
