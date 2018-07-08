@@ -1,67 +1,41 @@
 import $ from 'jquery'
-import { remove, throttle, debounce } from 'lodash'
+import { remove, throttle, debounce, includes } from 'lodash'
+import { ScrollManager } from './scrollManager.directive'
 
 export default function () {
   'ngInject'
   return {
     restrict: 'A',
     require: '^ganttScrollManager',
-    scope: {
-      selector: '@'
-    },
-    link: function (scope, element, attrs, ganttScrollManagerCtrl) {
+    link: function (scope, element, attrs, ganttScrollManagerCtrl: ScrollManager) {
       const el = (attrs.selector)
-        ? $(scope.selector)
+        ? $(element).find(attrs.selector)
         : $(element)
 
-      bindings(el)
-      ganttScrollManagerCtrl.registerAsVerticalScrollDuplexReceiver(el)
-
-      function bindings (element) {
-        element.scroll(scrollHandler)
+      let me = {
+        element: el,
+        lastScrollTop: el.scrollTop()
       }
+
+      ganttScrollManagerCtrl.verticalScrollDuplexReceivers.push(me)
+
+      me.element.on('scroll', scrollHandler)
 
       function scrollHandler () {
 
-        const isDuplexSending = ganttScrollManagerCtrl.isVerticalScrollDuplexSending()
+        const receivers = ganttScrollManagerCtrl.verticalScrollDuplexReceivers
+        me.lastScrollTop = me.element.scrollTop()
 
-        if (!isDuplexSending) {
-          setAsSender()
-          ganttScrollManagerCtrl.setVerticalScrollDuplexSending(true)
+        receivers.forEach(receiver => {
+          if (!receiver.element.is(me.element)) {
+            const itNeedsUpdate = me.lastScrollTop - receiver.lastScrollTop
 
-          const receivers = ganttScrollManagerCtrl.getVerticalScrollDuplexReceivers()
-
-          receivers.forEach(receiver => {
-            receiver.scrollTop(el.scrollTop())
-          })
-
-          ganttScrollManagerCtrl.setVerticalScrollDuplexSending(false)
-        }
+            if (itNeedsUpdate) {
+              receiver.element.scrollTop(me.element.scrollTop())
+            }
+          }
+        })
       }
-
-      function setAsSender () {
-        const sender = ganttScrollManagerCtrl.getVerticalScrollDuplexSender()
-        const receivers = ganttScrollManagerCtrl.getVerticalScrollDuplexReceivers()
-
-        if (sender === el) {
-          return
-        }
-
-        if (sender) {
-          unbindings(sender)
-          ganttScrollManagerCtrl.registerAsVerticalScrollDuplexReceiver(sender)
-        }
-
-        remove(receivers, receiver => receiver === el)
-        ganttScrollManagerCtrl.registerAsVerticalScrollDuplexSender(el)
-
-        bindings(el)
-      }
-
-      function unbindings (element) {
-        element.unbind('scroll', scrollHandler)
-      }
-
     }
   }
 }

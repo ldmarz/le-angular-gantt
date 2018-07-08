@@ -5,65 +5,47 @@ export default function () {
   return {
     restrict: 'A',
     scope: {},
-    controller: function ($scope) {
-      'ngInject'
-      $scope.horizontal = []
-      $scope.vertical = []
-      $scope.verticalSender = undefined
-      $scope.registerAsVerticalScrollDuplexSender = undefined
-      $scope.registerAsVerticalScrollDuplexReceiver = []
-      $scope.verticalScrollDuplexIsSending = false
-
-      this.registerVerticalReceiver = function (element) {
-        element.css('position', 'relative')
-        $scope.vertical.push(element[0])
-      }
-
-      this.registerHorizontalReceiver = function (element) {
-        element.css('position', 'relative')
-        $scope.horizontal.push(element[0])
-      }
-
-      this.getHorizontalRecievers = function () {
-        return $scope.horizontal
-      }
-
-      this.getVerticalRecievers = function () {
-        return $scope.vertical
-      }
-
-      this.registerScrollSender = function (element) {
-        $scope.verticalSender = element
-      }
-
-      this.getVerticalSender = function () {
-        return $scope.verticalSender
-      }
-
-      this.registerAsVerticalScrollDuplexSender = function (element) {
-        $scope.registerAsVerticalScrollDuplexSender = element
-      }
-
-      this.registerAsVerticalScrollDuplexReceiver = function (element) {
-        $scope.registerAsVerticalScrollDuplexReceiver.push(element)
-      }
-
-      this.getVerticalScrollDuplexSender = function (element) {
-        return $scope.registerAsVerticalScrollDuplexSender
-      }
-
-      this.getVerticalScrollDuplexReceivers = function (element) {
-        return $scope.registerAsVerticalScrollDuplexReceiver
-      }
-
-      this.isVerticalScrollDuplexSending = function () {
-        return $scope.verticalScrollDuplexIsSending
-      }
-
-      this.setVerticalScrollDuplexSending = function (val) {
-        $scope.verticalScrollDuplexIsSending = val
-      }
-
-    }
+    controller: ScrollManager
   }
+}
+
+export class ScrollManager {
+  $scope: any
+
+  verticalScrollDuplexReceivers: ScrollRecord[] = []
+
+  constructor ($scope) {
+    'ngInject'
+    this.$scope = $scope
+    this.$scope.horizontal = []
+    this.$scope.vertical = []
+    this.$scope.verticalSender = undefined
+  }
+
+  registerVerticalReceiver (element) {
+    element.css('position', 'relative')
+    this.$scope.vertical.push(element[0])
+  }
+
+  registerHorizontalReceiver (element) {
+    element.css('position', 'relative')
+    this.$scope.horizontal.push(element[0])
+  }
+
+  getHorizontalRecievers () {
+    return this.$scope.horizontal
+  }
+
+  getVerticalRecievers () {
+    return this.$scope.vertical
+  }
+
+  registerScrollSender (element) {
+    this.$scope.verticalSender = element
+  }
+
+  getVerticalSender () {
+    return this.$scope.verticalSender
+  }
+
 }
