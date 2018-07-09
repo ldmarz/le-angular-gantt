@@ -1,5 +1,5 @@
 /*!
- * Project: le-angular-gantt v3.4.1 - Gantt chart component for AngularJS
+ * Project: le-angular-gantt v3.4.2 - Gantt chart component for AngularJS
  * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
  * License: MIT
  * Homepage: https://www.angular-gantt.com
@@ -552,7 +552,7 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(18);
+var isObject = __webpack_require__(17);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -563,7 +563,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(19)(function(){
+module.exports = !__webpack_require__(18)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -689,6 +689,26 @@ module.exports = __webpack_require__(11) ? function(object, key, value){
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports) {
+
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
+};
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17780,26 +17800,6 @@ module.exports = __webpack_require__(11) ? function(object, key, value){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(184)(module)))
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
-};
-
-/***/ }),
 /* 20 */
 /***/ (function(module, exports) {
 
@@ -18441,7 +18441,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(18);
+var isObject = __webpack_require__(17);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -28848,7 +28848,7 @@ return jQuery;
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(18)
+var isObject = __webpack_require__(17)
   , document = __webpack_require__(9).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -30576,7 +30576,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _lodash = __webpack_require__(17);
+var _lodash = __webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31694,7 +31694,7 @@ var GanttTimespansManager = exports.GanttTimespansManager = function () {
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(11) && !__webpack_require__(19)(function(){
+module.exports = !__webpack_require__(11) && !__webpack_require__(18)(function(){
   return Object.defineProperty(__webpack_require__(41)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -34360,6 +34360,15 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.ScrollManager = undefined;
+
+var _classCallCheck2 = __webpack_require__(0);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(1);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
 
 exports.default = function () {
     'ngInject';
@@ -34367,56 +34376,60 @@ exports.default = function () {
     return {
         restrict: 'A',
         scope: {},
-        controller: ["$scope", function controller($scope) {
-            'ngInject';
-
-            $scope.horizontal = [];
-            $scope.vertical = [];
-            $scope.verticalSender = undefined;
-            $scope.registerAsVerticalScrollDuplexSender = undefined;
-            $scope.registerAsVerticalScrollDuplexReceiver = [];
-            $scope.verticalScrollDuplexIsSending = false;
-            this.registerVerticalReceiver = function (element) {
-                element.css('position', 'relative');
-                $scope.vertical.push(element[0]);
-            };
-            this.registerHorizontalReceiver = function (element) {
-                element.css('position', 'relative');
-                $scope.horizontal.push(element[0]);
-            };
-            this.getHorizontalRecievers = function () {
-                return $scope.horizontal;
-            };
-            this.getVerticalRecievers = function () {
-                return $scope.vertical;
-            };
-            this.registerScrollSender = function (element) {
-                $scope.verticalSender = element;
-            };
-            this.getVerticalSender = function () {
-                return $scope.verticalSender;
-            };
-            this.registerAsVerticalScrollDuplexSender = function (element) {
-                $scope.registerAsVerticalScrollDuplexSender = element;
-            };
-            this.registerAsVerticalScrollDuplexReceiver = function (element) {
-                $scope.registerAsVerticalScrollDuplexReceiver.push(element);
-            };
-            this.getVerticalScrollDuplexSender = function (element) {
-                return $scope.registerAsVerticalScrollDuplexSender;
-            };
-            this.getVerticalScrollDuplexReceivers = function (element) {
-                return $scope.registerAsVerticalScrollDuplexReceiver;
-            };
-            this.isVerticalScrollDuplexSending = function () {
-                return $scope.verticalScrollDuplexIsSending;
-            };
-            this.setVerticalScrollDuplexSending = function (val) {
-                $scope.verticalScrollDuplexIsSending = val;
-            };
-        }]
+        controller: ScrollManager
     };
 };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ScrollManager = exports.ScrollManager = function () {
+    ScrollManager.$inject = ["$scope"];
+    function ScrollManager($scope) {
+        'ngInject';
+
+        (0, _classCallCheck3.default)(this, ScrollManager);
+        this.verticalScrollDuplexReceivers = [];
+        this.$scope = $scope;
+        this.$scope.horizontal = [];
+        this.$scope.vertical = [];
+        this.$scope.verticalSender = undefined;
+    }
+
+    (0, _createClass3.default)(ScrollManager, [{
+        key: 'registerVerticalReceiver',
+        value: function registerVerticalReceiver(element) {
+            element.css('position', 'relative');
+            this.$scope.vertical.push(element[0]);
+        }
+    }, {
+        key: 'registerHorizontalReceiver',
+        value: function registerHorizontalReceiver(element) {
+            element.css('position', 'relative');
+            this.$scope.horizontal.push(element[0]);
+        }
+    }, {
+        key: 'getHorizontalRecievers',
+        value: function getHorizontalRecievers() {
+            return this.$scope.horizontal;
+        }
+    }, {
+        key: 'getVerticalRecievers',
+        value: function getVerticalRecievers() {
+            return this.$scope.vertical;
+        }
+    }, {
+        key: 'registerScrollSender',
+        value: function registerScrollSender(element) {
+            this.$scope.verticalSender = element;
+        }
+    }, {
+        key: 'getVerticalSender',
+        value: function getVerticalSender() {
+            return this.$scope.verticalSender;
+        }
+    }]);
+    return ScrollManager;
+}();
 
 /***/ }),
 /* 96 */
@@ -34627,46 +34640,25 @@ exports.default = function () {
     return {
         restrict: 'A',
         require: '^ganttScrollManager',
-        scope: {
-            selector: '@'
-        },
         link: function link(scope, element, attrs, ganttScrollManagerCtrl) {
-            var el = attrs.selector ? (0, _jquery2.default)(scope.selector) : (0, _jquery2.default)(element);
-            bindings(el);
-            ganttScrollManagerCtrl.registerAsVerticalScrollDuplexReceiver(el);
-            function bindings(element) {
-                element.scroll(scrollHandler);
-            }
+            var el = attrs.selector ? (0, _jquery2.default)(element).find(attrs.selector) : (0, _jquery2.default)(element);
+            var me = {
+                element: el,
+                lastScrollTop: el.scrollTop()
+            };
+            ganttScrollManagerCtrl.verticalScrollDuplexReceivers.push(me);
+            me.element.on('scroll', scrollHandler);
             function scrollHandler() {
-                var isDuplexSending = ganttScrollManagerCtrl.isVerticalScrollDuplexSending();
-                if (!isDuplexSending) {
-                    setAsSender();
-                    ganttScrollManagerCtrl.setVerticalScrollDuplexSending(true);
-                    var receivers = ganttScrollManagerCtrl.getVerticalScrollDuplexReceivers();
-                    receivers.forEach(function (receiver) {
-                        receiver.scrollTop(el.scrollTop());
-                    });
-                    ganttScrollManagerCtrl.setVerticalScrollDuplexSending(false);
-                }
-            }
-            function setAsSender() {
-                var sender = ganttScrollManagerCtrl.getVerticalScrollDuplexSender();
-                var receivers = ganttScrollManagerCtrl.getVerticalScrollDuplexReceivers();
-                if (sender === el) {
-                    return;
-                }
-                if (sender) {
-                    unbindings(sender);
-                    ganttScrollManagerCtrl.registerAsVerticalScrollDuplexReceiver(sender);
-                }
-                (0, _lodash.remove)(receivers, function (receiver) {
-                    return receiver === el;
+                var receivers = ganttScrollManagerCtrl.verticalScrollDuplexReceivers;
+                me.lastScrollTop = me.element.scrollTop();
+                receivers.forEach(function (receiver) {
+                    if (!receiver.element.is(me.element)) {
+                        var itNeedsUpdate = me.lastScrollTop - receiver.lastScrollTop;
+                        if (itNeedsUpdate) {
+                            receiver.element.scrollTop(me.element.scrollTop());
+                        }
+                    }
                 });
-                ganttScrollManagerCtrl.registerAsVerticalScrollDuplexSender(el);
-                bindings(el);
-            }
-            function unbindings(element) {
-                element.unbind('scroll', scrollHandler);
             }
         }
     };
@@ -34675,8 +34667,6 @@ exports.default = function () {
 var _jquery = __webpack_require__(40);
 
 var _jquery2 = _interopRequireDefault(_jquery);
-
-var _lodash = __webpack_require__(17);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36416,14 +36406,14 @@ module.exports = function(object, el){
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(25)('meta')
-  , isObject = __webpack_require__(18)
+  , isObject = __webpack_require__(17)
   , has      = __webpack_require__(13)
   , setDesc  = __webpack_require__(12).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(19)(function(){
+var FREEZE = !__webpack_require__(18)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -36519,7 +36509,7 @@ module.exports.f = function getOwnPropertyNames(it){
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(15)
   , core    = __webpack_require__(6)
-  , fails   = __webpack_require__(19);
+  , fails   = __webpack_require__(18);
 module.exports = function(KEY, exec){
   var fn  = (core.Object || {})[KEY] || Object[KEY]
     , exp = {};
@@ -36533,7 +36523,7 @@ module.exports = function(KEY, exec){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(18)
+var isObject = __webpack_require__(17)
   , anObject = __webpack_require__(10);
 var check = function(O, proto){
   anObject(O);
@@ -36695,7 +36685,7 @@ var global         = __webpack_require__(9)
   , $export        = __webpack_require__(15)
   , redefine       = __webpack_require__(65)
   , META           = __webpack_require__(165).KEY
-  , $fails         = __webpack_require__(19)
+  , $fails         = __webpack_require__(18)
   , shared         = __webpack_require__(35)
   , setToStringTag = __webpack_require__(27)
   , uid            = __webpack_require__(25)
