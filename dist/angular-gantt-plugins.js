@@ -85662,7 +85662,9 @@ exports.default = ["$scope", "$rootScope", "$timeout", function ($scope, $rootSc
         return [].concat(row.model.classes).concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd');
     };
     function isEven(row, pool) {
-        return _lodash2.default.indexOf(pool, row) % 2;
+        return _lodash2.default.findIndex(pool, function (o) {
+            return o.model.id === row.model.id;
+        }) % 2;
     }
 }];
 

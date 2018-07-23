@@ -70,7 +70,7 @@ export default function ($scope, $rootScope, $timeout) {
   }
 
   function isEven (row, pool) {
-    return _.indexOf(pool, row) % 2
+    return _.findIndex(pool, o => o.model.id === row.model.id) % 2
   }
 
   // $scope.$watch('collapsed', function (newValue) {
