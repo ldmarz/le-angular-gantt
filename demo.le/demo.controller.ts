@@ -25,7 +25,7 @@ export default function ($scope, $timeout) {
   ]
 
   _.each($scope.data, value => {
-    appendChilds(40, value.id)
+    appendChilds(10, value.id)
   })
 
   const tasks = _.filter($scope.data, o => {
@@ -33,7 +33,7 @@ export default function ($scope, $timeout) {
   })
 
   _.each(tasks, value => {
-    appendChilds(10, value.id)
+    appendChilds(2, value.id)
   })
 
   console.log($scope.data.length)
@@ -174,7 +174,7 @@ export default function ($scope, $timeout) {
       $scope.data.push(
         {
           id: uuid(),
-          name: name, mec: 'mec1', level: 1, parent: parent, isCollapsed: true,
+          name: name, mec: 'mec1', level: 1, parent: parent, isCollapsed: false,
           tasks: [
             {
               name: name,

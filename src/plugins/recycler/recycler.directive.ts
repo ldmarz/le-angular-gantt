@@ -108,18 +108,6 @@ export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
       })
     }
 
-    $scope.getClasses = (row, pool) => {
-      const eventRow = isEven(row, pool)
-
-      return []
-        .concat(row.model.classes)
-        .concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd')
-    }
-
-    function isEven (row, pool) {
-      return _.indexOf(pool, row) % 2
-    }
-
     $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api)
 
   }

@@ -563,7 +563,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(18)(function(){
+module.exports = !__webpack_require__(19)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -697,18 +697,6 @@ module.exports = function(it){
 
 /***/ }),
 /* 18 */
-/***/ (function(module, exports) {
-
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
-};
-
-/***/ }),
-/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17800,6 +17788,18 @@ module.exports = function(exec){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(184)(module)))
 
 /***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
+};
+
+/***/ }),
 /* 20 */
 /***/ (function(module, exports) {
 
@@ -30576,7 +30576,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31694,7 +31694,7 @@ var GanttTimespansManager = exports.GanttTimespansManager = function () {
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(11) && !__webpack_require__(18)(function(){
+module.exports = !__webpack_require__(11) && !__webpack_require__(19)(function(){
   return Object.defineProperty(__webpack_require__(41)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -42048,7 +42048,7 @@ var META     = __webpack_require__(25)('meta')
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(18)(function(){
+var FREEZE = !__webpack_require__(19)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -42144,7 +42144,7 @@ module.exports.f = function getOwnPropertyNames(it){
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(15)
   , core    = __webpack_require__(6)
-  , fails   = __webpack_require__(18);
+  , fails   = __webpack_require__(19);
 module.exports = function(KEY, exec){
   var fn  = (core.Object || {})[KEY] || Object[KEY]
     , exp = {};
@@ -42399,7 +42399,7 @@ var global         = __webpack_require__(9)
   , $export        = __webpack_require__(15)
   , redefine       = __webpack_require__(65)
   , META           = __webpack_require__(165).KEY
-  , $fails         = __webpack_require__(18)
+  , $fails         = __webpack_require__(19)
   , shared         = __webpack_require__(35)
   , setToStringTag = __webpack_require__(27)
   , uid            = __webpack_require__(25)
@@ -84750,7 +84750,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85152,7 +85152,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = sortRows;
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -85281,19 +85281,12 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", "$timeout", function 
                 $scope.verticalScrollOpts.enable = false;
             });
         }
-        $scope.getClasses = function (row, pool) {
-            var eventRow = isEven(row, pool);
-            return [].concat(row.model.classes).concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd');
-        };
-        function isEven(row, pool) {
-            return _lodash2.default.indexOf(pool, row) % 2;
-        }
         $scope.gantt.api.registerMethod('recycler', 'goToRow', goToRow, $scope.gantt.api);
     };
     return builder.build();
 }];
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -85513,7 +85506,7 @@ var _angular = __webpack_require__(2);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -85641,11 +85634,11 @@ exports.default = ["$scope", "$rootScope", "$timeout", function ($scope, $rootSc
             return 'row-level-' + $scope.row.rowLevel;
         }
     };
-    $scope.hasChildreen = function () {
+    $scope.hasChildreen = _lodash2.default.throttle(function () {
         if ($scope.row) {
             return _angular2.default.isDefined($scope.pluginScope.rowService.hasChildreen($scope.row.model.id));
         }
-    };
+    }, 100);
     $scope.getRowContent = function (rowTemplate) {
         if ($scope.row) {
             if (rowTemplate.content !== undefined) {
@@ -85664,7 +85657,18 @@ exports.default = ["$scope", "$rootScope", "$timeout", function ($scope, $rootSc
     $scope.getClass = function (rowTemplate) {
         return rowTemplate.classes;
     };
+    $scope.getClasses = function (row, pool) {
+        var eventRow = isEven(row, pool);
+        return [].concat(row.model.classes).concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd');
+    };
+    function isEven(row, pool) {
+        return _lodash2.default.indexOf(pool, row) % 2;
+    }
 }];
+
+var _lodash = __webpack_require__(18);
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 var _constant = __webpack_require__(182);
 
@@ -85718,7 +85722,7 @@ var _createClass2 = __webpack_require__(1);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -87334,7 +87338,7 @@ exports.default = ["$scope", "$rootScope", function ($scope, $rootScope) {
     });
 }];
 
-var _lodash = __webpack_require__(19);
+var _lodash = __webpack_require__(18);
 
 var _constant = __webpack_require__(182);
 

@@ -34,11 +34,11 @@ export default function ($scope, $rootScope, $timeout) {
     }
   }
 
-  $scope.hasChildreen = function () {
+  $scope.hasChildreen = _.throttle (() => {
     if ($scope.row) {
       return angular.isDefined($scope.pluginScope.rowService.hasChildreen($scope.row.model.id))
     }
-  }
+  }, 100)
 
   $scope.getRowContent = function (rowTemplate) {
     if ($scope.row) {
@@ -57,8 +57,20 @@ export default function ($scope, $rootScope, $timeout) {
     }
   }
 
-  $scope.getClass = function (rowTemplate) {
+  $scope.getClass = (rowTemplate) => {
     return rowTemplate.classes
+  }
+
+  $scope.getClasses = (row, pool) => {
+    const eventRow = isEven(row, pool)
+
+    return []
+      .concat(row.model.classes)
+      .concat(isEven(row, pool) ? 'gantt-row-even' : 'gantt-row-odd')
+  }
+
+  function isEven (row, pool) {
+    return _.indexOf(pool, row) % 2
   }
 
   // $scope.$watch('collapsed', function (newValue) {
