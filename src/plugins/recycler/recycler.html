@@ -19,7 +19,7 @@
       ng-style="{'grid-template-columns': getTemplateWidth(), 'background-color': row.model.color}">
 
       <div ng-repeat="rowTemplate in templateRows" class="gantt-side-column grid-column" ng-class="getClass(rowTemplate)">
-        <div ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
+        <div ng-cloak ng-if="rowTemplate.type == 'tree' " ng-class="getClassByLevel()" class="tree-container column-repeated" row-id="{{row.model.id}}">
           <a data-nodrag class="gantt-tree-handle-button btn btn-xs" ng-class="{'gantt-tree-collapsed': row.model.childreenCollapsed, 'gantt-tree-expanded': !row.model.childreenCollapsed}">
 
             <div ng-click="collapse()" ng-if="hasChildreen()" ng-show="!row.model.isLoading" class="wrapper-collapsed">
@@ -34,7 +34,7 @@
           <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)" />
         </div>
 
-        <div ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
+        <div ng-cloak ng-if="rowTemplate.type == 'column'" class="column-container column-repeated">
           <span class="gantt-label-text" gantt-bind-compile-html="getRowContent(rowTemplate)"></span>
         </div>
       </div>

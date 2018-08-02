@@ -5,6 +5,7 @@ import _ from 'lodash'
 export default function (GanttDirectiveBuilder, ganttLayout, $timeout) {
   'ngInject'
   let builder = new GanttDirectiveBuilder('gridSide', 'plugins/recycler/recycler.html')
+
   builder.controller = function ($scope, element) {
     $scope.verticalScrollOpts = {
       selector: '.md-virtual-repeat-scroller',

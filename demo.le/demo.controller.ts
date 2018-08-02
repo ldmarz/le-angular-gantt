@@ -47,6 +47,7 @@ export default function ($scope, $timeout) {
   $scope.algo = 'aksks'
   $scope.selectedRow = undefined
   $scope.watchRowTasks = false
+  $scope.visibleGantt = true
 
   $scope.templateRows = [{
     type: 'tree',

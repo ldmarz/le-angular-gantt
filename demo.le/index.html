@@ -23,6 +23,7 @@
         <button ng-click="setWidth()">set width</button>
         <button ng-click="setWidth2()">set width 2</button>
         <button ng-click="setScale()">set scale</button>
+        <button ng-click="visibleGantt = !visibleGantt"> toggle gantt </button>
         <md-slider-container>
             <md-slider-container class="control-bar-icon">
                 <md-slider flex ng-model="zoomSlider" ng-change="zoomSliderIsChange()" ; min="0" max="61" aria-label="blue" id="blue-slider"
@@ -39,6 +40,7 @@
             bs-select></button> -->
         <div gantt data="data"
             api="registerApi"
+            ng-if="visibleGantt"
             auto-expand="autoExpand"
             task-out-of-range="taskOutOfRange"
             extra-scale-time="extraScaleTime"

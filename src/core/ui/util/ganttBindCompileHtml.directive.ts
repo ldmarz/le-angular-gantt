@@ -3,9 +3,7 @@ export default function ($compile) {
 
   return {
     restrict: 'A',
-    require: '^gantt',
-    link: function (scope, element, attrs, ganttCtrl) {
-      scope.scope = ganttCtrl.gantt.$scope.$parent
+    link: function (scope, element, attrs) {
       scope.thisWatcher = scope.$watch(function () {
         return scope.$eval(attrs.ganttBindCompileHtml)
       }, function (value) {

@@ -35170,6 +35170,7 @@ exports.default = ["GanttDirectiveBuilder", function (GanttDirectiveBuilder) {
 
     var builder = new GanttDirectiveBuilder('ganttRowLabel');
     builder.restrict = 'A';
+    builder.require = '^?gantt';
     builder.templateUrl = undefined;
     return builder.build();
 }];
@@ -35725,9 +35726,7 @@ exports.default = ["$compile", function ($compile) {
 
     return {
         restrict: 'A',
-        require: '^gantt',
-        link: function link(scope, element, attrs, ganttCtrl) {
-            scope.scope = ganttCtrl.gantt.$scope.$parent;
+        link: function link(scope, element, attrs) {
             scope.thisWatcher = scope.$watch(function () {
                 return scope.$eval(attrs.ganttBindCompileHtml);
             }, function (value) {
