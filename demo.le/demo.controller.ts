@@ -92,9 +92,13 @@ export default function ($scope, $timeout) {
     type: 'column',
     classes: ['input-hidden'],
     headerContent: '<div> avic </div>',
-    content: '<div>algol</div>'
+    content: '<div><input ng-if="scope.$ctrl.render()"></div>'
   }
   ]
+
+  $scope.render = function () {
+    return true
+  }
 
   $scope.goToRow = function (id) {
     $scope.api.recycler.goToRow((row) => row.model.id === id)

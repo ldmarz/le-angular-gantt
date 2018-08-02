@@ -16,6 +16,7 @@ export default function ($document, $compile, $timeout) {
     },
     link: function (scope, element, attrs, ganttCtrl) {
       let api = ganttCtrl.gantt.api
+      scope.ganttCtrl = ganttCtrl
       scope.rowService = new rowService(api)
       scope.lastInitialized = ''
 

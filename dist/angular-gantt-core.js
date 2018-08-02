@@ -552,7 +552,7 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(17);
+var isObject = __webpack_require__(18);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -689,14 +689,6 @@ module.exports = __webpack_require__(11) ? function(object, key, value){
 
 /***/ }),
 /* 17 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-/***/ }),
-/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17788,6 +17780,14 @@ module.exports = function(it){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28), __webpack_require__(184)(module)))
 
 /***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+/***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
@@ -18441,7 +18441,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(17);
+var isObject = __webpack_require__(18);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -28848,7 +28848,7 @@ return jQuery;
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(17)
+var isObject = __webpack_require__(18)
   , document = __webpack_require__(9).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -30576,7 +30576,7 @@ var _moment = __webpack_require__(3);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _lodash = __webpack_require__(18);
+var _lodash = __webpack_require__(17);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35726,7 +35726,8 @@ exports.default = ["$compile", function ($compile) {
 
     return {
         restrict: 'A',
-        link: function link(scope, element, attrs) {
+        link: function link(scope, element, attrs, ganttCtrl) {
+            scope.scope = (0, _lodash.get)(scope, 'pluginScope.ganttCtrl.gantt.$scope.$parent');
             scope.thisWatcher = scope.$watch(function () {
                 return scope.$eval(attrs.ganttBindCompileHtml);
             }, function (value) {
@@ -35737,6 +35738,8 @@ exports.default = ["$compile", function ($compile) {
         }
     };
 }];
+
+var _lodash = __webpack_require__(17);
 
 /***/ }),
 /* 132 */
@@ -36405,7 +36408,7 @@ module.exports = function(object, el){
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(25)('meta')
-  , isObject = __webpack_require__(17)
+  , isObject = __webpack_require__(18)
   , has      = __webpack_require__(13)
   , setDesc  = __webpack_require__(12).f
   , id       = 0;
@@ -36522,7 +36525,7 @@ module.exports = function(KEY, exec){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(17)
+var isObject = __webpack_require__(18)
   , anObject = __webpack_require__(10);
 var check = function(O, proto){
   anObject(O);
